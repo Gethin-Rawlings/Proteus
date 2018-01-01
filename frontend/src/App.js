@@ -1,0 +1,23 @@
+import React, {Component} from 'react';
+import './App.css';
+import Getnetworks from './Getnetworks'
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      <form>
+          <fieldset>
+            <legend>Networks with open rounds from NODE rest and SQL SP</legend>
+              <p>
+                <label>Network </label>
+                  <Getnetworks network ></Getnetworks>
+              </p>
+          </fieldset>
+      </form>
+      </div> 
+    );
+  }
+}
+
+export default App;

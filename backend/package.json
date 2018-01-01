@@ -1,0 +1,27 @@
+ {
+  "name": "reactnodesql",
+  "version": "1.0.0",
+  "description": "react front end with restful node js and ms sql stored procs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gethin",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mssql": "^4.1.0",
+    "save": "^2.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "expect": "^22.0.3",
+    "expect.js": "^0.3.1",
+    "mocha": "^4.1.0",
+    "webpack": "^3.10.0"
+  }
+}
