@@ -5,9 +5,9 @@ var bodyParser = require('body-parser');
 
 router.get('/organisations', function (req, res) {
     var paramaters = req.query;
-    var organisationType = paramaters.organisationType;
+    var type = paramaters.type;
     var request = new sql.Request(); 
-    request.input('organisationType', sql.VarChar(50), organisationType); 
+    request.input('type', sql.VarChar(50), type); 
     request.execute('PR_GET_ORGANISATIONS', function (err, result) {
         if (err) console.log(err)
         var returnData = result.recordset;
