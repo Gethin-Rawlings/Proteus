@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import Getnetworks from './Getnetworks'
-
 import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-
-
 
 class App extends Component {
   render() {
