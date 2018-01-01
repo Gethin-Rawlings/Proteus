@@ -26,4 +26,7 @@ app.all('/rounds',jsonParser, rounds);
 var briefs = require('./briefs/getbriefs');
 app.all('/briefs',jsonParser, briefs);
 
+var organisations = require('./organisations/organisations');
+app.all('/organisations',jsonParser, briefs);
+
 module.exports = app;
