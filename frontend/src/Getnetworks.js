@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = network => 'http://localhost:5000/rounds'
+const urlForNetworks  = network => 'http://localhost:5000/organisations?type=open'
 
 class Getnetworks extends Component {
     constructor(props){
