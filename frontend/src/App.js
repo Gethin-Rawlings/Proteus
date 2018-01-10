@@ -14,7 +14,7 @@ class App extends Component {
             <legend>Networks with open rounds from NODE rest and SQL SP</legend>
               <p>
                 <label>Network </label>
-                  <Getnetworks network ></Getnetworks>
+                  <Getnetworks />
               </p>
           </fieldset>
       </form>
