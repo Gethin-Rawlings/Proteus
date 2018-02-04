@@ -18,14 +18,10 @@ class Form extends React.Component {
           }
            handleSubmit(event) { 
             event.preventDefault(); 
-            const username = event.target.username.value;
-            const password = event.target.password.value;
-            const data = new FormData();
-            data.append("username",username);
-            data.append("password",password)
+            const data = new FormData(event.target);
              fetch(urlForLogin(this.props.users), { 
                method: 'POST', 
-               body: username
+               body: data
              }).then(reponse => {
                 if (reponse === false){
                   alert("Login Failed")

@@ -3,15 +3,16 @@ var bcrypt = require('bcrypt');
 var router = express.Router();
 var bodyParser = require('body-parser');
 
-router.get('/users', function (req, res) {
-    var paramaters = req.query;
-    var name = paramaters.name;
+router.post('/users', function (req, res) {
+    console.log('wibble')
+    var paramaters = req.body;
+    var name = paramaters.username;
     var password = paramaters.password;
     var request = new sql.Request();     
     request.input('name', sql.VarChar(50), name); 
     request.input('PARAMS',sql.VarChar(1000),JSON.stringify(paramaters) );
     request.execute('PR_GET_USER', function (err, result) {
-        if (err) console.log(err)
+        if (err) console.log('err')
             if (result.recordset<1){
                 res.send(result);
             }else{
@@ -28,7 +29,7 @@ router.get('/users', function (req, res) {
             }
         });
     });
-                    
+ /*                   
 router.post('/users', function (req, res){
     var name = req.body.name;
     var password = req.body.password;
@@ -42,5 +43,6 @@ router.post('/users', function (req, res){
             });
         });
     });
+    */
     
 module.exports = router;
