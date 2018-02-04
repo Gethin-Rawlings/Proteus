@@ -4,7 +4,6 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 
 router.get('/users', function (req, res) {
-    console.log(req.query);
     var paramaters = req.query;
     var name = paramaters.name;
     var password = paramaters.password;
