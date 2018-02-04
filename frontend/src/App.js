@@ -1,24 +1,24 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import logo from './bbc_logo.png';
 import './App.css';
-import Getnetworks from './Getnetworks'
-import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+import Form from "./Form"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <form>
-          <fieldset>
-            <legend>Networks with open rounds from NODE rest and SQL SP</legend>
-              <p>
-                <label>Network </label>
-                  <Getnetworks />
-              </p>
-          </fieldset>
-      </form>
-      </div> 
+        <section className='App-nav'>
+          <img src={logo} className="App-logo" alt="logo" />
+        </section>
+        <section className="App-headerside"></section>
+        <header className="App-header">
+          <section className="App-title">Welcome to Proteus</section>
+        </header>
+        <section className="App-intro">
+          <Form />
+        </section>
+        <footer className="App-footer">Copyright BBC 2001-2018  |  Proteus 5</footer>
+      </div>
     );
   }
 }
