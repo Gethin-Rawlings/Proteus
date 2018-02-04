@@ -4,6 +4,7 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 
 router.get('/users', function (req, res) {
+    console.log(req.query);
     var paramaters = req.query;
     var name = paramaters.name;
     var password = paramaters.password;
@@ -13,14 +14,14 @@ router.get('/users', function (req, res) {
     request.execute('PR_GET_USER', function (err, result) {
         if (err) console.log(err)
             if (result.recordset<1){
-                res.send('Account invalid or password incorrect');
+                res.send(result);
             }else{
                 var accRecordset = result.recordset[0];
                 var accPassword = accRecordset.password; 
                 bcrypt.compare(password, accPassword, function(error, result) {
                     if (error) console.log(error);
                         if(result == false){
-                            res.send('Account invalid or password incorrect');        
+                            res.send(result);        
                         }else{
                             res.send(result);
                         }
