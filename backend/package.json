@@ -1,4 +1,4 @@
- {
+{
   "name": "reactnodesql",
   "version": "1.0.0",
   "description": "react front end with restful node js and ms sql stored procs",
@@ -12,6 +12,7 @@
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-formidable": "^1.0.0",
     "jsonwebtoken": "^8.1.0",
     "mssql": "^4.1.0",
     "save": "^2.3.2"

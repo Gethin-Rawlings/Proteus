@@ -22,12 +22,14 @@ class Form extends React.Component {
              fetch(urlForLogin(this.props.users), { 
                method: 'POST', 
                body: data
-             }).then(reponse => {
-                if (reponse === false){
+             }).then(response  => {
+               console.log(response.text)
+               
+                if (response.text  === false){
                   alert("Login Failed")
                 }
-                if (reponse === true){
-                  window.location.href = "http://stackoverflow.com";
+                if (response.text === true){
+                  console.log(response)
                 }
              } )        
            } 

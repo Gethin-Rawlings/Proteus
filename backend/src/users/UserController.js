@@ -1,14 +1,17 @@
-var express = require('express');
-var bcrypt = require('bcrypt');
-var router = express.Router();
-var bodyParser = require('body-parser');
+const express = require('express');
+const bcrypt = require('bcrypt');
+const router = express.Router();
+const bodyParser = require('body-parser');
+const formidable = require('express-formidable');
+
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(formidable());
 
 router.post('/users', function (req, res) {
-    console.log('wibble')
-    var paramaters = req.body;
-    var name = paramaters.username;
-    var password = paramaters.password;
-    var request = new sql.Request();     
+    const paramaters = req.body;
+    const name = req.fields.username;
+    const password = req.fields.password;
+    const request = new sql.Request();     
     request.input('name', sql.VarChar(50), name); 
     request.input('PARAMS',sql.VarChar(1000),JSON.stringify(paramaters) );
     request.execute('PR_GET_USER', function (err, result) {
@@ -16,14 +19,14 @@ router.post('/users', function (req, res) {
             if (result.recordset<1){
                 res.send(result);
             }else{
-                var accRecordset = result.recordset[0];
-                var accPassword = accRecordset.password; 
+                const accRecordset = result.recordset[0];
+                const accPassword = accRecordset.password; 
                 bcrypt.compare(password, accPassword, function(error, result) {
                     if (error) console.log(error);
                         if(result == false){
-                            res.send(result);        
+                            res.send(result.value);        
                         }else{
-                            res.send(result);
+                            res.send(result.text);
                         }
                 });  
             }
@@ -31,12 +34,12 @@ router.post('/users', function (req, res) {
     });
  /*                   
 router.post('/users', function (req, res){
-    var name = req.body.name;
-    var password = req.body.password;
+    const name = req.body.name;
+    const password = req.body.password;
     bcrypt.hash(password, 10, function(err, hash) {
-        var request = new sql.Request();
-        request.input('name', sql.VarChar(50), name); 
-        request.input('password', sql.VarChar(2000), hash);
+        const request = new sql.Request();
+        request.input('name', sql.constChar(50), name); 
+        request.input('password', sql.constChar(2000), hash);
         request.execute('PR_POST_USER', function (error, result) {
             if (err) console.log(error)
                 res.send(JSON.stringify(result.recordset));
