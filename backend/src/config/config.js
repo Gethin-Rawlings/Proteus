@@ -1,9 +1,10 @@
 var dbConfig = {
     development: {
        
-        user: 'rest',
-        password: 'password',
-        server: 'GETHIN', 
+        user: 'proteus_app',
+        password: 'GB3ZS0pHurlBDv1U',
+        server: 'bbcdbmsr163.national.core.bbc.co.uk',
+        port: '64598', 
         database: 'Proteus'
         
     },
