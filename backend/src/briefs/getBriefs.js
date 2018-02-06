@@ -1,7 +1,7 @@
-var express = require('express');
-var bcrypt = require('bcrypt');
-var router = express.Router();
-var bodyParser = require('body-parser');
+const express = require('express');
+const bcrypt = require('bcrypt');
+const router = express.Router();
+const bodyParser = require('body-parser');
 
 /*
 router.get('/briefs', function (req, res) {
@@ -21,11 +21,11 @@ router.get('/briefs', function (req, res) {
 */
 
 router.get('/briefs', function (req, res) {
-    var paramaters = req.query;
-    var organisation = paramaters.organisation;
-    var year = paramaters.year;
-    var round = paramaters.round;
-    var request = new sql.Request();
+    const paramaters = req.query;
+    const organisation = paramaters.organisation;
+    const year = paramaters.year;
+    const round = paramaters.round;
+    const request = new sql.Request();
     request.input('organisation', sql.Int, organisation) ;
     request.input('year', sql.Int, year) ;
     request.input('round', sql.Int, round) ;  
