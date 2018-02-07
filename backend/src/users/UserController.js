@@ -23,13 +23,19 @@ router.post('/users', function (req, res) {
                 console.log(accPassword)
                 bcrypt.compare(password, accPassword, function(error, result) {
                     if (error) console.log(error);
-                        if(name==='gethin'){
-                            res.send(true);
-                        }
-                        if(result == false){
-                            res.send(result.value);        
+                        if(result == true){
+                            let token = jwt.sign({ id: '1', username: name }, 'keyboard cat 4 ever', { expiresIn: 129600 });
+                            res.json({
+                                sucess: true,
+                                err: null,
+                                token
+                            });       
                         }else{
-                            res.send(result.text);
+                            res.json({
+                                sucess: false,
+                                err: 'User name or password incorrect',
+                                token:null
+                            })
                         }
                 });  
             }
