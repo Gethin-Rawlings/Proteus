@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './bbc_logo.png';
 import './App.css';
-import Form from "./Form"
+import Login from "./components/Login"
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
           <section className="App-title">Welcome to Proteus</section>
         </header>
         <section className="App-intro">
-          <Form />
+          <Login />
         </section>
         <footer className="App-footer">Copyright BBC 2001-2018  |  Proteus 5</footer>
       </div>

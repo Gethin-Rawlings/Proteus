@@ -1,10 +1,11 @@
 import React from 'react';
-import "./form.css";
+import "./Login.css";
 import decode from 'jwt-decode';
 
 const urlForLogin = users => 'http://localhost:5000/users'
 
-class Form extends React.Component {
+
+class Login extends React.Component {
     constructor(props) { 
             super(props); 
               this.state={value: ''};
@@ -23,17 +24,14 @@ class Form extends React.Component {
              fetch(urlForLogin(this.props.users), { 
                method: 'POST', 
                body: data
-             }).then(response  => { 
-               
-               console.log(response)
-               
-                if (response.text  === false){
+             }).then(response => response.json().then(data => {
+                if (data.sucess  === false){
                   console.log("Login Failed")
                 }
-                if (response.text === true){
-                  console.log(response)
+                if (data.sucess === true){
+                  console.log(data.token)
                 }
-             } )        
+             } ))      
            } 
            render() { 
              return ( 
@@ -47,6 +45,6 @@ class Form extends React.Component {
            } 
          } 
 
-  export default Form;
+  export default Login;
 
  

@@ -10,10 +10,10 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
 router.post('/users', function (req, res) {
-    const name = req.fields.username;
+    const username = req.fields.username;
     const password = req.fields.password;
     const request = new sql.Request();     
-    request.input('name', sql.VarChar(50), name); 
+    request.input('username', sql.VarChar(50), username); 
     request.execute('PR_GET_USER', function (err, result) {
         if (err) console.log('err')
             if (result.recordset<1){
@@ -24,18 +24,12 @@ router.post('/users', function (req, res) {
                 bcrypt.compare(password, accPassword, function(error, result) {
                     if (error) console.log(error);
                         if(result == true){
-                            let token = jwt.sign({ id: '1', username: name }, 'keyboard cat 4 ever', { expiresIn: 129600 });
-                            res.send({
-                                sucess: true,
-                                err: null,
-                                token
-                            });       
+                            let token = jwt.sign({ id: '1', username: username }, 'keyboard cat 4 ever', { expiresIn: 129600 });
+                            const responseToken = JSON.stringify({sucess: true,err: null,token});
+                            res.send(responseToken);       
                         }else{
-                            res.send({
-                                sucess: false,
-                                err: 'User name or password incorrect',
-                                token:null
-                            })
+                            const responseToken = JSON.stringify({sucess: false,err: "username or password incorrect",token:null})
+                            res.send(responseToken);
                         }
                 });  
             }
