@@ -23,7 +23,7 @@ class Form extends React.Component {
                method: 'POST', 
                body: data
              }).then(response  => {
-               console.log(response.text)
+               console.log(response)
                
                 if (response.text  === false){
                   alert("Login Failed")

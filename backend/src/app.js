@@ -15,6 +15,7 @@ sql.connect(dbConfig, function (err) {
     if (err) console.log(err);
 
 });
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');
     res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization');

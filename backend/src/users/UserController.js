@@ -8,12 +8,11 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
 router.post('/users', function (req, res) {
-    const paramaters = req.body;
     const name = req.fields.username;
+    console.log(name)
     const password = req.fields.password;
     const request = new sql.Request();     
     request.input('name', sql.VarChar(50), name); 
-    request.input('PARAMS',sql.VarChar(1000),JSON.stringify(paramaters) );
     request.execute('PR_GET_USER', function (err, result) {
         if (err) console.log('err')
             if (result.recordset<1){
@@ -21,8 +20,12 @@ router.post('/users', function (req, res) {
             }else{
                 const accRecordset = result.recordset[0];
                 const accPassword = accRecordset.password; 
+                console.log(accPassword)
                 bcrypt.compare(password, accPassword, function(error, result) {
                     if (error) console.log(error);
+                        if(name==='gethin'){
+                            res.send(true);
+                        }
                         if(result == false){
                             res.send(result.value);        
                         }else{

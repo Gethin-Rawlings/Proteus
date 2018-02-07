@@ -1,18 +1,18 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+const express = require('express');
+const router = express.Router();
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
 
-var UserController = require('./users/UserController');
+const UserController = require('./users/UserController');
 router.all('/users',jsonParser, UserController); 
 
-var rounds = require('./commrounds/getOpenRounds');
+const rounds = require('./commrounds/getOpenRounds');
 router.all('/rounds',jsonParser, rounds);
 
-var briefs = require('./briefs/getbriefs');
+const briefs = require('./briefs/getbriefs');
 router.all('/briefs',jsonParser, briefs);
 
-var organisations = require('./organisations/getOrganisations');
+const organisations = require('./organisations/getOrganisations');
 router.all('/organisations',jsonParser, organisations);
 
 module.exports = router;
