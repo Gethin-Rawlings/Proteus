@@ -1,5 +1,6 @@
 import React from 'react';
 import "./form.css";
+import decode from 'jwt-decode';
 
 const urlForLogin = users => 'http://localhost:5000/users'
 
@@ -22,11 +23,12 @@ class Form extends React.Component {
              fetch(urlForLogin(this.props.users), { 
                method: 'POST', 
                body: data
-             }).then(response  => {
+             }).then(response  => { 
+               
                console.log(response)
                
                 if (response.text  === false){
-                  alert("Login Failed")
+                  console.log("Login Failed")
                 }
                 if (response.text === true){
                   console.log(response)

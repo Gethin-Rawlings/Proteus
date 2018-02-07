@@ -3,13 +3,14 @@ const bcrypt = require('bcrypt');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const formidable = require('express-formidable');
+const jwt = require('jsonwebtoken');
+const exjwt = require('express-jwt');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
 router.post('/users', function (req, res) {
     const name = req.fields.username;
-    console.log(name)
     const password = req.fields.password;
     const request = new sql.Request();     
     request.input('name', sql.VarChar(50), name); 
@@ -20,18 +21,17 @@ router.post('/users', function (req, res) {
             }else{
                 const accRecordset = result.recordset[0];
                 const accPassword = accRecordset.password; 
-                console.log(accPassword)
                 bcrypt.compare(password, accPassword, function(error, result) {
                     if (error) console.log(error);
                         if(result == true){
                             let token = jwt.sign({ id: '1', username: name }, 'keyboard cat 4 ever', { expiresIn: 129600 });
-                            res.json({
+                            res.send({
                                 sucess: true,
                                 err: null,
                                 token
                             });       
                         }else{
-                            res.json({
+                            res.send({
                                 sucess: false,
                                 err: 'User name or password incorrect',
                                 token:null
