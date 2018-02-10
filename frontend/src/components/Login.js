@@ -1,10 +1,8 @@
 import React from 'react';
 import "./Login.css";
-import decode from 'jwt-decode';
 
 const urlForLogin = users => 'http://localhost:5000/users'
-
-
+ 
 class Login extends React.Component {
     constructor(props) { 
             super(props); 
@@ -20,6 +18,7 @@ class Login extends React.Component {
           }
            handleSubmit(event) { 
             event.preventDefault(); 
+            const { history } = this.props;
             const data = new FormData(event.target);
              fetch(urlForLogin(this.props.users), { 
                method: 'POST', 
@@ -29,7 +28,7 @@ class Login extends React.Component {
                   console.log("Login Failed")
                 }
                 if (data.sucess === true){
-                  console.log(data.token)
+                  history.push("/Main");
                 }
              } ))      
            } 
