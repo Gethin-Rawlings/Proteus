@@ -28,11 +28,11 @@ class Login extends React.Component {
                 if (data.success  === false){
                   console.log("Login Failed")
                   history.push("/Main");
-                }
-                if (data.sucess === true){
-                  
+                };
+                if (data.success === true){
+                 
                   history.push("/Main");
-                }
+                };
              } ))      
            } 
            render() { 

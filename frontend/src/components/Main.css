@@ -36,5 +36,15 @@ li {
 }
 
 .logout{
-    justify-content: flex-end;
+    margin-right: auto;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: black;
+
 }
