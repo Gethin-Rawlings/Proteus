@@ -1,0 +1,40 @@
+.main {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  20px 1fr 40px;
+    grid-template-areas: 
+                          "nav nav nav nav nav nav nav nav nav nav nav nav"
+                          "main main main main main main main main main main main main"
+                          "footer footer footer footer footer footer footer footer footer footer footer footer ";
+    grid-row-gap: 50px;
+    min-height: 100vh;
+    background-color: #F1F8FD;
+  }
+
+  .main-nav{
+    display: flex; 
+    max-height: 100% ;
+    background-color: #33619D;
+    grid-area: nav;
+    color:white;
+    justify-content: flex-start;
+    align-content: space-between;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    min-width: 150px;
+}
+
+.logout{
+    justify-content: flex-end;
+}
