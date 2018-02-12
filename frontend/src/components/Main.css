@@ -2,7 +2,7 @@
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  20px 1fr 40px;
+    grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
                           "nav nav nav nav nav nav nav nav nav nav nav nav"
                           "main main main main main main main main main main main main"
@@ -12,9 +12,15 @@
     background-color: #F1F8FD;
   }
 
+  .App-logo{
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
   .main-nav{
     display: flex; 
     max-height: 100% ;
+    
     background-color: #33619D;
     grid-area: nav;
     color:white;
@@ -24,26 +30,24 @@
 
   ul {
     list-style-type: none;
+    padding-top: 10px;
     margin: 0;
     padding: 0;
 }
 
 li {
+    
     margin: 0;
-    padding: 0;
     display: block;
     min-width: 150px;
 }
-
 .logout{
     margin-right: auto;
 }
-
 a {
     color:white;
     text-decoration: none;
 }
-
 a:hover{
     background-color: black;
 
