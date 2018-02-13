@@ -1,24 +1,27 @@
 import React from 'react';
 import "./Main.css";
 import { Link } from 'react-router-dom'
-
+import logo from '../bbc_logo.png';
 
 
 class UserAdmin extends React.Component {
-    render() {
-             return ( 
+  render() {
+    return ( 
 
-              <div className = 'main'>
-              <ul className='main-nav'>
-                <li><Link to='/Main'>Home</Link></li>
-                <li><Link to='/ProgrammeSearch'>Programme Search</Link></li>
-                <li><Link to='/UserAdmin'>User Admin</Link></li>
-                <li className="logout"><Link to='/'>Logout</Link></li>
-              </ul>
-              <h1> So manage users time</h1>
-              </div>
-             ); 
-           } 
-         } 
+     <div className = 'main'>
+      <ul className='main-nav'>
+        <li><img src={logo} className="main-logo" alt="logo" /></li>
+        <li><Link to='/Main'>Home</Link></li>
+        <li><Link to='/ProgrammeSearch'>Search</Link></li>
+        <li><Link to='/UserAdmin'>User Admin</Link></li>
+        <li className="logout"><Link to='/'>Logout</Link></li>
+      </ul>
+        <section className="main-body">User Admin stuff to go here</section>
+        <footer className="App-footer">Copyright BBC 2001-2018  |  Proteus 5</footer>
+      </div>
+     
+    ); 
+  } 
+} 
 
   export default UserAdmin;

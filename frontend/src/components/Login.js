@@ -54,7 +54,7 @@ class Login extends React.Component {
                  <section className="browser"> Recomended browsers are Chrome, Safari or Firefox</section>
                </form> 
                </section>
-               <footer className="App-footer">Copyright BBC 2001-2018  |  Proteus 5</footer>
+              
                </div>
              ); 
            } 

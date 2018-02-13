@@ -12,9 +12,10 @@
     background-color: #F1F8FD;
   }
 
-  .App-logo{
-    padding-top: 20px;
+  .main-logo{
+    padding-top: 3px;
     padding-left: 10px;
+    grid-area: nav;
   }
 
   .main-nav{
@@ -39,7 +40,7 @@ li {
     
     margin: 0;
     display: block;
-    min-width: 150px;
+    
 }
 .logout{
     margin-right: auto;
@@ -47,8 +48,18 @@ li {
 a {
     color:white;
     text-decoration: none;
+    padding: 25px;
 }
 a:hover{
-    background-color: black;
+    background-color:  rgb(62, 51, 157);
 
+}
+
+.main-nav {
+    padding-top: 17px;
+}
+
+.main-body{
+
+    grid-area: main;
 }

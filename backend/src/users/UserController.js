@@ -17,8 +17,8 @@ router.post('/users', function (req, res) {
     request.input('username', sql.VarChar(50), username); 
     request.execute('PR_GET_USER', function (err, result) {
         if (err) console.log(err)
-            if (result.recordset<1){
-                res.send(result);
+            if (result.recordset[0] === undefined){
+                res.send("username or password incorrect");
             }else{
                 const accRecordset = result.recordset[0];
                 const accPassword = accRecordset.password; 
