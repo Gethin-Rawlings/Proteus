@@ -1,10 +1,10 @@
 import React from 'react';
-import "./Login.css";
-import decode from 'jwt-decode';
+import "./login.css";
+import logo from '../bbc_logo.png';
+import 'whatwg-fetch';
 
 const urlForLogin = users => 'http://localhost:5000/users'
-
-
+ 
 class Login extends React.Component {
     constructor(props) { 
             super(props); 
@@ -20,27 +20,42 @@ class Login extends React.Component {
           }
            handleSubmit(event) { 
             event.preventDefault(); 
+            const { history } = this.props;
             const data = new FormData(event.target);
              fetch(urlForLogin(this.props.users), { 
                method: 'POST', 
                body: data
              }).then(response => response.json().then(data => {
-                if (data.sucess  === false){
+                if (data.success  === false){
                   console.log("Login Failed")
-                }
-                if (data.sucess === true){
-                  console.log(data.token)
-                }
+                  history.push("/Main");
+                };
+                if (data.success === true){
+                 
+                  history.push("/Main");
+                };
              } ))      
            } 
            render() { 
              return ( 
+              <div className="App">
+              <section className='App-nav'>
+                <img src={logo} className="App-logo" alt="logo" />
+              </section>
+              <section className="App-headerside"></section>
+              <header className="App-header">
+                <section className="App-title">Welcome to Proteus</section>
+              </header>
+              <section className="App-intro">
                <form className='content' onSubmit={this.handleSubmit} id='login'> 
                     <input  name="username" className="username" type="text"  placeholder="username" value={this.state.username} onChange={this.handleChange}/> 
                     <input  name="password" className="password" type="password"  placeholder="password" value={this.state.password} onChange={this.handleChange}/> 
                     <button id="loginbutton" className="loginbutton">Login</button> 
                  <section className="browser"> Recomended browsers are Chrome, Safari or Firefox</section>
                </form> 
+               </section>
+              
+               </div>
              ); 
            } 
          } 

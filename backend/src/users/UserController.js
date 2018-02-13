@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const formidable = require('express-formidable');
 const jwt = require('jsonwebtoken');
 const exjwt = require('express-jwt');
+// import decode from 'jwt-decode';
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
@@ -15,10 +16,10 @@ router.post('/users', function (req, res) {
     const request = new sql.Request();     
     request.input('username', sql.VarChar(50), username); 
     request.execute('PR_GET_USER', function (err, result) {
-        if (err) console.log('err')
-            if (result.recordset<1){
-                const responseToken = JSON.stringify({sucess: false,err: "username or password incorrect",token:null})
-                res.send(responseToken);
+
+        if (err) console.log(err)
+            if (result.recordset[0] === undefined){
+                res.send("username or password incorrect");
             }else{
                 const accRecordset = result.recordset[0];
                 const accPassword = accRecordset.password; 
@@ -29,7 +30,7 @@ router.post('/users', function (req, res) {
                             const responseToken = JSON.stringify({sucess: true,err: null,token:token});
                             res.send(responseToken);       
                         }else{
-                            const responseToken = JSON.stringify({sucess: false,err: "username or password incorrect",token:null})
+                            const responseToken = JSON.stringify({success: false,err: "username or password incorrect",token:null})
                             res.send(responseToken);
                         }
                 });  

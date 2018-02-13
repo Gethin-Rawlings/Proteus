@@ -1,10 +1,12 @@
-var dbConfig = {
+const dbConfig = {
     development: {
        
         user: 'rest',
-        password: 'password',
-        server: 'GETHIN', 
-        database: 'Proteus'
+        password: 'Password',
+        server: 'Gethin', 
+        port: '64598',
+        database: 'Proteusdev',
+        
         
     },
     production: {
