@@ -27,7 +27,7 @@ router.post('/users', function (req, res) {
                     if (error) console.log(error);
                         if(result == true){
                             let token = jwt.sign({ id: '1', username: username }, 'keyboard cat 4 ever', { expiresIn: 129600 });
-                            const responseToken = JSON.stringify({sucess: true,err: null,token:token});
+                            const responseToken = JSON.stringify({success: true,err: null,token:token});
                             res.send(responseToken);       
                         }else{
                             const responseToken = JSON.stringify({success: false,err: "username or password incorrect",token:null})
