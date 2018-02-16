@@ -51,7 +51,7 @@ class Login extends React.Component {
                     <input  name="username" className="username" type="text"  placeholder="username" value={this.state.username} onChange={this.handleChange}/> 
                     <input  name="password" className="password" type="password"  placeholder="password" value={this.state.password} onChange={this.handleChange}/> 
                     <button id="loginbutton" className="loginbutton">Login</button> 
-                 <section className="browser"> Recomended browsers are Chrome, Safari or Firefox</section>
+                 <section className="browser">Recomended browsers are Chrome, Safari or Firefox</section>
                </form> 
                </section>
                <footer className="App-footer">Copyright BBC 2001-2018  |  Proteus 5</footer>

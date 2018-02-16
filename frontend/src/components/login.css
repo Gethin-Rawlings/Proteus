@@ -47,7 +47,6 @@
   font-size: .8em;
   text-align: left;
 }
-
 .content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
