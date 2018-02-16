@@ -11,7 +11,7 @@ class ProgrammeSearch extends React.Component {
               <div className="main">
                 <Header />
                 <Navbar />
-                <section className="main-body">Grumpy cat was ere</section>
+                <section className="main-body">Search screen here</section>
                 <Footer />
               </div>
               

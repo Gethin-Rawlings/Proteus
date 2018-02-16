@@ -2,10 +2,10 @@ const dbConfig = {
     development: {
        
         user: 'rest',
-        password: 'Password',
+        password: 'password',
         server: 'Gethin', 
-        port: '64598',
-        database: 'Proteusdev',
+        
+        database: 'Proteus',
         
         
     },
