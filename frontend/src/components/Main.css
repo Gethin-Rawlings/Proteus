@@ -1,41 +1,40 @@
 .main {
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
-                          "nav nav nav nav nav nav nav nav nav nav nav nav"
-                          "main main main main main main main main main main main main"
-                          "footer footer footer footer footer footer footer footer footer footer footer footer ";
+                          "logo nav"
+                          "main main"
+                          "footer footer";
     grid-row-gap: 50px;
     min-height: 100vh;
     background-color: #F1F8FD;
   }
-
   .main-logo{
-    padding-top: 3px;
-    padding-left: 10px;
-    grid-area: nav;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 8px;
+    grid-area: logo;
+    background-color: #33619D;
+    max-height: 100% ;
   }
-
   .main-nav{
     display: flex; 
     max-height: 100% ;
-    
+    padding-top: 20px;
     background-color: #33619D;
     grid-area: nav;
     color:white;
     justify-content: flex-start;
-    align-content: space-between;
+   
   }
-
   ul {
     list-style-type: none;
     padding-top: 10px;
     margin: 0;
     padding: 0;
 }
-
 li {
     
     margin: 0;
@@ -43,23 +42,26 @@ li {
     
 }
 .logout{
-    margin-right: auto;
+    justify-self: flex-end;
 }
 a {
     color:white;
     text-decoration: none;
-    padding: 25px;
+    padding: 23px;
 }
 a:hover{
     background-color:  rgb(62, 51, 157);
-
 }
-
-.main-nav {
-    padding-top: 17px;
-}
-
 .main-body{
-
     grid-area: main;
 }
+.main-footer{
+    display: flex;
+    padding-top: 12px;
+    padding-left: 10px;
+    background-color: #33619D;
+    color: white;
+    grid-area: footer;
+    font-size: .8em;
+    text-align: left;
+  }

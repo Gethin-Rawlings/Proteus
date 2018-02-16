@@ -5,7 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 
 
-class Main extends React.Component {
+class ProgrammeSearch extends React.Component {
     render() {
              return ( 
               <div className="main">
@@ -19,6 +19,4 @@ class Main extends React.Component {
            } 
          } 
 
-  export default Main;
-
- 
+  export default ProgrammeSearch;
