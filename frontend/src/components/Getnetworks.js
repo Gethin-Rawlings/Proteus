@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 const urlForNetworks  = network => 'http://localhost:5000/organisations?type=network'
 
-class Getnetworks extends Component {
+class GetNetworks extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -45,5 +45,5 @@ class Getnetworks extends Component {
            } 
          } 
          
-        export default Getnetworks; 
+        export default GetNetworks; 
         
