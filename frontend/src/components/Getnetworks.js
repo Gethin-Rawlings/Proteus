@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = network => 'http://localhost:5000/organisations?type=open'
+const urlForNetworks  = network => "http://localhost:5000/organisations?networks";
 
 class Getnetworks extends Component {
     constructor(props){
@@ -9,8 +9,23 @@ class Getnetworks extends Component {
         this.state = {
             requestFailed: false
         }
+        console.log(props)
+      if (props.type === "networks"){
+        const urlForNetworks  = network => "http://localhost:5000/organisations?networks";
+      }; 
+     if (props.type === "indie"){
+      const urlForNetworks  = network => 'http://localhost:5000/organisations?indie';
+     }
+     if (props.type === "open"){
+      const urlForNetworks  = network => 'http://localhost:5000/organisations?open';
+     }
+     if (props.type === "production"){
+      const urlForNetworks  = network => 'http://localhost:5000/organisations?production';
+     }
+          
     }
-    componentDidMount() { 
+    componentDidMount(props) { 
+      
         fetch(urlForNetworks(this.props.network)) 
         .then(response => { 
             if (!response.ok) { 

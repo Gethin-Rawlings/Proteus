@@ -3,9 +3,9 @@ const dbConfig = {
        
         user: 'rest',
         password: 'password',
-        server: 'Gethin', 
-        
-        database: 'Proteus',
+        server: 'BBCDBMSR163', 
+        port: '64598',
+        database: 'Proteusdev',
         
         
     },
