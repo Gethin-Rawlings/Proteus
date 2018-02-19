@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = network => 'http://localhost:5000/organisations?type=network'
+const urlForNetworks  = network => 'http://localhost:5000/organisations?type=indie'
 
-class Getnetworks extends Component {
+class GetIndies extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -45,5 +45,5 @@ class Getnetworks extends Component {
            } 
          } 
          
-        export default Getnetworks; 
+        export default GetIndies; 
         

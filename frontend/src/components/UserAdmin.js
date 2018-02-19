@@ -4,15 +4,13 @@ import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
 import Getnetworks from "./Getnetworks"
-
-      const networks = "networks";
-      const prod = "production";
-      const indie = "indie" ;
+import GetProductionDepts from "./GetProductionDepts"
+import GetIndies from "./GetIndies"
+import GetOpenRounds from "./GetOpenRounds"
 
 class UserAdmin extends React.Component {
     constructor(props){
-      super(props)
-      
+      super(props) 
     }
     render() {
              return ( 
@@ -24,15 +22,19 @@ class UserAdmin extends React.Component {
                     <legend>User Admin</legend>
                     <p>
                       <label>Network</label>
-                      <Getnetworks type={networks}/>
+                      <Getnetworks />
                     </p>
                     <p>
                       <label>Production</label>
-                      <Getnetworks type={prod}/>
+                      <GetProductionDepts/>
                     </p>
                     <p>
                       <label>Indies</label>
-                      <Getnetworks type={indie}/>
+                      <GetIndies />
+                    </p>
+                    <p> 
+                      <label>Open Rounds</label>
+                      <GetOpenRounds />
                     </p>
                   </fieldset>
                 </form>
