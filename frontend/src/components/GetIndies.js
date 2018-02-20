@@ -4,12 +4,20 @@ import React, { Component } from 'react';
 const urlForNetworks  = network => 'http://localhost:5000/organisations?type=indie'
 
 class GetIndies extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            requestFailed: false
-        }
-    }
+  constructor(props){
+    super(props) 
+      this.state = {
+          requestFailed: false,
+          value: ''
+      }
+      this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+    this.setState({[name]: value});
+  }
     componentDidMount() { 
         fetch(urlForNetworks(this.props.network)) 
         .then(response => { 
@@ -22,7 +30,7 @@ class GetIndies extends Component {
                
                .then(d => { 
                  this.setState({ 
-                    Getnetworks: JSON.stringify(d)
+                    GetIndies: JSON.stringify(d)
                  }) 
                }, () => { 
                  this.setState({ 
@@ -34,12 +42,12 @@ class GetIndies extends Component {
 
             console.log(this.props)
              if (this.state.requestFailed) return <p>Failed!</p> 
-             if (!this.state.Getnetworks) return <p>Loading...</p> 
-             let returnData = JSON.parse(this.state.Getnetworks)
-             if (returnData.length === 0 ) return <select id = "Network"><option>No open rounds</option></select>
+             if (!this.state.GetIndies) return <p>Loading...</p> 
+             let returnData = JSON.parse(this.state.GetIndies)
+             if (returnData.length === 0 ) return <select id = "Indies"><option>No open rounds</option></select>
              return (
-                   <select id = "Network">
-                     {returnData.map(p => <option value={p.org_organisation_id}>{p.org_description}</option>)}
+                   <select id = "Indies">
+                      {returnData.map(p => <option name = "Indies" value={p.org_organisation_id} onChange={this.handleChange}>{p.org_description}</option>)}
                    </select>
              ) 
            } 
