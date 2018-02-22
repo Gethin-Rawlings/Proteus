@@ -10,8 +10,10 @@ const exjwt = require('express-jwt');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
-router.post('/login', function (req, res) {
-    const username = req.fields.username;
+router.post('/userAdmin', function (req, res) {
+    
+    
+    /*const username = req.fields.username;
     const password = req.fields.password;
     const request = new sql.Request();     
     request.input('username', sql.VarChar(50), username); 
@@ -35,7 +37,10 @@ router.post('/login', function (req, res) {
                         }
                 });  
             }
-        });
+        });*/
+
+        console.log(req.fields)
+        res.send('Hello')
     });
 
     

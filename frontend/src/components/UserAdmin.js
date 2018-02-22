@@ -1,13 +1,11 @@
 import React from 'react';
 import "./Main.css";
-import Navbar from "./Navbar"
-import Header from './Header'
-import Footer from './Footer'
-import GetNetworks from "./GetNetworks"
-import GetProductionDepts from "./GetProductionDepts"
-import GetIndies from "./GetIndies"
-import GetOpenRounds from "./GetOpenRounds"
-
+import Navbar from "./Navbar";
+import Header from './Header';
+import Footer from './Footer';
+import GetNetworks from "./GetNetworks";
+import GetProductionDepts from "./GetProductionDepts";
+import GetIndies from "./GetIndies";
 
 const urlForUserAdmin = users => 'http://localhost:5000/userAdmin'
 
@@ -26,8 +24,10 @@ class UserAdmin extends React.Component {
   }
    handleSubmit(event) { 
     event.preventDefault(); 
+    
     const { history } = this.props;
     const data = new FormData(event.target);
+    console.log(data)
      fetch(urlForUserAdmin(this.props.users), { 
        method: 'POST', 
        body: data
@@ -55,9 +55,8 @@ class UserAdmin extends React.Component {
                       <GetProductionDepts/>
                       Indies
                       <GetIndies />                    
-                      Open Rounds
-                      <GetOpenRounds />
                   </fieldset>
+                  <button id="submit" className="submit">Submit</button> 
                 </form>
                 <Footer />
               </div>

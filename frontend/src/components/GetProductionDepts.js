@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = network => 'http://localhost:5000/organisations?type=production'
+const urlForNetworks  = proddepts => 'http://localhost:5000/organisations?type=production'
 
 class GetProductionDepts extends Component {       
   constructor(props){
@@ -17,8 +17,8 @@ class GetProductionDepts extends Component {
     const name = target.name;
     const value = target.value;
     this.setState({[name]: value});
-}    componentDidMount() { 
-        fetch(urlForNetworks(this.props.network)) 
+}    componentWillMount() { 
+        fetch(urlForNetworks(this.props.proddepts)) 
         .then(response => { 
             if (!response.ok) { 
                 throw Error("Network request failed") 
@@ -38,7 +38,6 @@ class GetProductionDepts extends Component {
                }) 
            } 
            render() { 
-
             console.log(this.props)
              if (this.state.requestFailed) return <p>Failed!</p> 
              if (!this.state.Getproddepts) return <p>Loading...</p> 

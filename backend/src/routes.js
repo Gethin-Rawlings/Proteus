@@ -15,4 +15,7 @@ router.all('/briefs',jsonParser, briefs);
 const organisations = require('./organisations/getOrganisations');
 router.all('/organisations',jsonParser, organisations);
 
+const userAdmin = require('./users/userAdmin');
+router.all('/userAdmin',jsonParser, userAdmin); 
+
 module.exports = router;
