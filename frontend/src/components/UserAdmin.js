@@ -50,7 +50,7 @@ class UserAdmin extends React.Component {
                   <fieldset>
                     <legend>User Admin</legend>                  
                       Network
-                      <GetNetworks />
+                      <GetNetworks onSelectNetworks={this.handleChange}/>
                       Production
                       <GetProductionDepts/>
                       Indies
