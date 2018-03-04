@@ -10,7 +10,7 @@ const exjwt = require('express-jwt');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
-router.post('/users', function (req, res) {
+router.post('/login', function (req, res) {
     const username = req.fields.username;
     const password = req.fields.password;
     const request = new sql.Request();     
@@ -37,20 +37,6 @@ router.post('/users', function (req, res) {
             }
         });
     });
- /*                   
-router.post('/users', function (req, res){
-    const name = req.body.name;
-    const password = req.body.password;
-    bcrypt.hash(password, 10, function(err, hash) {
-        const request = new sql.Request();
-        request.input('name', sql.constChar(50), name); 
-        request.input('password', sql.constChar(2000), hash);
-        request.execute('PR_POST_USER', function (error, result) {
-            if (err) console.log(error)
-                res.send(JSON.stringify(result.recordset));
-            });
-        });
-    });
-    */
+
     
 module.exports = router;
