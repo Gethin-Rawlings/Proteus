@@ -3,7 +3,7 @@ const dbConfig = {
        
         user: 'rest',
         password: 'password',
-        server: 'Gethin', 
+        server: 'GETHIN', 
         
         database: 'Proteus',
         
