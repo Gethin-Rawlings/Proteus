@@ -9,7 +9,7 @@ router.all('/login',jsonParser, login);
 const rounds = require('./commrounds/getOpenRounds');
 router.all('/rounds',jsonParser, rounds);
 
-const briefs = require('./briefs/getbriefs');
+const briefs = require('./briefs/getBriefs');
 router.all('/briefs',jsonParser, briefs);
 
 const organisations = require('./organisations/getOrganisations');
