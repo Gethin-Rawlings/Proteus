@@ -17,7 +17,10 @@ class GetNetworks extends Component {
       const name = target.name;
       const value = target.value;
       this.setState({[name]: value});
+      console.log(name)
+      console.log(value)
     }
+    
     componentDidMount() { 
         fetch(urlForNetworks(this.props.network)) 
         .then(response => { 
@@ -42,12 +45,12 @@ class GetNetworks extends Component {
              if (this.state.requestFailed) return <p>Failed!</p> 
              if (!this.state.Getnetworks) return <p>Loading...</p> 
              let returnData = JSON.parse(this.state.Getnetworks)
-             if (returnData.length === 0 ) return <select id = "Network"><option>No open rounds</option></select>
+             if (returnData.length === 0 ) return <select name = "network"><option>No open rounds</option></select>
              return (
-                   <select id = "Network">
-                     {returnData.map(p => <option name = "networkvalue" value={p.org_organisation_id} onChange={this.handleChange}>{p.org_description}</option>)}
+                   <select name = "network"  onChange={this.handleChange}>
+                     {returnData.map(p => <option  value={p.org_organisation_id}>{p.org_description}</option>)}
                    </select>
-             ) 
+             )  
            } 
          } 
          

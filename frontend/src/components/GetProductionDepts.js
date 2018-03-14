@@ -17,7 +17,9 @@ class GetProductionDepts extends Component {
     const name = target.name;
     const value = target.value;
     this.setState({[name]: value});
-}    componentWillMount() { 
+}    
+
+  componentDidMount() { 
         fetch(urlForNetworks(this.props.proddepts)) 
         .then(response => { 
             if (!response.ok) { 
@@ -37,8 +39,7 @@ class GetProductionDepts extends Component {
                  }) 
                }) 
            } 
-           render() { 
-            console.log(this.props)
+           render() {    
              if (this.state.requestFailed) return <p>Failed!</p> 
              if (!this.state.Getproddepts) return <p>Loading...</p> 
              let returnData = JSON.parse(this.state.Getproddepts)
