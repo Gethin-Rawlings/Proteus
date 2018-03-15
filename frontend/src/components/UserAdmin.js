@@ -12,7 +12,7 @@ const urlForUserAdmin = users => 'http://172.18.0.2:5000/userAdmin'
 class UserAdmin extends React.Component {
   constructor(props) { 
     super(props); 
-      this.state={network: '', proddepts:'', indies:''};
+      this.state={network: '', production:'', indie:''};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this); 
    } 
@@ -33,13 +33,7 @@ class UserAdmin extends React.Component {
        method: 'POST', 
        body: data
      }).then(response => response.json().then(data => {
-        if (data.success  === false){
-          console.log("Login Failed")
-          history.push("/main");
-        };
-        if (data.success === true){
-          history.push("/main");
-        };
+        console.log(data)
      } ))      
    } 
     render() {
@@ -53,9 +47,9 @@ class UserAdmin extends React.Component {
                       Network
                       <Getnetworks name ="network" network={this.handleChange}/>
                       Production
-                      <GetProductionDepts name="proddepts" proddepts={this.handleChange}/>
+                      <GetProductionDepts name="production" production={this.handleChange}/>
                       Indies
-                      <GetIndies name="Indies" indies={this.handleChange}/>                    
+                      <GetIndies name="indie" indies={this.handleChange}/>                    
                   </fieldset>
                   <button id="submit" className="submit">Search</button> 
                 </form>

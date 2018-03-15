@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = proddepts => 'http://172.18.0.2:5000/organisations?type=production'
+const urlForNetworks  = production => 'http://172.18.0.2:5000/organisations?type=production'
 
 class GetProductionDepts extends Component {       
   constructor(props){
@@ -20,7 +20,7 @@ class GetProductionDepts extends Component {
 }    
 
   componentDidMount() { 
-        fetch(urlForNetworks(this.props.proddepts)) 
+        fetch(urlForNetworks(this.props.production)) 
         .then(response => { 
             if (!response.ok) { 
                 throw Error("Network request failed") 
@@ -31,7 +31,7 @@ class GetProductionDepts extends Component {
                
                .then(d => { 
                  this.setState({ 
-                    Getproddepts: JSON.stringify(d)
+                    Getproduction: JSON.stringify(d)
                  }) 
                }, () => { 
                  this.setState({ 
@@ -41,11 +41,11 @@ class GetProductionDepts extends Component {
            } 
            render() {    
              if (this.state.requestFailed) return <p>Failed!</p> 
-             if (!this.state.Getproddepts) return <p>Loading...</p> 
-             let returnData = JSON.parse(this.state.Getproddepts)
+             if (!this.state.Getproduction) return <p>Loading...</p> 
+             let returnData = JSON.parse(this.state.Getproduction)
              return (
-                   <select name = "proddepts" onChange={this.handleChange}>
-                    <option disabled selected value> -- select an Production deptartment -- </option>
+                   <select name = "production" onChange={this.handleChange}>
+                    <option disabled selected value> -- select a Production deptartment -- </option>
                      {returnData.map(p => <option value={p.org_organisation_id} >{p.org_description}</option>)}
                    </select>
              ) 
