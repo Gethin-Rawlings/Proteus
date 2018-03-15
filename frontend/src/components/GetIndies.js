@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = Indies => 'http://localhost:5000/organisations?type=indie'
+const urlForNetworks  = Indies => 'http://172.18.0.2:5000/organisations?type=indie'
 
 class GetIndies extends Component {
   constructor(props){
@@ -42,10 +42,11 @@ class GetIndies extends Component {
              if (this.state.requestFailed) return <p>Failed!</p> 
              if (!this.state.GetIndies) return <p>Loading...</p> 
              let returnData = JSON.parse(this.state.GetIndies)
-             if (returnData.length === 0 ) return <select id = "Indies"><option>No open rounds</option></select>
+             if (returnData.length === 0 ) return <select name = "indies"><option>No open rounds</option></select>
              return (
-                   <select id = "Indies">
-                      {returnData.map(p => <option name = "Indies" value={p.org_organisation_id} onChange={this.handleChange}>{p.org_description}</option>)}
+                   <select name = "indies"  onChange={this.handleChange}>
+                    <option disabled selected value> -- select an Indie -- </option>
+                      {returnData.map(p => <option value={p.org_organisation_id}>{p.org_description}</option>)}
                    </select>
              ) 
            } 

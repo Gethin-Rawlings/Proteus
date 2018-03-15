@@ -7,12 +7,12 @@ import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 
-const urlForUserAdmin = users => 'http://localhost:5000/userAdmin'
+const urlForUserAdmin = users => 'http://172.18.0.2:5000/userAdmin'
 
 class UserAdmin extends React.Component {
   constructor(props) { 
     super(props); 
-      this.state={Network: ''};
+      this.state={network: '', proddepts:'', indies:''};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this); 
    } 
@@ -21,15 +21,14 @@ class UserAdmin extends React.Component {
     const target = event.target;
     const name = target.name;
     const value = target.value;
-    console.log(value)
     this.setState({[name]: value});
   }
    handleSubmit(event) { 
     event.preventDefault(); 
-    console.log('heelo')
+    
     const { history } = this.props;
     const data = new FormData(event.target);
-    
+    console.log(data)
      fetch(urlForUserAdmin(this.props.users), { 
        method: 'POST', 
        body: data
@@ -48,17 +47,17 @@ class UserAdmin extends React.Component {
               <div className="main">
                 <Header />
                 <Navbar />
-                <form>
+                <form onSubmit={this.handleSubmit} id='userAdmin'>
                   <fieldset>
                     <legend>User Admin</legend>                  
-                      <div>Network</div>
-                      <Getnetworks name = "network" network={this.handleChange}/>
+                      Network
+                      <Getnetworks name ="network" network={this.handleChange}/>
                       Production
-                      <GetProductionDepts  onSelectProd={this.handleChange}/>
+                      <GetProductionDepts name="proddepts" proddepts={this.handleChange}/>
                       Indies
-                      <GetIndies />                    
+                      <GetIndies name="Indies" indies={this.handleChange}/>                    
                   </fieldset>
-                  <button id="submit" className="submit">Submit</button> 
+                  <button id="submit" className="submit">Search</button> 
                 </form>
                 <Footer />
               </div>

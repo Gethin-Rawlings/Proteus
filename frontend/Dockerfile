@@ -14,7 +14,6 @@ ENV NODE_JS_PORT=80
 
 RUN npm install
 
-RUN npm start
 
 
 
