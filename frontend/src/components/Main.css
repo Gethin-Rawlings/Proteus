@@ -1,12 +1,12 @@
 .main {
     text-align: center;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 100px 1fr 100px;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
-                          "logo nav"
-                          "main main"
-                          "footer footer";
+                          "logo nav nav"
+                          ". main ."
+                          "footer footer footer";
     grid-row-gap: 50px;
     min-height: 100vh;
     background-color: #F1F8FD;
@@ -65,3 +65,54 @@ a:hover{
     font-size: .8em;
     text-align: left;
   }
+
+  .App-intro{
+    grid-area: main;
+  }
+
+  .useradmin{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 140px 30px 1fr ;
+    grid-template-areas:    
+                            "search search search . . . . . . . . ."
+                            
+                            ". . . . .  . . . . . submit ."
+                            
+                            "results results results results results results results results results results results results"
+                            ;
+    grid-gap : 30px;
+  }
+
+  .form{
+      grid-area: search;
+  }
+  .submit{
+      grid-area: submit;
+  }
+  .results{
+    grid-area: results;
+}
+.displayusers{
+    grid-area: results;
+}
+.networks{
+    padding: 5px;
+    text-align: left;
+    
+}
+.indies{
+    padding: 5px;
+    text-align: left;
+}
+.productions{
+    padding: 5px;
+    text-align: left;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+select{
+    width:400px;
+}

@@ -16,13 +16,12 @@ router.post('/useradmin', function (req, res) {
     const indie = req.fields.indie;
     const request = new sql.Request();     
     request.input('production', sql.Int, production); 
-    request.input('network', sql.Int, production)
-    request.input('indie', sql.Int, production)
+    request.input('network', sql.Int, network)
+    request.input('indie', sql.Int, indie)
     request.execute('PR_GET_USERS', function (err, result) {
 
-        if (err) console.log(err)
-            
-                res.send(result)  
+        if (err) console.log(err)    
+                res.send(result.recordset)  
             
         });
 
