@@ -82,7 +82,17 @@ a:hover{
                             ;
     grid-gap : 7px;
   }
-
+  .programmeSearch{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 30px  100px 1fr;
+    grid-template-areas:    
+                            "username  networks productions indies submit"
+                            ". . . . ."
+                            "results results results results results "
+                            ;
+    grid-gap : 7px;
+  }
   .form{
       grid-area: search;
   }

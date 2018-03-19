@@ -18,9 +18,10 @@ begin
 
     set nocount on
 
-   declare @firstname varchar(500)
-   declare @lastname varchar(500)
-   declare @space int
+    declare @firstname varchar(500)
+    declare @lastname varchar(500)
+    declare @space int
+    set @username = ltrim(rtrim(@username))
 
    if CHARINDEX(' ',@username) <> 0
     BEGIN   
@@ -47,7 +48,7 @@ begin
     or      ro.ORG_ORGANISATION_ID = @network
     OR      ro.ORG_ORGANISATION_ID = @indie
     OR      u.usr_name = @username
-    or      u.USR_FIRST_NAME like @firstname+'%'
+    or      (u.USR_FIRST_NAME like @firstname+'%' and @lastname is null) 
             
     OR      (
                 u.USR_FIRST_NAME = @firstname 

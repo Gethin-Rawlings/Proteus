@@ -23,8 +23,6 @@ class UserAdmin extends React.Component {
    } 
    componentDidMount(){
     const { history } = this.props;
-    console.log(loggedIn)
-    console.log('wibble')
       if(!loggedIn) {
         history.push("/");
         }
