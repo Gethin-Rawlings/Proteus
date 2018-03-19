@@ -4,8 +4,17 @@ import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
 
+const loggedIn = sessionStorage.getItem('loggedIn');
 
 class ProgrammeSearch extends React.Component {
+  componentDidMount(){ 
+    const { history } = this.props;
+    console.log(loggedIn)
+    console.log('wibble')
+      if(!loggedIn) {
+        history.push("/");
+        }
+      } 
     render() {
              return ( 
               <div className="main">

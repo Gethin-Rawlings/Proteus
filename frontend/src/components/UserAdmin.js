@@ -10,6 +10,8 @@ import Displayusers from "./Displayusers";
 import "./userAdmin.css";
 
 const urlForUserAdmin = users => 'http://172.18.0.2:5000/userAdmin'
+const loggedIn = sessionStorage.getItem('loggedIn');
+
 
 class UserAdmin extends React.Component {
   constructor(props) { 
@@ -17,7 +19,16 @@ class UserAdmin extends React.Component {
       this.state={network: '', production:'', indie:'',users:'[{"usr_name":"Waiting"}]'};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this); 
+      console.log(loggedIn)
    } 
+   componentDidMount(){
+    const { history } = this.props;
+    console.log(loggedIn)
+    console.log('wibble')
+      if(!loggedIn) {
+        history.push("/");
+        }
+      } 
    handleChange(event) {
      
     const target = event.target;

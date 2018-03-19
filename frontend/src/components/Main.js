@@ -4,13 +4,27 @@ import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
 
+const loggedIn = sessionStorage.getItem('loggedIn');
+
 class Main extends React.Component {
+
+  componentDidMount(){
+    
+    const { history } = this.props;
+    console.log(loggedIn)
+    console.log('wibble')
+      if(!loggedIn) {
+        history.push("/");
+        }
+      } 
+   
+
     render() {
              return ( 
               <div className="main">
                 <Header />
                 <Navbar />
-                <section className="main-body">Grumpy cat was ere</section>
+                <section className="main-body">Grumpy cat was ere {loggedIn} </section>
                 <Footer />
               </div>
               

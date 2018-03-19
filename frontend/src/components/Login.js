@@ -12,6 +12,7 @@ class Login extends React.Component {
               this.state={value: ''};
               this.handleChange = this.handleChange.bind(this);
               this.handleSubmit = this.handleSubmit.bind(this); 
+              sessionStorage.clear();
            } 
            handleChange(event) {
             const target = event.target;
@@ -32,6 +33,13 @@ class Login extends React.Component {
                   
                 };
                 if (data.success === true){
+                  sessionStorage.setItem('token',data.token);
+                  sessionStorage.setItem('loggedIn',data.success);
+                  sessionStorage.setItem('supplier',data.supplier)
+                  sessionStorage.setItem('network',data.network)
+                  sessionStorage.setItem('admin',data.admin)
+                  sessionStorage.setItem('finance',data.finance)
+                  sessionStorage.setItem('commission',data.commission)
                   history.push("/main");
                 };
              } ))      
