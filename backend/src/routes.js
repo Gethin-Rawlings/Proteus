@@ -18,4 +18,10 @@ router.all('/organisations',jsonParser, organisations);
 const userAdmin = require('./users/useradmin');
 router.all('/useradmin',jsonParser, userAdmin); 
 
+const programmesearch = require('./searches/programmesearch');
+router.all('/programmesearch',jsonParser, programmesearch); 
+
+const proposalsearch = require('./searches/proposalsearch');
+router.all('/proposalsearch',jsonParser, proposalsearch); 
+
 module.exports = router;

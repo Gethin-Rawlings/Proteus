@@ -73,32 +73,47 @@ a:hover{
 
   .useradmin{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 30px  100px 1fr;
     grid-template-areas:    
-                            "username  networks productions indies submit"
-                            ". . . . ."
-                            "results results results results results "
+                            "username  networks productions indies submit reset"
+                            ". . . . . ."
+                            "results results results results results results"
                             ;
     grid-gap : 7px;
   }
   .programmeSearch{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 30px  100px 1fr;
+    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px  25px 25px 1fr;
     grid-template-areas:    
-                            "username  networks productions indies submit"
-                            ". . . . ."
-                            "results results results results results "
+                            "username  . networks  . submit reset"
+                            "from . productions  . . ."
+                            "to . indies . . ."
+                            "results results results results results results"
                             ;
     grid-gap : 7px;
+    
   }
   .form{
       grid-area: search;
   }
   .submit{
       grid-area: submit;
+      
   }
+  .reset{
+    grid-area: reset;
+}
+.from{
+    grid-area: from;
+    
+}
+.to{
+    grid-area: to;
+    
+    height: 25px;
+}
   .results{
     grid-area: results;
 }

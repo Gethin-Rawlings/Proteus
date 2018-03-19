@@ -40,8 +40,6 @@ class Login extends React.Component {
                   sessionStorage.setItem('admin',data.admin)
                   sessionStorage.setItem('finance',data.finance)
                   sessionStorage.setItem('commission',data.commission)
-                  const wibble = sessionStorage.getItem('loggedIn');
-                  console.log(wibble)
                   history.push("/main");
                 };
              } ))      

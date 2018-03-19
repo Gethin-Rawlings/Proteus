@@ -10,8 +10,6 @@ import Displayusers from "./Displayusers";
 import "./userAdmin.css";
 
 const urlForUserAdmin = users => 'http://172.18.0.2:5000/userAdmin'
-const loggedIn = sessionStorage.getItem('loggedIn');
-
 
 class UserAdmin extends React.Component {
   constructor(props) { 
@@ -19,9 +17,9 @@ class UserAdmin extends React.Component {
       this.state={network: '', production:'', indie:'',users:'[{"usr_name":"Waiting"}]'};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this); 
-      console.log(loggedIn)
    } 
    componentDidMount(){
+    const loggedIn = sessionStorage.getItem('loggedIn');
     const { history } = this.props;
       if(!loggedIn) {
         history.push("/");
@@ -54,8 +52,11 @@ class UserAdmin extends React.Component {
                 <section className="App-intro">
                   <section className='useradmin'>
                     <form  onSubmit={this.handleSubmit} id='form'>
-                      <button id="submit" className="submit">Search</button> 
+                       
+                     
                     </form>
+                    <button id="submit" className="submit" form ="form">Search</button>
+                    <button id="reset" type="reset" className="reset" form="form">Reset</button>
                     <section className='networks'>                 
                       <Getnetworks  name="network" network={this.handleChange}/>
                     </section>

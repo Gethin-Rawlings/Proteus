@@ -48,11 +48,12 @@ begin
     or      ro.ORG_ORGANISATION_ID = @network
     OR      ro.ORG_ORGANISATION_ID = @indie
     OR      u.usr_name = @username
+/*
     or      (u.USR_FIRST_NAME like @firstname+'%' and @lastname is null) 
             
     OR      (
                 u.USR_FIRST_NAME = @firstname 
             AND u.USR_LAST_NAME like @lastname+'%'
             )
-	           
+*/	           
 end

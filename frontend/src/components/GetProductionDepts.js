@@ -45,7 +45,7 @@ class GetProductionDepts extends Component {
              let returnData = JSON.parse(this.state.Getproduction)
              return (
                    <select name = "production" form="form"  onChange={this.handleChange}>
-                    <option disabled selected value> -- select a Production deptartment -- </option>
+                    <option selected value={0}> -- select a Production deptartment -- </option>
                      {returnData.map(p => <option value={p.org_organisation_id} >{p.org_description}</option>)}
                    </select>
              ) 
