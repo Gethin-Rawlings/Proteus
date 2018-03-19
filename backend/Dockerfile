@@ -13,3 +13,8 @@ EXPOSE 5000
 ENV NODE_JS_PORT=5000
 
 RUN npm install
+
+RUN npm install nodemon -g
+
+RUN cd /app/src/
+

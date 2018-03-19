@@ -1,32 +1,37 @@
-/*    ==Scripting Parameters==
-
-    Source Server Version : SQL Server 2016 (13.0.4206)
-    Source Database Engine Edition : Microsoft SQL Server Express Edition
-    Source Database Engine Type : Standalone SQL Server
-
-    Target Server Version : SQL Server 2017
-    Target Database Engine Edition : Microsoft SQL Server Standard Edition
-    Target Database Engine Type : Standalone SQL Server
-*/
 
 USE [Proteustraining]
 GO
-/****** Object:  StoredProcedure [dbo].[PR_GET_USER]    Script Date: 01/01/2018 10:38:27 ******/
+drop PROCEDURE [dbo].[PR_GET_USERS]
+GO
+
 SET ANSI_NULLS ON
 GO
-SET QUOTED_IDENTIFIER ON
+SET QUOTED_IDENTIFIER ON        
 GO
 create PROCEDURE [dbo].[PR_GET_USERS]
     @production int =null,
     @network int =null,
-    @indie int =null
+    @indie int =null,
+    @username varchar(500)=null
 as
 begin
 
     set nocount on
 
-   -- insert into testing (testTime,prod,indie,network) values(getdate(),@production,@indie,@network)
-    
+   declare @firstname varchar(500)
+   declare @lastname varchar(500)
+   declare @space int
+
+   if CHARINDEX(' ',@username) <> 0
+    BEGIN   
+        set @space = CHARINDEX(' ',@username)
+        set @firstname = substring(@username,1,@space-1)
+        set @lastname = substring(@username,@space+1,len(@username)-@space)
+    END  
+    if CHARINDEX(' ',@username) = 0  
+    BEGIN
+        set @firstname = @username
+    END
 	select  distinct
             u.USR_NAME,
             u.USR_FIRST_NAME,
@@ -41,8 +46,12 @@ begin
     where   ro.ORG_ORGANISATION_ID = @production
     or      ro.ORG_ORGANISATION_ID = @network
     OR      ro.ORG_ORGANISATION_ID = @indie
-	
-	
-	--for JSON path, root('password')
-           
+    OR      u.usr_name = @username
+    or      u.USR_FIRST_NAME like @firstname+'%'
+            
+    OR      (
+                u.USR_FIRST_NAME = @firstname 
+            AND u.USR_LAST_NAME like @lastname+'%'
+            )
+	           
 end

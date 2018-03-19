@@ -29,7 +29,7 @@ class Login extends React.Component {
              }).then(response => response.json().then(data => {
                 if (data.success  === false){
                   console.log("Login Failed")
-                  history.push("/main");
+                  
                 };
                 if (data.success === true){
                   history.push("/main");

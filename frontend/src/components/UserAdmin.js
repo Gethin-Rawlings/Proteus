@@ -27,8 +27,6 @@ class UserAdmin extends React.Component {
   }
    handleSubmit(event) { 
     event.preventDefault(); 
-    
-    const { history } = this.props;
     const data = new FormData(event.target);
      fetch(urlForUserAdmin(this.props.users), { 
        method: 'POST', 
@@ -45,29 +43,22 @@ class UserAdmin extends React.Component {
                 <Header />
                 <Navbar />
                 <section className="App-intro">
-                <form className='useradmin' onSubmit={this.handleSubmit}>
-                  <section className="form">
-                    
-                      <section className='networks'>  
-                      <label for="network">Networks   </label>            
-                      
+                  <section className='useradmin'>
+                    <form  onSubmit={this.handleSubmit} id='form'>
+                      <button id="submit" className="submit">Search</button> 
+                    </form>
+                    <section className='networks'>                 
                       <Getnetworks  name="network" network={this.handleChange}/>
-                      </section>
-                      <section className='productions' name='productions'>
-                      <label for="Production">Production</label> 
-                      
-                      <GetProductionDepts name="production" production={this.handleChange}/>
-                      </section>
-                      <section className='indies' name="indies">
-                      <label for="Indie">Indies</label> 
-                      
-                      <GetIndies name="indie" indies={this.handleChange}/>   
-                      </section>                 
+                    </section>
+                    <section className='productions' name='productions'>   
+                      <GetProductionDepts name="production" className="production" production={this.handleChange}/>
+                    </section>
+                    <section className='indies' name="indies">
+                      <GetIndies name="indie" indies={this.handleChange}/>  
+                    </section>
+                    <input  name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
+                    <Displayusers className='results' name='results'users={this.state.users}/>
                   </section>
-                  <button id="submit" className="submit">Search</button> 
-                  <Displayusers className='results' name='results'users={this.state.users}/>
-                </form>
-                
                 </section>
                 <Footer />
               </div>

@@ -4,7 +4,6 @@ import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
 
-
 class Main extends React.Component {
     render() {
              return ( 

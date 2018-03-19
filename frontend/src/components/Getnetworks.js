@@ -44,7 +44,7 @@ class GetNetworks extends Component {
              if (!this.state.Getnetworks) return <p>Loading...</p> 
              let returnData = JSON.parse(this.state.Getnetworks)
              return (
-                   <select name = "network"  onChange={this.handleChange}>
+                   <select name = "network" form="form"  onChange={this.handleChange}>
                     <option disabled selected value> -- select a Network -- </option>
                      {returnData.map(p => <option  value={p.org_organisation_id}>{p.org_description}</option>)}
                    </select>

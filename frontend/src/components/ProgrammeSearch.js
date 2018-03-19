@@ -12,6 +12,7 @@ class ProgrammeSearch extends React.Component {
                 <Header />
                 <Navbar />
                 <section className="main-body">Search screen here</section>
+                <input type="datetime-local" name="datetime" id="datetime"></input>
                 <Footer />
               </div>
               

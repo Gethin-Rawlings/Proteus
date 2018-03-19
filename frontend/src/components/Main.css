@@ -1,7 +1,7 @@
 .main {
     text-align: center;
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 200px 1fr 100px;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
                           "logo nav nav"
@@ -50,7 +50,8 @@ a {
     padding: 23px;
 }
 a:hover{
-    background-color:  rgb(62, 51, 157);
+    background-color: lightgray;
+    color: black;
 }
 .main-body{
     grid-area: main;
@@ -72,16 +73,14 @@ a:hover{
 
   .useradmin{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 140px 30px 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 30px  100px 1fr;
     grid-template-areas:    
-                            "search search search . . . . . . . . ."
-                            
-                            ". . . . .  . . . . . submit ."
-                            
-                            "results results results results results results results results results results results results"
+                            "username  networks productions indies submit"
+                            ". . . . ."
+                            "results results results results results "
                             ;
-    grid-gap : 30px;
+    grid-gap : 7px;
   }
 
   .form{
@@ -97,22 +96,36 @@ a:hover{
     grid-area: results;
 }
 .networks{
-    padding: 5px;
     text-align: left;
-    
+    grid-area: networks;
+    height: 60px;
 }
 .indies{
-    padding: 5px;
     text-align: left;
+    grid-area: indies;
+    
 }
 .productions{
-    padding: 5px;
     text-align: left;
+    grid-area: productions;
 }
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    
 }
 select{
-    width:400px;
+    max-width:400px;
+    height: 29px;
+}
+
+.usersearch{
+    grid-area: username;
+    text-align: center;
+}
+option{
+    font-family: arial, sans-serif;
+}
+button{
+    height:29px;
 }
