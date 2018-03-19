@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = Indies => 'http://localhost:5000/organisations?type=indie'
+const urlForNetworks  = indie => 'http://172.18.0.2:5000/organisations?type=indie'
 
-class GetIndies extends Component {
+class Getindie extends Component {
   constructor(props){
     super(props) 
       this.state = {
@@ -19,7 +19,7 @@ class GetIndies extends Component {
     this.setState({[name]: value});
   }
     componentDidMount() { 
-        fetch(urlForNetworks(this.props.Indies)) 
+        fetch(urlForNetworks(this.props.indie)) 
         .then(response => { 
             if (!response.ok) { 
                 throw Error("Network request failed") 
@@ -30,7 +30,7 @@ class GetIndies extends Component {
                
                .then(d => { 
                  this.setState({ 
-                    GetIndies: JSON.stringify(d)
+                    Getindie: JSON.stringify(d)
                  }) 
                }, () => { 
                  this.setState({ 
@@ -40,16 +40,17 @@ class GetIndies extends Component {
            } 
            render() { 
              if (this.state.requestFailed) return <p>Failed!</p> 
-             if (!this.state.GetIndies) return <p>Loading...</p> 
-             let returnData = JSON.parse(this.state.GetIndies)
-             if (returnData.length === 0 ) return <select id = "Indies"><option>No open rounds</option></select>
+             if (!this.state.Getindie) return <p>Loading...</p> 
+             let returnData = JSON.parse(this.state.Getindie)
+             if (returnData.length === 0 ) return <select name = "indie"><option>No open rounds</option></select>
              return (
-                   <select id = "Indies">
-                      {returnData.map(p => <option name = "Indies" value={p.org_organisation_id} onChange={this.handleChange}>{p.org_description}</option>)}
+                   <select name = "indie" form="form"  onChange={this.handleChange}>
+                    <option selected value={0}> -- select a Indie -- </option>
+                      {returnData.map(p => <option value={p.org_organisation_id}>{p.org_description}</option>)}
                    </select>
              ) 
            } 
          } 
          
-        export default GetIndies; 
+        export default Getindie; 
         

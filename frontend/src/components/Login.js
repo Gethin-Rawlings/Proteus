@@ -5,13 +5,14 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Welcome from "./Welcome"
 
-const urlForLogin = users => 'http://localhost:5000/login'
+const urlForLogin = users => 'http://172.18.0.2:5000/login'
 class Login extends React.Component {
     constructor(props) { 
             super(props); 
               this.state={value: ''};
               this.handleChange = this.handleChange.bind(this);
               this.handleSubmit = this.handleSubmit.bind(this); 
+              
            } 
            handleChange(event) {
             const target = event.target;
@@ -29,9 +30,16 @@ class Login extends React.Component {
              }).then(response => response.json().then(data => {
                 if (data.success  === false){
                   console.log("Login Failed")
-                  history.push("/main");
+                  
                 };
                 if (data.success === true){
+                  sessionStorage.setItem('token',data.token);
+                  sessionStorage.setItem('loggedIn',data.success);
+                  sessionStorage.setItem('supplier',data.supplier)
+                  sessionStorage.setItem('network',data.network)
+                  sessionStorage.setItem('admin',data.admin)
+                  sessionStorage.setItem('finance',data.finance)
+                  sessionStorage.setItem('commission',data.commission)
                   history.push("/main");
                 };
              } ))      

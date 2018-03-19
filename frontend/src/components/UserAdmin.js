@@ -6,60 +6,70 @@ import Footer from './Footer';
 import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
+import Displayusers from "./Displayusers";
+import "./userAdmin.css";
 
-const urlForUserAdmin = users => 'http://localhost:5000/userAdmin'
+const urlForUserAdmin = users => 'http://172.18.0.2:5000/userAdmin'
 
 class UserAdmin extends React.Component {
   constructor(props) { 
     super(props); 
-      this.state={Network: ''};
+      this.state={network: '', production:'', indie:'',users:'[{"usr_name":"Waiting"}]'};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this); 
    } 
+   componentDidMount(){
+    const loggedIn = sessionStorage.getItem('loggedIn');
+    const { history } = this.props;
+      if(!loggedIn) {
+        history.push("/");
+        }
+      } 
    handleChange(event) {
      
     const target = event.target;
     const name = target.name;
     const value = target.value;
-    console.log(value)
     this.setState({[name]: value});
   }
    handleSubmit(event) { 
     event.preventDefault(); 
-    console.log('heelo')
-    const { history } = this.props;
     const data = new FormData(event.target);
-    
      fetch(urlForUserAdmin(this.props.users), { 
        method: 'POST', 
        body: data
-     }).then(response => response.json().then(data => {
-        if (data.success  === false){
-          console.log("Login Failed")
-          history.push("/main");
-        };
-        if (data.success === true){
-          history.push("/main");
-        };
-     } ))      
+     }).then(response => response.json().then(data => { 
+      this.setState({ 
+         users: JSON.stringify(data)
+      }) 
+    } ))      
    } 
     render() {
              return ( 
               <div className="main">
                 <Header />
                 <Navbar />
-                <form>
-                  <fieldset>
-                    <legend>User Admin</legend>                  
-                      <div>Network</div>
-                      <Getnetworks name = "network" network={this.handleChange}/>
-                      Production
-                      <GetProductionDepts  onSelectProd={this.handleChange}/>
-                      Indies
-                      <GetIndies />                    
-                  </fieldset>
-                  <button id="submit" className="submit">Submit</button> 
-                </form>
+                <section className="App-intro">
+                  <section className='useradmin'>
+                    <form  onSubmit={this.handleSubmit} id='form'>
+                       
+                     
+                    </form>
+                    <button id="submit" className="submit" form ="form">Search</button>
+                    <button id="reset" type="reset" className="reset" form="form">Reset</button>
+                    <section className='networks'>                 
+                      <Getnetworks  name="network" network={this.handleChange}/>
+                    </section>
+                    <section className='productions' name='productions'>   
+                      <GetProductionDepts name="production" className="production" production={this.handleChange}/>
+                    </section>
+                    <section className='indies' name="indies">
+                      <GetIndies name="indie" indies={this.handleChange}/>  
+                    </section>
+                    <input  name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
+                    <Displayusers className='results' name='results'users={this.state.users}/>
+                  </section>
+                </section>
                 <Footer />
               </div>
               

@@ -6,8 +6,8 @@ import Main  from "./components/Main";
 import UserAdmin  from "./components/UserAdmin";
 import { Switch, Route } from 'react-router-dom'
 
-
 class App extends Component {
+  
   render() {
     return (
       <div  className="App-intro">       
