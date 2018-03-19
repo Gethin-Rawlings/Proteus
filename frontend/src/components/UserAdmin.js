@@ -52,8 +52,6 @@ class UserAdmin extends React.Component {
                 <section className="App-intro">
                   <section className='useradmin'>
                     <form  onSubmit={this.handleSubmit} id='form'>
-                       
-                     
                     </form>
                     <button id="submit" className="submit" form ="form">Search</button>
                     <button id="reset" type="reset" className="reset" form="form">Reset</button>
