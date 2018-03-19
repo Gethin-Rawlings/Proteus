@@ -11,8 +11,6 @@ class Main extends React.Component {
   componentDidMount(){
     
     const { history } = this.props;
-    console.log(loggedIn)
-    console.log('wibble')
       if(!loggedIn) {
         history.push("/");
         }
@@ -24,7 +22,7 @@ class Main extends React.Component {
               <div className="main">
                 <Header />
                 <Navbar />
-                <section className="main-body">Grumpy cat was ere {loggedIn} </section>
+                <section className="main-body">Grumpy cat was ere {loggedIn} wibble </section>
                 <Footer />
               </div>
               
