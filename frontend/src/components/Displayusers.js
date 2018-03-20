@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './displayusers.css'
-import {browserHistory,withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom"
 
 class Displayusers extends Component {       
   constructor(props) { 
@@ -10,7 +10,7 @@ class Displayusers extends Component {
    } 
    handleClick(event) {
     const value = event.target.id;
-    const history = this.props
+
     if (event){ 
       this.props.history.push({
           pathname: "/UserDetails",

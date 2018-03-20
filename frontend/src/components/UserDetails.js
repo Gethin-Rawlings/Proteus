@@ -19,7 +19,7 @@ class UserDetails extends React.Component {
         history.push("/");
         }
         fetch(urlForuserDetails(this.props.users)) 
-        .then(response => { 
+        .then(response => { console.log(response)
             if (!response.ok) { 
                 throw Error("Network request failed") 
             } 
@@ -30,6 +30,7 @@ class UserDetails extends React.Component {
                .then(d => { 
                  this.setState({ 
                     userDetails: JSON.stringify(d)
+                    
                  }) 
                }, () => { 
                  this.setState({ 
@@ -38,12 +39,13 @@ class UserDetails extends React.Component {
                })
       } 
     render() {
+      let returnData = JSON.parse(this.state.userDetails)
         return ( 
             <div className="main">
               <Header />
               <Navbar />
               <section className="App-intro">
-
+              {returnData}
               </section>
               <Footer />
             </div>              
