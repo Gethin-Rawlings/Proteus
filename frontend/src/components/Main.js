@@ -23,7 +23,7 @@ class Main extends React.Component {
               <div className="main">
                 <Header />
                 <Navbar />
-                <section className="main-body">Grumpy cat was ere </section>
+                <section className="main-body">Grumpy cat was ere again </section>
                 <Footer />
               </div>
               

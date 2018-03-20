@@ -8,9 +8,12 @@ import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 import Displayusers from "./Displayusers";
 
-const urlForprogrammeSearch = users => 'http://172.18.0.2:5000/programmesearch'
 
-class Programmesearch extends React.Component {
+const urlForproposalSearch = users => 'http://172.18.0.2:5000/proposalsearch'
+
+
+
+class Proposalsearch extends React.Component {
   constructor(props) { 
     super(props); 
       this.state={network: '', production:'', indie:'',users:'[{"usr_name":"Waiting"}]'};
@@ -35,7 +38,7 @@ class Programmesearch extends React.Component {
    handleSubmit(event) { 
     event.preventDefault(); 
     const data = new FormData(event.target);
-     fetch(urlForprogrammeSearch(this.props.users), { 
+     fetch(urlForproposalSearch(this.props.users), { 
        method: 'POST', 
        body: data
      }).then(response => response.json().then(data => { 
@@ -50,7 +53,7 @@ class Programmesearch extends React.Component {
                 <Header />
                 <Navbar />
                 <section className="App-intro">
-                  <section className='programmeSearch'>
+                  <section className='proposalSearch'>
                     <form  onSubmit={this.handleSubmit} id='form'>
                     </form>
                     <input className="from" type="date" name="fromdate" id="datetime" form ="form"></input>
@@ -68,12 +71,17 @@ class Programmesearch extends React.Component {
                     </section>
                     <input  name="username" className="usersearch" type="text" form="form" placeholder="Title" value={this.state.username} onChange={this.handleChange}/>
                     <Displayusers className='results' name='results'users={this.state.users}/>
+                    
                   </section>
+                  
+                  
                 </section>
+                wibble
                 <Footer />
-              </div>              
+              </div>
+              
              ); 
            } 
          } 
 
-  export default Programmesearch;
+  export default Proposalsearch;

@@ -1,21 +1,37 @@
 import React, { Component } from 'react';
 import './displayusers.css'
-class Displayusers extends Component {       
-    
-             render() {  
-                
-                let returnData = JSON.parse(this.props.users)
 
+class Displayusers extends Component {       
+  constructor(props) { 
+    super(props); 
+      this.state={user:'[{"usr_name":""}]'};
+      this.handleClick = this.handleClick.bind(this); 
+   } 
+   handleClick(event) {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+    this.setState({[name]: value});
+    console.log(event)
+    console.log(target)
+    console.log(name)
+    console.log(value)
+  }
+             render() {  
+                const returnData = JSON.parse(this.props.users)
                 return (
                      <table className='displayusers'>
+                      <tr>
                          <th>User Name</th>
                          <th>First Name</th>
                          <th>Last Name</th>
                          <th>Email Adress</th>
-                            {returnData.map(p => <tr><th>{p.USR_NAME}</th><th>{p.USR_FIRST_NAME}</th><th>{p.USR_LAST_NAME}</th><th>{p.USR_EMAIL_ADDRESS}</th></tr>)}
+                         <th>Edit/View</th>
+                      </tr>
+                            {returnData.map(p => <tr onClick={this.handleClick.bind(this)}><td>{p.USR_NAME}</td><td>{p.USR_FIRST_NAME}</td><td>{p.USR_LAST_NAME}</td><td>{p.USR_EMAIL_ADDRESS}</td></tr>)}
                      </table>
+
                ) 
              } 
            } 
-           
           export default Displayusers; 
