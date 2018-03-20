@@ -67,7 +67,7 @@ class Programmesearch extends React.Component {
                       <GetIndies name="indie" indies={this.handleChange}/>  
                     </section>
                     <input  name="username" className="usersearch" type="text" form="form" placeholder="Title" value={this.state.username} onChange={this.handleChange}/>
-                    <Displayusers className='results' name='results'users={this.state.users}/>
+                    <Displayusers className='results' name='results'users={this.state.users} history={this.history}/>
                   </section>
                 </section>
                 <Footer />

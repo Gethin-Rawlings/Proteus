@@ -18,7 +18,7 @@ class GetOpenRounds extends Component {
       const value = target.value;
       this.setState({[name]: value});
 }
-    componentDidMount() { 
+    componentDidMount() {
         fetch(urlForNetworks(this.props.network)) 
         .then(response => { 
             if (!response.ok) { 

@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import './displayusers.css'
+import {browserHistory,withRouter} from "react-router-dom"
 
 class Displayusers extends Component {       
   constructor(props) { 
     super(props); 
-      this.state={user:'[{"usr_name":""}]'};
+      this.state={user:'[{"USR_NAME":""}]', history:this.props.history};
       this.handleClick = this.handleClick.bind(this); 
    } 
    handleClick(event) {
-    const target = event.target;
-    const name = target.name;
-    const value = target.value;
-    this.setState({[name]: value});
-    console.log(event)
-    console.log(target)
-    console.log(name)
-    console.log(value)
+    const value = event.target.id;
+    const history = this.props
+    if (event){ 
+      this.props.history.push({
+          pathname: "/UserDetails",
+          state: { detail: value} 
+      });
+    }
   }
              render() {  
                 const returnData = JSON.parse(this.props.users)
@@ -27,11 +28,9 @@ class Displayusers extends Component {
                          <th>Last Name</th>
                          <th>Email Adress</th>
                       </tr>
-                      
-                            {returnData.map(p => <tr><td onClick={this.handleClick}>{p.USR_NAME}</td><td>{p.USR_FIRST_NAME}</td><td>{p.USR_LAST_NAME}</td><td>{p.USR_EMAIL_ADDRESS}</td></tr>)}
+                            {returnData.map(p => <tr onClick={this.handleClick}><td id={p.USR_NAME} >{p.USR_NAME}</td ><td id={p.USR_NAME}>{p.USR_FIRST_NAME}</td><td id={p.USR_NAME}>{p.USR_LAST_NAME}</td><td id={p.USR_NAME}>{p.USR_EMAIL_ADDRESS}</td></tr>)}
                      </table>
-
                ) 
              } 
            } 
-          export default Displayusers; 
+          export default withRouter(Displayusers); 

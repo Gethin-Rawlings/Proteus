@@ -18,6 +18,9 @@ router.all('/organisations',jsonParser, organisations);
 const userAdmin = require('./users/useradmin');
 router.all('/useradmin',jsonParser, userAdmin); 
 
+const userDetails = require('./users/userDetails');
+router.all('/userDetails',jsonParser, userDetails); 
+
 const programmesearch = require('./searches/programmesearch');
 router.all('/programmesearch',jsonParser, programmesearch); 
 
