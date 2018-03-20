@@ -13,8 +13,6 @@ begin
 
     set nocount on
 
-    insert into testing2 (user_name) values(@userName)
-    
 	select  USR_NAME,
             USR_FIRST_NAME,
             USR_LAST_NAME,
@@ -26,7 +24,7 @@ begin
             USR_PASSWORD_LAST_CHANGED,
             USR_INDIE_IND
 from        users 
-where       usr_name = 'rawlig01'
+where       usr_name = @userName
 	
 
            

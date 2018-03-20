@@ -120,6 +120,9 @@ a:hover{
 .displayusers{
     grid-area: results;
 }
+.displayprogrammes{
+    grid-area: results;
+}
 .networks{
     text-align: left;
     grid-area: networks;

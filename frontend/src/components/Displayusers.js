@@ -10,7 +10,6 @@ class Displayusers extends Component {
    } 
    handleClick(event) {
     const value = event.target.id;
-
     if (event){ 
       this.props.history.push({
           pathname: "/UserDetails",

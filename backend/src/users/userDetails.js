@@ -19,7 +19,7 @@ router.get('/userDetails', function (req, res){
     request.execute('PR_GET_USER_DETAILS', function (err, result) {
         
                 console.log(result.recordset)
-                res.send(JSON.stringify(result.recordset));
+                res.send(result.recordset[0]);
             
         }
     )});

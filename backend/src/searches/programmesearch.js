@@ -19,8 +19,8 @@ router.post('/programmesearch', function (req, res) {
     request.input('production', sql.Int, production); 
     request.input('network', sql.Int, network)
     request.input('indie', sql.Int, indie)
-    request.input('username', sql.VarChar(500), username)
-    request.execute('PR_GET_USERS', function (err, result) {
+    request.input('title', sql.VarChar(500), username)
+    request.execute('PR_GET_PROGRAMMES', function (err, result) {
 
         if (err) console.log(err)    
                 res.send(result.recordset)  
