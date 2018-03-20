@@ -26,9 +26,9 @@ class Displayusers extends Component {
                          <th>First Name</th>
                          <th>Last Name</th>
                          <th>Email Adress</th>
-                         <th>Edit/View</th>
                       </tr>
-                            {returnData.map(p => <tr onClick={this.handleClick.bind(this)}><td>{p.USR_NAME}</td><td>{p.USR_FIRST_NAME}</td><td>{p.USR_LAST_NAME}</td><td>{p.USR_EMAIL_ADDRESS}</td></tr>)}
+                      
+                            {returnData.map(p => <tr><td onClick={this.handleClick}>{p.USR_NAME}</td><td>{p.USR_FIRST_NAME}</td><td>{p.USR_LAST_NAME}</td><td>{p.USR_EMAIL_ADDRESS}</td></tr>)}
                      </table>
 
                ) 
