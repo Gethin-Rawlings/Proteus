@@ -18,7 +18,6 @@ router.get('/userDetails', function (req, res){
     request.input('username', sql.VarChar(50), username); 
     request.execute('PR_GET_USER_DETAILS', function (err, result) {
         
-                console.log(result.recordset)
                 res.send(result.recordset[0]);
             
         }
