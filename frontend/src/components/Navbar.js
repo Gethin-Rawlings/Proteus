@@ -5,31 +5,16 @@ import {Bootstrap, Grid, Row, Col, Nav, NavItem, NavDropdown, MenuItem} from 're
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
+
 class Navbar extends React.Component {
     render() {
              return ( 
-              <Navbar>
-              <Navbar.Header>
-                <Navbar.Brand>
-                  <a href="#home">React-Bootstrap</a>
-                </Navbar.Brand>
-              </Navbar.Header>
-              <Nav>
-                <NavItem eventKey={1} href="#">
-                  Link
-                </NavItem>
-                <NavItem eventKey={2} href="#">
-                  Link
-                </NavItem>
-                <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                  <MenuItem eventKey={3.1}>Action</MenuItem>
-                  <MenuItem eventKey={3.2}>Another action</MenuItem>
-                  <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey={3.4}>Separated link</MenuItem>
-                </NavDropdown>
-              </Nav>
-            </Navbar>
+              <ul className='main-nav'>
+              <li><Link to='/Main'>Home</Link></li>
+              <li><Link to='/ProgrammeSearch'>Search</Link></li>
+              <li><Link to='/UserAdmin'>User Admin</Link></li>
+              <li className="logout"><Link to='/'>Logout</Link></li>
+          </ul>
              ); 
            } 
          } 

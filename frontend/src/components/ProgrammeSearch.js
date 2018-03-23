@@ -1,12 +1,13 @@
 import React from 'react';
 import "./Main.css";
-import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
 import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 import Displayprogrammes from "./Displayprogrammes";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 const urlForprogrammeSearch = users => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/programmesearch'
 
@@ -47,8 +48,7 @@ class Programmesearch extends React.Component {
     render() {
              return ( 
               <div className="main">
-                
-                <Navbar />
+                <Header />               
                 <section className="App-intro">
                   <section className='programmeSearch'>
                     <form  onSubmit={this.handleSubmit} id='form'>

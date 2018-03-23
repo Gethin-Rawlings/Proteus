@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './displayusers.css'
 import {withRouter} from "react-router-dom"
+import { Table}  from 'react-bootstrap';
 
 class Displayprogrammes extends Component {       
   constructor(props) { 
@@ -20,17 +21,21 @@ class Displayprogrammes extends Component {
              render() {  
                 const returnData = JSON.parse(this.props.users)
                 return (
-                     <table className='displayprogrammes'>
-                      <tr>
-                         <th>Programme Number</th>
-                         <th>sequence</th>
-                         <th>Supplier</th>
-                         <th>Network</th>
-                         <th>Programme Title</th>
-                         <th>Duration</th>
-                         <th>scheduledTime</th>
-                      </tr>
-                            {returnData.map(p => <tr onClick={this.handleClick}>
+                  <div >
+                  <Table striped bordered condensed hover responsive>
+                  <thead>
+                    <tr>
+                      <th>Programme Number</th>
+                      <th>sequence</th>
+                      <th>Supplier</th>
+                      <th>Network</th>
+                      <th>Programme Title</th>
+                      <th>Duration</th>
+                      <th>scheduledTime</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {returnData.map(p => <tr onClick={this.handleClick}>
                                                     <td id={p.programmeNumber} >{p.programmeNumber}</td >
                                                     <td id={p.programmeNumber}>{p.sequence}</td>
                                                     <td id={p.programmeNumber}>{p.Supplier}</td>
@@ -38,8 +43,9 @@ class Displayprogrammes extends Component {
                                                     <td id={p.programmeNumber}>{p.ProgrammeTitle}</td>
                                                     <td id={p.programmeNumber}>{p.duration}</td>
                                                     <td id={p.programmeNumber}>{p.scheduledTime}</td>
-                                                </tr>)}
-                     </table>
+                                                </tr>)}</tbody>
+                </Table>
+                </div>
                ) 
              } 
            } 

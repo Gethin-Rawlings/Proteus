@@ -1,15 +1,12 @@
 import React from 'react';
 import "./Main.css";
-import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
 import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-
 class Main extends React.Component {
-
   componentDidMount(){
     const loggedIn = sessionStorage.getItem('loggedIn');
     console.log(loggedIn)
@@ -18,13 +15,10 @@ class Main extends React.Component {
         history.push("/");
         }
       } 
-   
-
     render() {
              return ( 
               <div className="main">
-                
-                <Navbar />
+                <Header />
                 <section className="main-body">Grumpy cat was ere again </section>
                 <Footer />
               </div>
@@ -32,7 +26,6 @@ class Main extends React.Component {
              ); 
            } 
          } 
-
   export default Main;
 
  

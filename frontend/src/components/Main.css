@@ -4,48 +4,14 @@
     grid-template-columns:  1fr ;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
-                          "nav"
+                          "."
                           "main"
                           "footer";
     grid-row-gap: 50px;
     min-height: 100vh;
+
     background-color: #F1F8FD;
   }
- 
-  .main-nav{
-    display: flex; 
-    max-height: 100% ;
-    padding-top: 20px;
-    background-color: #33619D;
-    grid-area: nav;
-    color:white;
-    justify-content: flex-start;
-   
-  }
-  ul {
-    list-style-type: none;
-    padding-top: 10px;
-    margin: 0;
-    padding: 0;
-}
-li {
-    
-    margin: 0;
-    display: block;
-    
-}
-.logout{
-    justify-self: flex-end;
-}
-a {
-    color:white;
-    text-decoration: none;
-    padding: 23px;
-}
-a:hover{
-    background-color: lightgray;
-    color: black;
-}
 .main-body{
     grid-area: main;
 }
@@ -53,100 +19,10 @@ a:hover{
     display: flex;
     padding-top: 12px;
     padding-left: 10px;
-    background-color: #33619D;
+    background-color: #333;
     color: white;
     grid-area: footer;
     font-size: .8em;
     text-align: left;
   }
 
-  .App-intro{
-    grid-area: main;
-  }
-
-  .useradmin{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px  100px 1fr;
-    grid-template-areas:    
-                            "username  networks productions indies submit reset"
-                            ". . . . . ."
-                            "results results results results results results"
-                            ;
-    grid-gap : 7px;
-  }
-  .programmeSearch{
-    display: grid;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px  25px 25px 1fr;
-    grid-template-areas:    
-                            "username  . networks  . submit reset"
-                            "from . productions  . . ."
-                            "to . indies . . ."
-                            "results results results results results results"
-                            ;
-    grid-gap : 7px;
-    
-  }
-  .form{
-      grid-area: search;
-  }
-  .submit{
-      grid-area: submit;
-      
-  }
-  .reset{
-    grid-area: reset;
-}
-.from{
-    grid-area: from;
-    
-}
-.to{
-    grid-area: to;
-    
-    height: 25px;
-}
-  .results{
-    grid-area: results;
-}
-.displayusers{
-    grid-area: results;
-}
-.displayprogrammes{
-    grid-area: results;
-}
-.networks{
-    text-align: left;
-    grid-area: networks;
-    height: 60px;
-}
-.indies{
-    text-align: left;
-    grid-area: indies;
-    
-}
-.productions{
-    text-align: left;
-    grid-area: productions;
-}
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    
-}
-select{
-    max-width:400px;
-    height: 29px;
-}
-
-.usersearch{
-    grid-area: username;
-    text-align: center;
-}
-option{
-    font-family: arial, sans-serif;
-}
-button{
-    height:29px;
-}

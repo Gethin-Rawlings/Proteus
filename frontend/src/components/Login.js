@@ -1,9 +1,10 @@
 import React from 'react';
 import "./login.css";
 import 'whatwg-fetch';
-
 import Footer from "./Footer"
 import Welcome from "./Welcome"
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 const urlForLogin = users => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/login'
 class Login extends React.Component {

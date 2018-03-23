@@ -1,10 +1,8 @@
 import React from 'react';
 import "./Main.css";
-import Navbar from "./Navbar";
 import Header from './Header';
 import Footer from './Footer';
-import "./userDetails.css"
-import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
+import {Bootstrap, Grid, Row, Col, Form, ControlLabel, FormControl, FormGroup} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
@@ -15,7 +13,6 @@ class UserDetails extends React.Component {
       requestFailed: false,
       value: ''
   }
-
    } 
    componentDidMount(){
     const loggedIn = sessionStorage.getItem('loggedIn');
@@ -34,11 +31,9 @@ class UserDetails extends React.Component {
                  return response 
                }) 
                .then(d => d.json()) 
-               
                .then(d => { 
                  this.setState({ 
                     userDetails: d
-                    
                  }) 
                }, () => { 
                  this.setState({ 
@@ -61,38 +56,88 @@ class UserDetails extends React.Component {
         const userIdIndie = returnData.USR_INDIE_IND
         return ( 
             <div className="main">
+              <Header />
               
-              <Navbar />
-              <section className="App-intro">
-                <section className='programmeSearch'>
                   <form id="userDetails">
+                  <Form horizontal>
+                  <Grid>
+                  <Row>
+                    <Col componentClass={ControlLabel} lg={2}>
+                      User Name
+                    </Col>
+                    <Col lg={2}>
+                      <FormControl type="text" value={userName} readonly/>
+                    </Col>
+                    <Col componentClass={ControlLabel} lg={2}>
+                      Indie
+                    </Col>
+                  <Col lg={2}>
+                    <FormControl type="text" placeholder="Email" value={userIdIndie}/>
+                  </Col>
+                  </Row><br />
+                  <Row>
+                    <Col componentClass={ControlLabel} lg={2}>
+                      First Name
+                    </Col>
+                    <Col lg={2}>
+                      <FormControl type="text" value={userFirstname} readonly/>
+                    </Col>
+                    <Col componentClass={ControlLabel} lg={2}>
+                      Last Name
+                    </Col>
+                    <Col lg={2}>
+                      <FormControl type="text" value={userLastname} readonly/>
+                    </Col>
+                  </Row><br />
+                  <Row>
+                  <Col componentClass={ControlLabel} lg={2}>
+                    Email
+                  </Col>
+                  <Col lg={2}>
+                    <FormControl type="email" placeholder="Email" value={userEmailAddress}/>
+                  </Col>
+                  <Col componentClass={ControlLabel} lg={2}>
+                  Mobile mumber
+                  </Col>
+                  <Col lg={2}>
+                    <FormControl type="text" placeholder="Mobile Number" value={userMobileNumber}/>
+                  </Col>
+                  </Row><br />
+                  <Row>
+                  <Col componentClass={ControlLabel} lg={2}>
+                  Account created
+                  </Col>
+                  <Col lg={2}>
+                    <FormControl type="text" placeholder="Email" value={accountCreationDate}/>
+                  </Col>
+                  <Col componentClass={ControlLabel} lg={2}>
+                  Account expired
+                  </Col>
+                  <Col lg={2}>
+                    <FormControl type="text" placeholder="Email" value={accountExpiryDate}/>
+                  </Col>
+                  </Row><br />
+                  <Row>
+                  <Col componentClass={ControlLabel} lg={2}>
+                  Password
+                  </Col>
+                  <Col lg={2}>
+                    <FormControl type="Password" value={userPassword}/>
+                  </Col>
+                  <Col componentClass={ControlLabel} lg={2}>
+                  Password changed
+                  </Col>
+                  <Col lg={2}>
+                    <FormControl type="text" value={passwordLastChanged} readonly/>
+                  </Col>
+                  </Row><br />
+                  </Grid>
+                  </Form> 
                   </form>
-                  <label for="username" className="userName">User Name</label>
-                  <input type="text" name="userName" form="userDetails" value={userName} readonly/>
-                  <label for="userFirstname" className="userFirstname">First Name</label>
-                  <input type="text" name="userFirstname" form="userDetails"  value={userFirstname} />
-                  <label for="userLastname" className="userLastname">Last Name</label>
-                  <input type="text" name="userLastname" form="userDetails"  value={userLastname} />
-                  <label for="userEmailAddress" className="userEmailAddress">Email address</label>
-                  <input type="email" name="userEmailAddress" form="userDetails"  value={userEmailAddress} />
-                  <label for="userMobileNumber" className="userMobileNumber">Mobile mumber</label> 
-                  <input type="text" name="userMobileNumber" form="userDetails"  value={userMobileNumber} />
-                  <label for="accountCreationDate" className="accountCreationDate">Account created on</label>
-                  <input type="text" form="userDetails"  name="accountCreationDate" value={accountCreationDate} readonly/>
-                  <label for="accountExpiryDate" className="accountExpiryDate">Account expired on</label>
-                  <input type="text" form="userDetails"  name="accountExpiryDate" value={accountExpiryDate} />
-                  <label for="userPassword" className="userPassword">Password</label>
-                  <input type="password" name="userPassword" form="userDetails"  value={userPassword} />
-                  <label for="passwordLastChanged" className="passwordLastChanged">Password last changed</label>
-                  <input type="text" form="userDetails"  name="passwordLastChanged" value={passwordLastChanged} readonly/>
-                  <label for="userIdIndie" className="userIdIndie">Indie</label>
-                  <input type="text" name="userIdIndie" form="userDetails"  value={userIdIndie} />
-                </section>
-              </section>
+             
               <Footer />
-            </div>              
+            </div>                   
            ); 
          } 
        } 
-
   export default UserDetails;

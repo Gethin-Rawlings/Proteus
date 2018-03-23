@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-
+import Proposalsearch from "./components/Proposalsearch"
 import ProgrammeSearch from "./components/ProgrammeSearch";
 import Login from "./components/Login";
 import Main  from "./components/Main";
 import UserAdmin  from "./components/UserAdmin";
 import UserDetails from "./components/UserDetails"
 import { Switch, Route, BrowserRouter} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 class App extends Component {
@@ -19,6 +21,7 @@ class App extends Component {
           <Route path ='/main' component={Main}/>
           <Route path ='/UserAdmin' component={UserAdmin}/>
           <Route path ='/ProgrammeSearch' component={ProgrammeSearch}/>
+          <Route path ='/Proposalsearch' component={Proposalsearch}/>
           <Route path ='/UserDetails' component={UserDetails}/>
         </Switch>  
         </BrowserRouter>        

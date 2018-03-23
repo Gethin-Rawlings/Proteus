@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './displayusers.css'
 import {withRouter} from "react-router-dom"
+import { Table}  from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 class Displayusers extends Component {       
   constructor(props) { 
@@ -20,15 +23,21 @@ class Displayusers extends Component {
              render() {  
                 const returnData = JSON.parse(this.props.users)
                 return (
-                     <table className='displayusers'>
-                      <tr>
+                    <div >
+                     <Table striped bordered condensed hover responsive>
+                     <thead>
+                       <tr>
                          <th>User Name</th>
                          <th>First Name</th>
                          <th>Last Name</th>
                          <th>Email Adress</th>
-                      </tr>
-                            {returnData.map(p => <tr onClick={this.handleClick}><td id={p.USR_NAME} >{p.USR_NAME}</td ><td id={p.USR_NAME}>{p.USR_FIRST_NAME}</td><td id={p.USR_NAME}>{p.USR_LAST_NAME}</td><td id={p.USR_NAME}>{p.USR_EMAIL_ADDRESS}</td></tr>)}
-                     </table>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       {returnData.map(p => <tr onClick={this.handleClick}><td id={p.USR_NAME} >{p.USR_NAME}</td ><td id={p.USR_NAME}>{p.USR_FIRST_NAME}</td><td id={p.USR_NAME}>{p.USR_LAST_NAME}</td><td id={p.USR_NAME}>{p.USR_EMAIL_ADDRESS}</td></tr>)}
+                     </tbody>
+                   </Table>
+                   </div>
                ) 
              } 
            } 
