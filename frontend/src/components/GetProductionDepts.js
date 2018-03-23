@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = production => 'http://172.18.0.2:5000/organisations?type=production'
+const urlForNetworks  = production => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/organisations?type=production'
 
 class GetProductionDepts extends Component {       
   constructor(props){

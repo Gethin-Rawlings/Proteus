@@ -9,7 +9,7 @@ import GetIndies from "./GetIndies";
 import Displayusers from "./Displayusers";
 import "./userAdmin.css";
 
-const urlForUserAdmin = users => 'http://172.18.0.2:5000/userAdmin'
+const urlForUserAdmin = users => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/userAdmin'
 
 class UserAdmin extends React.Component {
   constructor(props) { 

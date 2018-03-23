@@ -17,7 +17,7 @@ class UserDetails extends React.Component {
    componentDidMount(){
     const loggedIn = sessionStorage.getItem('loggedIn');
     const user =this.props.location.state.detail
-    const urlForuserDetails = users => 'http://172.18.0.2:5000/userDetails?user='+user
+    const urlForuserDetails = users => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/userDetails?user='+user
     console.log (urlForuserDetails)
     const { history } = this.props;
       if(!loggedIn) {

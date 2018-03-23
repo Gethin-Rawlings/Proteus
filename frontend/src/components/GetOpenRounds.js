@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = network => 'http://172.18.0.3:5000/organisations?type=open'
+const urlForNetworks  = network => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/organisations?type=open'
 
 class GetOpenRounds extends Component {
     constructor(props){

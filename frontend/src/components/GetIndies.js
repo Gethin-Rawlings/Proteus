@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const urlForNetworks  = indie => 'http://172.18.0.2:5000/organisations?type=indie'
+const urlForNetworks  = indie => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/organisations?type=indie'
 
 class Getindie extends Component {
   constructor(props){
