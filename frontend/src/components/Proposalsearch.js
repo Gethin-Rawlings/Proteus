@@ -50,7 +50,7 @@ class Proposalsearch extends React.Component {
     render() {
              return ( 
               <div className="main">
-                <Header />
+                
                 <Navbar />
                 <section className="App-intro">
                   <section className='proposalSearch'>

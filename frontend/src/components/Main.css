@@ -1,24 +1,17 @@
 .main {
     text-align: center;
     display: grid;
-    grid-template-columns: 200px 1fr 100px;
+    grid-template-columns:  1fr ;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
-                          "logo nav nav"
-                          ". main ."
-                          "footer footer footer";
+                          "nav"
+                          "main"
+                          "footer";
     grid-row-gap: 50px;
     min-height: 100vh;
     background-color: #F1F8FD;
   }
-  .main-logo{
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-bottom: 8px;
-    grid-area: logo;
-    background-color: #33619D;
-    max-height: 100% ;
-  }
+ 
   .main-nav{
     display: flex; 
     max-height: 100% ;

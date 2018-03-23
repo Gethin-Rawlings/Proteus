@@ -3,7 +3,9 @@ import "./Main.css";
 import Navbar from "./Navbar"
 import Header from './Header'
 import Footer from './Footer'
-
+import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 class Main extends React.Component {
@@ -21,7 +23,7 @@ class Main extends React.Component {
     render() {
              return ( 
               <div className="main">
-                <Header />
+                
                 <Navbar />
                 <section className="main-body">Grumpy cat was ere again </section>
                 <Footer />

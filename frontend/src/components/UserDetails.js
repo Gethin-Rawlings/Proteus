@@ -4,6 +4,9 @@ import Navbar from "./Navbar";
 import Header from './Header';
 import Footer from './Footer';
 import "./userDetails.css"
+import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 class UserDetails extends React.Component {
   constructor(props) { 
@@ -58,7 +61,7 @@ class UserDetails extends React.Component {
         const userIdIndie = returnData.USR_INDIE_IND
         return ( 
             <div className="main">
-              <Header />
+              
               <Navbar />
               <section className="App-intro">
                 <section className='programmeSearch'>
