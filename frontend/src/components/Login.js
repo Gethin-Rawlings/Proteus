@@ -3,6 +3,7 @@ import "./login.css";
 import 'whatwg-fetch';
 import Footer from "./Footer"
 import Welcome from "./Welcome"
+import { Form, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
@@ -30,8 +31,7 @@ class Login extends React.Component {
                body: data
              }).then(response => response.json().then(data => {
                 if (data.success  === false){
-                  console.log("Login Failed")
-                  
+                  console.log("Login Failed") 
                 };
                 if (data.success === true){
                   sessionStorage.setItem('token',data.token);
@@ -48,15 +48,29 @@ class Login extends React.Component {
            render() { 
              return ( 
               <div className="App">
-                <Welcome />
-                <section className="App-intro">
-                <form className='content' onSubmit={this.handleSubmit} id='login'> 
+                <Welcome /> 
+                <form  onSubmit={this.handleSubmit} id='login'> 
+                  <Form>
+                    <br />
+                    <br />
+                    <br />
                     <input  name="username" className="username" type="text"  placeholder="username" value={this.state.username} onChange={this.handleChange}/> 
+                    <br />
+                    <br />
                     <input  name="password" className="password" type="password"  placeholder="password" value={this.state.password} onChange={this.handleChange}/> 
-                    <button id="loginbutton" className="loginbutton">Login</button> 
-                 <section className="browser">Recomended browsers are Chrome, Safari or Firefox</section>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <Button type="submit" id="loginbutton" bsStyle="primary" className="loginbutton">Login</Button> 
+                    <br />
+                    <br />
+                    <br />
+                    <section className="browser">
+                      Recomended browsers are Chrome, Safari or Firefox
+                    </section>  
+                  </Form>
                 </form> 
-               </section>
                <Footer />
                </div>
              ); 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './displayusers.css'
 import {withRouter} from "react-router-dom"
-import { Table}  from 'react-bootstrap';
+import { Table }  from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
@@ -24,7 +23,7 @@ class Displayusers extends Component {
                 const returnData = JSON.parse(this.props.users)
                 return (
                     <div >
-                     <Table striped bordered condensed hover responsive>
+                     <Table striped bordered hover responsive  className='results' >
                      <thead>
                        <tr>
                          <th>User Name</th>

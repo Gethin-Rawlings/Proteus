@@ -1,28 +1,25 @@
 .main {
-    text-align: center;
-    display: grid;
-    grid-template-columns:  1fr ;
-    grid-template-rows:  60px 1fr 40px;
-    grid-template-areas: 
-                          "."
-                          "main"
-                          "footer";
-    grid-row-gap: 50px;
+    padding-top: 80px;
     min-height: 100vh;
-
     background-color: #F1F8FD;
   }
 .main-body{
     grid-area: main;
 }
 .main-footer{
-    display: flex;
-    padding-top: 12px;
-    padding-left: 10px;
-    background-color: #333;
     color: white;
-    grid-area: footer;
-    font-size: .8em;
     text-align: left;
   }
+.results{
+  padding-left: 10px;
+}
 
+.userAdminButtons{
+
+  padding-left: 198px;
+}
+
+
+.container-fluid {
+  background-color: green;
+}

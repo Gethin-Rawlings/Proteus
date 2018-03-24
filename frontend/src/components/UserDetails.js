@@ -57,84 +57,87 @@ class UserDetails extends React.Component {
         return ( 
             <div className="main">
               <Header />
-              
                   <form id="userDetails">
                   <Form horizontal>
-                  <Grid>
-                  <Row>
-                    <Col componentClass={ControlLabel} lg={2}>
-                      User Name
-                    </Col>
-                    <Col lg={2}>
-                      <FormControl type="text" value={userName} readonly/>
-                    </Col>
-                    <Col componentClass={ControlLabel} lg={2}>
-                      Indie
-                    </Col>
-                  <Col lg={2}>
-                    <FormControl type="text" placeholder="Email" value={userIdIndie}/>
-                  </Col>
-                  </Row><br />
-                  <Row>
-                    <Col componentClass={ControlLabel} lg={2}>
-                      First Name
-                    </Col>
-                    <Col lg={2}>
-                      <FormControl type="text" value={userFirstname} readonly/>
-                    </Col>
-                    <Col componentClass={ControlLabel} lg={2}>
-                      Last Name
-                    </Col>
-                    <Col lg={2}>
-                      <FormControl type="text" value={userLastname} readonly/>
-                    </Col>
-                  </Row><br />
-                  <Row>
-                  <Col componentClass={ControlLabel} lg={2}>
-                    Email
-                  </Col>
-                  <Col lg={2}>
-                    <FormControl type="email" placeholder="Email" value={userEmailAddress}/>
-                  </Col>
-                  <Col componentClass={ControlLabel} lg={2}>
-                  Mobile mumber
-                  </Col>
-                  <Col lg={2}>
-                    <FormControl type="text" placeholder="Mobile Number" value={userMobileNumber}/>
-                  </Col>
-                  </Row><br />
-                  <Row>
-                  <Col componentClass={ControlLabel} lg={2}>
-                  Account created
-                  </Col>
-                  <Col lg={2}>
-                    <FormControl type="text" placeholder="Email" value={accountCreationDate}/>
-                  </Col>
-                  <Col componentClass={ControlLabel} lg={2}>
-                  Account expired
-                  </Col>
-                  <Col lg={2}>
-                    <FormControl type="text" placeholder="Email" value={accountExpiryDate}/>
-                  </Col>
-                  </Row><br />
-                  <Row>
-                  <Col componentClass={ControlLabel} lg={2}>
-                  Password
-                  </Col>
-                  <Col lg={2}>
-                    <FormControl type="Password" value={userPassword}/>
-                  </Col>
-                  <Col componentClass={ControlLabel} lg={2}>
-                  Password changed
-                  </Col>
-                  <Col lg={2}>
-                    <FormControl type="text" value={passwordLastChanged} readonly/>
-                  </Col>
-                  </Row><br />
+                    <Grid>
+                    <Row>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        User Name
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" value={userName} readonly/>
+                      </Col>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Indie
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" placeholder="Email" value={userIdIndie}/>
+                      </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        First Name
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" value={userFirstname} readonly/>
+                      </Col>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Last Name
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" value={userLastname} readonly/>
+                      </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Email
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="email" placeholder="Email" value={userEmailAddress}/>
+                      </Col>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Mobile mumber
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" placeholder="Mobile Number" value={userMobileNumber}/>
+                      </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Account created
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" placeholder="Email" value={accountCreationDate}/>
+                      </Col>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Account expired
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" placeholder="Email" value={accountExpiryDate}/>
+                      </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Password
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="Password" value={userPassword}/>
+                      </Col>
+                      <Col componentClass={ControlLabel} lg={2}>
+                        Password changed
+                      </Col>
+                      <Col lg={2}>
+                        <FormControl type="text" value={passwordLastChanged} readonly/>
+                      </Col>
+                    </Row>
+                    <br />
                   </Grid>
-                  </Form> 
-                  </form>
-             
+                </Form> 
+              </form> 
               <Footer />
             </div>                   
            ); 

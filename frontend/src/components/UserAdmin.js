@@ -6,7 +6,7 @@ import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 import Displayusers from "./Displayusers";
-import {Grid, Row, Col, Form, ControlLabel, FormControl} from 'react-bootstrap';
+import {Grid, Row, Col, Form, ControlLabel, FormControl, Button, ButtonToolbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
@@ -47,10 +47,10 @@ class UserAdmin extends React.Component {
    } 
     render() {
              return ( 
-              <div className="main">
+              <div  className="main">
                 <Header />
-                <section className="App-intro">
-                <Grid>
+                <section>
+                <Grid className="wibble">
                 <Form horizontal>
                   <form  onSubmit={this.handleSubmit} id='form'>
                   <Row>
@@ -69,6 +69,8 @@ class UserAdmin extends React.Component {
                   <Col sm={3}>
                   <Getnetworks  name="network" network={this.handleChange}/> 
                   </Col>
+                  </Row><br />
+                  <Row>
                   <Col componentClass={ControlLabel} sm={2}>
                       Production Dept
                     </Col>
@@ -84,12 +86,14 @@ class UserAdmin extends React.Component {
                   <GetIndies name="indie" indies={this.handleChange}/>
                   </Col>
                   </Row><br />
-                  <button id="submit" className="submit" form ="form">Search</button>
-                  <button id="reset" type="reset" className="reset" form="form">Reset</button>
+                  <ButtonToolbar className="userAdminButtons">
+                    <Button id="submit" bsStyle="primary"  className="submit" type="submit" form ="form">Search</Button>
+                    <Button id="reset" bsStyle="danger"  type="reset" className="reset" form="form">Reset</Button>
+                  </ButtonToolbar><br />
                   </form>
                   </Form>
                   </Grid>
-                  <Displayusers className='results' name='results'users={this.state.users} history={this.history}/>
+                  <Displayusers name='results'users={this.state.users} history={this.history}/>
                 </section>
                 <Footer />
               </div>

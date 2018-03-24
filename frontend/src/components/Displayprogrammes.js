@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './displayusers.css'
 import {withRouter} from "react-router-dom"
 import { Table}  from 'react-bootstrap';
 

@@ -8,7 +8,7 @@ class Header extends React.Component {
     render() {
              return ( 
               <div>
-                <Navbar fixedTop fluid inverse>
+                <Navbar fixedTop fluid inverse className="prot-header">
                   <Nav>
                     <NavItem eventKey={1} href="/Main">
                       Home
