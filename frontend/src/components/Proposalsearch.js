@@ -3,7 +3,7 @@ import "./Main.css";
 import Header from './Header'
 import Footer from './Footer'
 import Getnetworks from "./Getnetworks";
-
+import {Grid, Row, Col, Form, ControlLabel, FormControl, Button, ButtonToolbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 

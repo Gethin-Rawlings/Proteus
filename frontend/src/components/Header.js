@@ -8,15 +8,15 @@ class Header extends React.Component {
     render() {
              return ( 
               <div>
-                <Navbar fixedTop fluid inverse className="prot-header">
+                <Navbar fixedTop fluid className="prot-header">
                   <Nav>
                     <NavItem eventKey={1} href="/Main">
-                      Home
+                      <span className="headerText">Home</span>
                     </NavItem>
                     <NavItem eventKey={2} href="/Useradmin">
-                      User admin
+                    <span className="headerText">User admin</span>
                     </NavItem>
-                    <NavDropdown eventKey={3} title="Search" id="basic-nav-dropdown">
+                    <NavDropdown eventKey={3} bsStyle="inverse" title="Search" id="basic-nav-dropdown">
                       <MenuItem eventKey={3.1} href="/Programmesearch">Programme search</MenuItem>
                       <MenuItem eventKey={3.2} href="/Proposalsearch">Proposal search</MenuItem>
                       <MenuItem divider />

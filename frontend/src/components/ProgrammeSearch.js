@@ -6,6 +6,7 @@ import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 import Displayprogrammes from "./Displayprogrammes";
+import {Grid, Row, Col, Form, ControlLabel, FormControl, Button, ButtonToolbar, InputGroup} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
@@ -47,31 +48,75 @@ class Programmesearch extends React.Component {
    } 
     render() {
              return ( 
-              <div className="main">
-                <Header />               
-                <section className="App-intro">
-                  <section className='programmeSearch'>
-                    <form  onSubmit={this.handleSubmit} id='form'>
-                    </form>
-                    <input className="from" type="date" name="fromdate" id="datetime" form ="form"></input>
-                    <input className="to" type="date" name="todate" id="datetime" form ="form"></input>
-                    <button id="submit" className="submit" form ="form">Search</button>
-                    <button id="reset" type="reset" className="reset" form="form">Reset</button>
-                    <section className='networks'>                 
-                      <Getnetworks  name="network" network={this.handleChange}/>
-                    </section>
-                    <section className='productions' name='productions'>   
-                      <GetProductionDepts name="production" className="production" production={this.handleChange}/>
-                    </section>
-                    <section className='indies' name="indies">
-                      <GetIndies name="indie" indies={this.handleChange}/>  
-                    </section>
-                    <input  name="username" className="usersearch" type="text" form="form" placeholder="Title" value={this.state.username} onChange={this.handleChange}/>
-                    <Displayprogrammes className='results' name='results'users={this.state.users} history={this.history}/>
-                  </section>
-                </section>
-                <Footer />
-              </div>              
+              <div  className="main">
+              <Header />
+              <section>
+              <Grid>
+              <Form horizontal>
+                <form  onSubmit={this.handleSubmit} id='form'>
+                <Row>
+                  <Col componentClass={ControlLabel} sm={2}>
+                    Title 
+                  </Col>
+                  <Col sm={2}>
+                    <FormControl type="text" value={this.state.username} onChange={this.handleChange}/>
+                  </Col>
+                  </Row><br />
+                  <Row>
+                  <Col componentClass={ControlLabel} sm={2}>
+                    Network
+                  </Col>
+                <Col sm={3}>
+                <Getnetworks  name="network" network={this.handleChange}/> 
+                </Col>
+                </Row><br />
+                <Row>
+                <Col componentClass={ControlLabel} sm={2}>
+                    Production Dept
+                  </Col>
+                <Col sm={2}>
+                <GetProductionDepts name="production" className="production" production={this.handleChange}/>
+                </Col>
+                </Row><br />
+                <Row>
+                <Col componentClass={ControlLabel} sm={2}>
+                    Indies
+                  </Col>
+                <Col sm={2}>
+                <GetIndies name="indie" indies={this.handleChange}/>
+                </Col>
+                </Row><br />
+                <Row>
+                  <Col componentClass={ControlLabel} sm={2}>
+                    From
+                  </Col>
+                  <Col sm={2}>
+              
+                  <input className="from" type="date" name="fromdate" id="datetime" form ="form"></input>
+                  </Col>
+                </Row><br />
+                <Row>
+                  <Col componentClass={ControlLabel} sm={2}>
+                    To
+                  </Col>
+                  <Col sm={2}>
+              
+                  <input className="to" type="date" name="todate" id="datetime" form ="form"></input>
+                  </Col>
+                </Row><br />
+                <ButtonToolbar className="userAdminButtons">
+                  <Button id="submit" bsStyle="primary"  className="submit" type="submit" form ="form">Search</Button>
+                  <Button id="reset" bsStyle="danger"  type="reset" className="reset" form="form">Reset</Button>
+                </ButtonToolbar><br />
+                
+                    
+                </form>
+                </Form>
+                </Grid>
+                <Displayprogrammes name='results'users={this.state.users} history={this.history}/>
+              </section>
+              <Footer />
+            </div>          
              ); 
            } 
          } 

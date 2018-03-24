@@ -21,7 +21,7 @@ class Displayprogrammes extends Component {
                 const returnData = JSON.parse(this.props.users)
                 return (
                   <div >
-                  <Table striped bordered condensed hover responsive>
+                  <Table striped bordered  hover responsive className='results'>
                   <thead>
                     <tr>
                       <th>Programme Number</th>

@@ -13,13 +13,24 @@
 .results{
   padding-left: 10px;
 }
-
 .userAdminButtons{
-
   padding-left: 198px;
 }
-
-
 .container-fluid {
-  background-color: green;
+  background-color: #33619D;
+}
+.headerText{
+  color: white !important;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white !important;
+  font-size: 1.1em;
+}
+.selectBox{
+  height: 30px;
+  width: 300px;
+}
+.results{
+   color: black;
+   font-size: 1.1em;
 }

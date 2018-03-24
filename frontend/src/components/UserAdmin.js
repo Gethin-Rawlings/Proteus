@@ -50,17 +50,22 @@ class UserAdmin extends React.Component {
               <div  className="main">
                 <Header />
                 <section>
-                <Grid className="wibble">
+                <Grid>
                 <Form horizontal>
                   <form  onSubmit={this.handleSubmit} id='form'>
                   <Row>
                     <Col componentClass={ControlLabel} sm={2}>
                       User Name
                     </Col>
-                    
-                    <Col sm={2}>
+                    <Col sm={3}>
                       <FormControl type="text" value={this.state.username} onChange={this.handleChange}/>
                     </Col>
+                    <Col componentClass={ControlLabel} sm={2}>
+                      Indies
+                    </Col>
+                  <Col sm={2}>
+                  <GetIndies name="indie" indies={this.handleChange}/>
+                  </Col>
                     </Row><br />
                     <Row>
                     <Col componentClass={ControlLabel} sm={2}>
@@ -69,8 +74,6 @@ class UserAdmin extends React.Component {
                   <Col sm={3}>
                   <Getnetworks  name="network" network={this.handleChange}/> 
                   </Col>
-                  </Row><br />
-                  <Row>
                   <Col componentClass={ControlLabel} sm={2}>
                       Production Dept
                     </Col>
@@ -79,12 +82,10 @@ class UserAdmin extends React.Component {
                   </Col>
                   </Row><br />
                   <Row>
-                  <Col componentClass={ControlLabel} sm={2}>
-                      Indies
-                    </Col>
-                  <Col lg={1}>
-                  <GetIndies name="indie" indies={this.handleChange}/>
-                  </Col>
+                  
+                  </Row><br />
+                  <Row>
+                  
                   </Row><br />
                   <ButtonToolbar className="userAdminButtons">
                     <Button id="submit" bsStyle="primary"  className="submit" type="submit" form ="form">Search</Button>

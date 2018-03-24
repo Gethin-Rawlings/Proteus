@@ -12,7 +12,7 @@
   background-color: #F1F8FD;
 }
 .App-header {
-  background-color: #333;
+  background-color: #33619D;;
   padding-top: 17px;
   grid-area: header;
   color: white; 
@@ -21,7 +21,7 @@
 .App-footer{
   padding-top: 12px;
   padding-left: 10px;
-  background-color: #333;
+  background-color: #33619D;
   color: white;
   grid-area: footer;
   font-size: .8em;
