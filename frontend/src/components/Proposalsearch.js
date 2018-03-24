@@ -3,10 +3,7 @@ import "./Main.css";
 import Header from './Header'
 import Footer from './Footer'
 import Getnetworks from "./Getnetworks";
-import GetProductionDepts from "./GetProductionDepts";
-import GetIndies from "./GetIndies";
-import Displayusers from "./Displayusers";
-import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
