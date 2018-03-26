@@ -27,10 +27,26 @@
   font-size: 1.1em;
 }
 .selectBox{
-
   width: 300px;
+  margin-top: 6px;
 }
 .results{
    color: black;
    font-size: 1.1em;
+   margin-right: 15px;
+   margin-left: 15px;
+
+}
+
+.userAdminText{
+  width: 300px;
+  max-height: 20px;
+  margin-top: 6px;
+}
+
+.userAdmin{
+  display: flex;
+  padding: 2px;
+  flex-flow: row wrap;
+  background-color:blue !important;
 }
