@@ -5,7 +5,7 @@
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
                           "logo nav nav"
-                          ". main ."
+                          "main main main"
                           "footer footer footer";
     grid-row-gap: 50px;
     min-height: 100vh;
@@ -26,23 +26,22 @@
     background-color: #33619D;
     grid-area: nav;
     color:white;
-    justify-content: flex-start;
+ 
    
   }
   ul {
     list-style-type: none;
-    padding-top: 10px;
     margin: 0;
     padding: 0;
 }
 li {
     
-    margin: 0;
+    margin: 2px;
     display: block;
     
 }
 .logout{
-    justify-self: flex-end;
+    margin-right: 1px;
 }
 a {
     color:white;
@@ -72,27 +71,15 @@ a:hover{
   }
 
   .useradmin{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px  100px 1fr;
-    grid-template-areas:    
-                            "username  networks productions indies submit reset"
-                            ". . . . . ."
-                            "results results results results results results"
-                            ;
-    grid-gap : 7px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    
   }
   .programmeSearch{
-    display: grid;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px  25px 25px 1fr;
-    grid-template-areas:    
-                            "username  . networks  . submit reset"
-                            "from . productions  . . ."
-                            "to . indies . . ."
-                            "results results results results results results"
-                            ;
-    grid-gap : 7px;
+    display: flex;
+    flex-wrap: wrap;
+    
     
   }
   .form{
@@ -125,35 +112,26 @@ a:hover{
 }
 .networks{
     text-align: left;
-    grid-area: networks;
-    height: 60px;
+    margin: auto; 
+
 }
 .indies{
     text-align: left;
-    grid-area: indies;
+    margin: auto; 
+    flex-basis: 100px;
+
     
 }
 .productions{
     text-align: left;
-    grid-area: productions;
-}
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    
-}
-select{
-    max-width:400px;
-    height: 29px;
+    margin: auto; 
 }
 
 .usersearch{
-    grid-area: username;
     text-align: center;
+    margin: auto; 
 }
 option{
     font-family: arial, sans-serif;
 }
-button{
-    height:29px;
-}
+
