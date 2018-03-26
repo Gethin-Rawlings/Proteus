@@ -49,51 +49,51 @@ class UserAdmin extends React.Component {
              return ( 
               <div className="main">
                 <Header />
-                <form  onSubmit={this.handleSubmit} id='form'>
-                </form>
-                <div classname="userAdmin">
-
-                    <div>
-                      User Name
-                    </div>
-                    <div>
-                      <input type="text" name = "username" classname="userAdminText" value={this.state.username} onChange={this.handleChange}/>
-                    </div>
-  
-                    <div>
+                <section>
+                <Grid bsClass="userAdmin">
+                <Form horizontal>
+                  <form  onSubmit={this.handleSubmit} id='form'>
+                  <Row >
+                    <Col componentClass={ControlLabel} sm={2}>
+                      <section classname="userAdminText"> User Name</section>
+                    </Col>
+                    <Col sm={3} >
+                      <FormControl bsClass="userAdminText" type="text" name = "username" bsSize="small"   value={this.state.username} onChange={this.handleChange}/>
+                    </Col>
+                    <Col componentClass={ControlLabel} sm={2}>
                       Indies
-                      </div>
-                    <div>
+                    </Col>
+                  <Col sm={2}>
                   <GetIndies name="indie" indies={this.handleChange}/>
-                  </div>
-                    <div>
+                  </Col>
+                    </Row>
+                    <Row>
+                    <Col componentClass={ControlLabel} sm={2}>
                       Network
-                      </div>
-                    <div>
+                    </Col>
+                  <Col sm={3}>
                   <Getnetworks  name="network" network={this.handleChange}/> 
-                  </div>
-                    <div>
+                  </Col>
+                  <Col componentClass={ControlLabel} sm={2}>
                       Production Dept
-                      </div>
-                    <div>
+                    </Col>
+                  <Col sm={2}>
                   <GetProductionDepts name="production" className="production" production={this.handleChange}/>
-                  </div>
-                    
-                    
+                  </Col>
+                  </Row><br />
+                  <Row>
+                    <Col sm={3} mdPush={1}>
                   <ButtonToolbar className="userAdminButtons">
-
                     <Button id="submit" bsStyle="primary"  className="submit" type="submit" form ="form">Search</Button>
-
-
                     <Button id="reset" bsStyle="danger"  type="reset" className="reset" form="form">Reset</Button>
-
                   </ButtonToolbar><br />
-                  
-
-      
-                  </div>
+                  </Col>
+                  </Row>
+                  </form>
+                  </Form>
+                  </Grid>
                   <Displayusers name='results' users={this.state.users} history={this.history}/>
- 
+                </section>
                 <Footer />
               </div>
               

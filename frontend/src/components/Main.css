@@ -45,8 +45,5 @@
 }
 
 .userAdmin{
-  display: flex;
   padding: 2px;
-  flex-flow: row wrap;
-  background-color:blue !important;
 }
