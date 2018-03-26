@@ -58,7 +58,7 @@ class UserAdmin extends React.Component {
                       User Name
                     </Col>
                     <Col sm={3}>
-                      <FormControl type="text" value={this.state.username} onChange={this.handleChange}/>
+                      <FormControl type="text" name = "username" bsSize="small"   value={this.state.username} onChange={this.handleChange}/>
                     </Col>
                     <Col componentClass={ControlLabel} sm={2}>
                       Indies

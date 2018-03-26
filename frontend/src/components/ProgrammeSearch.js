@@ -59,7 +59,7 @@ class Programmesearch extends React.Component {
                     Title 
                   </Col>
                   <Col sm={2}>
-                    <FormControl type="text" value={this.state.username} onChange={this.handleChange}/>
+                    <FormControl type="text" name="title" value={this.state.username} onChange={this.handleChange}/>
                   </Col>
                   </Row><br />
                   <Row>
