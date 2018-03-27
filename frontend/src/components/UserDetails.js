@@ -58,12 +58,11 @@ class UserDetails extends React.Component {
         const userIdIndie = returnData.USR_INDIE_IND
         return ( 
             <div className="main">
-              <Header />
               <Navbar />
               <section className="App-intro">
                 <section className='programmeSearch'>
-                  <form id="userDetails">
-                  </form>
+                  <form id="userDetails" className="userDetails">
+                  
                   <label for="username" className="userName">User Name</label>
                   <input type="text" name="userName" form="userDetails" value={userName} readonly/>
                   <label for="userFirstname" className="userFirstname">First Name</label>
@@ -84,6 +83,7 @@ class UserDetails extends React.Component {
                   <input type="text" form="userDetails"  name="passwordLastChanged" value={passwordLastChanged} readonly/>
                   <label for="userIdIndie" className="userIdIndie">Indie</label>
                   <input type="text" name="userIdIndie" form="userDetails"  value={userIdIndie} />
+                  </form>
                 </section>
               </section>
               <Footer />
