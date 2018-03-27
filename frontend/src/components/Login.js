@@ -47,8 +47,6 @@ class Login extends React.Component {
            render() { 
              return ( 
               <div className="App">
-                <Header />
-                <section className="App-headerside"></section>
                 <Welcome />
                 <section className="App-intro">
                 <form className='content' onSubmit={this.handleSubmit} id='login'> 

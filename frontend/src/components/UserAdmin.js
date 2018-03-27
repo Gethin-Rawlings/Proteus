@@ -47,15 +47,13 @@ class UserAdmin extends React.Component {
     render() {
              return ( 
               <div className="main">
-                <Header />
                 <Navbar />
-                <section className="App-intro">
-                  
-                    <form  onSubmit={this.handleSubmit} id='form'>
-                    </form>
+                <div className="App-intro">
+                  <form  onSubmit={this.handleSubmit} id='form'>
+                  </form>
                     <section className='useradmin'>
-                    <input  name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
-                    <section className='networks'>                 
+                      <input  name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
+                      <section className='networks'>                 
                       <Getnetworks  name="network" network={this.handleChange}/>
                     </section>
                     <section className='productions' name='productions'>   
@@ -66,15 +64,15 @@ class UserAdmin extends React.Component {
                     </section>
                     
                     </section>
-                    
+                    <br />
                     <button id="submit" className="submit" form ="form">Search</button>
                    
                     <button id="reset" className ="reset" type="reset" form="form">Reset</button>
-                    
+                    <div>
                     <Displayusers className='results' name='results'users={this.state.users} history={this.history}/>
-
+                    </div>
                   
-                </section>
+                </div>
                 <Footer />
               </div>
               

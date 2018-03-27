@@ -21,7 +21,6 @@ class Main extends React.Component {
     render() {
              return ( 
               <div className="main">
-                <Header />
                 <Navbar />
                 <section className="main-body">Grumpy cat was ere again </section>
                 <Footer />

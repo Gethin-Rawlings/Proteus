@@ -1,28 +1,21 @@
 .main {
     text-align: center;
     display: grid;
-    grid-template-columns: 200px 1fr 100px;
+    grid-template-columns: 1fr;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
-                          "logo nav nav"
-                          "main main main"
-                          "footer footer footer";
+                          "nav  "
+                          "main  "
+                          "footer  ";
     grid-row-gap: 50px;
     min-height: 100vh;
     background-color: #F1F8FD;
   }
-  .main-logo{
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-bottom: 8px;
-    grid-area: logo;
-    background-color: #33619D;
-    max-height: 100% ;
-  }
   .main-nav{
     display: flex; 
     max-height: 100% ;
-    padding-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 8px;
     background-color: #33619D;
     grid-area: nav;
     color:white;
@@ -41,7 +34,7 @@ li {
     
 }
 .logout{
-    margin-right: 1px;
+    margin-left: auto;
 }
 a {
     color:white;
@@ -49,8 +42,8 @@ a {
     padding: 23px;
 }
 a:hover{
-    background-color: lightgray;
-    color: black;
+
+    color: grey;
 }
 .main-body{
     grid-area: main;
@@ -73,7 +66,7 @@ a:hover{
   .useradmin{
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+
     
   }
   .programmeSearch{
@@ -113,18 +106,19 @@ a:hover{
 .networks{
     text-align: left;
     margin: auto; 
+    max-width: 200px;
+    
 
 }
 .indies{
     text-align: left;
     margin: auto; 
-    flex-basis: 100px;
-
-    
+    max-width: 200px;
 }
 .productions{
     text-align: left;
     margin: auto; 
+    max-width: 200px;
 }
 
 .usersearch{
@@ -135,3 +129,26 @@ option{
     font-family: arial, sans-serif;
 }
 
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-size: .8em;
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding:5px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

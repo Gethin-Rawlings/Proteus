@@ -2,12 +2,12 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 1fr;
   grid-template-rows:  60px 1fr 40px;
   grid-template-areas: 
-                        "logo header  headerside "
-                        ". main . "
-                        "footer footer footer ";
+                        "header   "
+                        " main  "
+                        "footer  ";
   grid-row-gap: 50px;
   min-height: 100vh;
   background-color: #F1F8FD;

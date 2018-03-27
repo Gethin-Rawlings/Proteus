@@ -8,9 +8,17 @@ class Navbar extends React.Component {
                <div >
                 <ul className='main-nav'>
                     <div><li><Link to='/Main'>Home</Link></li></div>
-                    <div><li><Link to='/ProgrammeSearch'>Search</Link></li></div>
                     <div><li><Link to='/UserAdmin'>User Admin</Link></li></div>
-                    <div><li className="logout"><Link to='/'>Logout</Link></li></div>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" className="dropbtn">Search</a>
+                        <div className="dropdown-content">
+                          <Link to='/ProgrammeSearch'>Programme</Link>
+                          <Link to='/ProposalSearch'>Proposal</Link>
+                          <Link to='/ClassicalSearch'>Classical music</Link>
+                          <Link to='/ContemporarySearch'>Contemporary music</Link>
+                      </div>
+                    </li>
+                    <div className="logout"><li ><Link to='/'>Logout</Link></li></div>
                 </ul>
                 </div>
              ); 
