@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar"
-import Header from './Header'
 import Footer from './Footer'
 import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
@@ -66,14 +65,19 @@ class Programmesearch extends React.Component {
                       <section className='indies' name="indies">
                         <GetIndies name="indie" indies={this.handleChange}/>  
                       </section>
+                      
+                    </section>
+                    <br />
+                    <section className="datePicker">
+                      <section>From</section>
                       <section className="from" >
                         <input type="date" name="fromdate" id="datetime" form ="form"></input>
                       </section>
+                      <section>To</section>
                       <section className="to" >
                         <input type="date" name="todate" id="datetime" form ="form"></input>
-                      </section>
                     </section>
-                    <br />
+                    </section>
                     <button id="submit" className="submit" form ="form">Search</button>
                     <button id="reset" type="reset" className="reset" form="form">Reset</button>
                     <Displayprogrammes className='results' name='results'users={this.state.users} history={this.history}/>

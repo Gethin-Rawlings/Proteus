@@ -1,7 +1,6 @@
 import React from 'react';
 import "./login.css";
 import 'whatwg-fetch';
-import Header from "./Header"
 import Footer from "./Footer"
 import Welcome from "./Welcome"
 
