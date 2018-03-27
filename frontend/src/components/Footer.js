@@ -8,11 +8,11 @@ class Footer extends React.Component {
     render() {
              return ( 
                 
-                 <Navbar fixedBottom fluid className="main-footer">
+                 <div className="main-footer">
                     <br />
                      <footer>Copyright GPR Consulting Ltd 2018  |  Proteus 5</footer>
                      <br />
-                     </Navbar>    
+                     </div>    
              ); 
            } 
          } 

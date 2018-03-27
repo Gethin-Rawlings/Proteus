@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 class Header extends React.Component {
     render() {
              return ( 
-              <div>
-                <Navbar fixedTop fluid className="prot-header">
+              <div className="header"> 
+                <Navbar fluid className="prot-header">
                   <Nav>
                     <NavItem eventKey={1} href="/Main">
                       <span className="headerText">Home</span>
@@ -16,7 +16,7 @@ class Header extends React.Component {
                     <NavItem eventKey={2} href="/Useradmin">
                     <span className="headerText">User admin</span>
                     </NavItem>
-                    <NavDropdown eventKey={3} bsStyle="inverse" title="Search" id="basic-nav-dropdown">
+                    <NavDropdown eventKey={3} inverse title="Search" id="basic-nav-dropdown">
                       <MenuItem eventKey={3.1} href="/Programmesearch">Programme search</MenuItem>
                       <MenuItem eventKey={3.2} href="/Proposalsearch">Proposal search</MenuItem>
                       <MenuItem divider />
