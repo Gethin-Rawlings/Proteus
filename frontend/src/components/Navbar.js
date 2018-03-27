@@ -10,7 +10,7 @@ class Navbar extends React.Component {
                     <div><li><Link to='/Main'>Home</Link></li></div>
                     <div><li><Link to='/UserAdmin'>User Admin</Link></li></div>
                     <li class="dropdown">
-                      <a href="javascript:void(0)" className="dropbtn">Search</a>
+                      <a className="dropbtn">Search</a>
                         <div className="dropdown-content">
                           <Link to='/ProgrammeSearch'>Programme</Link>
                           <Link to='/ProposalSearch'>Proposal</Link>
@@ -24,5 +24,4 @@ class Navbar extends React.Component {
              ); 
            } 
          } 
-
   export default Navbar;

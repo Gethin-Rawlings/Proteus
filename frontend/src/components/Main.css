@@ -1,5 +1,4 @@
 .main {
-    text-align: center;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:  60px 1fr 40px;
@@ -19,19 +18,15 @@
     background-color: #33619D;
     grid-area: nav;
     color:white;
- 
-   
   }
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-li {
-    
+li { 
     margin: 2px;
-    display: block;
-    
+    display: block;  
 }
 .logout{
     margin-left: auto;
@@ -42,7 +37,6 @@ a {
     padding: 23px;
 }
 a:hover{
-
     color: grey;
 }
 .main-body{
@@ -58,95 +52,72 @@ a:hover{
     font-size: .8em;
     text-align: left;
   }
-
   .App-intro{
     grid-area: main;
   }
-
   .useradmin{
     display: flex;
     flex-wrap: wrap;
-
-    
+    justify-content: flex-start;    
   }
   .programmeSearch{
     display: flex;
-    flex-wrap: wrap;
-    
-    
+    flex-wrap: wrap;  
   }
-  .form{
-      grid-area: search;
-  }
-  .submit{
-      grid-area: submit;
-      
-  }
-  .reset{
-    grid-area: reset;
-}
-.from{
-    grid-area: from;
-    
-}
-.to{
-    grid-area: to;
-    
-    height: 25px;
-}
-  .results{
-    grid-area: results;
-}
-.displayusers{
-    grid-area: results;
-}
-.displayprogrammes{
-    grid-area: results;
-}
 .networks{
     text-align: left;
-    margin: auto; 
-    max-width: 200px;
-    
-
-}
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 240px;
+    }
 .indies{
     text-align: left;
-    margin: auto; 
-    max-width: 200px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 240px;
 }
 .productions{
     text-align: left;
-    margin: auto; 
-    max-width: 200px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 240px;
 }
-
+.from{
+  text-align: center;
+  margin-left: 10px; 
+  margin-right: 10px; 
+  max-width: 240px;
+}
+.to{
+  text-align: center;
+  margin-left: 10px; 
+  margin-right: 10px; 
+  max-width: 240px;
+}
 .usersearch{
     text-align: center;
-    margin: auto; 
+    margin-left: 10px; 
+    margin-right: 10px;  
 }
 option{
     font-family: arial, sans-serif;
 }
-
-
 .dropdown-content {
+  border-radius: 5px;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   font-size: .8em;
-
 }
-
 .dropdown-content a {
   color: black;
   padding:5px;
   text-decoration: none;
   display: block;
   text-align: left;
+  border-radius: 5px;
 }
-
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {

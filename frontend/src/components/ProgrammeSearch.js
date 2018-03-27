@@ -50,25 +50,34 @@ class Programmesearch extends React.Component {
 
                 <Navbar />
                 <section className="App-intro">
-                  <section className='programmeSearch'>
+                  
                     <form  onSubmit={this.handleSubmit} id='form'>
                     </form>
-                    <input className="from" type="date" name="fromdate" id="datetime" form ="form"></input>
-                    <input className="to" type="date" name="todate" id="datetime" form ="form"></input>
+                    <section className='programmeSearch'>
+                      <section>
+                        <input  name="username" className="usersearch" type="text" form="form" placeholder="Title" value={this.state.username} onChange={this.handleChange}/>
+                      </section>
+                      <section className='networks'>                 
+                        <Getnetworks  name="network" network={this.handleChange}/>
+                      </section>
+                      <section className='productions' name='productions'>   
+                        <GetProductionDepts name="production" className="production" production={this.handleChange}/>
+                      </section>
+                      <section className='indies' name="indies">
+                        <GetIndies name="indie" indies={this.handleChange}/>  
+                      </section>
+                      <section className="from" >
+                        <input type="date" name="fromdate" id="datetime" form ="form"></input>
+                      </section>
+                      <section className="to" >
+                        <input type="date" name="todate" id="datetime" form ="form"></input>
+                      </section>
+                    </section>
+                    <br />
                     <button id="submit" className="submit" form ="form">Search</button>
                     <button id="reset" type="reset" className="reset" form="form">Reset</button>
-                    <section className='networks'>                 
-                      <Getnetworks  name="network" network={this.handleChange}/>
-                    </section>
-                    <section className='productions' name='productions'>   
-                      <GetProductionDepts name="production" className="production" production={this.handleChange}/>
-                    </section>
-                    <section className='indies' name="indies">
-                      <GetIndies name="indie" indies={this.handleChange}/>  
-                    </section>
-                    <input  name="username" className="usersearch" type="text" form="form" placeholder="Title" value={this.state.username} onChange={this.handleChange}/>
                     <Displayprogrammes className='results' name='results'users={this.state.users} history={this.history}/>
-                  </section>
+                  
                 </section>
                 <Footer />
               </div>              

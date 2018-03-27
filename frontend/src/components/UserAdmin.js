@@ -52,26 +52,25 @@ class UserAdmin extends React.Component {
                   <form  onSubmit={this.handleSubmit} id='form'>
                   </form>
                     <section className='useradmin'>
-                      <input  name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
-                      <section className='networks'>                 
-                      <Getnetworks  name="network" network={this.handleChange}/>
-                    </section>
-                    <section className='productions' name='productions'>   
-                      <GetProductionDepts name="production" className="production" production={this.handleChange}/>
-                    </section>
-                    <section className='indies' name="indies">
-                      <GetIndies name="indie" indies={this.handleChange}/>  
-                    </section>
-                    
+                      <section>
+                        <input  name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
+                      </section> 
+                      <section className='network'>                 
+                        <Getnetworks  name="network" network={this.handleChange}/>
+                      </section>
+                      <section className='production' name='productions'>   
+                        <GetProductionDepts name="production" className="production" production={this.handleChange}/>
+                      </section>
+                      <section className='indie' name="indies">
+                        <GetIndies name="indie" indies={this.handleChange}/>  
+                      </section>
                     </section>
                     <br />
                     <button id="submit" className="submit" form ="form">Search</button>
-                   
                     <button id="reset" className ="reset" type="reset" form="form">Reset</button>
                     <div>
-                    <Displayusers className='results' name='results'users={this.state.users} history={this.history}/>
+                      <Displayusers className='results' name='results'users={this.state.users} history={this.history}/>
                     </div>
-                  
                 </div>
                 <Footer />
               </div>
