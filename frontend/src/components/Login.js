@@ -1,7 +1,6 @@
 import React from 'react';
 import "./login.css";
 import 'whatwg-fetch';
-import Header from "./Header"
 import Footer from "./Footer"
 import Welcome from "./Welcome"
 
@@ -47,8 +46,6 @@ class Login extends React.Component {
            render() { 
              return ( 
               <div className="App">
-                <Header />
-                <section className="App-headerside"></section>
                 <Welcome />
                 <section className="App-intro">
                 <form className='content' onSubmit={this.handleSubmit} id='login'> 

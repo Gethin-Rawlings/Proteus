@@ -44,7 +44,7 @@ class Getindie extends Component {
              let returnData = JSON.parse(this.state.Getindie)
              if (returnData.length === 0 ) return <select name = "indie"><option>No open rounds</option></select>
              return (
-                   <select name = "indie" form="form"  onChange={this.handleChange}>
+                   <select className='indies' name = "indie" form="form"  onChange={this.handleChange}>
                     <option selected value={0}> -- select a Indie -- </option>
                       {returnData.map(p => <option value={p.org_organisation_id}>{p.org_description}</option>)}
                    </select>

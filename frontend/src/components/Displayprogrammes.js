@@ -20,7 +20,7 @@ class Displayprogrammes extends Component {
              render() {  
                 const returnData = JSON.parse(this.props.users)
                 return (
-                     <table className='displayprogrammes'>
+                     <table className='displayusers'>
                       <tr>
                          <th>Programme Number</th>
                          <th>sequence</th>

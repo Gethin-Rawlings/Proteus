@@ -1,48 +1,36 @@
 .main {
-    text-align: center;
     display: grid;
-    grid-template-columns: 200px 1fr 100px;
+    grid-template-columns: 1fr;
     grid-template-rows:  60px 1fr 40px;
     grid-template-areas: 
-                          "logo nav nav"
-                          ". main ."
-                          "footer footer footer";
-    grid-row-gap: 50px;
+                          "nav  "
+                          "main  "
+                          "footer  ";
+
     min-height: 100vh;
     background-color: #F1F8FD;
-  }
-  .main-logo{
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-bottom: 8px;
-    grid-area: logo;
-    background-color: #33619D;
-    max-height: 100% ;
   }
   .main-nav{
     display: flex; 
     max-height: 100% ;
-    padding-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 8px;
     background-color: #33619D;
     grid-area: nav;
     color:white;
-    justify-content: flex-start;
-   
+    font-size: 0.9em;
   }
   ul {
     list-style-type: none;
-    padding-top: 10px;
     margin: 0;
     padding: 0;
 }
-li {
-    
-    margin: 0;
-    display: block;
-    
+li { 
+    margin: 2px;
+    display: block;  
 }
 .logout{
-    justify-self: flex-end;
+    margin-left: auto;
 }
 a {
     color:white;
@@ -50,8 +38,7 @@ a {
     padding: 23px;
 }
 a:hover{
-    background-color: lightgray;
-    color: black;
+    color: grey;
 }
 .main-body{
     grid-area: main;
@@ -66,94 +53,90 @@ a:hover{
     font-size: .8em;
     text-align: left;
   }
-
   .App-intro{
     grid-area: main;
   }
-
   .useradmin{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px  100px 1fr;
-    grid-template-areas:    
-                            "username  networks productions indies submit reset"
-                            ". . . . . ."
-                            "results results results results results results"
-                            ;
-    grid-gap : 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;    
   }
   .programmeSearch{
-    display: grid;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px  25px 25px 1fr;
-    grid-template-areas:    
-                            "username  . networks  . submit reset"
-                            "from . productions  . . ."
-                            "to . indies . . ."
-                            "results results results results results results"
-                            ;
-    grid-gap : 7px;
-    
+    display: flex;
+    flex-wrap: wrap;  
   }
-  .form{
-      grid-area: search;
-  }
-  .submit{
-      grid-area: submit;
-      
-  }
-  .reset{
-    grid-area: reset;
-}
-.from{
-    grid-area: from;
-    
-}
-.to{
-    grid-area: to;
-    
-    height: 25px;
-}
-  .results{
-    grid-area: results;
-}
-.displayusers{
-    grid-area: results;
-}
-.displayprogrammes{
-    grid-area: results;
-}
 .networks{
     text-align: left;
-    grid-area: networks;
-    height: 60px;
-}
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 240px;
+    }
 .indies{
     text-align: left;
-    grid-area: indies;
-    
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 240px;
 }
 .productions{
     text-align: left;
-    grid-area: productions;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 240px;
 }
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    
+.from{
+  text-align: center;
+  margin-left: 10px; 
+  margin-right: 10px; 
+  max-width: 240px;
 }
-select{
-    max-width:400px;
-    height: 29px;
+.to{
+  text-align: center;
+  margin-left: 10px; 
+  margin-right: 10px; 
+  max-width: 240px;
 }
-
 .usersearch{
-    grid-area: username;
     text-align: center;
+    margin-left: 10px; 
+    margin-right: 10px;  
 }
 option{
     font-family: arial, sans-serif;
 }
-button{
-    height:29px;
+.dropdown-content {
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-size: .8em;
+}
+.dropdown-content a {
+  color: black;
+  padding:5px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 5px;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.submit{
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.reset{
+    margin-left: 15px;
+}
+.datePicker{
+    margin-left: 15px;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    font-size: .8em;
 }

@@ -1,39 +1,21 @@
-
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows:  60px 1fr 40px;
+  grid-template-columns: 1fr;
+  grid-template-rows:  40px 1fr 40px;
   grid-template-areas: 
-                        "logo header  headerside "
-                        ". main . "
-                        "footer footer footer ";
+                        "header   "
+                        " main  "
+                        "footer  ";
   grid-row-gap: 50px;
   min-height: 100vh;
   background-color: #F1F8FD;
 }
-.App-logo{
-  padding-top: 20px;
-  padding-left: 10px;
-  grid-area: logo;
-}
-.App-nav{
-  max-height: 100% ;
-  background-color: #33619D;
-  grid-area: logo;
-}
 .App-header {
   background-color: #33619D;
-  padding-top: 17px;
+  padding-top: 9px;
   grid-area: header;
   color: white; 
-}
-.App-headerside{
-  background-color: #33619D;
-  grid-area: headerside;
-}
-.App-title {
-  font-size: 1.5em;
 }
 .App-intro{
   grid-area: main;
@@ -50,8 +32,8 @@
 .content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-areas:    ". . . . ."
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas:    
                             ". . name . ."
                             
                             ". . password . ."
@@ -59,45 +41,34 @@
                             ". . login . ."
                             ". . . . ."
                             ". .  browser . .";
-    grid-gap : 15px;
   }
   .username {
     align-self: center;
     text-align: center;
     justify-self: center;
-    font-size: 1.2em;
+    font-size: 0.8em;
     grid-area: name;
-    height: 30px;
-    width:250px;
   }
   .password {
     grid-area :password;
     text-align: center;
     justify-self: center;
     align-self: center;
-    font-size: 1.2em;
-    width:250px;
-    height: 30px;
+    font-size: 0.8em;
   }
   .loginbutton {
     grid-area :login;
     align-self: center;
     justify-self: center;
-    font-size: 1.2em;
-    background-color: #8fcf00;
-    color: white;
+    font-size: 0.8em;
+    color: black;
     height: 30px;
     width:100px;
   }
   .browser {
-    height: 30px;
-    width:250px;
     grid-area: browser;
     text-align: center;
     align-self: center;
     color: #8a6d3b;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    padding-left: 30px;
     font-size: 0.9em;
   }
