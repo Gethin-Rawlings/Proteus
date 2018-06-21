@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-
-const urlForNetworks  = network => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/organisations?type=network'
+import {getNetwork} from './apiCalls';
 
 class GetNetworks extends Component {
     constructor(props){
@@ -18,31 +16,18 @@ class GetNetworks extends Component {
       const value = target.value;
       this.setState({[name]: value});
     }
-    
-    componentDidMount() { 
-        fetch(urlForNetworks(this.props.network)) 
-        .then(response => { 
-            if (!response.ok) { 
-                throw Error("Network request failed") 
-            } 
-                 return response 
-               }) 
-               .then(d => d.json()) 
-               
-               .then(d => { 
-                 this.setState({ 
-                    Getnetworks: JSON.stringify(d)
-                 }) 
-               }, () => { 
-                 this.setState({ 
-                   requestFailed: true 
-                 }) 
-               }) 
-           } 
+    async componentDidMount() {
+      try {
+        const data = await getNetwork()
+        this.setState({Getnetworks: data})
+      } catch(err) {
+        this.setState({requestFailed: true})
+      }
+    }
            render() { 
              if (this.state.requestFailed) return <p>Failed!</p> 
              if (!this.state.Getnetworks) return <p>Loading...</p> 
-             let returnData = JSON.parse(this.state.Getnetworks)
+            let returnData = this.state.Getnetworks
              return (
                    <select className='networks' name = "network" form="form"  onChange={this.handleChange}>
                     <option selected value={0}> -- select a Network -- </option>
@@ -50,7 +35,6 @@ class GetNetworks extends Component {
                    </select>
              )  
            } 
-         } 
-         
+         }          
         export default GetNetworks; 
         

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-
-const urlForNetworks  = production => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/organisations?type=production'
+import { getProduction } from './apiCalls';
 
 class GetProductionDepts extends Component {       
   constructor(props){
@@ -18,31 +16,18 @@ class GetProductionDepts extends Component {
     const value = target.value;
     this.setState({[name]: value});
 }    
-
-  componentDidMount() { 
-        fetch(urlForNetworks(this.props.production)) 
-        .then(response => { 
-            if (!response.ok) { 
-                throw Error("Network request failed") 
-            } 
-                 return response 
-               }) 
-               .then(d => d.json()) 
-               
-               .then(d => { 
-                 this.setState({ 
-                    Getproduction: JSON.stringify(d)
-                 }) 
-               }, () => { 
-                 this.setState({ 
-                   requestFailed: true 
-                 }) 
-               }) 
-           } 
+    async componentDidMount() {
+      try {
+        const data = await getProduction()
+        this.setState({Getproduction: data})
+      } catch(err) {
+        this.setState({requestFailed: true})
+      }
+    }
            render() {    
              if (this.state.requestFailed) return <p>Failed!</p> 
              if (!this.state.Getproduction) return <p>Loading...</p> 
-             let returnData = JSON.parse(this.state.Getproduction)
+             let returnData = this.state.Getproduction
              return (
                    <select className='productions' name = "production" form="form"  onChange={this.handleChange}>
                     <option selected value={0}> -- select a Production deptartment -- </option>
@@ -50,7 +35,6 @@ class GetProductionDepts extends Component {
                    </select>
              ) 
            } 
-         } 
-         
+         }        
         export default GetProductionDepts; 
         
