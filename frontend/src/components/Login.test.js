@@ -1,23 +1,24 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import ReactSixteenAdapter from 'enzyme-adapter-react-16';
 import Login from './Login'
-import renderer from 'react-test-renderer';
+import ReactDOM from 'react-dom';
 
 Enzyme.configure({ adapter: new ReactSixteenAdapter() });
 
-describe('Login Component', () => {
-  it('should render without throwing an error', () => {
-    expect(shallow(<Login />).exists(<form className='login'></form>)).toBe(true)
-   })
-  it('renders a username input', () => {
-    expect(shallow(<Login />).exists(<input  name="username"></input>)).toBe(true)
-   })
-  it('renders a password input', () => {
-    expect(shallow(<Login />).exists(<input  name="password"></input>)).toBe(true)
-   })
-   it('renders a password input', () => {
-    expect(shallow(<Login />).exists(<button id="loginbutton"></button>)).toBe(true)
-   })
+test ('Login component should render as expected', () => {
+    const component = shallow(<Login />)
+    const tree = component;
+    expect(tree).toMatchSnapshot();
+})
+
+it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Login />, div);
+  });
+
+  test ('Login component should render as expected', () => {
+    const component = mount(<Login />)
+    expect(component.find(Login).length).toBe(1)
 })
