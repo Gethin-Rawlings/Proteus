@@ -13,17 +13,18 @@ const urlForprogrammeSearch =  'http://ec2-52-56-248-133.eu-west-2.compute.amazo
 class Programmesearch extends React.Component {
   constructor(props) { 
     super(props); 
-      this.state={network: '', production:'', indie:'',users:'[{"usr_name":"Waiting"}]'};
+      this.state={network: '', production:'', indie:'',users:'[{"usr_name":"Waiting"}]',history: this.history};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this); 
 
    } 
    componentDidMount(){
     const loggedIn = sessionStorage.getItem('loggedIn');
+    console.log(loggedIn)
     const { history } = this.props;
+    if(loggedIn){console.log(loggedIn)}
       if(!loggedIn) {
-        //history.push("/");
-        console.log("wibble")
+        history.push("/");
         }
       } 
    handleChange(event) {

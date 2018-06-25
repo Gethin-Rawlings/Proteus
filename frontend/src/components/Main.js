@@ -9,7 +9,6 @@ class Main extends React.Component {
 
   componentDidMount(){
     const loggedIn = sessionStorage.getItem('loggedIn');
-    console.log(loggedIn)
     const { history } = this.props;
       if(!loggedIn) {
         history.push("/");

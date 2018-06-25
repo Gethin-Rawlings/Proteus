@@ -8,7 +8,7 @@ import { login } from './apiCalls'
 class Login extends React.Component {
     constructor(props) { 
             super(props); 
-              this.state={value: ''};
+              this.state={value: '', loggedIn: 'false'};
               this.handleChange = this.handleChange.bind(this);
               this.handleSubmit = this.handleSubmit.bind(this);      
            } 
@@ -18,19 +18,12 @@ class Login extends React.Component {
             const value = target.value;
             this.setState({[name]: value});
           }
-           handleSubmit(event) { 
+           async handleSubmit(event) { 
             event.preventDefault(); 
             const { history } = this.props;
             const dataForm = new FormData(event.target);
             try {
-              const data = login(dataForm)
-              sessionStorage.setItem('token',data.token);
-              sessionStorage.setItem('loggedIn',data.success);
-              sessionStorage.setItem('supplier',data.supplier)
-              sessionStorage.setItem('network',data.network)
-              sessionStorage.setItem('admin',data.admin)
-              sessionStorage.setItem('finance',data.finance)
-              sessionStorage.setItem('commission',data.commission)
+              const data = await login(dataForm)
               history.push("/main")
             } catch(err) {
               console.log("Login Failed")

@@ -19,6 +19,7 @@ class GetNetworks extends Component {
     async componentDidMount() {
       try {
         const data = await getNetwork()
+        console.log(data)
         this.setState({Getnetworks: data})
       } catch(err) {
         this.setState({requestFailed: true})

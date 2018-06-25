@@ -5,7 +5,12 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Programmesearch
-    history={undefined}
+    history={
+        Array [
+            "/ProgrammeSearch",
+            "/",
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

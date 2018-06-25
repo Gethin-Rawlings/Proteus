@@ -19,7 +19,9 @@ router.post('/login', function (req, res) {
 
         if (err) console.log(err)
             if (result.recordset[0] === undefined){
-                res.send("username or password incorrect");
+                const responseToken = JSON.stringify({success: false,err: "username or password incorrect",token:null})
+                console.log(responseToken)
+                res.send(responseToken);
             }else{
                 const accRecordset = result.recordset[0];
                 const accPassword = accRecordset.password; 
@@ -31,6 +33,7 @@ router.post('/login', function (req, res) {
                             res.send(responseToken);       
                         }else{
                             const responseToken = JSON.stringify({success: false,err: "username or password incorrect",token:null})
+                            console.log(responseToken)
                             res.send(responseToken);
                         }
                 });  
