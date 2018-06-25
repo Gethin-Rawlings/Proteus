@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Main.css';
 
 class Navbar extends React.Component {
@@ -7,18 +7,18 @@ class Navbar extends React.Component {
              return ( 
                <div >
                 <ul className='main-nav'>
-                    <div><li><Link to='/Main'>Home</Link></li></div>
-                    <div><li><Link to='/UserAdmin'>User Admin</Link></li></div>
-                    <li class="dropdown">
+                    <div><li><NavLink to='/Main'>Home</NavLink></li></div>
+                    <div><li><NavLink to='/UserAdmin'>User Admin</NavLink></li></div>
+                    <li className="dropdown">
                       <a className="dropbtn">Search</a>
                         <div className="dropdown-content">
-                          <Link to='/ProgrammeSearch'>Programme</Link>
-                          <Link to='/ProposalSearch'>Proposal</Link>
-                          <Link to='/ClassicalSearch'>Classical music</Link>
-                          <Link to='/ContemporarySearch'>Contemporary music</Link>
+                          <NavLink to='/ProgrammeSearch'>Programme</NavLink>
+                          <NavLink to='/ProposalSearch'>Proposal</NavLink>
+                          <NavLink to='/ClassicalSearch'>Classical music</NavLink>
+                          <NavLink to='/ContemporarySearch'>Contemporary music</NavLink>
                       </div>
                     </li>
-                    <div className="logout"><li ><Link to='/'>Logout</Link></li></div>
+                    <div className="logout"><li ><NavLink to='/'>Logout</NavLink></li></div>
                 </ul>
                 </div>
              ); 

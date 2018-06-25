@@ -21,9 +21,9 @@ class Login extends React.Component {
            handleSubmit(event) { 
             event.preventDefault(); 
             const { history } = this.props;
-            const data = new FormData(event.target);
+            const dataForm = new FormData(event.target);
             try {
-              const data = login(data)
+              const data = login(dataForm)
               sessionStorage.setItem('token',data.token);
               sessionStorage.setItem('loggedIn',data.success);
               sessionStorage.setItem('supplier',data.supplier)

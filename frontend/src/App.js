@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-
 import ProgrammeSearch from "./components/ProgrammeSearch";
 import Login from "./components/Login";
 import Main  from "./components/Main";
 import UserAdmin  from "./components/UserAdmin";
-import UserDetails from "./components/UserDetails"
-import { Switch, Route, BrowserRouter} from 'react-router-dom'
+import UserDetails from "./components/UserDetails";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 class App extends Component {
   
@@ -20,7 +19,7 @@ class App extends Component {
           <Route path ='/ProgrammeSearch' component={ProgrammeSearch}/>
           <Route path ='/UserDetails' component={UserDetails}/>
         </Switch>  
-        </BrowserRouter>        
+      </BrowserRouter>        
       </div>
     );
   }

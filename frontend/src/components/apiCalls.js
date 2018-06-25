@@ -31,7 +31,7 @@ const urlForLogin = url+'login';
         return await response.json()
       }
     }
-//Fetch to handle login submitw
+//Fetch to handle login submit
     export const login = async (data) => {
         const response = await fetch(urlForLogin, { 
             method: 'POST', 

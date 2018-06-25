@@ -6,9 +6,11 @@ class Security extends React.Component {
             this.state={isLoggedIn: ''};
         }
         componentDidMount() {
-          const { isLoggedIn, history } = this.props
-          if (!isLoggedIn) {
+          const { history } = this.props
+          const loggedIn = sessionStorage.getItem('loggedIn');
+          if (!loggedIn) {
             history.push("/");
+            console.log('Wibble  Sec')
           }
         }
         render() {
@@ -17,3 +19,4 @@ class Security extends React.Component {
       }
 
 export default Security
+

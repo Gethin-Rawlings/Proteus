@@ -21,6 +21,7 @@ class Displayprogrammes extends Component {
                 const returnData = JSON.parse(this.props.users)
                 return (
                      <table className='displayusers'>
+                     <tbody> 
                       <tr>
                          <th>Programme Number</th>
                          <th>sequence</th>
@@ -39,7 +40,8 @@ class Displayprogrammes extends Component {
                                                     <td id={p.programmeNumber}>{p.duration}</td>
                                                     <td id={p.programmeNumber}>{p.scheduledTime}</td>
                                                 </tr>)}
-                     </table>
+                                                  
+                     </tbody></table>
                ) 
              } 
            } 
