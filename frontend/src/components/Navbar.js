@@ -6,6 +6,7 @@ class Navbar extends React.Component {
     render() {
              return ( 
                <div >
+               
                 <ul className='main-nav'>
                     <div><li><NavLink to='/Main'>Home</NavLink></li></div>
                     <div><li><NavLink to='/UserAdmin'>User Admin</NavLink></li></div>

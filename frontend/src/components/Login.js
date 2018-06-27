@@ -1,9 +1,9 @@
 import React from 'react';
 import "./login.css";
 import 'whatwg-fetch';
-import Footer from "./Footer"
-import Welcome from "./Welcome"
-import { login } from './apiCalls'
+import Footer from "./Footer";
+import Welcome from "./Welcome";
+import { login } from './apiCalls';
 
 class Login extends React.Component {
     constructor(props) { 
@@ -23,11 +23,14 @@ class Login extends React.Component {
             const { history } = this.props;
             const dataForm = new FormData(event.target);
             try {
-              const data = await login(dataForm)
-              history.push("/main")
+              await login(dataForm)
             } catch(err) {
               console.log("Login Failed")
             } 
+            const loggedIn = sessionStorage.getItem('loggedIn');
+            if(loggedIn) {
+              history.push("/main");
+              }
            } 
            render() { 
              return ( 

@@ -8,7 +8,7 @@ import GetIndies from "./GetIndies";
 import Displayprogrammes from "./Displayprogrammes";
 
 
-const urlForprogrammeSearch =  'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/programmesearch'
+const urlForprogrammeSearch = () =>  'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/programmesearch'
 
 class Programmesearch extends React.Component {
   constructor(props) { 
@@ -20,9 +20,7 @@ class Programmesearch extends React.Component {
    } 
    componentDidMount(){
     const loggedIn = sessionStorage.getItem('loggedIn');
-    console.log(loggedIn)
     const { history } = this.props;
-    if(loggedIn){console.log(loggedIn)}
       if(!loggedIn) {
         history.push("/");
         }

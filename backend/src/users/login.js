@@ -4,8 +4,6 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const formidable = require('express-formidable');
 const jwt = require('jsonwebtoken');
-const exjwt = require('express-jwt');
-// import decode from 'jwt-decode';
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
@@ -20,7 +18,6 @@ router.post('/login', function (req, res) {
         if (err) console.log(err)
             if (result.recordset[0] === undefined){
                 const responseToken = JSON.stringify({success: false,err: "username or password incorrect",token:null})
-                console.log(responseToken)
                 res.send(responseToken);
             }else{
                 const accRecordset = result.recordset[0];
@@ -33,13 +30,11 @@ router.post('/login', function (req, res) {
                             res.send(responseToken);       
                         }else{
                             const responseToken = JSON.stringify({success: false,err: "username or password incorrect",token:null})
-                            console.log(responseToken)
                             res.send(responseToken);
                         }
                 });  
             }
         });
     });
-
-    
+   
 module.exports = router;
