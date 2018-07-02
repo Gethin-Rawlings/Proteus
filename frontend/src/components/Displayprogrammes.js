@@ -5,7 +5,7 @@ import {withRouter} from "react-router-dom"
 class Displayprogrammes extends Component {       
   constructor(props) { 
     super(props); 
-      this.state={user:'[{"programmeNumber":""}]', history:this.props.history};
+      this.state={programmes:'[{"programmeNumber":""}]', history:this.props.history};
       this.handleClick = this.handleClick.bind(this); 
    } 
    handleClick(event) {
@@ -18,7 +18,7 @@ class Displayprogrammes extends Component {
     }
   }
              render() {  
-                const returnData = JSON.parse(this.props.users)
+                const returnData = JSON.parse(this.props.programmes)
                 return (
                      <table className='displayusers'>
                      <tbody> 
@@ -31,16 +31,15 @@ class Displayprogrammes extends Component {
                          <th>Duration</th>
                          <th>scheduledTime</th>
                       </tr>
-                            {returnData.map(p => <tr onClick={this.handleClick}>
-                                                    <td id={p.programmeNumber} >{p.programmeNumber}</td >
+                            {returnData.map(p => <tr key={p.programmeNumber} onClick={this.handleClick}>
+                                                    <td id={p.programmeNumber}>{p.programmeNumber}</td>
                                                     <td id={p.programmeNumber}>{p.sequence}</td>
                                                     <td id={p.programmeNumber}>{p.Supplier}</td>
                                                     <td id={p.programmeNumber}>{p.Network}</td>
                                                     <td id={p.programmeNumber}>{p.ProgrammeTitle}</td>
                                                     <td id={p.programmeNumber}>{p.duration}</td>
                                                     <td id={p.programmeNumber}>{p.scheduledTime}</td>
-                                                </tr>)}
-                                                  
+                                                </tr>)}                             
                      </tbody></table>
                ) 
              } 

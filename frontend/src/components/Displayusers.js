@@ -21,13 +21,21 @@ class Displayusers extends Component {
                 const returnData = JSON.parse(this.props.users)
                 return (
                      <table className='displayusers'>
+                     <tbody>
                       <tr>
                          <th>User Name</th>
                          <th>First Name</th>
                          <th>Last Name</th>
                          <th>Email Adress</th>
                       </tr>
-                            {returnData.map(p => <tr onClick={this.handleClick}><td id={p.USR_NAME} >{p.USR_NAME}</td ><td id={p.USR_NAME}>{p.USR_FIRST_NAME}</td><td id={p.USR_NAME}>{p.USR_LAST_NAME}</td><td id={p.USR_NAME}>{p.USR_EMAIL_ADDRESS}</td></tr>)}
+                            {returnData.map(p => 
+                                <tr key={p.USR_NAME} onClick={this.handleClick}>
+                                  <td id={p.USR_NAME} >{p.USR_NAME}</td>
+                                  <td id={p.USR_NAME}>{p.USR_FIRST_NAME}</td>
+                                  <td id={p.USR_NAME}>{p.USR_LAST_NAME}</td>
+                                  <td id={p.USR_NAME}>{p.USR_EMAIL_ADDRESS}</td>
+                                </tr>)}
+                      </tbody>
                      </table>
                ) 
              } 

@@ -7,8 +7,7 @@ import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 import Displayusers from "./Displayusers";
 import "./userAdmin.css";
-
-const urlForUserAdmin = () => 'http://localhost:5000/userAdmin'
+import { userSearch } from "./apiCalls"
 
 class UserAdmin extends React.Component {
   constructor(props) { 
@@ -24,24 +23,21 @@ class UserAdmin extends React.Component {
         history.push("/");
         }
       } 
-   handleChange(event) {
-     
+   handleChange(event) {   
     const target = event.target;
     const name = target.name;
     const value = target.value;
     this.setState({[name]: value});
   }
-   handleSubmit(event) { 
+  async handleSubmit(event) { 
     event.preventDefault(); 
-    const data = new FormData(event.target);
-     fetch(urlForUserAdmin(this.props.users), { 
-       method: 'POST', 
-       body: data
-     }).then(response => response.json().then(data => { 
-      this.setState({ 
-         users: JSON.stringify(data)
-      }) 
-    } ))      
+    try {
+      console.log(event.target)
+      const data = await userSearch(event.target)
+      this.setState({users: JSON.stringify(data)})
+    } catch(err) {
+      console.log(err)
+    }       
    } 
     render() {
              return ( 
@@ -68,12 +64,11 @@ class UserAdmin extends React.Component {
                     <button id="submit" className="submit" form ="form">Search</button>
                     <button id="reset" className ="reset" type="reset" form="form">Reset</button>
                     <div>
-                      <Displayusers className='results' name='results'users={this.state.users} history={this.history}/>
+                      <Displayusers className='results' name='results' users={this.state.users} history={this.history}/>
                     </div>
                 </div>
                 <Footer />
-              </div>
-              
+              </div>             
              ); 
            } 
          } 

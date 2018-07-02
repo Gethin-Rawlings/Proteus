@@ -34,3 +34,22 @@ Enzyme.configure({ adapter: new ReactSixteenAdapter() });
   });
 }));
 
+/*
+
+describe('User signin', () => {
+  it('should fail if no credentials are provided', () => {
+      const fakeEvent = { preventDefault: () => console.log('preventDefault') };
+      const loginComponent = shallow(<ProgrammeSearch history={history} />);
+      expect(loginComponent.find('.programmeForm').length).toBe(1);
+     // loginComponent.find('.programmeForm').simulate('submit', fakeEvent);
+      //expect(loginComponent.find(Notification).length).toBe(1);
+     console.log(loginComponent.debug)
+  });
+});
+
+it('should find a result via fetch', () => {
+  return fetch('http://www.google.com')
+      .then(() => console.log('Success'))
+      .catch((err) => console.log('Error!!!!' + err));
+});
+*/

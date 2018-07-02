@@ -21,12 +21,14 @@ class Login extends React.Component {
            async handleSubmit(event) { 
             event.preventDefault(); 
             const { history } = this.props;
-            const dataForm = new FormData(event.target);
             try {
-              await login(dataForm)
+              const data = await login(event.target)
+              this.setState({Getnetworks: data})
             } catch(err) {
-              console.log("Login Failed")
+              console.log(err)
             } 
+            
+            console.log(this.state.Getnetworks)
             const loggedIn = sessionStorage.getItem('loggedIn');
             if(loggedIn) {
               history.push("/main");

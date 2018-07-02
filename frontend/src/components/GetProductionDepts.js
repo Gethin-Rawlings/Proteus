@@ -30,8 +30,8 @@ class GetProductionDepts extends Component {
              let returnData = this.state.Getproduction
              return (
                    <select className='productions' name = "production" form="form"  onChange={this.handleChange}>
-                    <option selected value={0}> -- select a Production deptartment -- </option>
-                     {returnData.map(p => <option value={p.org_organisation_id} >{p.org_description}</option>)}
+                    <option selected key={0} value={0}> -- select a Production deptartment -- </option>
+                     {returnData.map(p => <option key={p.org_organisation_id} value={p.org_organisation_id} >{p.org_description}</option>)}
                    </select>
              ) 
            } 

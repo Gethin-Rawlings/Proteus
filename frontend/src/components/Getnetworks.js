@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {getNetwork} from './apiCalls';
+import { getNetwork } from './apiCalls';
 
 class GetNetworks extends Component {
     constructor(props){
@@ -19,7 +19,6 @@ class GetNetworks extends Component {
     async componentDidMount() {
       try {
         const data = await getNetwork()
-        console.log(data)
         this.setState({Getnetworks: data})
       } catch(err) {
         this.setState({requestFailed: true})
@@ -31,8 +30,8 @@ class GetNetworks extends Component {
             let returnData = this.state.Getnetworks
              return (
                    <select className='networks' name = "network" form="form"  onChange={this.handleChange}>
-                    <option selected value={0}> -- select a Network -- </option>
-                     {returnData.map(p => <option  value={p.org_organisation_id}>{p.org_description}</option>)}
+                    <option selected key={0} value={0}> -- select a Network -- </option>
+                     {returnData.map(p => <option key={p.org_organisation_id} value={p.org_organisation_id}>{p.org_description}</option>)}
                    </select>
              )  
            } 

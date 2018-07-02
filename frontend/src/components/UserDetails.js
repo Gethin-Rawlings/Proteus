@@ -30,7 +30,7 @@ class UserDetails extends React.Component {
       await updateUsers(dataForm)
       
     } catch(err) {
-      console.log("Login Failed")
+      console.log(err)
     } 
    } 
    componentDidMount(){
@@ -48,8 +48,7 @@ class UserDetails extends React.Component {
             } 
                  return response 
                }) 
-               .then(d => d.json()) 
-               
+               .then(d => d.json())   
                .then(d => { 
                  this.setState({ 
                     userDetails: d,
