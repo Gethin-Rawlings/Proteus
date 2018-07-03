@@ -25,7 +25,7 @@ router.post('/login', function (req, res) {
             bcrypt.compare(password, accPassword, function (error, result) {
                 if (error) console.log(error);
                 if (result == true) {
-                    let token = jwt.sign({ id: '1', username: username }, 'keyboard cat 4 ever', { expiresIn: 129600 });
+                    let token = jwt.sign({ username: username }, 'keyboard cat 4 ever', { expiresIn: 129600 });
                     const responseToken = JSON.stringify({ success: true, err: null, token: token });
                     res.send(responseToken);
                 } else {

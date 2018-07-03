@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const formidable = require('express-formidable');
 const jwt = require('jsonwebtoken');
-const exjwt = require('express-jwt');
-// import decode from 'jwt-decode';
 
 router.use(formidable());
 
@@ -12,6 +10,10 @@ router.post('/useradmin', function (req, res) {
     const network = req.fields.network;
     const indie = req.fields.indie;
     const username = req.fields.username;
+    const token = req.headers.authorization;
+    jwt.verify(token, 'keyboard cat 4 ever', function(err, decoded) {
+        console.log(decoded.username) 
+      });
     const request = new sql.Request();
     request.input('production', sql.Int, production);
     request.input('network', sql.Int, network)

@@ -74,7 +74,7 @@ export const programmeSearch = async(submit) => {
   const dataform = new FormData(submit)
   const token = sessionStorage.getItem('token');
   const programmeSearchHeader = {
-    Authorization: `Bearer ${token}`
+    Authorization: `${token}`
   }
   const response = await fetch(urlForprogrammeSearch, {
     method: 'POST',
@@ -92,7 +92,7 @@ export const userSearch = async(submit) => {
   const dataform = new FormData(submit)
   const token = sessionStorage.getItem('token');
   const userSearchHeader = {
-    authorization: `Bearer ${token}`
+    authorization: `${token}`
   }
   const response = await fetch(urlForUserSearch, {
     method: 'POST',
