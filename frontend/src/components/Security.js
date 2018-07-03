@@ -26,5 +26,5 @@ export const logedIn = async () => {
     history.push("/main");
     console.log('Wibble  Sec')
   }
-  }
+}
 

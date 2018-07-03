@@ -7,7 +7,7 @@ router.get('/organisations', function (req, res) {
     const paramaters = req.query;
     const type = paramaters.type;
     const request = new sql.Request();
-    request.input('type', sql.VarChar(50), type); 
+    request.input('type', sql.VarChar(50), type);
     request.execute('PR_GET_ORGANISATIONS', function (err, result) {
         if (err) console.log(err)
         var returnData = result.recordset;

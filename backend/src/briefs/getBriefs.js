@@ -26,14 +26,14 @@ router.get('/briefs', function (req, res) {
     const year = paramaters.year;
     const round = paramaters.round;
     const request = new sql.Request();
-    request.input('organisation', sql.Int, organisation) ;
-    request.input('year', sql.Int, year) ;
-    request.input('round', sql.Int, round) ;  
-    request.input('PARAMS',sql.VarChar(1000),JSON.stringify(paramaters) );
+    request.input('organisation', sql.Int, organisation);
+    request.input('year', sql.Int, year);
+    request.input('round', sql.Int, round);
+    request.input('PARAMS', sql.VarChar(1000), JSON.stringify(paramaters));
     request.execute('PR_GET_BRIEFS', function (err, result) {
         if (err) console.log(err)
         res.send(JSON.stringify(result.recordset));
-});
+    });
 });
 
 module.exports = router;

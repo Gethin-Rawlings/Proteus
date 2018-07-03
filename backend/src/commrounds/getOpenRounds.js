@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 
 router.get('/rounds', function (req, res) {
     const type = 'open';
-    const request = new sql.Request(); 
-    request.input('type', sql.VarChar(50), type); 
+    const request = new sql.Request();
+    request.input('type', sql.VarChar(50), type);
     request.execute('PR_GET_OPEN_ROUNDS', function (err, result) {
         if (err) console.log(err)
         const returnData = result.recordset;

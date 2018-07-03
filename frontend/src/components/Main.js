@@ -3,31 +3,24 @@ import "./Main.css";
 import Navbar from "./Navbar"
 import Footer from './Footer'
 
-
-
 class Main extends React.Component {
-
-  componentDidMount(){
+  componentDidMount() {
     const loggedIn = sessionStorage.getItem('loggedIn');
-    const { history } = this.props;
-      if(!loggedIn) {
-        history.push("/");
-        }
-      } 
-   
+    const {history} = this.props;
+    if (!loggedIn) {
+      history.push("/");
+    }
+  }
+  render() {
+    return (
+      <div className="main">
+        <Navbar/>
+        <section className="main-body">Grumpy cat was ere again
+        </section>
+        <Footer/>
+      </div>
 
-    render() {
-             return ( 
-              <div className="main">
-                <Navbar />
-                <section className="main-body">Grumpy cat was ere again </section>
-                <Footer />
-              </div>
-              
-             ); 
-           } 
-         } 
-
-  export default Main;
-
- 
+    );
+  }
+}
+export default Main;

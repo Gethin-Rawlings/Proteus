@@ -4,30 +4,30 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 const login = require('./users/login');
-router.all('/login',jsonParser, login); 
+router.all('/login', jsonParser, login);
 
 const rounds = require('./commrounds/getOpenRounds');
-router.all('/rounds',jsonParser, rounds);
+router.all('/rounds', jsonParser, rounds);
 
 const briefs = require('./briefs/getBriefs');
-router.all('/briefs',jsonParser, briefs);
+router.all('/briefs', jsonParser, briefs);
 
 const organisations = require('./organisations/getOrganisations');
-router.all('/organisations',jsonParser, organisations);
+router.all('/organisations', jsonParser, organisations);
 
 const userAdmin = require('./users/useradmin');
-router.all('/useradmin',jsonParser, userAdmin); 
+router.all('/useradmin', jsonParser, userAdmin);
 
 const updateUsers = require('./users/updateUsers');
-router.all('/updateusers',jsonParser, updateUsers); 
+router.all('/updateusers', jsonParser, updateUsers);
 
 const userDetails = require('./users/userDetails');
-router.all('/userDetails',jsonParser, userDetails); 
+router.all('/userDetails', jsonParser, userDetails);
 
 const programmesearch = require('./searches/programmesearch');
-router.all('/programmesearch',jsonParser, programmesearch); 
+router.all('/programmesearch', jsonParser, programmesearch);
 
 const proposalsearch = require('./searches/proposalsearch');
-router.all('/proposalsearch',jsonParser, proposalsearch); 
+router.all('/proposalsearch', jsonParser, proposalsearch);
 
 module.exports = router;
