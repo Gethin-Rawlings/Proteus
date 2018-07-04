@@ -10,7 +10,11 @@ class Login extends React.Component {
     super(props);
     this.state = {
       value: '',
-      loggedIn: 'false'
+      loggedIn: 'false',
+      username:'',
+      password:''
+
+
     };
     this.handleChange = this
       .handleChange

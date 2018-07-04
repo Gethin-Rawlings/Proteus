@@ -31,7 +31,7 @@ class Getindie extends Component {
     if (returnData.length === 0) return <select name="indie"><option>No open rounds</option></select>
     return (
       <select className='indies' name="indie" form="form" onChange={this.handleChange}>
-        <option selected key={0} value={0}> -- select a Indie -- </option>
+        <option key={0} value={0}> -- select a Indie -- </option>
         {returnData.map(p => <option key={p.org_organisation_id} value={p.org_organisation_id}>{p.org_description}</option>)}
       </select>
     )
