@@ -32,7 +32,6 @@ class UserAdmin extends React.Component {
   async handleSubmit(event) {
     event.preventDefault();
     try {
-      console.log(event.target)
       const data = await userSearch(event.target)
       this.setState({ users: JSON.stringify(data) })
     } catch (err) {

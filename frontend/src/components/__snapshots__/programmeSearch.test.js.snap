@@ -110,6 +110,7 @@ ShallowWrapper {
                     className="submit"
                     form="form"
                     id="submit"
+                    name="submit"
           >
                     Search
           </button>
@@ -231,6 +232,7 @@ ShallowWrapper {
               className="submit"
               form="form"
               id="submit"
+              name="submit"
 >
               Search
 </button>,
@@ -575,6 +577,7 @@ ShallowWrapper {
               "className": "submit",
               "form": "form",
               "id": "submit",
+              "name": "submit",
             },
             "ref": null,
             "rendered": "Search",
@@ -717,6 +720,7 @@ ShallowWrapper {
                         className="submit"
                         form="form"
                         id="submit"
+                        name="submit"
             >
                         Search
             </button>
@@ -838,6 +842,7 @@ ShallowWrapper {
                 className="submit"
                 form="form"
                 id="submit"
+                name="submit"
 >
                 Search
 </button>,
@@ -1182,6 +1187,7 @@ ShallowWrapper {
                 "className": "submit",
                 "form": "form",
                 "id": "submit",
+                "name": "submit",
               },
               "ref": null,
               "rendered": "Search",
@@ -1352,6 +1358,7 @@ ShallowWrapper {
                     className="submit"
                     form="form"
                     id="submit"
+                    name="submit"
           >
                     Search
           </button>
@@ -1473,6 +1480,7 @@ ShallowWrapper {
               className="submit"
               form="form"
               id="submit"
+              name="submit"
 >
               Search
 </button>,
@@ -1817,6 +1825,7 @@ ShallowWrapper {
               "className": "submit",
               "form": "form",
               "id": "submit",
+              "name": "submit",
             },
             "ref": null,
             "rendered": "Search",
@@ -1959,6 +1968,7 @@ ShallowWrapper {
                         className="submit"
                         form="form"
                         id="submit"
+                        name="submit"
             >
                         Search
             </button>
@@ -2080,6 +2090,7 @@ ShallowWrapper {
                 className="submit"
                 form="form"
                 id="submit"
+                name="submit"
 >
                 Search
 </button>,
@@ -2424,6 +2435,7 @@ ShallowWrapper {
                 "className": "submit",
                 "form": "form",
                 "id": "submit",
+                "name": "submit",
               },
               "ref": null,
               "rendered": "Search",

@@ -90,7 +90,7 @@ class Programmesearch extends React.Component {
               <input type="date" name="todate" id="datetime" form="form"></input>
             </section>
           </section>
-          <button id="submit" className="submit" form="form">Search</button>
+          <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
           <Displayprogrammes
             className='results'

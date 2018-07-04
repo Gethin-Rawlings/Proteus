@@ -32,7 +32,7 @@ class Displayprogrammes extends Component {
     return (
       <table className='displayusers'>
         <tbody>
-          <tr>
+          <tr key='menu'>
             <th>Programme Number</th>
             <th>sequence</th>
             <th>Supplier</th>
@@ -41,7 +41,7 @@ class Displayprogrammes extends Component {
             <th>Duration</th>
             <th>scheduledTime</th>
           </tr>
-          {returnData.map(p => <tr key={p.programmeNumber} onClick={this.handleClick}>
+          {returnData.map(p => <tr key={p.programmeNumber+p.sequence} onClick={this.handleClick}>
             <td id={p.programmeNumber}>{p.programmeNumber}</td>
             <td id={p.programmeNumber}>{p.sequence}</td>
             <td id={p.programmeNumber}>{p.Supplier}</td>

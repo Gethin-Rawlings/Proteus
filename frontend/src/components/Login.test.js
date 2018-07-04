@@ -12,13 +12,34 @@ test('Login component should render as expected', () => {
     const tree = component;
     expect(tree).toMatchSnapshot();
 })
-
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Login />, div);
-});
-
-test('Login component should render as expected', () => {
-    const component = mount(<Login />)
-    expect(component.find(Login).length).toBe(1)
+describe('Login Component', () => {
+    // make our assertion and what we expect to happen 
+    it('should render without throwing an error', () => {
+        expect(shallow(<Login />).find('form.content').exists()).toBe(true)
+    })
 })
+describe('user id input', () => {
+    it('should respond to change event and change the state of the Login Component', () => {
+        const wrapper = shallow(<Login />);
+        wrapper.find('.username').simulate('change', { target: { name: 'username', value: 'blah@gmail.com' } });
+        expect(wrapper.state('username')).toEqual('blah@gmail.com');
+    })
+})
+describe('Password input', () => {
+    it('should respond to change event and change the state of the Login Component', () => {
+        const wrapper = shallow(<Login />);
+        wrapper.find('.password').simulate('change', { target: { name: 'password', value: 'cats' } });
+        expect(wrapper.state('password')).toEqual('cats');
+    })
+})
+/*
+const mockFn = jest.fn();
+it('should call mock function when button is clicked', () => {
+  const tree = shallow(
+    <Login name='submit' handleClick={mockFn} />
+  );
+  tree.simulate('click');
+  expect(mockFn).toHaveBeenCalled();
+});
+*/
+

@@ -47,15 +47,6 @@ export const login = async(submit) => {
     sessionStorage.setItem('loggedIn', 'failed');
     throw(new Error('Network request failed'))
   };
-  if (response.success === true) {
-    sessionStorage.setItem('token', response.token);
-    sessionStorage.setItem('loggedIn', response.success);
-    sessionStorage.setItem('supplier', response.supplier)
-    sessionStorage.setItem('network', response.network)
-    sessionStorage.setItem('admin', response.admin)
-    sessionStorage.setItem('finance', response.finance)
-    sessionStorage.setItem('commission', response.commission)
-  };
   return await response.json()
 }
 // Fetch to update user information

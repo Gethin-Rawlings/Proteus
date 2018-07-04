@@ -31,23 +31,20 @@ describe('storage', () => [localStorage, sessionStorage].map(storage => {
     expect(textBox.find('.main')).toHaveLength(1);
   });
 }));
-
 /*
-
-describe('User signin', () => {
-  it('should fail if no credentials are provided', () => {
-      const fakeEvent = { preventDefault: () => console.log('preventDefault') };
-      const loginComponent = shallow(<ProgrammeSearch history={history} />);
-      expect(loginComponent.find('.programmeForm').length).toBe(1);
-     // loginComponent.find('.programmeForm').simulate('submit', fakeEvent);
-      //expect(loginComponent.find(Notification).length).toBe(1);
-     console.log(loginComponent.debug)
-  });
-});
-
-it('should find a result via fetch', () => {
-  return fetch('http://www.google.com')
-      .then(() => console.log('Success'))
-      .catch((err) => console.log('Error!!!!' + err));
+const mockFn = jest.fn();
+it('should call mock function when button is clicked', () => {
+  const tree = shallow(
+    <ProgrammeSearch name='submit' handleClick={mockFn} />
+  );
+  tree.simulate('click');
+  expect(mockFn).toHaveBeenCalled();
 });
 */
+
+describe('Login Component', () => {
+  // make our assertion and what we expect to happen 
+  it('should render without throwing an error', () => {
+      expect(shallow(<ProgrammeSearch />).find('form.programmeForm').exists()).toBe(true)
+    })
+   })

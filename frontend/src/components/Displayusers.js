@@ -32,7 +32,7 @@ class Displayusers extends Component {
     return (
       <table className='displayusers'>
         <tbody>
-          <tr>
+          <tr key='menu'>
             <th>User Name</th>
             <th>First Name</th>
             <th>Last Name</th>
