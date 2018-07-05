@@ -14,7 +14,6 @@ router.post('/login', function (req, res) {
     const request = new sql.Request();
     request.input('username', sql.VarChar(50), username);
     request.execute('PR_GET_USER', function (err, result) {
-
         if (err) console.log(err)
         if (result.recordset[0] === undefined) {
             const responseToken = JSON.stringify({ success: false, err: "username or password incorrect", token: null })
@@ -22,11 +21,25 @@ router.post('/login', function (req, res) {
         } else {
             const accRecordset = result.recordset[0];
             const accPassword = accRecordset.password;
+            const supplier = accRecordset.supplier;
+            const network = accRecordset.network;
+            const admin = accRecordset.admin;
+            const finance = accRecordset.finance;
+            const commission = accRecordset.commission;
             bcrypt.compare(password, accPassword, function (error, result) {
                 if (error) console.log(error);
                 if (result == true) {
                     let token = jwt.sign({ username: username }, 'keyboard cat 4 ever', { expiresIn: 129600 });
-                    const responseToken = JSON.stringify({ success: true, err: null, token: token });
+                    const responseToken = JSON.stringify({ 
+                                                            success: true, 
+                                                            err: null, 
+                                                            token: token,
+                                                            admin: admin,
+                                                            supplier: supplier,
+                                                            network: network,
+                                                            finance: finance,
+                                                            commission: commission
+                                                        });
                     res.send(responseToken);
                 } else {
                     const responseToken = JSON.stringify({ success: false, err: "username or password incorrect", token: null })

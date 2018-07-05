@@ -10,7 +10,6 @@ class Security extends React.Component {
           const loggedIn = sessionStorage.getItem('loggedIn');
           if (!loggedIn) {
             history.push("/");
-            console.log('Wibble  Sec')
           }
         }
         render() {
