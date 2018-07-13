@@ -33,7 +33,7 @@ ShallowWrapper {
                               onChange={[Function]}
                               placeholder="username"
                               type="text"
-                              value={undefined}
+                              value=""
                     />
                     <input
                               className="password"
@@ -41,7 +41,7 @@ ShallowWrapper {
                               onChange={[Function]}
                               placeholder="password"
                               type="password"
-                              value={undefined}
+                              value=""
                     />
                     <button
                               className="loginbutton"
@@ -87,7 +87,7 @@ ShallowWrapper {
                         onChange={[Function]}
                         placeholder="username"
                         type="text"
-                        value={undefined}
+                        value=""
             />
             <input
                         className="password"
@@ -95,7 +95,7 @@ ShallowWrapper {
                         onChange={[Function]}
                         placeholder="password"
                         type="password"
-                        value={undefined}
+                        value=""
             />
             <button
                         className="loginbutton"
@@ -124,7 +124,7 @@ ShallowWrapper {
                 onChange={[Function]}
                 placeholder="username"
                 type="text"
-                value={undefined}
+                value=""
 />,
               <input
                 className="password"
@@ -132,7 +132,7 @@ ShallowWrapper {
                 onChange={[Function]}
                 placeholder="password"
                 type="password"
-                value={undefined}
+                value=""
 />,
               <button
                 className="loginbutton"
@@ -162,7 +162,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "username",
                 "type": "text",
-                "value": undefined,
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -178,7 +178,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "password",
                 "type": "password",
-                "value": undefined,
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -248,7 +248,7 @@ ShallowWrapper {
                                     onChange={[Function]}
                                     placeholder="username"
                                     type="text"
-                                    value={undefined}
+                                    value=""
                         />
                         <input
                                     className="password"
@@ -256,7 +256,7 @@ ShallowWrapper {
                                     onChange={[Function]}
                                     placeholder="password"
                                     type="password"
-                                    value={undefined}
+                                    value=""
                         />
                         <button
                                     className="loginbutton"
@@ -302,7 +302,7 @@ ShallowWrapper {
                             onChange={[Function]}
                             placeholder="username"
                             type="text"
-                            value={undefined}
+                            value=""
               />
               <input
                             className="password"
@@ -310,7 +310,7 @@ ShallowWrapper {
                             onChange={[Function]}
                             placeholder="password"
                             type="password"
-                            value={undefined}
+                            value=""
               />
               <button
                             className="loginbutton"
@@ -339,7 +339,7 @@ ShallowWrapper {
                   onChange={[Function]}
                   placeholder="username"
                   type="text"
-                  value={undefined}
+                  value=""
 />,
                 <input
                   className="password"
@@ -347,7 +347,7 @@ ShallowWrapper {
                   onChange={[Function]}
                   placeholder="password"
                   type="password"
-                  value={undefined}
+                  value=""
 />,
                 <button
                   className="loginbutton"
@@ -377,7 +377,7 @@ ShallowWrapper {
                   "onChange": [Function],
                   "placeholder": "username",
                   "type": "text",
-                  "value": undefined,
+                  "value": "",
                 },
                 "ref": null,
                 "rendered": null,
@@ -393,7 +393,7 @@ ShallowWrapper {
                   "onChange": [Function],
                   "placeholder": "password",
                   "type": "password",
-                  "value": undefined,
+                  "value": "",
                 },
                 "ref": null,
                 "rendered": null,

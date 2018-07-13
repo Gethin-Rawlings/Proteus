@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import Main from "./components/Main";
 import UserAdmin from "./components/UserAdmin";
 import UserDetails from "./components/UserDetails";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 
 class App extends Component {
 

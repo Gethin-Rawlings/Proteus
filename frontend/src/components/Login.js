@@ -13,8 +13,6 @@ class Login extends React.Component {
       loggedIn: 'false',
       username:'',
       password:''
-
-
     };
     this.handleChange = this
       .handleChange
@@ -39,7 +37,7 @@ class Login extends React.Component {
       console.log(err)
     }
     const loginStatus = this.state.loginStatus
-    if (loginStatus.success === true) {
+    if (this.state.loginStatus === true) {
       sessionStorage.setItem('token', loginStatus.token);
       sessionStorage.setItem('loggedIn', loginStatus.success);
       sessionStorage.setItem('supplier', loginStatus.supplier)
@@ -47,7 +45,7 @@ class Login extends React.Component {
       sessionStorage.setItem('admin', loginStatus.admin)
       sessionStorage.setItem('finance', loginStatus.finance)
       sessionStorage.setItem('commission', loginStatus.commission)
-    };
+    }; 
     const loggedIn = sessionStorage.getItem('loggedIn');
     if (loggedIn) {
       history.push("/main");

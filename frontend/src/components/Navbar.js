@@ -4,6 +4,10 @@ import './Main.css';
 
 class Navbar extends React.Component {
   render() {
+
+    const admin = sessionStorage.getItem('admin');
+    console.log(admin)
+
     return (
       <div >
         <ul className='main-nav'>

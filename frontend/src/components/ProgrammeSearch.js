@@ -6,7 +6,7 @@ import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
 import Displayprogrammes from "./Displayprogrammes";
-import {programmeSearch} from "./apiCalls"
+import {programmeSearch} from "./apiCalls";
 
 class Programmesearch extends React.Component {
   constructor(props) {
