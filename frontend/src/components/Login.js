@@ -37,7 +37,7 @@ class Login extends React.Component {
       console.log(err)
     }
     const loginStatus = this.state.loginStatus
-    if (this.state.loginStatus === true) {
+    if (this.state.loginStatus.success === true) {
       sessionStorage.setItem('token', loginStatus.token);
       sessionStorage.setItem('loggedIn', loginStatus.success);
       sessionStorage.setItem('supplier', loginStatus.supplier)
