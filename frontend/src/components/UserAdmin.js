@@ -43,7 +43,7 @@ class UserAdmin extends React.Component {
       <div className="main">
         <Navbar />
         <div className="App-intro">
-          <form onSubmit={this.handleSubmit} id='form'>
+          <form onSubmit={this.handleSubmit} id='form' className="userAdminForm">
           </form>
           <section className='useradmin'>
             <section>

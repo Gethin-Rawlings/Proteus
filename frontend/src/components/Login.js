@@ -37,7 +37,7 @@ class Login extends React.Component {
       console.log(err)
     }
     const loginStatus = this.state.loginStatus
-    if (this.state.loginStatus.success === true) {
+    if (loginStatus.success === true) {
       sessionStorage.setItem('token', loginStatus.token);
       sessionStorage.setItem('loggedIn', loginStatus.success);
       sessionStorage.setItem('supplier', loginStatus.supplier)
@@ -45,7 +45,7 @@ class Login extends React.Component {
       sessionStorage.setItem('admin', loginStatus.admin)
       sessionStorage.setItem('finance', loginStatus.finance)
       sessionStorage.setItem('commission', loginStatus.commission)
-    }; 
+    };  
     const loggedIn = sessionStorage.getItem('loggedIn');
     if (loggedIn) {
       history.push("/main");
@@ -80,5 +80,4 @@ class Login extends React.Component {
     );
   }
 }
-
 export default Login;

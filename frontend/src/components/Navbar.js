@@ -6,7 +6,7 @@ class Navbar extends React.Component {
   render() {
 
     const admin = sessionStorage.getItem('admin');
-    console.log(admin)
+   
 
     return (
       <div >

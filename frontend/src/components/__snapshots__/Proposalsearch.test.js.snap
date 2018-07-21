@@ -1,0 +1,1961 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storage Proposalsearch component should render as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Proposalsearch
+    history={
+        Array [
+            "/Proposalsearch",
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Navbar />,
+        <section
+          className="App-intro"
+>
+          <section
+                    className="proposalSearch"
+          >
+                    <form
+                              id="form"
+                              onSubmit={[Function]}
+                    />
+                    <input
+                              className="from"
+                              form="form"
+                              id="datetime"
+                              name="fromdate"
+                              type="date"
+                    />
+                    <input
+                              className="to"
+                              form="form"
+                              id="datetime"
+                              name="todate"
+                              type="date"
+                    />
+                    <button
+                              className="submit"
+                              form="form"
+                              id="submit"
+                    >
+                              Search
+                    </button>
+                    <button
+                              className="reset"
+                              form="form"
+                              id="reset"
+                              type="reset"
+                    >
+                              Reset
+                    </button>
+                    <section
+                              className="networks"
+                    >
+                              <GetNetworks
+                                        name="network"
+                                        network={[Function]}
+                              />
+                    </section>
+                    <section
+                              className="productions"
+                              name="productions"
+                    >
+                              <GetProductionDepts
+                                        className="production"
+                                        name="production"
+                                        production={[Function]}
+                              />
+                    </section>
+                    <section
+                              className="indies"
+                              name="indies"
+                    >
+                              <Getindie
+                                        indies={[Function]}
+                                        name="indie"
+                              />
+                    </section>
+                    <input
+                              className="usersearch"
+                              form="form"
+                              name="username"
+                              onChange={[Function]}
+                              placeholder="Title"
+                              type="text"
+                              value={undefined}
+                    />
+                    <withRouter(Displayusers)
+                              className="results"
+                              name="results"
+                              users="[{\\"usr_name\\":\\"Waiting\\"}]"
+                    />
+          </section>
+</section>,
+        <Footer />,
+      ],
+      "className": "main",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <section
+            className="proposalSearch"
+>
+            <form
+                        id="form"
+                        onSubmit={[Function]}
+            />
+            <input
+                        className="from"
+                        form="form"
+                        id="datetime"
+                        name="fromdate"
+                        type="date"
+            />
+            <input
+                        className="to"
+                        form="form"
+                        id="datetime"
+                        name="todate"
+                        type="date"
+            />
+            <button
+                        className="submit"
+                        form="form"
+                        id="submit"
+            >
+                        Search
+            </button>
+            <button
+                        className="reset"
+                        form="form"
+                        id="reset"
+                        type="reset"
+            >
+                        Reset
+            </button>
+            <section
+                        className="networks"
+            >
+                        <GetNetworks
+                                    name="network"
+                                    network={[Function]}
+                        />
+            </section>
+            <section
+                        className="productions"
+                        name="productions"
+            >
+                        <GetProductionDepts
+                                    className="production"
+                                    name="production"
+                                    production={[Function]}
+                        />
+            </section>
+            <section
+                        className="indies"
+                        name="indies"
+            >
+                        <Getindie
+                                    indies={[Function]}
+                                    name="indie"
+                        />
+            </section>
+            <input
+                        className="usersearch"
+                        form="form"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Title"
+                        type="text"
+                        value={undefined}
+            />
+            <withRouter(Displayusers)
+                        className="results"
+                        name="results"
+                        users="[{\\"usr_name\\":\\"Waiting\\"}]"
+            />
+</section>,
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <form
+                id="form"
+                onSubmit={[Function]}
+/>,
+              <input
+                className="from"
+                form="form"
+                id="datetime"
+                name="fromdate"
+                type="date"
+/>,
+              <input
+                className="to"
+                form="form"
+                id="datetime"
+                name="todate"
+                type="date"
+/>,
+              <button
+                className="submit"
+                form="form"
+                id="submit"
+>
+                Search
+</button>,
+              <button
+                className="reset"
+                form="form"
+                id="reset"
+                type="reset"
+>
+                Reset
+</button>,
+              <section
+                className="networks"
+>
+                <GetNetworks
+                                name="network"
+                                network={[Function]}
+                />
+</section>,
+              <section
+                className="productions"
+                name="productions"
+>
+                <GetProductionDepts
+                                className="production"
+                                name="production"
+                                production={[Function]}
+                />
+</section>,
+              <section
+                className="indies"
+                name="indies"
+>
+                <Getindie
+                                indies={[Function]}
+                                name="indie"
+                />
+</section>,
+              <input
+                className="usersearch"
+                form="form"
+                name="username"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+                value={undefined}
+/>,
+              <withRouter(Displayusers)
+                className="results"
+                name="results"
+                users="[{\\"usr_name\\":\\"Waiting\\"}]"
+/>,
+            ],
+            "className": "proposalSearch",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "form",
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "form",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "from",
+                "form": "form",
+                "id": "datetime",
+                "name": "fromdate",
+                "type": "date",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "to",
+                "form": "form",
+                "id": "datetime",
+                "name": "todate",
+                "type": "date",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Search",
+                "className": "submit",
+                "form": "form",
+                "id": "submit",
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Reset",
+                "className": "reset",
+                "form": "form",
+                "id": "reset",
+                "type": "reset",
+              },
+              "ref": null,
+              "rendered": "Reset",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <GetNetworks
+                  name="network"
+                  network={[Function]}
+/>,
+                "className": "networks",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "name": "network",
+                  "network": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <GetProductionDepts
+                  className="production"
+                  name="production"
+                  production={[Function]}
+/>,
+                "className": "productions",
+                "name": "productions",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "className": "production",
+                  "name": "production",
+                  "production": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Getindie
+                  indies={[Function]}
+                  name="indie"
+/>,
+                "className": "indies",
+                "name": "indies",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "indies": [Function],
+                  "name": "indie",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "usersearch",
+                "form": "form",
+                "name": "username",
+                "onChange": [Function],
+                "placeholder": "Title",
+                "type": "text",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "results",
+                "name": "results",
+                "users": "[{\\"usr_name\\":\\"Waiting\\"}]",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "section",
+        },
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Navbar />,
+          <section
+            className="App-intro"
+>
+            <section
+                        className="proposalSearch"
+            >
+                        <form
+                                    id="form"
+                                    onSubmit={[Function]}
+                        />
+                        <input
+                                    className="from"
+                                    form="form"
+                                    id="datetime"
+                                    name="fromdate"
+                                    type="date"
+                        />
+                        <input
+                                    className="to"
+                                    form="form"
+                                    id="datetime"
+                                    name="todate"
+                                    type="date"
+                        />
+                        <button
+                                    className="submit"
+                                    form="form"
+                                    id="submit"
+                        >
+                                    Search
+                        </button>
+                        <button
+                                    className="reset"
+                                    form="form"
+                                    id="reset"
+                                    type="reset"
+                        >
+                                    Reset
+                        </button>
+                        <section
+                                    className="networks"
+                        >
+                                    <GetNetworks
+                                                name="network"
+                                                network={[Function]}
+                                    />
+                        </section>
+                        <section
+                                    className="productions"
+                                    name="productions"
+                        >
+                                    <GetProductionDepts
+                                                className="production"
+                                                name="production"
+                                                production={[Function]}
+                                    />
+                        </section>
+                        <section
+                                    className="indies"
+                                    name="indies"
+                        >
+                                    <Getindie
+                                                indies={[Function]}
+                                                name="indie"
+                                    />
+                        </section>
+                        <input
+                                    className="usersearch"
+                                    form="form"
+                                    name="username"
+                                    onChange={[Function]}
+                                    placeholder="Title"
+                                    type="text"
+                                    value={undefined}
+                        />
+                        <withRouter(Displayusers)
+                                    className="results"
+                                    name="results"
+                                    users="[{\\"usr_name\\":\\"Waiting\\"}]"
+                        />
+            </section>
+</section>,
+          <Footer />,
+        ],
+        "className": "main",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <section
+              className="proposalSearch"
+>
+              <form
+                            id="form"
+                            onSubmit={[Function]}
+              />
+              <input
+                            className="from"
+                            form="form"
+                            id="datetime"
+                            name="fromdate"
+                            type="date"
+              />
+              <input
+                            className="to"
+                            form="form"
+                            id="datetime"
+                            name="todate"
+                            type="date"
+              />
+              <button
+                            className="submit"
+                            form="form"
+                            id="submit"
+              >
+                            Search
+              </button>
+              <button
+                            className="reset"
+                            form="form"
+                            id="reset"
+                            type="reset"
+              >
+                            Reset
+              </button>
+              <section
+                            className="networks"
+              >
+                            <GetNetworks
+                                          name="network"
+                                          network={[Function]}
+                            />
+              </section>
+              <section
+                            className="productions"
+                            name="productions"
+              >
+                            <GetProductionDepts
+                                          className="production"
+                                          name="production"
+                                          production={[Function]}
+                            />
+              </section>
+              <section
+                            className="indies"
+                            name="indies"
+              >
+                            <Getindie
+                                          indies={[Function]}
+                                          name="indie"
+                            />
+              </section>
+              <input
+                            className="usersearch"
+                            form="form"
+                            name="username"
+                            onChange={[Function]}
+                            placeholder="Title"
+                            type="text"
+                            value={undefined}
+              />
+              <withRouter(Displayusers)
+                            className="results"
+                            name="results"
+                            users="[{\\"usr_name\\":\\"Waiting\\"}]"
+              />
+</section>,
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <form
+                  id="form"
+                  onSubmit={[Function]}
+/>,
+                <input
+                  className="from"
+                  form="form"
+                  id="datetime"
+                  name="fromdate"
+                  type="date"
+/>,
+                <input
+                  className="to"
+                  form="form"
+                  id="datetime"
+                  name="todate"
+                  type="date"
+/>,
+                <button
+                  className="submit"
+                  form="form"
+                  id="submit"
+>
+                  Search
+</button>,
+                <button
+                  className="reset"
+                  form="form"
+                  id="reset"
+                  type="reset"
+>
+                  Reset
+</button>,
+                <section
+                  className="networks"
+>
+                  <GetNetworks
+                                    name="network"
+                                    network={[Function]}
+                  />
+</section>,
+                <section
+                  className="productions"
+                  name="productions"
+>
+                  <GetProductionDepts
+                                    className="production"
+                                    name="production"
+                                    production={[Function]}
+                  />
+</section>,
+                <section
+                  className="indies"
+                  name="indies"
+>
+                  <Getindie
+                                    indies={[Function]}
+                                    name="indie"
+                  />
+</section>,
+                <input
+                  className="usersearch"
+                  form="form"
+                  name="username"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                  value={undefined}
+/>,
+                <withRouter(Displayusers)
+                  className="results"
+                  name="results"
+                  users="[{\\"usr_name\\":\\"Waiting\\"}]"
+/>,
+              ],
+              "className": "proposalSearch",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "form",
+                  "onSubmit": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "form",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "from",
+                  "form": "form",
+                  "id": "datetime",
+                  "name": "fromdate",
+                  "type": "date",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "to",
+                  "form": "form",
+                  "id": "datetime",
+                  "name": "todate",
+                  "type": "date",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Search",
+                  "className": "submit",
+                  "form": "form",
+                  "id": "submit",
+                },
+                "ref": null,
+                "rendered": "Search",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Reset",
+                  "className": "reset",
+                  "form": "form",
+                  "id": "reset",
+                  "type": "reset",
+                },
+                "ref": null,
+                "rendered": "Reset",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <GetNetworks
+                    name="network"
+                    network={[Function]}
+/>,
+                  "className": "networks",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "name": "network",
+                    "network": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <GetProductionDepts
+                    className="production"
+                    name="production"
+                    production={[Function]}
+/>,
+                  "className": "productions",
+                  "name": "productions",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": "production",
+                    "name": "production",
+                    "production": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Getindie
+                    indies={[Function]}
+                    name="indie"
+/>,
+                  "className": "indies",
+                  "name": "indies",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "indies": [Function],
+                    "name": "indie",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "usersearch",
+                  "form": "form",
+                  "name": "username",
+                  "onChange": [Function],
+                  "placeholder": "Title",
+                  "type": "text",
+                  "value": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "results",
+                  "name": "results",
+                  "users": "[{\\"usr_name\\":\\"Waiting\\"}]",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "section",
+          },
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`storage Proposalsearch component should render as expected 2`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Proposalsearch
+    history={
+        Array [
+            "/Proposalsearch",
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Navbar />,
+        <section
+          className="App-intro"
+>
+          <section
+                    className="proposalSearch"
+          >
+                    <form
+                              id="form"
+                              onSubmit={[Function]}
+                    />
+                    <input
+                              className="from"
+                              form="form"
+                              id="datetime"
+                              name="fromdate"
+                              type="date"
+                    />
+                    <input
+                              className="to"
+                              form="form"
+                              id="datetime"
+                              name="todate"
+                              type="date"
+                    />
+                    <button
+                              className="submit"
+                              form="form"
+                              id="submit"
+                    >
+                              Search
+                    </button>
+                    <button
+                              className="reset"
+                              form="form"
+                              id="reset"
+                              type="reset"
+                    >
+                              Reset
+                    </button>
+                    <section
+                              className="networks"
+                    >
+                              <GetNetworks
+                                        name="network"
+                                        network={[Function]}
+                              />
+                    </section>
+                    <section
+                              className="productions"
+                              name="productions"
+                    >
+                              <GetProductionDepts
+                                        className="production"
+                                        name="production"
+                                        production={[Function]}
+                              />
+                    </section>
+                    <section
+                              className="indies"
+                              name="indies"
+                    >
+                              <Getindie
+                                        indies={[Function]}
+                                        name="indie"
+                              />
+                    </section>
+                    <input
+                              className="usersearch"
+                              form="form"
+                              name="username"
+                              onChange={[Function]}
+                              placeholder="Title"
+                              type="text"
+                              value={undefined}
+                    />
+                    <withRouter(Displayusers)
+                              className="results"
+                              name="results"
+                              users="[{\\"usr_name\\":\\"Waiting\\"}]"
+                    />
+          </section>
+</section>,
+        <Footer />,
+      ],
+      "className": "main",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <section
+            className="proposalSearch"
+>
+            <form
+                        id="form"
+                        onSubmit={[Function]}
+            />
+            <input
+                        className="from"
+                        form="form"
+                        id="datetime"
+                        name="fromdate"
+                        type="date"
+            />
+            <input
+                        className="to"
+                        form="form"
+                        id="datetime"
+                        name="todate"
+                        type="date"
+            />
+            <button
+                        className="submit"
+                        form="form"
+                        id="submit"
+            >
+                        Search
+            </button>
+            <button
+                        className="reset"
+                        form="form"
+                        id="reset"
+                        type="reset"
+            >
+                        Reset
+            </button>
+            <section
+                        className="networks"
+            >
+                        <GetNetworks
+                                    name="network"
+                                    network={[Function]}
+                        />
+            </section>
+            <section
+                        className="productions"
+                        name="productions"
+            >
+                        <GetProductionDepts
+                                    className="production"
+                                    name="production"
+                                    production={[Function]}
+                        />
+            </section>
+            <section
+                        className="indies"
+                        name="indies"
+            >
+                        <Getindie
+                                    indies={[Function]}
+                                    name="indie"
+                        />
+            </section>
+            <input
+                        className="usersearch"
+                        form="form"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Title"
+                        type="text"
+                        value={undefined}
+            />
+            <withRouter(Displayusers)
+                        className="results"
+                        name="results"
+                        users="[{\\"usr_name\\":\\"Waiting\\"}]"
+            />
+</section>,
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <form
+                id="form"
+                onSubmit={[Function]}
+/>,
+              <input
+                className="from"
+                form="form"
+                id="datetime"
+                name="fromdate"
+                type="date"
+/>,
+              <input
+                className="to"
+                form="form"
+                id="datetime"
+                name="todate"
+                type="date"
+/>,
+              <button
+                className="submit"
+                form="form"
+                id="submit"
+>
+                Search
+</button>,
+              <button
+                className="reset"
+                form="form"
+                id="reset"
+                type="reset"
+>
+                Reset
+</button>,
+              <section
+                className="networks"
+>
+                <GetNetworks
+                                name="network"
+                                network={[Function]}
+                />
+</section>,
+              <section
+                className="productions"
+                name="productions"
+>
+                <GetProductionDepts
+                                className="production"
+                                name="production"
+                                production={[Function]}
+                />
+</section>,
+              <section
+                className="indies"
+                name="indies"
+>
+                <Getindie
+                                indies={[Function]}
+                                name="indie"
+                />
+</section>,
+              <input
+                className="usersearch"
+                form="form"
+                name="username"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+                value={undefined}
+/>,
+              <withRouter(Displayusers)
+                className="results"
+                name="results"
+                users="[{\\"usr_name\\":\\"Waiting\\"}]"
+/>,
+            ],
+            "className": "proposalSearch",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "form",
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "form",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "from",
+                "form": "form",
+                "id": "datetime",
+                "name": "fromdate",
+                "type": "date",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "to",
+                "form": "form",
+                "id": "datetime",
+                "name": "todate",
+                "type": "date",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Search",
+                "className": "submit",
+                "form": "form",
+                "id": "submit",
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Reset",
+                "className": "reset",
+                "form": "form",
+                "id": "reset",
+                "type": "reset",
+              },
+              "ref": null,
+              "rendered": "Reset",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <GetNetworks
+                  name="network"
+                  network={[Function]}
+/>,
+                "className": "networks",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "name": "network",
+                  "network": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <GetProductionDepts
+                  className="production"
+                  name="production"
+                  production={[Function]}
+/>,
+                "className": "productions",
+                "name": "productions",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "className": "production",
+                  "name": "production",
+                  "production": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Getindie
+                  indies={[Function]}
+                  name="indie"
+/>,
+                "className": "indies",
+                "name": "indies",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "indies": [Function],
+                  "name": "indie",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "usersearch",
+                "form": "form",
+                "name": "username",
+                "onChange": [Function],
+                "placeholder": "Title",
+                "type": "text",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "results",
+                "name": "results",
+                "users": "[{\\"usr_name\\":\\"Waiting\\"}]",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "section",
+        },
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Navbar />,
+          <section
+            className="App-intro"
+>
+            <section
+                        className="proposalSearch"
+            >
+                        <form
+                                    id="form"
+                                    onSubmit={[Function]}
+                        />
+                        <input
+                                    className="from"
+                                    form="form"
+                                    id="datetime"
+                                    name="fromdate"
+                                    type="date"
+                        />
+                        <input
+                                    className="to"
+                                    form="form"
+                                    id="datetime"
+                                    name="todate"
+                                    type="date"
+                        />
+                        <button
+                                    className="submit"
+                                    form="form"
+                                    id="submit"
+                        >
+                                    Search
+                        </button>
+                        <button
+                                    className="reset"
+                                    form="form"
+                                    id="reset"
+                                    type="reset"
+                        >
+                                    Reset
+                        </button>
+                        <section
+                                    className="networks"
+                        >
+                                    <GetNetworks
+                                                name="network"
+                                                network={[Function]}
+                                    />
+                        </section>
+                        <section
+                                    className="productions"
+                                    name="productions"
+                        >
+                                    <GetProductionDepts
+                                                className="production"
+                                                name="production"
+                                                production={[Function]}
+                                    />
+                        </section>
+                        <section
+                                    className="indies"
+                                    name="indies"
+                        >
+                                    <Getindie
+                                                indies={[Function]}
+                                                name="indie"
+                                    />
+                        </section>
+                        <input
+                                    className="usersearch"
+                                    form="form"
+                                    name="username"
+                                    onChange={[Function]}
+                                    placeholder="Title"
+                                    type="text"
+                                    value={undefined}
+                        />
+                        <withRouter(Displayusers)
+                                    className="results"
+                                    name="results"
+                                    users="[{\\"usr_name\\":\\"Waiting\\"}]"
+                        />
+            </section>
+</section>,
+          <Footer />,
+        ],
+        "className": "main",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <section
+              className="proposalSearch"
+>
+              <form
+                            id="form"
+                            onSubmit={[Function]}
+              />
+              <input
+                            className="from"
+                            form="form"
+                            id="datetime"
+                            name="fromdate"
+                            type="date"
+              />
+              <input
+                            className="to"
+                            form="form"
+                            id="datetime"
+                            name="todate"
+                            type="date"
+              />
+              <button
+                            className="submit"
+                            form="form"
+                            id="submit"
+              >
+                            Search
+              </button>
+              <button
+                            className="reset"
+                            form="form"
+                            id="reset"
+                            type="reset"
+              >
+                            Reset
+              </button>
+              <section
+                            className="networks"
+              >
+                            <GetNetworks
+                                          name="network"
+                                          network={[Function]}
+                            />
+              </section>
+              <section
+                            className="productions"
+                            name="productions"
+              >
+                            <GetProductionDepts
+                                          className="production"
+                                          name="production"
+                                          production={[Function]}
+                            />
+              </section>
+              <section
+                            className="indies"
+                            name="indies"
+              >
+                            <Getindie
+                                          indies={[Function]}
+                                          name="indie"
+                            />
+              </section>
+              <input
+                            className="usersearch"
+                            form="form"
+                            name="username"
+                            onChange={[Function]}
+                            placeholder="Title"
+                            type="text"
+                            value={undefined}
+              />
+              <withRouter(Displayusers)
+                            className="results"
+                            name="results"
+                            users="[{\\"usr_name\\":\\"Waiting\\"}]"
+              />
+</section>,
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <form
+                  id="form"
+                  onSubmit={[Function]}
+/>,
+                <input
+                  className="from"
+                  form="form"
+                  id="datetime"
+                  name="fromdate"
+                  type="date"
+/>,
+                <input
+                  className="to"
+                  form="form"
+                  id="datetime"
+                  name="todate"
+                  type="date"
+/>,
+                <button
+                  className="submit"
+                  form="form"
+                  id="submit"
+>
+                  Search
+</button>,
+                <button
+                  className="reset"
+                  form="form"
+                  id="reset"
+                  type="reset"
+>
+                  Reset
+</button>,
+                <section
+                  className="networks"
+>
+                  <GetNetworks
+                                    name="network"
+                                    network={[Function]}
+                  />
+</section>,
+                <section
+                  className="productions"
+                  name="productions"
+>
+                  <GetProductionDepts
+                                    className="production"
+                                    name="production"
+                                    production={[Function]}
+                  />
+</section>,
+                <section
+                  className="indies"
+                  name="indies"
+>
+                  <Getindie
+                                    indies={[Function]}
+                                    name="indie"
+                  />
+</section>,
+                <input
+                  className="usersearch"
+                  form="form"
+                  name="username"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                  value={undefined}
+/>,
+                <withRouter(Displayusers)
+                  className="results"
+                  name="results"
+                  users="[{\\"usr_name\\":\\"Waiting\\"}]"
+/>,
+              ],
+              "className": "proposalSearch",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "form",
+                  "onSubmit": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "form",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "from",
+                  "form": "form",
+                  "id": "datetime",
+                  "name": "fromdate",
+                  "type": "date",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "to",
+                  "form": "form",
+                  "id": "datetime",
+                  "name": "todate",
+                  "type": "date",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Search",
+                  "className": "submit",
+                  "form": "form",
+                  "id": "submit",
+                },
+                "ref": null,
+                "rendered": "Search",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Reset",
+                  "className": "reset",
+                  "form": "form",
+                  "id": "reset",
+                  "type": "reset",
+                },
+                "ref": null,
+                "rendered": "Reset",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <GetNetworks
+                    name="network"
+                    network={[Function]}
+/>,
+                  "className": "networks",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "name": "network",
+                    "network": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <GetProductionDepts
+                    className="production"
+                    name="production"
+                    production={[Function]}
+/>,
+                  "className": "productions",
+                  "name": "productions",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": "production",
+                    "name": "production",
+                    "production": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Getindie
+                    indies={[Function]}
+                    name="indie"
+/>,
+                  "className": "indies",
+                  "name": "indies",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "indies": [Function],
+                    "name": "indie",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "usersearch",
+                  "form": "form",
+                  "name": "username",
+                  "onChange": [Function],
+                  "placeholder": "Title",
+                  "type": "text",
+                  "value": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "results",
+                  "name": "results",
+                  "users": "[{\\"usr_name\\":\\"Waiting\\"}]",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "section",
+          },
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

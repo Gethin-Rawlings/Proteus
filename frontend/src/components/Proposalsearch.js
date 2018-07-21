@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar"
-import Header from './Header'
 import Footer from './Footer'
 import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
@@ -54,7 +53,6 @@ class Proposalsearch extends React.Component {
   render() {
     return (
       <div className="main">
-        <Header/>
         <Navbar/>
         <section className="App-intro">
           <section className='proposalSearch'>

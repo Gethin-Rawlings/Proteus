@@ -6,7 +6,7 @@ import Footer from './Footer'
 class Main extends React.Component {
   componentDidMount() {
     const loggedIn = sessionStorage.getItem('loggedIn');
-    const { history } = this.props;
+    const {history} = this.props;
     if (!loggedIn) {
       history.push("/");
     }
@@ -14,10 +14,10 @@ class Main extends React.Component {
   render() {
     return (
       <div className="main">
-        <Navbar />
+        <Navbar/>
         <section className="main-body">Grumpy cat was ere again
         </section>
-        <Footer />
+        <Footer/>
       </div>
 
     );

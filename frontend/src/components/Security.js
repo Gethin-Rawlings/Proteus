@@ -18,12 +18,3 @@ class Security extends React.Component {
       }
 
 export default Security
-/*
-export const logedIn = async () => {
-  const response = await sessionStorage.getItem('loggedIn');
-  if (response) {
-    history.push("/main");
-    console.log('Wibble  Sec')
-  }
-}
-*/
