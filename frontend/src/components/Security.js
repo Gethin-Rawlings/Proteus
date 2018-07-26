@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from "react-router-dom"
 
 class Security extends React.Component {
         constructor(props){
@@ -13,8 +14,7 @@ class Security extends React.Component {
           }
         }
         render() {
-            return this.props.children
+            return (null);
         }
       }
-
-export default Security
+export default  withRouter(Security)

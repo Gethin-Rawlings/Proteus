@@ -26,10 +26,10 @@ class GetNetworks extends Component {
   }
   render() {
     if (this.state.requestFailed) return <p>Failed!</p>
-    if (!this.state.Getnetworks) return <p>Loading...</p>
+    if (!this.state.Getnetworks) return <p name="network" className="network">Loading...</p>
     let returnData = this.state.Getnetworks
     return (
-      <select className='networks' name="network" form="form" onChange={this.handleChange}>
+      <select className='networks' name="network"  form="form" onChange={this.handleChange}>
         <option key={0} value={0}> -- select a Network -- </option>
         {returnData.map(p => <option key={p.org_organisation_id} value={p.org_organisation_id}>{p.org_description}</option>)}
       </select>

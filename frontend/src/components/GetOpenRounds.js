@@ -18,25 +18,13 @@ class GetOpenRounds extends Component {
     const value = target.value;
     this.setState({ [name]: value });
   }
-  componentDidMount() {
-    fetch(urlForNetworks(this.props.network))
-      .then(response => {
-        if (!response.ok) {
-          throw Error("Network request failed")
-        }
-        return response
-      })
-      .then(d => d.json())
-
-      .then(d => {
-        this.setState({
-          Getopenrounds: JSON.stringify(d)
-        })
-      }, () => {
-        this.setState({
-          requestFailed: true
-        })
-      })
+  async componentDidMount() {
+    try {
+      const data = await getNetwork()
+      this.setState({ Getopenrounds: data })
+    } catch (err) {
+      this.setState({ requestFailed: true })
+    }
   }
   render() {
     if (this.state.requestFailed) return <p>Failed!</p>

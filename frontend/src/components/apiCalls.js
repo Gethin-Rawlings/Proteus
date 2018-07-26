@@ -1,5 +1,5 @@
-//const url ='http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/';
-const url = 'http://localhost:5000/';
+const url ='http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/';
+//const url = 'http://localhost:5000/';
 const urlForNetwork = url + 'organisations?type=network';
 const urlForindie = url + 'organisations?type=indie';
 const urlForproduction = url + 'organisations?type=production';

@@ -2,7 +2,7 @@ import React from 'react';
 import * as Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
 import ReactSixteenAdapter from 'enzyme-adapter-react-16';
-import Proposalsearch from './Proposalsearch'
+import Displayprogrammes from './Displayprogrammes'
 
 describe('storage', () => [localStorage, sessionStorage].map(storage => {
     beforeEach(() => {
@@ -12,16 +12,14 @@ describe('storage', () => [localStorage, sessionStorage].map(storage => {
   
     Enzyme.configure({ adapter: new ReactSixteenAdapter() });
   
-    const history = ['/Proposalsearch'];
+    const history = ['/Displayprogrammes'];
   
-    test('Proposalsearch component should render as expected', () => {
+    test('Displayprogrammes component should render as expected', () => {
       const KEY = 'loggedIn',
         VALUE = true;
       sessionStorage.setItem(KEY, VALUE);
-      const component = shallow(<Proposalsearch history={history} />);
+      const component = shallow(<Displayprogrammes history={history} />);
       const tree = component;
       expect(tree).toMatchSnapshot();
     })
   }));
-
-  

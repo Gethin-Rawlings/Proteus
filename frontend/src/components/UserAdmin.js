@@ -16,13 +16,6 @@ class UserAdmin extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  componentDidMount() {
-    const loggedIn = sessionStorage.getItem('loggedIn');
-    const { history } = this.props;
-    if (!loggedIn) {
-      history.push("/");
-    }
-  }
   handleChange(event) {
     const target = event.target;
     const name = target.name;

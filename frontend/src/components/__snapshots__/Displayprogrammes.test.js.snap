@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`storage Security component should render as expected 1`] = `
+exports[`storage Displayprogrammes component should render as expected 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Security)
+  Symbol(enzyme.__unrendered__): <withRouter(Displayprogrammes)
     history={
         Array [
-            "/Security",
+            "/Displayprogrammes",
           ]
     }
 />,
@@ -52,14 +52,14 @@ ShallowWrapper {
 }
 `;
 
-exports[`storage Security component should render as expected 2`] = `
+exports[`storage Displayprogrammes component should render as expected 2`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Security)
+  Symbol(enzyme.__unrendered__): <withRouter(Displayprogrammes)
     history={
         Array [
-            "/Security",
+            "/Displayprogrammes",
           ]
     }
 />,

@@ -31,13 +31,8 @@ class UserDetails extends React.Component {
     }
   }
   componentDidMount() {
-    const loggedIn = sessionStorage.getItem('loggedIn');
     const user = this.props.location.state.detail
-    const urlForuserDetails = () => 'http://localhost:5000/userDetails?user=' + user
-    const { history } = this.props;
-    if (!loggedIn) {
-      history.push("/");
-    }
+    const urlForuserDetails = () => 'http://localhost:5000/userDetails?user=' + user   
     fetch(urlForuserDetails(this.props.users))
       .then(response => {
         if (!response.ok) {

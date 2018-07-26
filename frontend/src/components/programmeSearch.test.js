@@ -5,6 +5,7 @@ import ReactSixteenAdapter from 'enzyme-adapter-react-16';
 import ProgrammeSearch from './ProgrammeSearch';
 import TestUtils from 'react-dom/test-utils';
 import { BrowserRouter } from "react-router-dom";
+import {programmeSearch} from "./apiCalls";
 
 
 describe('storage', () => [localStorage, sessionStorage].map(storage => {
@@ -57,6 +58,7 @@ test('Form submitted and search function called', () => {
   const history = ['/ProgrammeSearch'];
   var rendered = TestUtils.renderIntoDocument(<BrowserRouter><ProgrammeSearch /></BrowserRouter>);
   var form = TestUtils.findRenderedDOMComponentWithClass(rendered, 'programmeForm');
+  TestUtils.Simulate.submit(form);
 })
 
 

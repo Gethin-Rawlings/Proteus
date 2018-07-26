@@ -1,6 +1,8 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import './Main.css';
+import Security from './Security';
+import {withRouter} from "react-router-dom"
 
 class Navbar extends React.Component {
   render() {
@@ -10,6 +12,7 @@ class Navbar extends React.Component {
 
     return (
       <div >
+        <Security history={this.props.route}/>
         <ul className='main-nav'>
           <div>
             <li>
@@ -40,4 +43,4 @@ class Navbar extends React.Component {
     );
   }
 }
-export default Navbar;
+export default withRouter(Navbar);

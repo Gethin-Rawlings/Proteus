@@ -1,16 +1,20 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import Getnetworks from './Getnetworks'
 
- test('getnetworks renders as expected' ,() => {
-    const component = shallow(<Getnetworks />);
+
+import GetOpenRounds from './GetOpenRounds'
+
+jest.mock("./apiCalls")
+ test('GetOpenRounds renders as expected' ,() => {
+    const component = shallow(<GetOpenRounds />);
     const tree = component;
     expect(tree).toMatchSnapshot();
  })
 
+
  jest.mock("./apiCalls")
     it('should respond to change event and change the state of the networks drop down', done => {        
-      const wrapper = mount(<Getnetworks />);
+      const wrapper = mount(<GetOpenRounds />);
       const data =  jest.fn()
       setTimeout(()=>{
       wrapper.update();

@@ -4,13 +4,7 @@ import Navbar from "./Navbar"
 import Footer from './Footer'
 
 class Main extends React.Component {
-  componentDidMount() {
-    const loggedIn = sessionStorage.getItem('loggedIn');
-    const {history} = this.props;
-    if (!loggedIn) {
-      history.push("/");
-    }
-  }
+  
   render() {
     return (
       <div className="main">
