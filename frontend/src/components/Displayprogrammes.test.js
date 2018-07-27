@@ -3,6 +3,8 @@ import * as Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
 import ReactSixteenAdapter from 'enzyme-adapter-react-16';
 import Displayprogrammes from './Displayprogrammes'
+import renderer from 'react-test-renderer';
+import { BrowserRouter } from "react-router-dom";
 
 describe('storage', () => [localStorage, sessionStorage].map(storage => {
     beforeEach(() => {
@@ -22,4 +24,11 @@ describe('storage', () => [localStorage, sessionStorage].map(storage => {
       const tree = component;
       expect(tree).toMatchSnapshot();
     })
+    /*
+    test('It responds to a mouse click', () => {
+      const wrapper = shallow(<Displayprogrammes />);
+      wrapper.find('').simulate('click', { preventDefault() {} });
+
+    })
+    */
   }));
