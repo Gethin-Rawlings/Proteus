@@ -3,6 +3,12 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
+router.get("/", function(req, res) {  
+    res.json({
+        status: "My API is alive!"
+    });
+});
+
 const login = require('./users/login');
 router.all('/login', jsonParser, login);
 

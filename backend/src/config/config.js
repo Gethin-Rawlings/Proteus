@@ -2,8 +2,8 @@ const dbConfig = {
     development: {
         user: 'rest',
         password: 'password',
-        server: 'GETHIN',
-        database: 'Proteus',
+        server: 'localhost',
+        database: 'Proteus'
     },
     production: {
         user: 'rest',

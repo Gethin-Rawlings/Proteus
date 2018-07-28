@@ -3,9 +3,9 @@ const app = require('./app');
 const port = process.env.PORT || 5000;
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
-const server = app.listen(port, function () {
+/*const server = app.listen(port, function () {
   console.log('Express server listening on port ' + port);
-});
+});*/
 if (cluster.isMaster) {
   console.log(`Master ${process.pid} is running`);
 
