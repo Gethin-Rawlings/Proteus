@@ -8,7 +8,7 @@ class Navbar extends React.Component {
   render() {
 
     const admin = sessionStorage.getItem('admin');
-   
+   console.log(admin)
 
     return (
       <div >
@@ -19,11 +19,13 @@ class Navbar extends React.Component {
               <NavLink to='/Main'>Home</NavLink>
             </li>
           </div>
+          {admin === 'true' &&
           <div>
             <li>
               <NavLink to='/UserAdmin'>User Admin</NavLink>
             </li>
           </div>
+          }
           <li className="dropdown">
             <a className="dropbtn">Search</a>
             <div className="dropdown-content">
