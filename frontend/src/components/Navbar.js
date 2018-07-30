@@ -8,8 +8,13 @@ class Navbar extends React.Component {
   render() {
 
     const admin = sessionStorage.getItem('admin');
-   
-
+    const classical = sessionStorage.getItem('classical')
+    const supplier = sessionStorage.getItem('supplier')
+    const commission = sessionStorage.getItem('commission')
+    var proposal = 'false'
+    if (supplier === 'true' || commission === 'true' ) {
+       proposal = 'true'
+    } 
     return (
       <div >
         <Security history={this.props.route}/>
@@ -19,23 +24,25 @@ class Navbar extends React.Component {
               <NavLink to='/Main'>Home</NavLink>
             </li>
           </div>
+          {admin === 'true' &&
           <div>
             <li>
               <NavLink to='/UserAdmin'>User Admin</NavLink>
             </li>
           </div>
+          }
           <li className="dropdown">
             <a className="dropbtn">Search</a>
             <div className="dropdown-content">
               <NavLink to='/ProgrammeSearch'>Programme</NavLink>
-              <NavLink to='/ProposalSearch'>Proposal</NavLink>
-              <NavLink to='/ClassicalSearch'>Classical music</NavLink>
+              {proposal === 'true' && <NavLink to='/ProposalSearch'>Proposal</NavLink>}
+              {classical ==='true'&& <NavLink to='/ClassicalSearch'>Classical music</NavLink>}
               <NavLink to='/ContemporarySearch'>Contemporary music</NavLink>
             </div>
           </li>
           <div className="logout">
             <li >
-              <NavLink to='/'>Logout</NavLink>
+              <NavLink to='/Logout'>Logout</NavLink>
             </li>
           </div>
         </ul>

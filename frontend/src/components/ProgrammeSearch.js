@@ -25,14 +25,6 @@ class Programmesearch extends React.Component {
       .handleSubmit
       .bind(this);
   }
-  /*
-  componentDidMount() {
-    const loggedIn = sessionStorage.getItem('loggedIn');
-    const {history} = this.props;
-    if (!loggedIn) {
-      history.push("/");
-    }
-  }*/
   handleChange(event) {
     const target = event.target;
     const name = target.name;
