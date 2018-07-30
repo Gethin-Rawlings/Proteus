@@ -1,14 +1,11 @@
-
-USE [Proteustraining]
+USE [Proteus]
 GO
-drop PROCEDURE [dbo].[PR_GET_USERS]
-GO
-
+/****** Object:  StoredProcedure [dbo].[PR_GET_USERS]    Script Date: 7/30/2018 7:33:19 PM ******/
 SET ANSI_NULLS ON
 GO
-SET QUOTED_IDENTIFIER ON        
+SET QUOTED_IDENTIFIER ON
 GO
-create PROCEDURE [dbo].[PR_GET_USERS]
+ALTER PROCEDURE [dbo].[PR_GET_USERS]
     @production int =null,
     @network int =null,
     @indie int =null,
