@@ -35,7 +35,7 @@ class Navbar extends React.Component {
           </li>
           <div className="logout">
             <li >
-              <NavLink to='/'>Logout</NavLink>
+              <NavLink to='/Logout'>Logout</NavLink>
             </li>
           </div>
         </ul>
