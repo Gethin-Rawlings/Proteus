@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
-router.post('/updateUsers', function (req, res) {
+router.post('/updateUsers', async (req, res) => {
     const username = req.fields.userName;
     const userFirstname = req.fields.userFirstname;
     const userLastname = req.fields.userLastname;
@@ -26,7 +26,7 @@ router.post('/updateUsers', function (req, res) {
     request.input('accountExpiryDate', sql.VarChar(50), accountExpiryDate);
     request.input('userIdIndie', sql.VarChar(50), userIdIndie);
     request.input('password', sql.VarChar(50), password);
-    request.execute('PR_UPDATE_USER', function (err, result) {
+    await request.execute('PR_UPDATE_USER', function (err, result) {
         if (err) console.log(err)
         if (result.recordset[0] === undefined) {
             const response = JSON.stringify({ success: false, err: "update Failed" })

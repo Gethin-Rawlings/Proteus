@@ -9,7 +9,7 @@ const exjwt = require('express-jwt');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
-router.post('/proposalsearch', function (req, res) {
+router.post('/proposalsearch', async (req, res) => {
 
     const production = req.fields.production;
     const network = req.fields.network;
@@ -20,7 +20,7 @@ router.post('/proposalsearch', function (req, res) {
     request.input('network', sql.Int, network)
     request.input('indie', sql.Int, indie)
     request.input('username', sql.VarChar(500), username)
-    request.execute('PR_GET_USERS', function (err, result) {
+    await request.execute('PR_GET_USERS', function (err, result) {
 
         if (err) console.log(err)
         res.send(result.recordset)

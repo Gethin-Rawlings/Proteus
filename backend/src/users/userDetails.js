@@ -6,11 +6,11 @@ const formidable = require('express-formidable');
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(formidable());
 
-router.get('/userDetails', function (req, res) {
+router.get('/userDetails', async (req, res) => {
     const username = req.query.user;
     const request = new sql.Request()
     request.input('username', sql.VarChar(50), username);
-    request.execute('PR_GET_USER_DETAILS', function (err, result) {
+    await request.execute('PR_GET_USER_DETAILS', function (err, result) {
 
         res.send(result.recordset[0]);
     })

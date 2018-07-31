@@ -8,12 +8,12 @@ const jwt = require('jsonwebtoken');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
-router.post('/login', function (req, res) {
+router.post('/login', async  (req, res) => {
     const username = req.fields.username;
     const password = req.fields.password;
     const request = new sql.Request();
     request.input('username', sql.VarChar(50), username);
-    request.execute('PR_GET_USER', function (err, result) {
+    await request.execute('PR_GET_USER', function (err, result) {
         if (err) console.log(err)
         if (result.recordset[0] === undefined) {
             const responseToken = JSON.stringify({ success: false, err: "username or password incorrect", token: null })
@@ -28,7 +28,6 @@ router.post('/login', function (req, res) {
             const commission = accRecordset.commission;
             const classical = accRecordset.classical;
             const reports = accRecordset.reports;
-            console.log(reports)
             bcrypt.compare(password, accPassword, function (error, result) {
                 if (error) console.log(error);
                 if (result == true) {
