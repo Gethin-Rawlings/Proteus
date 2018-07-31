@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import UserAdmin from "./components/UserAdmin";
 import UserDetails from "./components/UserDetails";
 import Logout from "./components/Logout";
+import Reports from "./components/Reports"
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 class App extends Component {
@@ -17,8 +18,10 @@ class App extends Component {
             <Route exact path='/' component={Login} />
             <Route path='/main' component={Main} />
             <Route path='/UserAdmin' component={UserAdmin} />
+            <Route path='/Reports' component={Reports} />
             <Route path='/ProgrammeSearch' component={ProgrammeSearch} />
             <Route path='/UserDetails' component={UserDetails} />
+           
             <Route path='/Logout' component={Logout} />
           </Switch>
         </BrowserRouter>

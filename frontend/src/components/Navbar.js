@@ -11,6 +11,7 @@ class Navbar extends React.Component {
     const classical = sessionStorage.getItem('classical')
     const supplier = sessionStorage.getItem('supplier')
     const commission = sessionStorage.getItem('commission')
+    const reports = sessionStorage.getItem('reports')
     var proposal = 'false'
     if (supplier === 'true' || commission === 'true' ) {
        proposal = 'true'
@@ -28,6 +29,13 @@ class Navbar extends React.Component {
           <div>
             <li>
               <NavLink to='/UserAdmin'>User Admin</NavLink>
+            </li>
+          </div>
+          }
+          {reports === 'true' &&
+          <div>
+            <li>
+              <NavLink to='/Reports'>Reports</NavLink>
             </li>
           </div>
           }

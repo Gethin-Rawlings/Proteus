@@ -27,6 +27,8 @@ router.post('/login', function (req, res) {
             const finance = accRecordset.finance;
             const commission = accRecordset.commission;
             const classical = accRecordset.classical;
+            const reports = accRecordset.reports;
+            console.log(reports)
             bcrypt.compare(password, accPassword, function (error, result) {
                 if (error) console.log(error);
                 if (result == true) {
@@ -41,7 +43,8 @@ router.post('/login', function (req, res) {
                                                             finance: finance,
                                                             commission: commission,
                                                             name : username,
-                                                            classical : classical
+                                                            classical : classical,
+                                                            reports : reports
                                                         });
                     res.send(responseToken);
                 } else {
