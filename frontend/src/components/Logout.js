@@ -9,10 +9,7 @@ class Logout extends React.Component {
         componentDidMount() {
           const { history } = this.props
           sessionStorage.clear();
-          const loggedIn = sessionStorage.getItem('loggedIn');
-          if (!loggedIn) {
             history.push("/");
-          }
         }
         render() {
             return (null);
