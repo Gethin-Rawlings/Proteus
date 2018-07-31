@@ -25,10 +25,11 @@ class UserDetails extends React.Component {
     const dataForm = new FormData(event.target);
     try {
       await updateUsers(dataForm)
-
+      
     } catch (err) {
       console.log(err)
     }
+    alert('Changes Saved')
   }
   componentDidMount() {
     const user = this.props.location.state.detail
