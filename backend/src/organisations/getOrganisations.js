@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const router = express.Router();
 const bodyParser = require('body-parser');
+const sql = require('../config/db')
 
 router.get('/organisations', async (req, res) => {
     const paramaters = req.query;

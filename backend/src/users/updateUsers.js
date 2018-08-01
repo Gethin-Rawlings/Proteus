@@ -4,6 +4,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const formidable = require('express-formidable');
 const jwt = require('jsonwebtoken');
+const sql = require('../config/db')
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());

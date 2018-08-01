@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const formidable = require('express-formidable');
 const jwt = require('jsonwebtoken');
+const sql = require('../config/db')
 
 router.use(formidable());
 

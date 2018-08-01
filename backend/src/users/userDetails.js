@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const formidable = require('express-formidable');
+const sql = require('../config/db')
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(formidable());
