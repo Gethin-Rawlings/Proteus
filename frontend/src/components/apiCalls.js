@@ -7,6 +7,7 @@ const urlForLogin = url + 'login';
 const urlForUpdateUsers = url + 'updateusers';
 const urlForprogrammeSearch = url + 'programmesearch';
 const urlForUserSearch = url + 'useradmin';
+const urlForuserDetails = url + 'userDetails?user='
 
 //Fetch for organsation drop downs returns all networks from organisations table
 export const getNetwork = async() => {
@@ -94,4 +95,12 @@ export const userSearch = async(submit) => {
     throw(new Error('Network request failed'))
   };
   return await response.json()
+}
+export const userDetails = async(user) => {
+  const response = await fetch(urlForuserDetails+user)
+  if (response.status >= 400) {
+    throw(new Error('Network request failed'))
+  } else {
+    return await response
+  }
 }

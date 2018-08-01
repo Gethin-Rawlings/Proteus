@@ -3,7 +3,7 @@ import "./Main.css";
 import Navbar from "./Navbar";
 import Footer from './Footer';
 import "./userDetails.css";
-import { updateUsers } from './apiCalls';
+import { updateUsers , userDetails  } from './apiCalls';
 
 class UserDetails extends React.Component {
   constructor(props) {
@@ -31,16 +31,9 @@ class UserDetails extends React.Component {
     }
     alert('Changes Saved')
   }
-  componentDidMount() {
-    const user = this.props.location.state.detail
-    const urlForuserDetails = () => 'http://localhost:5000/userDetails?user=' + user   
-    fetch(urlForuserDetails(this.props.users))
-      .then(response => {
-        if (!response.ok) {
-          throw Error("Network request failed")
-        }
-        return response
-      })
+  async componentDidMount() {
+    const user = this.props.location.state.detail  
+    await userDetails(user)
       .then(d => d.json())
       .then(d => {
         this.setState({

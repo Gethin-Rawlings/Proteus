@@ -38,6 +38,7 @@ class Programmesearch extends React.Component {
       this.setState({
         programmes: JSON.stringify(data)
       })
+      console.log(data.keys)
     } catch (err) {
       console.log(err)
     }
