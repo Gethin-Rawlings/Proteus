@@ -50,7 +50,7 @@ ShallowWrapper {
                     <section
                               className="network"
                     >
-                              <GetNetworks
+                              <Getorganisations
                                         name="network"
                                         network={[Function]}
                               />
@@ -59,7 +59,7 @@ ShallowWrapper {
                               className="production"
                               name="productions"
                     >
-                              <GetProductionDepts
+                              <Getorganisations
                                         className="production"
                                         name="production"
                                         production={[Function]}
@@ -69,7 +69,7 @@ ShallowWrapper {
                               className="indie"
                               name="indies"
                     >
-                              <Getindie
+                              <Getorganisations
                                         indies={[Function]}
                                         name="indie"
                               />
@@ -143,7 +143,7 @@ ShallowWrapper {
               <section
                             className="network"
               >
-                            <GetNetworks
+                            <Getorganisations
                                           name="network"
                                           network={[Function]}
                             />
@@ -152,7 +152,7 @@ ShallowWrapper {
                             className="production"
                             name="productions"
               >
-                            <GetProductionDepts
+                            <Getorganisations
                                           className="production"
                                           name="production"
                                           production={[Function]}
@@ -162,7 +162,7 @@ ShallowWrapper {
                             className="indie"
                             name="indies"
               >
-                            <Getindie
+                            <Getorganisations
                                           indies={[Function]}
                                           name="indie"
                             />
@@ -230,7 +230,7 @@ ShallowWrapper {
                 <section
                   className="network"
 >
-                  <GetNetworks
+                  <Getorganisations
                                     name="network"
                                     network={[Function]}
                   />
@@ -239,7 +239,7 @@ ShallowWrapper {
                   className="production"
                   name="productions"
 >
-                  <GetProductionDepts
+                  <Getorganisations
                                     className="production"
                                     name="production"
                                     production={[Function]}
@@ -249,7 +249,7 @@ ShallowWrapper {
                   className="indie"
                   name="indies"
 >
-                  <Getindie
+                  <Getorganisations
                                     indies={[Function]}
                                     name="indie"
                   />
@@ -299,7 +299,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <GetNetworks
+                  "children": <Getorganisations
                     name="network"
                     network={[Function]}
 />,
@@ -325,7 +325,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <GetProductionDepts
+                  "children": <Getorganisations
                     className="production"
                     name="production"
                     production={[Function]}
@@ -354,7 +354,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Getindie
+                  "children": <Getorganisations
                     indies={[Function]}
                     name="indie"
 />,
@@ -494,7 +494,7 @@ ShallowWrapper {
                         <section
                                     className="network"
                         >
-                                    <GetNetworks
+                                    <Getorganisations
                                                 name="network"
                                                 network={[Function]}
                                     />
@@ -503,7 +503,7 @@ ShallowWrapper {
                                     className="production"
                                     name="productions"
                         >
-                                    <GetProductionDepts
+                                    <Getorganisations
                                                 className="production"
                                                 name="production"
                                                 production={[Function]}
@@ -513,7 +513,7 @@ ShallowWrapper {
                                     className="indie"
                                     name="indies"
                         >
-                                    <Getindie
+                                    <Getorganisations
                                                 indies={[Function]}
                                                 name="indie"
                                     />
@@ -587,7 +587,7 @@ ShallowWrapper {
                 <section
                                 className="network"
                 >
-                                <GetNetworks
+                                <Getorganisations
                                                 name="network"
                                                 network={[Function]}
                                 />
@@ -596,7 +596,7 @@ ShallowWrapper {
                                 className="production"
                                 name="productions"
                 >
-                                <GetProductionDepts
+                                <Getorganisations
                                                 className="production"
                                                 name="production"
                                                 production={[Function]}
@@ -606,7 +606,7 @@ ShallowWrapper {
                                 className="indie"
                                 name="indies"
                 >
-                                <Getindie
+                                <Getorganisations
                                                 indies={[Function]}
                                                 name="indie"
                                 />
@@ -674,7 +674,7 @@ ShallowWrapper {
                   <section
                     className="network"
 >
-                    <GetNetworks
+                    <Getorganisations
                                         name="network"
                                         network={[Function]}
                     />
@@ -683,7 +683,7 @@ ShallowWrapper {
                     className="production"
                     name="productions"
 >
-                    <GetProductionDepts
+                    <Getorganisations
                                         className="production"
                                         name="production"
                                         production={[Function]}
@@ -693,7 +693,7 @@ ShallowWrapper {
                     className="indie"
                     name="indies"
 >
-                    <Getindie
+                    <Getorganisations
                                         indies={[Function]}
                                         name="indie"
                     />
@@ -743,7 +743,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <GetNetworks
+                    "children": <Getorganisations
                       name="network"
                       network={[Function]}
 />,
@@ -769,7 +769,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <GetProductionDepts
+                    "children": <Getorganisations
                       className="production"
                       name="production"
                       production={[Function]}
@@ -798,7 +798,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <Getindie
+                    "children": <Getorganisations
                       indies={[Function]}
                       name="indie"
 />,
@@ -966,7 +966,7 @@ ShallowWrapper {
                     <section
                               className="network"
                     >
-                              <GetNetworks
+                              <Getorganisations
                                         name="network"
                                         network={[Function]}
                               />
@@ -975,7 +975,7 @@ ShallowWrapper {
                               className="production"
                               name="productions"
                     >
-                              <GetProductionDepts
+                              <Getorganisations
                                         className="production"
                                         name="production"
                                         production={[Function]}
@@ -985,7 +985,7 @@ ShallowWrapper {
                               className="indie"
                               name="indies"
                     >
-                              <Getindie
+                              <Getorganisations
                                         indies={[Function]}
                                         name="indie"
                               />
@@ -1059,7 +1059,7 @@ ShallowWrapper {
               <section
                             className="network"
               >
-                            <GetNetworks
+                            <Getorganisations
                                           name="network"
                                           network={[Function]}
                             />
@@ -1068,7 +1068,7 @@ ShallowWrapper {
                             className="production"
                             name="productions"
               >
-                            <GetProductionDepts
+                            <Getorganisations
                                           className="production"
                                           name="production"
                                           production={[Function]}
@@ -1078,7 +1078,7 @@ ShallowWrapper {
                             className="indie"
                             name="indies"
               >
-                            <Getindie
+                            <Getorganisations
                                           indies={[Function]}
                                           name="indie"
                             />
@@ -1146,7 +1146,7 @@ ShallowWrapper {
                 <section
                   className="network"
 >
-                  <GetNetworks
+                  <Getorganisations
                                     name="network"
                                     network={[Function]}
                   />
@@ -1155,7 +1155,7 @@ ShallowWrapper {
                   className="production"
                   name="productions"
 >
-                  <GetProductionDepts
+                  <Getorganisations
                                     className="production"
                                     name="production"
                                     production={[Function]}
@@ -1165,7 +1165,7 @@ ShallowWrapper {
                   className="indie"
                   name="indies"
 >
-                  <Getindie
+                  <Getorganisations
                                     indies={[Function]}
                                     name="indie"
                   />
@@ -1215,7 +1215,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <GetNetworks
+                  "children": <Getorganisations
                     name="network"
                     network={[Function]}
 />,
@@ -1241,7 +1241,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <GetProductionDepts
+                  "children": <Getorganisations
                     className="production"
                     name="production"
                     production={[Function]}
@@ -1270,7 +1270,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Getindie
+                  "children": <Getorganisations
                     indies={[Function]}
                     name="indie"
 />,
@@ -1410,7 +1410,7 @@ ShallowWrapper {
                         <section
                                     className="network"
                         >
-                                    <GetNetworks
+                                    <Getorganisations
                                                 name="network"
                                                 network={[Function]}
                                     />
@@ -1419,7 +1419,7 @@ ShallowWrapper {
                                     className="production"
                                     name="productions"
                         >
-                                    <GetProductionDepts
+                                    <Getorganisations
                                                 className="production"
                                                 name="production"
                                                 production={[Function]}
@@ -1429,7 +1429,7 @@ ShallowWrapper {
                                     className="indie"
                                     name="indies"
                         >
-                                    <Getindie
+                                    <Getorganisations
                                                 indies={[Function]}
                                                 name="indie"
                                     />
@@ -1503,7 +1503,7 @@ ShallowWrapper {
                 <section
                                 className="network"
                 >
-                                <GetNetworks
+                                <Getorganisations
                                                 name="network"
                                                 network={[Function]}
                                 />
@@ -1512,7 +1512,7 @@ ShallowWrapper {
                                 className="production"
                                 name="productions"
                 >
-                                <GetProductionDepts
+                                <Getorganisations
                                                 className="production"
                                                 name="production"
                                                 production={[Function]}
@@ -1522,7 +1522,7 @@ ShallowWrapper {
                                 className="indie"
                                 name="indies"
                 >
-                                <Getindie
+                                <Getorganisations
                                                 indies={[Function]}
                                                 name="indie"
                                 />
@@ -1590,7 +1590,7 @@ ShallowWrapper {
                   <section
                     className="network"
 >
-                    <GetNetworks
+                    <Getorganisations
                                         name="network"
                                         network={[Function]}
                     />
@@ -1599,7 +1599,7 @@ ShallowWrapper {
                     className="production"
                     name="productions"
 >
-                    <GetProductionDepts
+                    <Getorganisations
                                         className="production"
                                         name="production"
                                         production={[Function]}
@@ -1609,7 +1609,7 @@ ShallowWrapper {
                     className="indie"
                     name="indies"
 >
-                    <Getindie
+                    <Getorganisations
                                         indies={[Function]}
                                         name="indie"
                     />
@@ -1659,7 +1659,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <GetNetworks
+                    "children": <Getorganisations
                       name="network"
                       network={[Function]}
 />,
@@ -1685,7 +1685,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <GetProductionDepts
+                    "children": <Getorganisations
                       className="production"
                       name="production"
                       production={[Function]}
@@ -1714,7 +1714,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <Getindie
+                    "children": <Getorganisations
                       indies={[Function]}
                       name="indie"
 />,

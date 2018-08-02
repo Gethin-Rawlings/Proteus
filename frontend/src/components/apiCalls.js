@@ -1,6 +1,7 @@
 //const url ='http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/';
 const url = 'http://localhost:5000/';
 const urlForNetwork = url + 'organisations?type=network';
+const urlForOrganisations = url + 'organisations?type='
 const urlForindie = url + 'organisations?type=indie';
 const urlForproduction = url + 'organisations?type=production';
 const urlForLogin = url + 'login';
@@ -102,5 +103,14 @@ export const userDetails = async(user) => {
     throw(new Error('Network request failed'))
   } else {
     return await response
+  }
+}
+
+export const getOrganisations = async(type) => {
+  const response = await fetch(urlForOrganisations+type)
+  if (response.status >= 400) {
+    throw(new Error('Network request failed'))
+  } else {
+    return await response.json()
   }
 }

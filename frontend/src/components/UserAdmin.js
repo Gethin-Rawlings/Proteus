@@ -2,12 +2,10 @@ import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar";
 import Footer from './Footer';
-import Getnetworks from "./Getnetworks";
-import GetProductionDepts from "./GetProductionDepts";
-import GetIndies from "./GetIndies";
 import Displayusers from "./Displayusers";
 import "./userAdmin.css";
 import { userSearch } from "./apiCalls"
+import Getorganisations from "./Getorganisations";
 
 class UserAdmin extends React.Component {
   constructor(props) {
@@ -43,13 +41,13 @@ class UserAdmin extends React.Component {
               <input name="username" className="usersearch" type="text" form="form" placeholder="username" value={this.state.username} onChange={this.handleChange} />
             </section>
             <section className='network'>
-              <Getnetworks name="network" network={this.handleChange} />
+              <Getorganisations name="network" network={this.handleChange} />
             </section>
             <section className='production' name='productions'>
-              <GetProductionDepts name="production" className="production" production={this.handleChange} />
+              <Getorganisations name="production" className="production" production={this.handleChange} />
             </section>
             <section className='indie' name="indies">
-              <GetIndies name="indie" indies={this.handleChange} />
+              <Getorganisations name="indie" indies={this.handleChange} />
             </section>
           </section>
           <br />

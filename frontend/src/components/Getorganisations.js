@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { getNetwork } from './apiCalls';
+import { getOrganisations } from './apiCalls';
 
-class GetNetworks extends Component {
+class Getorganisations extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -18,22 +18,23 @@ class GetNetworks extends Component {
   }
   async componentDidMount() {
     try {
-      const data = await getNetwork()
-      this.setState({ Getnetworks: data })
+        const type = this.props.name
+        const data = await getOrganisations(type)
+        this.setState({ Getorganisations: data })
     } catch (err) {
-      this.setState({ requestFailed: true })
+        this.setState({ requestFailed: true })
     }
   }
   render() {
     if (this.state.requestFailed) return <p>Failed!</p>
-    if (!this.state.Getnetworks) return <p name="network" className="network">Loading...</p>
-    let returnData = this.state.Getnetworks
+    if (!this.state.Getorganisations) return <p name="network" className="network">Loading...</p>
+    let returnData = this.state.Getorganisations
     return (
       <select className='networks' name="network"  form="form" onChange={this.handleChange}>
-        <option key={0} value={0}> -- select a Network -- </option>
+        <option key={0} value={0}>{this.props.name}</option>
         {returnData.map(p => <option key={p.org_organisation_id} value={p.org_organisation_id}>{p.org_description}</option>)}
       </select>
     )
   }
 }
-export default GetNetworks;
+export default Getorganisations;

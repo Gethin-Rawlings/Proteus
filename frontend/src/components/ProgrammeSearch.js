@@ -2,11 +2,9 @@ import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar"
 import Footer from './Footer'
-import Getnetworks from "./Getnetworks";
-import GetProductionDepts from "./GetProductionDepts";
-import GetIndies from "./GetIndies";
 import Displayprogrammes from "./Displayprogrammes";
 import {programmeSearch} from "./apiCalls";
+import Getorganisations from "./Getorganisations";
 
 class Programmesearch extends React.Component {
   constructor(props) {
@@ -61,16 +59,16 @@ class Programmesearch extends React.Component {
                 onChange={this.handleChange}/>
             </section>
             <section className='networks'>
-              <Getnetworks name="network" network={this.handleChange}/>
+              <Getorganisations name="network" network={this.handleChange}/>
             </section>
             <section className='productions' name='productions'>
-              <GetProductionDepts
+              <Getorganisations
                 name="production"
                 className="production"
                 production={this.handleChange}/>
             </section>
             <section className='indies' name="indies">
-              <GetIndies name="indie" indies={this.handleChange}/>
+              <Getorganisations name="indie" indies={this.handleChange}/>
             </section>
           </section>
           <br/>

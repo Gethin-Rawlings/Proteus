@@ -6,6 +6,7 @@ import UserAdmin from "./components/UserAdmin";
 import UserDetails from "./components/UserDetails";
 import Logout from "./components/Logout";
 import Reports from "./components/Reports"
+import Proposalsearch from "./components/Proposalsearch"
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
             <Route path='/Reports' component={Reports} />
             <Route path='/ProgrammeSearch' component={ProgrammeSearch} />
             <Route path='/UserDetails' component={UserDetails} />
-           
+            <Route path='/Proposalsearch' component={Proposalsearch} />
             <Route path='/Logout' component={Logout} />
           </Switch>
         </BrowserRouter>

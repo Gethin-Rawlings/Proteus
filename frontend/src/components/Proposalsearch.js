@@ -5,9 +5,9 @@ import Footer from './Footer'
 import Getnetworks from "./Getnetworks";
 import GetProductionDepts from "./GetProductionDepts";
 import GetIndies from "./GetIndies";
-import Displayusers from "./Displayusers";
-
-const urlForproposalSearch = users => 'http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/proposalsearch'
+import Displayprogrammes from "./Displayprogrammes";
+import {programmeSearch} from "./apiCalls";
+import Getorganisations from "./Getorganisations"
 
 class Proposalsearch extends React.Component {
   constructor(props) {
@@ -16,7 +16,8 @@ class Proposalsearch extends React.Component {
       network: '',
       production: '',
       indie: '',
-      users: '[{"usr_name":"Waiting"}]'
+      programmes: '[{"usr_name":"Waiting"}]',
+      history: this.history
     };
     this.handleChange = this
       .handleChange
@@ -31,56 +32,70 @@ class Proposalsearch extends React.Component {
     const value = target.value;
     this.setState({[name]: value});
   }
-  handleSubmit(event) {
+  async handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.target);
-    fetch(urlForproposalSearch(this.props.users), {
-      method: 'POST',
-      body: data
-    }).then(response => response.json().then(data => {
+    try {
+      const data = await programmeSearch(event.target)
       this.setState({
-        users: JSON.stringify(data)
+        programmes: JSON.stringify(data)
       })
-    }))
+      console.log(data.keys)
+    } catch (err) {
+      console.log(err)
+    }
   }
   render() {
     return (
       <div className="main">
         <Navbar/>
         <section className="App-intro">
-          <section className='proposalSearch'>
-            <form onSubmit={this.handleSubmit} id='form'></form>
-            <input className="from" type="date" name="fromdate" id="datetime" form="form"></input>
-            <input className="to" type="date" name="todate" id="datetime" form="form"></input>
-            <button id="submit" className="submit" form="form">Search</button>
-            <button id="reset" type="reset" className="reset" form="form">Reset</button>
+          <form onSubmit={this.handleSubmit} id='form' className="programmeForm"></form>
+          <section className='programmeSearch'>
+            <section>
+              <input
+                name="username"
+                className="usersearch"
+                type="text"
+                form="form"
+                placeholder="Title"
+                value={this.state.username}
+                onChange={this.handleChange}/>
+            </section>
             <section className='networks'>
-              <Getnetworks name="network" network={this.handleChange}/>
+              <Getorganisations  name="network" network={this.handleChange}/>
             </section>
             <section className='productions' name='productions'>
-              <GetProductionDepts
+              <Getorganisations
                 name="production"
                 className="production"
                 production={this.handleChange}/>
             </section>
             <section className='indies' name="indies">
-              <GetIndies name="indie" indies={this.handleChange}/>
+              <Getorganisations name="indie" indies={this.handleChange}/>
             </section>
-            <input
-              name="username"
-              className="usersearch"
-              type="text"
-              form="form"
-              placeholder="Title"
-              value={this.state.username}
-              onChange={this.handleChange}/>
-            <Displayusers className='results' name='results' users={this.state.users}/>
           </section>
+          <br/>
+          <section className="datePicker">
+            <section>From</section>
+            <section className="from">
+              <input type="date" name="fromdate" id="datetime" form="form"></input>
+            </section>
+            <section>To</section>
+            <section className="to">
+              <input type="date" name="todate" id="datetime" form="form"></input>
+            </section>
+          </section>
+          <button id="submit" name = 'submit' className="submit" form="form">Search</button>
+          <button id="reset" type="reset" className="reset" form="form">Reset</button>
+          <Displayprogrammes
+            className='results'
+            name='results'
+            programmes={this.state.programmes}
+            history={this.history}/>
         </section>
         <Footer/>
       </div>
     );
   }
 }
-
 export default Proposalsearch;
