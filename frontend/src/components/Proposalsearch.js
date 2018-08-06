@@ -2,7 +2,7 @@ import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar"
 import Footer from './Footer'
-import Displayprogrammes from "./Displayprogrammes";
+import Displayproposals from "./Displayproposals";
 import {programmeSearch} from "./apiCalls";
 import Getorganisations from "./Getorganisations"
 
@@ -13,7 +13,7 @@ class Proposalsearch extends React.Component {
       network: '',
       production: '',
       indie: '',
-      programmes: '[{"usr_name":"Waiting"}]',
+      programmes: '[{"":""}]',
       history: this.history
     };
     this.handleChange = this
@@ -36,7 +36,6 @@ class Proposalsearch extends React.Component {
       this.setState({
         programmes: JSON.stringify(data)
       })
-      console.log(data.keys)
     } catch (err) {
       console.log(err)
     }
@@ -84,7 +83,7 @@ class Proposalsearch extends React.Component {
           </section>
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
-          <Displayprogrammes
+          <Displayproposals
             className='results'
             name='results'
             programmes={this.state.programmes}
