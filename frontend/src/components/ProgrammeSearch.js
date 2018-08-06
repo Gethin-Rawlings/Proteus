@@ -13,7 +13,7 @@ class Programmesearch extends React.Component {
       network: '',
       production: '',
       indie: '',
-      programmes: '[{"usr_name":"Waiting"}]',
+      programmes: '[{"":""}]',
       history: this.history
     };
     this.handleChange = this

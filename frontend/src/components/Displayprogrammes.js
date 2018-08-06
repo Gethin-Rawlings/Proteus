@@ -6,7 +6,7 @@ class Displayprogrammes extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      programmes: '[{"programmeNumber":""}]',
+      programmes: '[{"":""}]',
       history: this.props.history
     };
     this.handleClick = this
@@ -26,32 +26,40 @@ class Displayprogrammes extends Component {
           }
         });
     }
+  }handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+    this.setState({[name]: value});
+  }
+  createTable = (tableData) => {
+    let tableLength=tableData.length
+    let table = []
+    for (let i = 0; i < tableLength; i++) {
+        let children = []
+        let row = Object.values(tableData[i])
+        row.map(data => children.push(<td>{data}</td>))
+        table.push(<tr key={i}>{children}</tr>)
+    }
+    if (table.length === 1) {
+        return null
+    }
+    else return table
   }
   render() {
     const returnData = JSON.parse(this.props.programmes)
+    let tableHeaders = [];
+    let headers = Object.keys(returnData[0]);
+    headers.map(header => tableHeaders.push(<th key={header}>{header}</th>))
     return (
+    <section>
       <table className='displayusers'>
         <tbody>
-          <tr key='menu'>
-            <th>Programme Number</th>
-            <th>sequence</th>
-            <th>Supplier</th>
-            <th>Network</th>
-            <th>Programme Title</th>
-            <th>Duration</th>
-            <th>scheduledTime</th>
-          </tr>
-          {returnData.map(p => <tr key={p.programmeNumber+p.sequence} onClick={this.handleClick}>
-            <td id={p.programmeNumber}>{p.programmeNumber}</td>
-            <td id={p.programmeNumber}>{p.sequence}</td>
-            <td id={p.programmeNumber}>{p.Supplier}</td>
-            <td id={p.programmeNumber}>{p.Network}</td>
-            <td id={p.programmeNumber}>{p.ProgrammeTitle}</td>
-            <td id={p.programmeNumber}>{p.duration}</td>
-            <td id={p.programmeNumber}>{p.scheduledTime}</td>
-          </tr>)}
+            <tr>{tableHeaders}</tr>
+            {this.createTable(returnData)}
         </tbody>
-      </table>
+      </table> 
+    </section>
     )
   }
 }
