@@ -27,10 +27,10 @@ class Getorganisations extends Component {
   }
   render() {
     if (this.state.requestFailed) return <p>Failed!</p>
-    if (!this.state.Getorganisations) return <p name="network" className="network">Loading...</p>
+    if (!this.state.Getorganisations) return <p name={this.props.name} className="network">Loading...</p>
     let returnData = this.state.Getorganisations
     return (
-      <select className='networks' name="network"  form="form" onChange={this.handleChange}>
+      <select className='networks' name={this.props.name}  form="form" onChange={this.handleChange}>
         <option key={0} value={0}>{this.props.name}</option>
         {returnData.map(p => <option key={p.org_organisation_id} value={p.org_organisation_id}>{p.org_description}</option>)}
       </select>

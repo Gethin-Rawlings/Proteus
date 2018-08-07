@@ -126,7 +126,7 @@ ShallowWrapper {
                     className="results"
                     history={undefined}
                     name="results"
-                    programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+                    programmes="[{\\"\\":\\"\\"}]"
           />
 </section>,
         <Footer />,
@@ -248,7 +248,7 @@ ShallowWrapper {
               className="results"
               history={undefined}
               name="results"
-              programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+              programmes="[{\\"\\":\\"\\"}]"
 />,
           ],
           "className": "App-intro",
@@ -606,7 +606,7 @@ ShallowWrapper {
               "className": "results",
               "history": undefined,
               "name": "results",
-              "programmes": "[{\\"usr_name\\":\\"Waiting\\"}]",
+              "programmes": "[{\\"\\":\\"\\"}]",
             },
             "ref": null,
             "rendered": null,
@@ -736,7 +736,7 @@ ShallowWrapper {
                         className="results"
                         history={undefined}
                         name="results"
-                        programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+                        programmes="[{\\"\\":\\"\\"}]"
             />
 </section>,
           <Footer />,
@@ -858,7 +858,7 @@ ShallowWrapper {
                 className="results"
                 history={undefined}
                 name="results"
-                programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+                programmes="[{\\"\\":\\"\\"}]"
 />,
             ],
             "className": "App-intro",
@@ -1216,7 +1216,7 @@ ShallowWrapper {
                 "className": "results",
                 "history": undefined,
                 "name": "results",
-                "programmes": "[{\\"usr_name\\":\\"Waiting\\"}]",
+                "programmes": "[{\\"\\":\\"\\"}]",
               },
               "ref": null,
               "rendered": null,
@@ -1374,7 +1374,7 @@ ShallowWrapper {
                     className="results"
                     history={undefined}
                     name="results"
-                    programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+                    programmes="[{\\"\\":\\"\\"}]"
           />
 </section>,
         <Footer />,
@@ -1496,7 +1496,7 @@ ShallowWrapper {
               className="results"
               history={undefined}
               name="results"
-              programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+              programmes="[{\\"\\":\\"\\"}]"
 />,
           ],
           "className": "App-intro",
@@ -1854,7 +1854,7 @@ ShallowWrapper {
               "className": "results",
               "history": undefined,
               "name": "results",
-              "programmes": "[{\\"usr_name\\":\\"Waiting\\"}]",
+              "programmes": "[{\\"\\":\\"\\"}]",
             },
             "ref": null,
             "rendered": null,
@@ -1984,7 +1984,7 @@ ShallowWrapper {
                         className="results"
                         history={undefined}
                         name="results"
-                        programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+                        programmes="[{\\"\\":\\"\\"}]"
             />
 </section>,
           <Footer />,
@@ -2106,7 +2106,7 @@ ShallowWrapper {
                 className="results"
                 history={undefined}
                 name="results"
-                programmes="[{\\"usr_name\\":\\"Waiting\\"}]"
+                programmes="[{\\"\\":\\"\\"}]"
 />,
             ],
             "className": "App-intro",
@@ -2464,7 +2464,7 @@ ShallowWrapper {
                 "className": "results",
                 "history": undefined,
                 "name": "results",
-                "programmes": "[{\\"usr_name\\":\\"Waiting\\"}]",
+                "programmes": "[{\\"\\":\\"\\"}]",
               },
               "ref": null,
               "rendered": null,

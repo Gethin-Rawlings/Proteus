@@ -20,7 +20,7 @@ class Displayprogrammes extends Component {
         .props
         .history
         .push({
-          pathname: "/UserDetails",
+          pathname: "/Programmedetails",
           state: {
             detail: value
           }
@@ -38,8 +38,8 @@ class Displayprogrammes extends Component {
     for (let i = 0; i < tableLength; i++) {
         let children = []
         let row = Object.values(tableData[i])
-        row.map(data => children.push(<td>{data}</td>))
-        table.push(<tr key={i}>{children}</tr>)
+        row.map(data => children.push(<td id={row[0]+row[1]} key={data}>{data}</td>))
+        table.push(<tr key={row} onClick={this.handleClick}>{children}</tr>)
     }
     if (table.length === 1) {
         return null

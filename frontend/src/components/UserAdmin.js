@@ -43,10 +43,10 @@ class UserAdmin extends React.Component {
             <section className='network'>
               <Getorganisations name="network" network={this.handleChange} />
             </section>
-            <section className='production' name='productions'>
+            <section className='production'>
               <Getorganisations name="production" className="production" production={this.handleChange} />
             </section>
-            <section className='indie' name="indies">
+            <section className='indie'>
               <Getorganisations name="indie" indies={this.handleChange} />
             </section>
           </section>

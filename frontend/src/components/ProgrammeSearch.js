@@ -36,7 +36,6 @@ class Programmesearch extends React.Component {
       this.setState({
         programmes: JSON.stringify(data)
       })
-      console.log(data.keys)
     } catch (err) {
       console.log(err)
     }
@@ -62,10 +61,7 @@ class Programmesearch extends React.Component {
               <Getorganisations name="network" network={this.handleChange}/>
             </section>
             <section className='productions' name='productions'>
-              <Getorganisations
-                name="production"
-                className="production"
-                production={this.handleChange}/>
+              <Getorganisations name="production" production={this.handleChange}/>
             </section>
             <section className='indies' name="indies">
               <Getorganisations name="indie" indies={this.handleChange}/>
