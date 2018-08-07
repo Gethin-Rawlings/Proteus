@@ -5,6 +5,7 @@ import Footer from './Footer'
 import Displayprogrammes from "./Displayprogrammes";
 import {programmeSearch} from "./apiCalls";
 import Getorganisations from "./Getorganisations";
+import {CSVLink} from 'react-csv';
 
 class Programmesearch extends React.Component {
   constructor(props) {
@@ -86,6 +87,9 @@ class Programmesearch extends React.Component {
             programmes={this.state.programmes}
             history={this.history}/>
         </section>
+        <CSVLink data={this.state.programmes}>
+          Download me
+        </CSVLink>
         <Footer/>
       </div>
     );
