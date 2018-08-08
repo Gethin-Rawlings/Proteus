@@ -49,8 +49,10 @@ class Displayprogrammes extends Component {
   render() {
     const returnData = JSON.parse(this.props.programmes)
     let tableHeaders = [];
-    let headers = Object.keys(returnData[0]);
-    headers.map(header => tableHeaders.push(<th key={header}>{header}</th>))
+    if (returnData.length>0){
+      let headers = Object.keys(returnData[0]);
+      headers.map(header => tableHeaders.push(<th key={header}>{header}</th>))
+    }
     return (
     <section>
       <table className='displayusers'>
