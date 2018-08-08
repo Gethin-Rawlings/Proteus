@@ -6,6 +6,7 @@ const urlForUpdateUsers = url + 'updateusers';
 const urlForprogrammeSearch = url + 'programmesearch';
 const urlForUserSearch = url + 'useradmin';
 const urlForuserDetails = url + 'userDetails?user='
+const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user='
 
 //Fetch to handle login submit
 export const login = async(submit) => {
@@ -77,6 +78,15 @@ export const userDetails = async(user) => {
 
 export const getOrganisations = async(type) => {
   const response = await fetch(urlForOrganisations+type)
+  if (response.status >= 400) {
+    throw(new Error('Network request failed'))
+  } else {
+    return await response.json()
+  }
+}
+
+export const getProgrammeSearchColumns = async(user) =>{
+  const response = await fetch(urlForUserProgrammeSearch+user)
   if (response.status >= 400) {
     throw(new Error('Network request failed'))
   } else {

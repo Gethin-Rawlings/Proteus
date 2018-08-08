@@ -81,15 +81,16 @@ class Programmesearch extends React.Component {
           </section>
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
+          <CSVLink data={this.state.programmes} >
+          Download me
+        </CSVLink>
           <Displayprogrammes
             className='results'
             name='results'
             programmes={this.state.programmes}
             history={this.history}/>
         </section>
-        <CSVLink data={this.state.programmes}>
-          Download me
-        </CSVLink>
+
         <Footer/>
       </div>
     );

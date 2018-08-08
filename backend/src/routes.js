@@ -36,4 +36,7 @@ router.all('/programmesearch', jsonParser, programmesearch);
 const proposalsearch = require('./searches/proposalsearch');
 router.all('/proposalsearch', jsonParser, proposalsearch);
 
+const programmeSearchColumns = require('./searches/programmeSearchColumns');
+router.all('/programmeSearchColumns', jsonParser, programmeSearchColumns)
+
 module.exports = router;
