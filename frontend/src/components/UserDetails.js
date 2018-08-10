@@ -22,14 +22,16 @@ class UserDetails extends React.Component {
   }
   async handleSubmit(event) {
     event.preventDefault();
-    const dataForm = new FormData(event.target);
-    try {
-      await updateUsers(dataForm)
+    if (window.confirm("Save?")) { 
+      const dataForm = new FormData(event.target);
+      try {
+        await updateUsers(dataForm)
       
-    } catch (err) {
-      console.log(err)
+      } catch (err) {
+        console.log(err)
+      }
+      alert('Changes Saved')
     }
-    alert('Changes Saved')
   }
   async componentDidMount() {
     const user = this.props.location.state.detail  
@@ -64,7 +66,6 @@ class UserDetails extends React.Component {
         <section className="App-intro">
           <section className='programmeSearch'>
             <form id="userDetails" className="userDetails" onSubmit={this.handleSubmit}>
-
               <label for="username" className="userName">User Name</label>
               <input type="text" name="userName" form="userDetails" value={userName} />
               <label for="userFirstname" className="userFirstname">First Name</label>
@@ -85,7 +86,8 @@ class UserDetails extends React.Component {
               <input type="text" form="userDetails" name="passwordLastChanged" value={passwordLastChanged} />
               <label for="userIdIndie" className="userIdIndie">Indie</label>
               <input type="text" name="userIdIndie" form="userDetails" value={this.state.userIdIndie} onChange={this.handleChange} />
-              <button id="loginbutton" className="loginbutton">Save</button>
+              <button id="save" className="save">Save</button>
+              <button id="reset" type="reset" className="reset" form="form">Reset</button>
             </form>
           </section>
         </section>
