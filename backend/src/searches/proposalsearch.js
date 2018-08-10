@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
 router.post('/proposalsearch', async (req, res) => {
-
+    verifyToken(req)
     const production = req.fields.production;
     const network = req.fields.network;
     const indie = req.fields.indie;

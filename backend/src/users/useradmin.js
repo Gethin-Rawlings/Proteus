@@ -7,6 +7,7 @@ const sql = require('../config/db')
 router.use(formidable());
 
 router.post('/useradmin', async (req, res) => {
+    verifyToken(req)
     const production = req.fields.production;
     const network = req.fields.network;
     const indie = req.fields.indie;
