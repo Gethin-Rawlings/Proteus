@@ -50,12 +50,12 @@ class Programmesearch extends React.Component {
           <section className='programmeSearch'>
             <section>
               <input
-                name="username"
-                className="usersearch"
+                name="text"
+                className="test"
                 type="text"
                 form="form"
                 placeholder="Title"
-                value={this.state.username}
+                value={this.state.text}
                 onChange={this.handleChange}/>
             </section>
             <section className='networks'>

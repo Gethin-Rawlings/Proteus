@@ -9,20 +9,12 @@ router.use(formidable());
 
 router.post('/programmesearch', async (req, res) =>{
     verifyToken(req)
-    /*const token = req.headers.authorization;
-    jwt.verify(token, 'keyboard cat 4 ever', function(err, decoded) {
-        if(err){
-            console.log(err)
-        }
-        req.userName = decoded.username
-        console.log(decoded.username) 
-      });*/
-    console.log(req.userId)
     const request = new sql.Request();
     request.input('production', sql.Int, req.fields.production);
     request.input('network', sql.Int, req.fields.network);
     request.input('indie', sql.Int, req.fields.indie);
-    request.input('title', sql.VarChar(500), req.fields.username);
+    request.input('title', sql.VarChar(500), req.fields.text);
+    request.input('userName', sql.VarChar(20), req.userId);
     await request.execute('PR_GET_PROGRAMMES', function (err, result) {
         if (err) 
             console.log(err)
