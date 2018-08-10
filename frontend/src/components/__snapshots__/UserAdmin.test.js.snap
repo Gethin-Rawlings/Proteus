@@ -57,7 +57,6 @@ ShallowWrapper {
                     </section>
                     <section
                               className="production"
-                              name="productions"
                     >
                               <Getorganisations
                                         className="production"
@@ -67,7 +66,6 @@ ShallowWrapper {
                     </section>
                     <section
                               className="indie"
-                              name="indies"
                     >
                               <Getorganisations
                                         indies={[Function]}
@@ -150,7 +148,6 @@ ShallowWrapper {
               </section>
               <section
                             className="production"
-                            name="productions"
               >
                             <Getorganisations
                                           className="production"
@@ -160,7 +157,6 @@ ShallowWrapper {
               </section>
               <section
                             className="indie"
-                            name="indies"
               >
                             <Getorganisations
                                           indies={[Function]}
@@ -237,7 +233,6 @@ ShallowWrapper {
 </section>,
                 <section
                   className="production"
-                  name="productions"
 >
                   <Getorganisations
                                     className="production"
@@ -247,7 +242,6 @@ ShallowWrapper {
 </section>,
                 <section
                   className="indie"
-                  name="indies"
 >
                   <Getorganisations
                                     indies={[Function]}
@@ -331,7 +325,6 @@ ShallowWrapper {
                     production={[Function]}
 />,
                   "className": "production",
-                  "name": "productions",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -359,7 +352,6 @@ ShallowWrapper {
                     name="indie"
 />,
                   "className": "indie",
-                  "name": "indies",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -501,7 +493,6 @@ ShallowWrapper {
                         </section>
                         <section
                                     className="production"
-                                    name="productions"
                         >
                                     <Getorganisations
                                                 className="production"
@@ -511,7 +502,6 @@ ShallowWrapper {
                         </section>
                         <section
                                     className="indie"
-                                    name="indies"
                         >
                                     <Getorganisations
                                                 indies={[Function]}
@@ -594,7 +584,6 @@ ShallowWrapper {
                 </section>
                 <section
                                 className="production"
-                                name="productions"
                 >
                                 <Getorganisations
                                                 className="production"
@@ -604,7 +593,6 @@ ShallowWrapper {
                 </section>
                 <section
                                 className="indie"
-                                name="indies"
                 >
                                 <Getorganisations
                                                 indies={[Function]}
@@ -681,7 +669,6 @@ ShallowWrapper {
 </section>,
                   <section
                     className="production"
-                    name="productions"
 >
                     <Getorganisations
                                         className="production"
@@ -691,7 +678,6 @@ ShallowWrapper {
 </section>,
                   <section
                     className="indie"
-                    name="indies"
 >
                     <Getorganisations
                                         indies={[Function]}
@@ -775,7 +761,6 @@ ShallowWrapper {
                       production={[Function]}
 />,
                     "className": "production",
-                    "name": "productions",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -803,7 +788,6 @@ ShallowWrapper {
                       name="indie"
 />,
                     "className": "indie",
-                    "name": "indies",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -973,7 +957,6 @@ ShallowWrapper {
                     </section>
                     <section
                               className="production"
-                              name="productions"
                     >
                               <Getorganisations
                                         className="production"
@@ -983,7 +966,6 @@ ShallowWrapper {
                     </section>
                     <section
                               className="indie"
-                              name="indies"
                     >
                               <Getorganisations
                                         indies={[Function]}
@@ -1066,7 +1048,6 @@ ShallowWrapper {
               </section>
               <section
                             className="production"
-                            name="productions"
               >
                             <Getorganisations
                                           className="production"
@@ -1076,7 +1057,6 @@ ShallowWrapper {
               </section>
               <section
                             className="indie"
-                            name="indies"
               >
                             <Getorganisations
                                           indies={[Function]}
@@ -1153,7 +1133,6 @@ ShallowWrapper {
 </section>,
                 <section
                   className="production"
-                  name="productions"
 >
                   <Getorganisations
                                     className="production"
@@ -1163,7 +1142,6 @@ ShallowWrapper {
 </section>,
                 <section
                   className="indie"
-                  name="indies"
 >
                   <Getorganisations
                                     indies={[Function]}
@@ -1247,7 +1225,6 @@ ShallowWrapper {
                     production={[Function]}
 />,
                   "className": "production",
-                  "name": "productions",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1275,7 +1252,6 @@ ShallowWrapper {
                     name="indie"
 />,
                   "className": "indie",
-                  "name": "indies",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1417,7 +1393,6 @@ ShallowWrapper {
                         </section>
                         <section
                                     className="production"
-                                    name="productions"
                         >
                                     <Getorganisations
                                                 className="production"
@@ -1427,7 +1402,6 @@ ShallowWrapper {
                         </section>
                         <section
                                     className="indie"
-                                    name="indies"
                         >
                                     <Getorganisations
                                                 indies={[Function]}
@@ -1510,7 +1484,6 @@ ShallowWrapper {
                 </section>
                 <section
                                 className="production"
-                                name="productions"
                 >
                                 <Getorganisations
                                                 className="production"
@@ -1520,7 +1493,6 @@ ShallowWrapper {
                 </section>
                 <section
                                 className="indie"
-                                name="indies"
                 >
                                 <Getorganisations
                                                 indies={[Function]}
@@ -1597,7 +1569,6 @@ ShallowWrapper {
 </section>,
                   <section
                     className="production"
-                    name="productions"
 >
                     <Getorganisations
                                         className="production"
@@ -1607,7 +1578,6 @@ ShallowWrapper {
 </section>,
                   <section
                     className="indie"
-                    name="indies"
 >
                     <Getorganisations
                                         indies={[Function]}
@@ -1691,7 +1661,6 @@ ShallowWrapper {
                       production={[Function]}
 />,
                     "className": "production",
-                    "name": "productions",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1719,7 +1688,6 @@ ShallowWrapper {
                       name="indie"
 />,
                     "className": "indie",
-                    "name": "indies",
                   },
                   "ref": null,
                   "rendered": Object {
