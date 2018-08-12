@@ -38,9 +38,9 @@ ShallowWrapper {
           >
                     <section>
                               <input
-                                        className="usersearch"
+                                        className="test"
                                         form="form"
-                                        name="username"
+                                        name="text"
                                         onChange={[Function]}
                                         placeholder="Title"
                                         type="text"
@@ -178,9 +178,9 @@ ShallowWrapper {
 >
               <section>
                             <input
-                                          className="usersearch"
+                                          className="test"
                                           form="form"
-                                          name="username"
+                                          name="text"
                                           onChange={[Function]}
                                           placeholder="Title"
                                           type="text"
@@ -312,9 +312,9 @@ ShallowWrapper {
               "children": Array [
                 <section>
                   <input
-                                    className="usersearch"
+                                    className="test"
                                     form="form"
-                                    name="username"
+                                    name="text"
                                     onChange={[Function]}
                                     placeholder="Title"
                                     type="text"
@@ -358,9 +358,9 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <input
-                    className="usersearch"
+                    className="test"
                     form="form"
-                    name="username"
+                    name="text"
                     onChange={[Function]}
                     placeholder="Title"
                     type="text"
@@ -373,9 +373,9 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "usersearch",
+                    "className": "test",
                     "form": "form",
-                    "name": "username",
+                    "name": "text",
                     "onChange": [Function],
                     "placeholder": "Title",
                     "type": "text",
@@ -730,9 +730,9 @@ ShallowWrapper {
             >
                         <section>
                                     <input
-                                                className="usersearch"
+                                                className="test"
                                                 form="form"
-                                                name="username"
+                                                name="text"
                                                 onChange={[Function]}
                                                 placeholder="Title"
                                                 type="text"
@@ -870,9 +870,9 @@ ShallowWrapper {
 >
                 <section>
                                 <input
-                                                className="usersearch"
+                                                className="test"
                                                 form="form"
-                                                name="username"
+                                                name="text"
                                                 onChange={[Function]}
                                                 placeholder="Title"
                                                 type="text"
@@ -1004,9 +1004,9 @@ ShallowWrapper {
                 "children": Array [
                   <section>
                     <input
-                                        className="usersearch"
+                                        className="test"
                                         form="form"
-                                        name="username"
+                                        name="text"
                                         onChange={[Function]}
                                         placeholder="Title"
                                         type="text"
@@ -1050,9 +1050,9 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <input
-                      className="usersearch"
+                      className="test"
                       form="form"
-                      name="username"
+                      name="text"
                       onChange={[Function]}
                       placeholder="Title"
                       type="text"
@@ -1065,9 +1065,9 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "usersearch",
+                      "className": "test",
                       "form": "form",
-                      "name": "username",
+                      "name": "text",
                       "onChange": [Function],
                       "placeholder": "Title",
                       "type": "text",
@@ -1450,9 +1450,9 @@ ShallowWrapper {
           >
                     <section>
                               <input
-                                        className="usersearch"
+                                        className="test"
                                         form="form"
-                                        name="username"
+                                        name="text"
                                         onChange={[Function]}
                                         placeholder="Title"
                                         type="text"
@@ -1590,9 +1590,9 @@ ShallowWrapper {
 >
               <section>
                             <input
-                                          className="usersearch"
+                                          className="test"
                                           form="form"
-                                          name="username"
+                                          name="text"
                                           onChange={[Function]}
                                           placeholder="Title"
                                           type="text"
@@ -1724,9 +1724,9 @@ ShallowWrapper {
               "children": Array [
                 <section>
                   <input
-                                    className="usersearch"
+                                    className="test"
                                     form="form"
-                                    name="username"
+                                    name="text"
                                     onChange={[Function]}
                                     placeholder="Title"
                                     type="text"
@@ -1770,9 +1770,9 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <input
-                    className="usersearch"
+                    className="test"
                     form="form"
-                    name="username"
+                    name="text"
                     onChange={[Function]}
                     placeholder="Title"
                     type="text"
@@ -1785,9 +1785,9 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "usersearch",
+                    "className": "test",
                     "form": "form",
-                    "name": "username",
+                    "name": "text",
                     "onChange": [Function],
                     "placeholder": "Title",
                     "type": "text",
@@ -2142,9 +2142,9 @@ ShallowWrapper {
             >
                         <section>
                                     <input
-                                                className="usersearch"
+                                                className="test"
                                                 form="form"
-                                                name="username"
+                                                name="text"
                                                 onChange={[Function]}
                                                 placeholder="Title"
                                                 type="text"
@@ -2282,9 +2282,9 @@ ShallowWrapper {
 >
                 <section>
                                 <input
-                                                className="usersearch"
+                                                className="test"
                                                 form="form"
-                                                name="username"
+                                                name="text"
                                                 onChange={[Function]}
                                                 placeholder="Title"
                                                 type="text"
@@ -2416,9 +2416,9 @@ ShallowWrapper {
                 "children": Array [
                   <section>
                     <input
-                                        className="usersearch"
+                                        className="test"
                                         form="form"
-                                        name="username"
+                                        name="text"
                                         onChange={[Function]}
                                         placeholder="Title"
                                         type="text"
@@ -2462,9 +2462,9 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <input
-                      className="usersearch"
+                      className="test"
                       form="form"
-                      name="username"
+                      name="text"
                       onChange={[Function]}
                       placeholder="Title"
                       type="text"
@@ -2477,9 +2477,9 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "usersearch",
+                      "className": "test",
                       "form": "form",
-                      "name": "username",
+                      "name": "text",
                       "onChange": [Function],
                       "placeholder": "Title",
                       "type": "text",

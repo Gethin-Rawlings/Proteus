@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const formidable = require('express-formidable');
-const jwt = require('jsonwebtoken');
 const sql = require('../config/db')
+const verifyToken = require('../security/verifyToken')
 
 router.use(formidable());
 
 router.post('/useradmin', async (req, res) => {
-    verifyToken(req)
+    verifyToken(req, res)
     const production = req.fields.production;
     const network = req.fields.network;
     const indie = req.fields.indie;

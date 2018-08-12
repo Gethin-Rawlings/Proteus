@@ -2,16 +2,14 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const formidable = require('express-formidable');
-const jwt = require('jsonwebtoken');
-const exjwt = require('express-jwt');
-// import decode from 'jwt-decode';
+const verifyToken = require('../security/verifyToken')
 const sql = require('../config/db')
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
 router.post('/proposalsearch', async (req, res) => {
-    verifyToken(req)
+    verifyToken(req, res)
     const production = req.fields.production;
     const network = req.fields.network;
     const indie = req.fields.indie;

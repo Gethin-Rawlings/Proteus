@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const formidable = require('express-formidable');
-const jwt = require('jsonwebtoken');
 const sql = require('../config/db')
 const verifyToken = require('../security/verifyToken')
 
 router.use(formidable());
 
 router.post('/programmesearch', async (req, res) =>{
-    verifyToken(req)
+    verifyToken(req, res)
     const request = new sql.Request();
     request.input('production', sql.Int, req.fields.production);
     request.input('network', sql.Int, req.fields.network);

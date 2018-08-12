@@ -10,7 +10,6 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
 router.post('/login', async  (req, res) => {
-    verifyToken(req)
     const username = req.fields.username;
     const password = req.fields.password;
     const request = new sql.Request();
