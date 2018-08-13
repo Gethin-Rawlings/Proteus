@@ -40,8 +40,15 @@ class ProgrammeDetails extends React.Component {
       <div className="main">
         <Navbar />
         <section className="App-intro">
-          
+          <section>
+          Programme section
+          </section>
         <Brands />
+        
+        <section>
+          Tx section
+        </section>
+        <section>Core details</section>
         </section>
         <Footer />
       </div>
