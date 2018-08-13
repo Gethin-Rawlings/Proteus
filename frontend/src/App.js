@@ -5,8 +5,10 @@ import Main from "./components/Main";
 import UserAdmin from "./components/UserAdmin";
 import UserDetails from "./components/UserDetails";
 import Logout from "./components/Logout";
-import Reports from "./components/Reports"
-import Proposalsearch from "./components/Proposalsearch"
+import Reports from "./components/Reports";
+import ProgrammeDetails from "./components/ProgrammeDetails";
+import Brands from "./components/Brands";
+import Proposalsearch from "./components/Proposalsearch";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 class App extends Component {
@@ -24,6 +26,8 @@ class App extends Component {
             <Route path='/UserDetails' component={UserDetails} />
             <Route path='/Proposalsearch' component={Proposalsearch} />
             <Route path='/Logout' component={Logout} />
+            <Route path='/ProgrammeDetails' component={ProgrammeDetails} />
+            <Route path='/Brands' component={Brands} />
           </Switch>
         </BrowserRouter>
       </div>

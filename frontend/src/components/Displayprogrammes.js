@@ -15,12 +15,13 @@ class Displayprogrammes extends Component {
   }
   handleClick(event) {
     const value = event.target.id;
+    console.log(value)
     if (event) {
       this
         .props
         .history
         .push({
-          pathname: "/Programmedetails",
+          pathname: "/ProgrammeDetails",
           state: {
             detail: value
           }
