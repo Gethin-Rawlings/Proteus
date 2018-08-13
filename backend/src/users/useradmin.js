@@ -13,9 +13,6 @@ router.post('/useradmin', async (req, res) => {
     const indie = req.fields.indie;
     const username = req.fields.username;
     const token = req.headers.authorization;
-    jwt.verify(token, 'keyboard cat 4 ever', function(err, decoded) {
-        console.log(decoded.username) 
-      });
     const request = new sql.Request();
     request.input('production', sql.Int, production);
     request.input('network', sql.Int, network)
