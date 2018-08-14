@@ -1,7 +1,7 @@
 .main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  60px 1fr 40px;
+    grid-template-rows:  40px 1fr 40px;
     grid-template-areas: 
                           "nav  "
                           "main  "
@@ -146,6 +146,10 @@ option{
     font-size: .8em;
 }
 
-.programmeTabs {
+/*.programmeTabs {
     background-color: black !important;
+  }*/
+
+  .ProgrammeTab{
+      max-width: 20% !important;
   }
