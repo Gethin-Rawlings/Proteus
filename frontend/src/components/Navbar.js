@@ -20,22 +20,22 @@ class Navbar extends React.Component {
       <div >
         <Security history={this.props.route}/>
         <ul className='main-nav'>
-          <div>
+          <div className = 'navbar'>
             <li>
               <NavLink to='/Main'>Home</NavLink>
             </li>
           </div>
           {admin === 'true' &&
-          <div>
+          <div className = 'navbar'>
             <li>
               <NavLink to='/UserAdmin'>User Admin</NavLink>
             </li>
           </div>
           }
           {reports === 'true' &&
-          <div>
+          <div className = 'navbar'>
             <li>
-              <NavLink to='/Reports'>Reports</NavLink>
+              <NavLink to='/Reports' >Reports</NavLink>
             </li>
           </div>
           }

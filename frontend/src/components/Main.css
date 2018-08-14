@@ -33,12 +33,12 @@ li {
     margin-left: auto;
 }
 a {
-    color:white;
-    text-decoration: none;
+    color:white !important;
+    text-decoration: none !important;
     padding: 23px;
 }
 a:hover{
-    color: grey;
+    color: grey !important;
 }
 .main-body{
     grid-area: main;
@@ -112,9 +112,9 @@ option{
   font-size: .8em;
 }
 .dropdown-content a {
-  color: black;
+  color: black !important;
   padding:5px;
-  text-decoration: none;
+  text-decoration: none !important;
   display: block;
   text-align: left;
   border-radius: 5px;
@@ -145,3 +145,7 @@ option{
     align-items: center;
     font-size: .8em;
 }
+
+.programmeTabs {
+    background-color: black !important;
+  }
