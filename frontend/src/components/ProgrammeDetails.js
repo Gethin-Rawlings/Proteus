@@ -56,14 +56,14 @@ class ProgrammeDetails extends React.Component {
               <Tab>Audit</Tab>
             </TabList>
             <TabPanel>
-              <section>
+              <section className = 'card'>
                 Programme section
-              </section>
+              
               <Brands />
-              <section>
+              
                 Tx section
-              </section>
-              <section>
+            
+              
                 Core details
               </section>
             </TabPanel>
