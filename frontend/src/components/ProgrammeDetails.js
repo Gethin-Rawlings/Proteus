@@ -40,7 +40,7 @@ class ProgrammeDetails extends React.Component {
     return (
       <div className="main">
         <Navbar />
-        <section className="App-intro">
+        <section className="programmeDetails">
           <Tabs>
             <TabList>
               <Tab>Core Details</Tab>

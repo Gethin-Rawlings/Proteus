@@ -34,6 +34,7 @@ class UserAdmin extends React.Component {
       <div className="main">
         <Navbar />
         <div className="App-intro">
+        <section className="pad">
           <form onSubmit={this.handleSubmit} id='form' className="userAdminForm">
           </form>
           <section className='useradmin'>
@@ -56,6 +57,7 @@ class UserAdmin extends React.Component {
           <div>
             <Displayusers className='results' name='results' users={this.state.users} history={this.history} />
           </div>
+          </section>
         </div>
         <Footer />
       </div>

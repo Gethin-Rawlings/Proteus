@@ -9,7 +9,9 @@ class Reports extends React.Component {
     return (
       <div className="main">
         <Navbar/>
+        <section className="pad">
         <section className="main-body">Reports will go here
+        </section>
         </section>
         <Footer/>
       </div>

@@ -45,6 +45,7 @@ class Proposalsearch extends React.Component {
       <div className="main">
         <Navbar/>
         <section className="App-intro">
+        <section className="pad">
           <form onSubmit={this.handleSubmit} id='form' className="programmeForm"></form>
           <section className='programmeSearch'>
             <section>
@@ -88,6 +89,7 @@ class Proposalsearch extends React.Component {
             name='results'
             programmes={this.state.programmes}
             history={this.history}/>
+        </section>
         </section>
         <Footer/>
       </div>

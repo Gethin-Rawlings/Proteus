@@ -47,6 +47,7 @@ class Programmesearch extends React.Component {
         <Navbar/>
         <section className="App-intro">
           <form onSubmit={this.handleSubmit} id='form' className="programmeForm"></form>
+          <section className="pad">
           <section className='programmeSearch'>
             <section>
               <input
@@ -90,7 +91,7 @@ class Programmesearch extends React.Component {
             programmes={this.state.programmes}
             history={this.history}/>
         </section>
-
+        </section>
         <Footer/>
       </div>
     );
