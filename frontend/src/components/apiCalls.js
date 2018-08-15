@@ -5,8 +5,9 @@ const urlForLogin = url + 'login';
 const urlForUpdateUsers = url + 'updateusers';
 const urlForprogrammeSearch = url + 'programmesearch';
 const urlForUserSearch = url + 'useradmin';
-const urlForuserDetails = url + 'userDetails?user='
-const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user='
+const urlForuserDetails = url + 'userDetails?user=';
+const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user=';
+const urlForProgrammeSection = url + 'programmeSection=';
 
 //Fetch to handle login submit
 export const login = async(submit) => {
@@ -87,6 +88,15 @@ export const getOrganisations = async(type) => {
 
 export const getProgrammeSearchColumns = async(user) =>{
   const response = await fetch(urlForUserProgrammeSearch+user)
+  if (response.status >= 400) {
+    throw(new Error('Network request failed'))
+  } else {
+    return await response.json()
+  }
+}
+
+export const getProgrammeSection = async(programme) =>{
+  const response = await fetch(urlForProgrammeSection+programme)
   if (response.status >= 400) {
     throw(new Error('Network request failed'))
   } else {

@@ -5,6 +5,7 @@ import Footer from './Footer';
 import "./userDetails.css";
 import { updateUsers   } from './apiCalls';
 import Brands from "./Brands";
+import ProgrammeSection from "./ProgrammeSection";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 class ProgrammeDetails extends React.Component {
@@ -13,7 +14,8 @@ class ProgrammeDetails extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       requestFailed: false,
-      value: ''
+      value: '',
+      programme: ''
     }
   }
   handleChange(event) {
@@ -37,6 +39,8 @@ class ProgrammeDetails extends React.Component {
   }
 
   render() {
+    const programme = this.props.location.state.detail
+    console.log(programme)
     return (
       <div className="main">
         <Navbar />
@@ -57,7 +61,7 @@ class ProgrammeDetails extends React.Component {
             </TabList>
             <TabPanel>
               <section className = 'card'>
-                Programme section
+                <ProgrammeSection programme = {programme}/>
               
               <Brands />
               
