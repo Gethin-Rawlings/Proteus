@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Footer from './Footer';
 import "./userDetails.css";
 import { updateUsers   } from './apiCalls';
-import Brands from "./Brands";
 import ProgrammeSection from "./ProgrammeSection";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -43,9 +42,9 @@ class ProgrammeDetails extends React.Component {
     return (
       <div className="main">
         <Navbar />
-        <section className="programmeDetails">
-          <Tabs>
-            <TabList>
+        <section >
+          <Tabs>      
+            <TabList >
               <Tab>Core Details</Tab>
               <Tab>Transmissions</Tab>
               <Tab>Compliance</Tab>
@@ -58,16 +57,13 @@ class ProgrammeDetails extends React.Component {
               <Tab>Versions</Tab>
               <Tab>Audit</Tab>
             </TabList>
+            <ProgrammeSection programme = {programme}/>
             <TabPanel>
               <section className = 'card'>
-                <ProgrammeSection programme = {programme}/>
+                Core details to go here 
               </section>
             </TabPanel>
             <TabPanel>
-            <section>
-                Programme section
-              </section>
-              <Brands />
               <section>
                 Tx section
               </section>
@@ -77,10 +73,6 @@ class ProgrammeDetails extends React.Component {
             </TabPanel>
             <TabPanel>
               <section>
-                Programme section
-              </section>
-              <Brands />
-              <section>
                 Tx section
               </section>
               <section>
@@ -88,10 +80,6 @@ class ProgrammeDetails extends React.Component {
               </section>
             </TabPanel>
             <TabPanel>
-            <section>
-                Programme section
-              </section>
-              <Brands />
               <section>
                 Tx section
               </section>
@@ -101,10 +89,6 @@ class ProgrammeDetails extends React.Component {
             </TabPanel>
             <TabPanel>
               <section>
-                Programme section
-              </section>
-              <Brands />
-              <section>
                 Tx section
               </section>
               <section>
@@ -112,10 +96,6 @@ class ProgrammeDetails extends React.Component {
               </section>
             </TabPanel>
             <TabPanel>
-            <section>
-                Programme section
-              </section>
-              <Brands />
               <section>
                 Tx section
               </section>
@@ -125,10 +105,6 @@ class ProgrammeDetails extends React.Component {
             </TabPanel>
             <TabPanel>
               <section>
-                Programme section
-              </section>
-              <Brands />
-              <section>
                 Tx section
               </section>
               <section>
@@ -136,10 +112,6 @@ class ProgrammeDetails extends React.Component {
               </section>
             </TabPanel>
             <TabPanel>
-            <section>
-                Programme section
-              </section>
-              <Brands />
               <section>
                 Tx section
               </section>
@@ -149,10 +121,6 @@ class ProgrammeDetails extends React.Component {
             </TabPanel>
             <TabPanel>
               <section>
-                Programme section
-              </section>
-              <Brands />
-              <section>
                 Tx section
               </section>
               <section>
@@ -160,10 +128,6 @@ class ProgrammeDetails extends React.Component {
               </section>
             </TabPanel>
             <TabPanel>
-            <section>
-                Programme section
-              </section>
-              <Brands />
               <section>
                 Tx section
               </section>
@@ -172,10 +136,6 @@ class ProgrammeDetails extends React.Component {
               </section>
             </TabPanel>
             <TabPanel>
-            <section>
-                Programme section
-              </section>
-              <Brands />
               <section>
                 Tx section
               </section>

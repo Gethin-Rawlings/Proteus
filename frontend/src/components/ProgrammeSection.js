@@ -1,6 +1,5 @@
 import React from 'react';
-import "./Main.css";
-import Brands from "./Brands";
+import "./programmeSection.css";
 import {getProgrammeSection} from "./apiCalls";
 
 class ProgrammeSection extends React.Component {
@@ -32,23 +31,33 @@ class ProgrammeSection extends React.Component {
         this.setState( {episodeTitle:(this.state.programmes[0].episodeTitle)})
         this.setState( {commissionTitle:(this.state.programmes[0].commissionTitle)})
         this.setState( {supplier:(this.state.programmes[0].supplier)})
-
-        
+        this.setState( {duration:(this.state.programmes[0].duration)})
+        this.setState( {prgType:(this.state.programmes[0].prgType)})
+        this.setState( {versionTitle:(this.state.programmes[0].versionTitle)})
+        this.setState( {txStatus:(this.state.programmes[0].txStatus)})
+        this.setState( {proteusPrgNumber:(this.state.programmes[0].proteusPrgNumber)})
+        this.setState( {contenttype:(this.state.programmes[0].contenttype)})
+        this.setState( {brand:(this.state.programmes[0].brand)})
+        this.setState( {series:(this.state.programmes[0].series)})    
     } catch (err) {
         this.setState({ requestFailed: true })
     } 
   }
   render() {
     if (!this.state.programmes) return <p>Loading...</p>
-    let returnData = JSON.stringify(this.state.programmes)
-
     return (
-      <div  onChange={this.handleChange}>
+      <div  onChange={this.handleChange} className='programmeSection'>
        <p>Programme Title: {this.state.programmeTitle} </p>
        <p>Episode Title: {this.state.episodeTitle} </p>
        <p>Commssion Title : {this.state.commissionTitle} </p>
-       <p>supplier : {this.state.supplier} </p>
-       <Brands />
+       <p>Supplier : {this.state.supplier} </p>
+       <p>Duration : {this.state.duration} </p>
+       <p>Content type : {this.state.prgType} </p>
+       <p>Version Title : {this.state.versionTitle} </p>
+       <p>Programme Status : {this.state.txStatus} </p>
+       <p>Proteus Prog Number : {this.state.proteusPrgNumber} </p>
+       <p>Brand : {this.state.brand} </p>
+       <p>Series : {this.state.series} </p>
       </div>
     );
   }
