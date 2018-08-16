@@ -3,7 +3,6 @@ import "./Main.css";
 import Brands from "./Brands";
 import {getProgrammeSection} from "./apiCalls";
 
-
 class ProgrammeSection extends React.Component {
   constructor(props) {
     super(props);
@@ -24,21 +23,31 @@ class ProgrammeSection extends React.Component {
     const value = target.value;
     this.setState({[name]: value});
   }
-/*  async componentDidMount(event) {
-    event.preventDefault();
+
+  async componentDidMount() {
     try {
-      const data = await getProgrammeSection(this.programme)
-      this.setState({
-        programmes: JSON.stringify(data)
-      })
+        const data = await getProgrammeSection(this.props.programme) 
+        this.setState({ programmes:(data)})
+        this.setState( {programmeTitle:(this.state.programmes[0].programmeTitle)})
+        this.setState( {episodeTitle:(this.state.programmes[0].episodeTitle)})
+        this.setState( {commissionTitle:(this.state.programmes[0].commissionTitle)})
+        this.setState( {supplier:(this.state.programmes[0].supplier)})
+
+        
     } catch (err) {
-      console.log(err)
-    }
-  }*/
+        this.setState({ requestFailed: true })
+    } 
+  }
   render() {
+    if (!this.state.programmes) return <p>Loading...</p>
+    let returnData = JSON.stringify(this.state.programmes)
+
     return (
-      <div className="main">
-       stuff will go here
+      <div  onChange={this.handleChange}>
+       <p>Programme Title: {this.state.programmeTitle} </p>
+       <p>Episode Title: {this.state.episodeTitle} </p>
+       <p>Commssion Title : {this.state.commissionTitle} </p>
+       <p>supplier : {this.state.supplier} </p>
        <Brands />
       </div>
     );

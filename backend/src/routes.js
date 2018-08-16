@@ -3,11 +3,8 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
-router.get("/", function(req, res) {  
-    res.json({
-        status: "My API is alive!"
-    });
-});
+const programmeSection = require('./programmeDetails/programmeSection');
+router.all('/programmeSection', jsonParser, programmeSection);
 
 const login = require('./users/login');
 router.all('/login', jsonParser, login);
@@ -37,6 +34,6 @@ const proposalsearch = require('./searches/proposalsearch');
 router.all('/proposalsearch', jsonParser, proposalsearch);
 
 const programmeSearchColumns = require('./searches/programmeSearchColumns');
-router.all('/programmeSearchColumns', jsonParser, programmeSearchColumns)
+router.all('/programmeSearchColumns', jsonParser, programmeSearchColumns);
 
 module.exports = router;

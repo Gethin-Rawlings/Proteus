@@ -40,7 +40,6 @@ class ProgrammeDetails extends React.Component {
 
   render() {
     const programme = this.props.location.state.detail
-    console.log(programme)
     return (
       <div className="main">
         <Navbar />
@@ -62,13 +61,6 @@ class ProgrammeDetails extends React.Component {
             <TabPanel>
               <section className = 'card'>
                 <ProgrammeSection programme = {programme}/>
-              
-              <Brands />
-              
-                Tx section
-            
-              
-                Core details
               </section>
             </TabPanel>
             <TabPanel>

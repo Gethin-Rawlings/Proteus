@@ -7,7 +7,7 @@ const urlForprogrammeSearch = url + 'programmesearch';
 const urlForUserSearch = url + 'useradmin';
 const urlForuserDetails = url + 'userDetails?user=';
 const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user=';
-const urlForProgrammeSection = url + 'programmeSection=';
+const urlForProgrammeSection = url + 'programmeSection?programme=';
 
 //Fetch to handle login submit
 export const login = async(submit) => {
