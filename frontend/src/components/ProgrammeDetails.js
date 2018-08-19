@@ -6,6 +6,8 @@ import "./userDetails.css";
 import { updateUsers   } from './apiCalls';
 import ProgrammeSection from "./ProgrammeSection";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import CoreDetails from "./CoreDetails"
+
 
 class ProgrammeDetails extends React.Component {
   constructor(props) {
@@ -57,11 +59,14 @@ class ProgrammeDetails extends React.Component {
               <Tab>Versions</Tab>
               <Tab>Audit</Tab>
             </TabList>
-            <ProgrammeSection programme = {programme}/>
+            <section>
+              <ProgrammeSection programme = {programme}/>
+              
+            </section>
+            
             <TabPanel>
-              <section className = 'card'>
-                Core details to go here 
-              </section>
+              <CoreDetails />
+            
             </TabPanel>
             <TabPanel>
               <section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./programmeSection.css";
+import "./Main.css";
 import {getProgrammeSection} from "./apiCalls";
 
 class ProgrammeSection extends React.Component {
@@ -46,18 +47,44 @@ class ProgrammeSection extends React.Component {
   render() {
     if (!this.state.programmes) return <p>Loading...</p>
     return (
-      <div  onChange={this.handleChange} className='programmeSection'>
-       <p>Programme Title: {this.state.programmeTitle} </p>
-       <p>Episode Title: {this.state.episodeTitle} </p>
-       <p>Commssion Title : {this.state.commissionTitle} </p>
-       <p>Supplier : {this.state.supplier} </p>
-       <p>Duration : {this.state.duration} </p>
-       <p>Content type : {this.state.prgType} </p>
-       <p>Version Title : {this.state.versionTitle} </p>
-       <p>Programme Status : {this.state.txStatus} </p>
-       <p>Proteus Prog Number : {this.state.proteusPrgNumber} </p>
-       <p>Brand : {this.state.brand} </p>
-       <p>Series : {this.state.series} </p>
+      <div  onChange={this.handleChange}>
+        <section >
+          <form onSubmit={this.handleSubmit} id='form' className="programmeSection">
+            <section>
+              Programme title <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
+            </section>
+            <section>
+              Episode title <input name="episodeTitle" className="episodeTitle" type="text" form="form" placeholder="episodeTitle" value={this.state.episodeTitle} onChange={this.handleChange} />
+            </section>
+            <section>
+              Commssion title <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
+            </section>
+            <section>
+              Supplier <input name="supplier" className="supplier" type="text" form="form" placeholder="supplier" value={this.state.supplier} onChange={this.handleChange} />
+            </section>
+            <section>
+              Duration <input name="duration" className="duration" type="text" form="form" placeholder="duration" value={this.state.duration} onChange={this.handleChange} />
+            </section>
+            <section>
+              Content type <input name="prgType" className="prgType" type="text" form="form" placeholder="prgType" value={this.state.prgType} onChange={this.handleChange} />
+            </section>
+            <section>
+              Version title <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
+            </section>
+            <section>
+              Programme Status <input name="txStatus" className="txStatus" type="text" form="form" placeholder="txStatus" value={this.state.txStatus} onChange={this.handleChange} />
+            </section>
+            <section>
+              Proteus Prog Number <input name="proteusPrgNumber" className="proteusPrgNumber" type="text" form="form" placeholder="proteusPrgNumber" value={this.state.proteusPrgNumber} onChange={this.handleChange} />
+            </section>
+            <section>
+              Brand <input name="Brand" className="Brand" type="text" form="form" placeholder="Brand" value={this.state.brand} onChange={this.handleChange} />
+            </section>
+            <section>
+              Series <input name="series" className="series" type="text" form="form" placeholder="series" value={this.state.series} onChange={this.handleChange} />
+            </section>
+        </form>
+       </section>  
       </div>
     );
   }

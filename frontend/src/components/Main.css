@@ -9,6 +9,7 @@
 
     min-height: 100vh;
     background-color: #F1F8FD;
+    font-size: 75%;
   }
   .main-nav{
     display: flex; 
@@ -149,12 +150,7 @@ option{
     align-items: center;
     font-size: .8em;
 }
-
-/*.programmeTabs {
-    background-color: black !important;
-  }*/
-/*
-  .ProgrammeTab{
-      max-width: 20% !important;
-  }
-  */
+.coredetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
