@@ -154,3 +154,11 @@ option{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+input {
+    font-size: 75%;
+}
+
+select {
+    font-size: 75%;
+}
