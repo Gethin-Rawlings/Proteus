@@ -2,7 +2,7 @@ import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar";
 import Footer from './Footer';
-import "./userDetails.css";
+
 import { updateUsers   } from './apiCalls';
 import ProgrammeSection from "./ProgrammeSection";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -44,7 +44,7 @@ class ProgrammeDetails extends React.Component {
     return (
       <div className="main">
         <Navbar />
-        <section >
+        <section className="programmeDetails">
           <Tabs>      
             <TabList >
               <Tab>Core Details</Tab>
@@ -60,12 +60,12 @@ class ProgrammeDetails extends React.Component {
               <Tab>Audit</Tab>
             </TabList>
             <section>
-              <ProgrammeSection programme = {programme}/>
+              <ProgrammeSection className='programme' programme = {programme}/>
               
             </section>
             
             <TabPanel>
-              <CoreDetails />
+              <CoreDetails className='details' />
             
             </TabPanel>
             <TabPanel>

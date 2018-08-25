@@ -11,7 +11,39 @@
     background-color: #F1F8FD;
     font-size: 75%;
   }
-  .main-nav{
+  .programmeDetails{
+      grid-area: main;
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:  "programme "
+                            "transmission "
+                            "details ";
+  }
+.programmeSection {
+    grid-area: programme;
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-right: 50px;
+    padding-bottom: 50px; 
+    max-height: 45px;
+    justify-items: end;
+    
+  }
+ .details {
+    grid-area: transmission;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-right: 50px;
+    padding-bottom: 50px; 
+    max-height: 45px;
+    justify-items: end;
+} 
+ 
+ .main-nav{
     display: flex; 
     max-height: 100% ;
     padding-top: 12px;
@@ -127,7 +159,6 @@ option{
 .dropdown-content a:hover {
     background-color: #f1f1f1
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -154,11 +185,9 @@ option{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
 input {
     font-size: 75%;
 }
-
 select {
     font-size: 75%;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import "./programmeSection.css";
 import "./Main.css";
 import {getProgrammeSection} from "./apiCalls";
 
@@ -48,8 +47,9 @@ class ProgrammeSection extends React.Component {
     if (!this.state.programmes) return <p>Loading...</p>
     return (
       <div  onChange={this.handleChange}>
-        <section >
-          <form onSubmit={this.handleSubmit} id='form' className="programmeSection">
+      <form onSubmit={this.handleSubmit} id='form' ></form>
+        <section className="programmeSection">
+          
             <section>
               Programme title <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
             </section>
@@ -83,7 +83,7 @@ class ProgrammeSection extends React.Component {
             <section>
               Series <input name="series" className="series" type="text" form="form" placeholder="series" value={this.state.series} onChange={this.handleChange} />
             </section>
-        </form>
+        
        </section>  
       </div>
     );

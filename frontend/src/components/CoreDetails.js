@@ -1,5 +1,4 @@
 import React from 'react';
-import "./details.css";
 import "./Main.css"
 
 
@@ -28,8 +27,9 @@ class CoreDetails extends React.Component {
     
     return (
       <div  onChange={this.handleChange} >
-        <section >
-        <form onSubmit={this.handleSubmit} id='form' className='details'>
+      <form onSubmit={this.handleSubmit} id='form' ></form>
+        <section className="details">
+        
             <section>
               TX title <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
             </section>
@@ -39,7 +39,7 @@ class CoreDetails extends React.Component {
             <section>
               Tx Type <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
             </section>
-            </form>
+          
         </section>
        
       </div>
