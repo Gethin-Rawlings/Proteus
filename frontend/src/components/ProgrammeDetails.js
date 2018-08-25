@@ -5,10 +5,8 @@ import Footer from './Footer';
 import TransmissionSection from "./TransmissionSection";
 import { updateUsers   } from './apiCalls';
 import ProgrammeSection from "./ProgrammeSection";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs} from 'react-bootstrap';
 import CoreDetails from "./CoreDetails";
-
-
 
 class ProgrammeDetails extends React.Component {
   constructor(props) {
@@ -52,107 +50,20 @@ class ProgrammeDetails extends React.Component {
           <section>
             <TransmissionSection  programme = {programme}/>
           </section>
-          <Tabs className="programmeDetailsTabs">      
-            <TabList >
-              <Tab>Core Details</Tab>
-              <Tab>Transmissions</Tab>
-              <Tab>Compliance</Tab>
-              <Tab>Finance</Tab>
-              <Tab>Recordings</Tab>
-              <Tab>Running Order</Tab>
-              <Tab>Rights</Tab>
-              <Tab>Descriptions</Tab>
-              <Tab>Pres Details</Tab>
-              <Tab>Versions</Tab>
-              <Tab>Audit</Tab>
-            </TabList>
-
-            
-            <TabPanel>
-              <section>Core Details</section>
-              
-            
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Transmissions
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Compliance
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Finance
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Recordings
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Running Order
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Rights
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Descriptions
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                PRES Details
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Versions
-              </section>
-            </TabPanel>
-            <TabPanel>
-              <section>
-                Tx section
-              </section>
-              <section>
-                Audit
-              </section>
-            </TabPanel>
+          <Tabs className="programmeDetailsTabs" defaultActiveKey={0} id="programmeDetailsTabs">      
+              <Tab eventKey={0} title="Core Details">
+                <CoreDetails />
+              </Tab>
+              <Tab eventKey={1} className='test' title="Transmissions">Transmissions</Tab>
+              <Tab eventKey={2} title="Compliance">Compliance</Tab>
+              <Tab eventKey={3} title="Finance">Finance</Tab>
+              <Tab eventKey={4} title="Recordings">Recordings</Tab>
+              <Tab eventKey={5} title="Running Order">Running Order</Tab>
+              <Tab eventKey={6} title="Rights">Rights</Tab>
+              <Tab eventKey={7} title="Descriptions">Descriptions</Tab>
+              <Tab eventKey={8} title="Pres Details">Pres Details</Tab>
+              <Tab eventKey={9} title="Versions">Versions</Tab>
+              <Tab eventKey={10} title="Audit">Audit</Tab>
           </Tabs>
         </section>
         <Footer />

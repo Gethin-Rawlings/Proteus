@@ -9,67 +9,48 @@
 
     min-height: 100vh;
     background-color: #F1F8FD;
-    font-size: 75%;
+    font-size: 90%;
   }
   .programmeDetails {
       grid-area: main;
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:  "programme "
-                            "transmission "
-                            "details "
-                            "."
-                            "."
-                            "."
-                            "."
-                            "."
-                            ".";
+      grid-template-rows: 1fr 1fr 550px;
+
   }
 .programmeSection {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    padding-top: 25px;
+    padding-top: 15px;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fill, 210px);
+    grid-template-rows: 1fr 1fr 1fr ;
     padding-right: 50px;
-    padding-bottom: 25px; 
-    max-height: 45px;
-    justify-items: end;
+
+    justify-items: center;
     grid-area: programme;
     
   }
   .transmission {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fill, 210px);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;
-    padding-bottom: 25px; 
-    padding-top:25px;
-    max-height: 45px;
-    justify-items: end;
+
+
+    
+    justify-items: center;
     grid-area: transmission;
 } 
  .details {
-        border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
     grid-area: details;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fill, 210px);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;
-    padding-bottom: 50px; 
-    max-height: 45px;
-    justify-items: end;
+
+    justify-items: center;
 } 
 programmeDetailsTabs{
     padding-left: 50px;
@@ -96,14 +77,7 @@ li {
 .logout{
     margin-left: auto;
 }
-a {
-    color:white !important;
-    text-decoration: none !important;
-    padding: 23px;
-}
-a:hover{
-    color: grey !important;
-}
+
 .main-body{
     grid-area: main;
 }
@@ -186,6 +160,15 @@ option{
   display: block;
   text-align: left;
   border-radius: 5px;
+}
+.navText {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 23px;
+    font-size: 100% !important;
+}
+.navText:hover{
+    color: grey !important;
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1

@@ -22,30 +22,30 @@ class Navbar extends React.Component {
         <ul className='main-nav'>
           <div className = 'navbar'>
             <li>
-              <NavLink to='/Main'>Home</NavLink>
+              <NavLink className='navText' to='/Main'>Home</NavLink>
             </li>
           </div>
           {admin === 'true' &&
           <div className = 'navbar'>
             <li>
-              <NavLink to='/UserAdmin'>User Admin</NavLink>
+              <NavLink className='navText' to='/UserAdmin'>User Admin</NavLink>
             </li>
           </div>
           }
           {reports === 'true' &&
           <div className = 'navbar'>
             <li>
-              <NavLink to='/Reports' >Reports</NavLink>
+              <NavLink className='navText' to='/Reports' >Reports</NavLink>
             </li>
           </div>
           }
           <li className="dropdown">
-            <a className="dropbtn">Search</a>
+            <a className="dropbtn navText">Search</a>
             <div className="dropdown-content">
               <NavLink to='/ProgrammeSearch'>Programme</NavLink>
-              {proposal === 'true' && <NavLink to='/ProposalSearch'>Proposal</NavLink>}
-              {classical ==='true'&& <NavLink to='/ClassicalSearch'>Classical music</NavLink>}
-              <NavLink to='/ContemporarySearch'>Contemporary music</NavLink>
+              {proposal === 'true' && <NavLink className='navText' to='/ProposalSearch'>Proposal</NavLink>}
+              {classical ==='true'&& <NavLink className='navText' to='/ClassicalSearch'>Classical music</NavLink>}
+              <NavLink className='navText' to='/ContemporarySearch'>Contemporary music</NavLink>
             </div>
           </li>
           <div className="logout">

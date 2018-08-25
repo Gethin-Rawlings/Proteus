@@ -20,7 +20,7 @@ class Displayproposals extends Component {
         .props
         .history
         .push({
-          pathname: "/Programmedetails",
+          pathname: "/Proposaldetails",
           state: {
             detail: value
           }

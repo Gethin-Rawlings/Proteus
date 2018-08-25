@@ -5,6 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import 'react-tabs/style/react-tabs.css';
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render((
     <BrowserRouter>
