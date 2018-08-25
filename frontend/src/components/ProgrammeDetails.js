@@ -2,11 +2,12 @@ import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar";
 import Footer from './Footer';
-
+import TransmissionSection from "./TransmissionSection";
 import { updateUsers   } from './apiCalls';
 import ProgrammeSection from "./ProgrammeSection";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import CoreDetails from "./CoreDetails"
+import CoreDetails from "./CoreDetails";
+
 
 
 class ProgrammeDetails extends React.Component {
@@ -45,6 +46,12 @@ class ProgrammeDetails extends React.Component {
       <div className="main">
         <Navbar />
         <section className="programmeDetails">
+          <section>
+            <ProgrammeSection programme = {programme}/>  
+          </section>
+          <section>
+            <TransmissionSection  programme = {programme}/>
+          </section>
           <Tabs>      
             <TabList >
               <Tab>Core Details</Tab>
@@ -59,13 +66,11 @@ class ProgrammeDetails extends React.Component {
               <Tab>Versions</Tab>
               <Tab>Audit</Tab>
             </TabList>
-            <section>
-              <ProgrammeSection className='programme' programme = {programme}/>
-              
-            </section>
+
             
             <TabPanel>
-              <CoreDetails className='details' />
+              <section>Core Details</section>
+              
             
             </TabPanel>
             <TabPanel>

@@ -46,7 +46,7 @@ class ProgrammeSection extends React.Component {
   render() {
     if (!this.state.programmes) return <p>Loading...</p>
     return (
-      <div  onChange={this.handleChange}>
+      <div  onChange={this.handleChange} >
       <form onSubmit={this.handleSubmit} id='form' ></form>
         <section className="programmeSection">
           

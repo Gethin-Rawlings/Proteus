@@ -11,17 +11,23 @@
     background-color: #F1F8FD;
     font-size: 75%;
   }
-  .programmeDetails{
+  .programmeDetails {
       grid-area: main;
       display:grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:  "programme "
                             "transmission "
-                            "details ";
+                            "details "
+                            "."
+                            "."
+                            "."
+                            "."
+                            "."
+                            ".";
   }
 .programmeSection {
-    grid-area: programme;
+    
     grid-gap: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -30,11 +36,25 @@
     padding-bottom: 50px; 
     max-height: 45px;
     justify-items: end;
+    grid-area: programme;
     
   }
- .details {
-    grid-area: transmission;
+  .transmission {
+    
+    grid-gap: 5px;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-right: 50px;
+    padding-bottom: 50px; 
+    max-height: 45px;
+    justify-items: end;
+    grid-area: transmission;
+} 
+ .details {
+    grid-area: details;
+    display: grid;
+    grid-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;

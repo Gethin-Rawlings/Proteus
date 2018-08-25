@@ -2,7 +2,7 @@ import React from 'react';
 import "./Main.css"
 
 
-class CoreDetails extends React.Component {
+class TransmissionSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +28,7 @@ class CoreDetails extends React.Component {
     return (
       <div  onChange={this.handleChange} >
       <form onSubmit={this.handleSubmit} id='form' ></form>
-        <section className="details" name="details">
+        <section className="transmission" name="transmission">
         
             <section>
               TX title <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
@@ -46,4 +46,4 @@ class CoreDetails extends React.Component {
     );
   }
 }
-export default CoreDetails;
+export default TransmissionSection;
