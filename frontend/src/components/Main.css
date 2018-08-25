@@ -27,42 +27,53 @@
                             ".";
   }
 .programmeSection {
-    
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 25px;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;
-    padding-bottom: 50px; 
+    padding-bottom: 25px; 
     max-height: 45px;
     justify-items: end;
     grid-area: programme;
     
   }
   .transmission {
-    
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;
-    padding-bottom: 50px; 
+    padding-bottom: 25px; 
+    padding-top:25px;
     max-height: 45px;
     justify-items: end;
     grid-area: transmission;
 } 
  .details {
+        border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
     grid-area: details;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;
     padding-bottom: 50px; 
     max-height: 45px;
     justify-items: end;
 } 
- 
+programmeDetailsTabs{
+    padding-left: 50px;
+}
  .main-nav{
     display: flex; 
     max-height: 100% ;

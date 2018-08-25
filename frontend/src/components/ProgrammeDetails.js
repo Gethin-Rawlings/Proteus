@@ -52,7 +52,7 @@ class ProgrammeDetails extends React.Component {
           <section>
             <TransmissionSection  programme = {programme}/>
           </section>
-          <Tabs>      
+          <Tabs className="programmeDetailsTabs">      
             <TabList >
               <Tab>Core Details</Tab>
               <Tab>Transmissions</Tab>
