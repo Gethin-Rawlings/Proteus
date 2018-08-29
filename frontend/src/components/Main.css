@@ -22,7 +22,7 @@
     padding-top: 15px;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
 
     padding-right: 50px;
 
@@ -31,10 +31,10 @@
     
   }
   .transmission {
+    padding-top: 15px;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     padding-right: 50px;
 
 
@@ -43,10 +43,11 @@
     grid-area: transmission;
 } 
  .details {
+    padding-top: 15px;
     grid-area: details;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-right: 50px;
 
@@ -162,6 +163,7 @@ option{
   display: block;
   text-align: left;
   border-radius: 5px;
+  z-index: +4;
 }
 .navText {
     color: white !important;

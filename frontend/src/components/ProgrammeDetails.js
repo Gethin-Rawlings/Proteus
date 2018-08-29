@@ -46,15 +46,16 @@ class ProgrammeDetails extends React.Component {
         <section className="programmeDetails">
           
           <Tabs className="programmeDetailsTabs" defaultActiveKey={0} id="programmeDetailsTabs">      
-              <Tab eventKey={0} title="Core Details">
-                <CoreDetails />
-              </Tab>
-              <section>
+          <section>
             <ProgrammeSection programme = {programme}/>  
           </section>
           <section>
             <TransmissionSection  programme = {programme}/>
           </section>
+              <Tab eventKey={0} title="Core Details">
+                <CoreDetails />
+              </Tab>
+              
               <Tab eventKey={1} className='test' title="Transmissions">Transmissions</Tab>
               <Tab eventKey={2} title="Compliance">Compliance</Tab>
               <Tab eventKey={3} title="Finance">Finance</Tab>
