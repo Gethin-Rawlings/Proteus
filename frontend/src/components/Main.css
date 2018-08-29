@@ -10,6 +10,7 @@
     min-height: 100vh;
     background-color: #F1F8FD;
     font-size: 90%;
+    font-family: arial, sans-serif;
   }
   .programmeDetails {
       grid-area: main;
@@ -20,36 +21,31 @@
   }
 .programmeSection {
     padding-top: 15px;
-    grid-gap: 5px;
+    grid-gap: 10px;
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(208px, 1fr));
-
     justify-items: center;
-    grid-area: programme;
-    
+    grid-area: programme;  
   }
   .transmission {
-    padding-top: 15px;
-    grid-gap: 5px;
+    padding-top: 50px;
+    grid-gap: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
-
     justify-items: center;
     grid-area: transmission;
 } 
  .details {
-    padding-top: 15px;
+    padding-top: 50px;
     grid-area: details;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns:repeat(auto-fit, minmax(208px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
-
-
     justify-items: center;
 } 
 .programmeDetailsTabs{
-    padding-left: 50px;
+    padding-left: 10px;
 }
  .main-nav{
     display: flex; 
@@ -61,19 +57,9 @@
     color:white;
     font-size: 0.9em;
   }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-li { 
-    margin: 2px;
-    display: block;  
-}
 .logout{
     margin-left: auto;
 }
-
 .main-body{
     grid-area: main;
 }
@@ -137,9 +123,6 @@ li {
     margin-left: 10px; 
     margin-right: 10px;  
 }
-option{
-    font-family: arial, sans-serif;
-}
 .dropdown-content {
   border-radius: 5px;
   display: none;
@@ -165,6 +148,15 @@ option{
 }
 .navText:hover{
     color: grey !important;
+}
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li { 
+    margin: 2px;
+    display: block;  
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1
@@ -195,10 +187,4 @@ option{
 .coredetails {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-input {
-    font-size: 75%;
-}
-select {
-    font-size: 75%;
 }

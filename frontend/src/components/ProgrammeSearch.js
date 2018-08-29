@@ -52,7 +52,7 @@ class Programmesearch extends React.Component {
             <section>
               <input
                 name="text"
-                className="test"
+                className="usersearch"
                 type="text"
                 form="form"
                 placeholder="Title"
@@ -83,7 +83,7 @@ class Programmesearch extends React.Component {
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
           <button id="download" className="csv">CSV
-           <CSVLink data={JSON.parse(this.state.programmes)} ></CSVLink>
+           <CSVLink data={JSON.parse(this.state.programmes)}></CSVLink>
           </button>
           <Displayprogrammes
             className='results'
