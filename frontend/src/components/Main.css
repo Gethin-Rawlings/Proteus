@@ -22,9 +22,7 @@
     padding-top: 15px;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-
-    padding-right: 50px;
+    grid-template-columns:repeat(auto-fit, minmax(208px, 1fr));
 
     justify-items: center;
     grid-area: programme;
@@ -34,11 +32,8 @@
     padding-top: 15px;
     grid-gap: 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    padding-right: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
 
-
-    
     justify-items: center;
     grid-area: transmission;
 } 
@@ -47,13 +42,13 @@
     grid-area: details;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(208px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding-right: 50px;
+
 
     justify-items: center;
 } 
-programmeDetailsTabs{
+.programmeDetailsTabs{
     padding-left: 50px;
 }
  .main-nav{
@@ -94,9 +89,6 @@ li {
   }
   .App-intro{
     grid-area: main;
-
-
-   /* padding-top: 20px;*/
   }
   .pad{
       padding-top: 20px;
@@ -163,13 +155,13 @@ option{
   display: block;
   text-align: left;
   border-radius: 5px;
-  z-index: +4;
+  z-index: -1;
 }
 .navText {
     color: white !important;
     text-decoration: none !important;
     padding: 23px;
-    font-size: 100% !important;
+    font-size: 120% !important;
 }
 .navText:hover{
     color: grey !important;
@@ -179,6 +171,7 @@ option{
 }
 .dropdown:hover .dropdown-content {
   display: block;
+  z-index: 1;
 }
 .submit{
     margin-left: 15px;

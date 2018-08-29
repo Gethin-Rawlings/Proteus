@@ -47,6 +47,18 @@ class TransmissionSection extends React.Component {
             <section>
             <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
             </section>
+            <section>
+              Planned 
+            </section>
+            <section>
+            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
+            </section>
+            <section>
+              Billed 
+            </section>
+            <section>
+            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
+            </section>
         </section>
        
       </div>
