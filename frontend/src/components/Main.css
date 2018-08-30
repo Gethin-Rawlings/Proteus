@@ -76,15 +76,15 @@
   .App-intro{
     grid-area: main;
   }
-  .pad{
-      padding-top: 20px;
-  }
   .useradmin{
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;    
   }
   .programmeSearch{
+    padding-top: 20px;
+    padding-left: 5px;
     display: flex;
     flex-wrap: wrap;  
   }
@@ -122,6 +122,7 @@
     text-align: center;
     margin-left: 10px; 
     margin-right: 10px;  
+    max-height: 18px;
 }
 .dropdown-content {
   border-radius: 5px;
@@ -174,7 +175,7 @@
 }
 .csv {
     margin-left: 15px;
-    max-height: 20px;
+    max-height: 25px;
     max-width: 60px;
 }
 .datePicker{
@@ -182,7 +183,6 @@
     display: flex;
     margin-bottom: 15px;
     align-items: center;
-
 }
 .coredetails {
     display: grid;

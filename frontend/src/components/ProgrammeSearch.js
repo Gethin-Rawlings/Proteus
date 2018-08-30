@@ -41,13 +41,14 @@ class Programmesearch extends React.Component {
       console.log(err)
     }
   }
+
   render() {
     return (
       <div className="main">
         <Navbar/>
         <section className="App-intro">
           <form onSubmit={this.handleSubmit} id='form' className="programmeForm"></form>
-          <section className="pad">
+          
           <section className='programmeSearch'>
             <section>
               <input
@@ -68,8 +69,6 @@ class Programmesearch extends React.Component {
             <section className='indies' name="indies">
               <Getorganisations name="indie" indies={this.handleChange}/>
             </section>
-          </section>
-          <br/>
           <section className="datePicker">
             <section>From</section>
             <section className="from">
@@ -80,9 +79,10 @@ class Programmesearch extends React.Component {
               <input type="date" name="todate" id="datetime" form="form"></input>
             </section>
           </section>
+          </section>
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
-          <button id="download" className="csv">CSV
+          <button id="download" className="csv" >CSV
            <CSVLink data={JSON.parse(this.state.programmes)}></CSVLink>
           </button>
           <Displayprogrammes
@@ -91,7 +91,7 @@ class Programmesearch extends React.Component {
             programmes={this.state.programmes}
             history={this.history}/>
         </section>
-        </section>
+
         <Footer/>
       </div>
     );
