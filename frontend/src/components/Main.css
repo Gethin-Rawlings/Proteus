@@ -9,9 +9,41 @@
 
     min-height: 100vh;
     background-color: #F1F8FD;
-    font-size: 75%;
+    font-size: 90%;
+    font-family: arial, sans-serif;
   }
-  .main-nav{
+  .programmeDetails {
+      grid-area: main;
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 550px;
+
+  }
+.programmeSection {
+    padding-top: 15px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+    grid-area: programme;  
+  }
+  .transmission {
+    padding-top: 50px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+    grid-area: transmission;
+} 
+ .details {
+    padding-top: 50px;
+    grid-area: details;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+} 
+.programmeDetailsTabs{
+    padding-left: 10px;
+}
+ .main-nav{
     display: flex; 
     max-height: 100% ;
     padding-top: 12px;
@@ -21,25 +53,8 @@
     color:white;
     font-size: 0.9em;
   }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-li { 
-    margin: 2px;
-    display: block;  
-}
 .logout{
     margin-left: auto;
-}
-a {
-    color:white !important;
-    text-decoration: none !important;
-    padding: 23px;
-}
-a:hover{
-    color: grey !important;
 }
 .main-body{
     grid-area: main;
@@ -56,17 +71,16 @@ a:hover{
   }
   .App-intro{
     grid-area: main;
-   /* padding-top: 20px;*/
-  }
-  .pad{
-      padding-top: 20px;
   }
   .useradmin{
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;    
   }
   .programmeSearch{
+    padding-top: 20px;
+    padding-left: 5px;
     display: flex;
     flex-wrap: wrap;  
   }
@@ -104,9 +118,7 @@ a:hover{
     text-align: center;
     margin-left: 10px; 
     margin-right: 10px;  
-}
-option{
-    font-family: arial, sans-serif;
+    max-height: 18px;
 }
 .dropdown-content {
   border-radius: 5px;
@@ -123,13 +135,32 @@ option{
   display: block;
   text-align: left;
   border-radius: 5px;
+  z-index: -1;
+}
+.navText {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 23px;
+    font-size: 120% !important;
+}
+.navText:hover{
+    color: grey !important;
+}
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li { 
+    margin: 2px;
+    display: block;  
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
+  z-index: 1;
 }
 .submit{
     margin-left: 15px;
@@ -140,7 +171,7 @@ option{
 }
 .csv {
     margin-left: 15px;
-    max-height: 20px;
+    max-height: 25px;
     max-width: 60px;
 }
 .datePicker{
@@ -148,17 +179,23 @@ option{
     display: flex;
     margin-bottom: 15px;
     align-items: center;
-    font-size: .8em;
 }
 .coredetails {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
-input {
-    font-size: 75%;
+.textInput{
+    align-items: right;
 }
-
-select {
-    font-size: 75%;
+.programmeSectionText{
+    justify-self: end;
+    align-self: center;
+}
+.transmissionSectionText {
+    justify-self: end;
+    align-self: center;
+}
+.detailSectionText {
+    justify-self: end;
+    align-self: center;
 }
