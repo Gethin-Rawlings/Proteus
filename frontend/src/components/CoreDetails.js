@@ -30,19 +30,19 @@ class CoreDetails extends React.Component {
       <form onSubmit={this.handleSubmit} id='form' ></form>
         <section className="details" name="details">
         
-            <section>
+            <section className="detailSectionText">
               TX title 
             </section>
             <section>
             <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
             </section>
-            <section>
+            <section className="detailSectionText">
               Tx Details 
             </section>
             <section>
             <input name="episodeTitle" className="episodeTitle" type="text" form="form" placeholder="episodeTitle" value={this.state.episodeTitle} onChange={this.handleChange} />
             </section>
-            <section>
+            <section className="detailSectionText">
               Tx Type 
             </section>
             <section>

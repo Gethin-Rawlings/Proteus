@@ -23,16 +23,14 @@
     padding-top: 15px;
     grid-gap: 10px;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(208px, 1fr));
-    justify-items: center;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
     grid-area: programme;  
   }
   .transmission {
     padding-top: 50px;
     grid-gap: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
     grid-area: transmission;
 } 
  .details {
@@ -40,9 +38,7 @@
     grid-area: details;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns:repeat(auto-fit, minmax(208px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-items: center;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
 } 
 .programmeDetailsTabs{
     padding-left: 10px;
@@ -187,4 +183,19 @@
 .coredetails {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.textInput{
+    align-items: right;
+}
+.programmeSectionText{
+    justify-self: end;
+    align-self: center;
+}
+.transmissionSectionText {
+    justify-self: end;
+    align-self: center;
+}
+.detailSectionText {
+    justify-self: end;
+    align-self: center;
 }

@@ -29,35 +29,35 @@ class TransmissionSection extends React.Component {
       <div  onChange={this.handleChange} >
       <form onSubmit={this.handleSubmit} id='form' ></form>
         <section className="transmission" name="transmission">
-            <section>
+            <section className="transmissionSectionText">
               TX title 
             </section>
             <section>
-            <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
+            <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="TX Title" value={this.state.programmeTitle} onChange={this.handleChange} />
             </section>
-            <section>
+            <section className="transmissionSectionText">
               Tx Details 
             </section>
             <section>
-            <input name="episodeTitle" className="episodeTitle" type="text" form="form" placeholder="episodeTitle" value={this.state.episodeTitle} onChange={this.handleChange} />
+            <input name="episodeTitle" className="episodeTitle" type="text" form="form" placeholder="TX Details" value={this.state.episodeTitle} onChange={this.handleChange} />
             </section>
-            <section>
+            <section className="transmissionSectionText">
               Tx Type 
             </section>
             <section>
-            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
+            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="TX Type" value={this.state.commissionTitle} onChange={this.handleChange} />
             </section>
-            <section>
+            <section className="transmissionSectionText">
               Planned 
             </section>
             <section>
-            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
+            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="Planned" value={this.state.commissionTitle} onChange={this.handleChange} />
+            </section>
+            <section className="transmissionSectionText">
+              Billed
             </section>
             <section>
-              Billed 
-            </section>
-            <section>
-            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="commissionTitle" value={this.state.commissionTitle} onChange={this.handleChange} />
+            <input name="commissionTitle" className="commissionTitle" type="text" form="form" placeholder="Billed" value={this.state.commissionTitle} onChange={this.handleChange} />
             </section>
         </section>
        
