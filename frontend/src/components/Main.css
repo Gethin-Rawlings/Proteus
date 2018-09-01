@@ -12,13 +12,7 @@
     font-size: 90%;
     font-family: arial, sans-serif;
   }
-  .programmeDetails {
-      grid-area: main;
-      display:grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 550px;
 
-  }
 .programmeSection {
     padding-top: 15px;
     grid-gap: 10px;
