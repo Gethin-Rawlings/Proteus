@@ -1,21 +1,26 @@
 form {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-gap: 16px;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-gap: 10px;
+    
 }
 label {
     grid-column: 1 / 2;
 }
- 
 input,
 button {
     grid-column: 2 / 3;
 }
-
 .userDetails{
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    
+    margin-left: 20px;
     font-size: 0.9em;
+}
+.roles{
+    background-color: white;
+    grid-column: 4/5;
+    font-size: 80%;
+    padding: 10px;
+    box-shadow: 1px 1px .5px grey;
 }
 
