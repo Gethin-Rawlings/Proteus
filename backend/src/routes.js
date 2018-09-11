@@ -27,6 +27,9 @@ router.all('/updateusers', jsonParser, updateUsers);
 const userDetails = require('./users/userDetails');
 router.all('/userDetails', jsonParser, userDetails);
 
+const userRoles = require('./users/userRoles');
+router.all('/userRoles', jsonParser, userRoles);
+
 const programmesearch = require('./searches/programmesearch');
 router.all('/programmesearch', jsonParser, programmesearch);
 

@@ -2,8 +2,9 @@ import React from 'react';
 import "./Main.css";
 import Navbar from "./Navbar";
 import Footer from './Footer';
+import UserRoles from './UserRoles';
 import "./userDetails.css";
-import { updateUsers , userDetails  } from './apiCalls';
+import { updateUsers , userDetails } from './apiCalls';
 
 class UserDetails extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class UserDetails extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       requestFailed: false,
-      value: ''
+      value: '',
+      returnRoles: '[]'
     }
   }
   handleChange(event) {
@@ -26,7 +28,6 @@ class UserDetails extends React.Component {
       const dataForm = new FormData(event.target);
       try {
         await updateUsers(dataForm)
-      
       } catch (err) {
         console.log(err)
       }
@@ -59,7 +60,7 @@ class UserDetails extends React.Component {
     const returnData = this.state.userDetails;
     const userName = returnData.USR_NAME
     const accountCreationDate = returnData.USR_ACCOUNT_CREATED
-    const passwordLastChanged = returnData.USR_PASSWORD_LAST_CHANGED
+    const passwordLastChanged = returnData.USR_PASSWORD_LAST_CHAGED
     return (
       <div className="main">
         <Navbar />
@@ -89,6 +90,10 @@ class UserDetails extends React.Component {
               <button id="save" className="save">Save</button>
               <button id="reset" type="reset" className="reset" form="form">Reset</button>
             </form>
+            <UserRoles user={userName}/>
+            
+              
+            
           </section>
         </section>
         <Footer />

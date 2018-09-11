@@ -6,6 +6,7 @@ const urlForUpdateUsers = url + 'updateusers';
 const urlForprogrammeSearch = url + 'programmesearch';
 const urlForUserSearch = url + 'useradmin';
 const urlForuserDetails = url + 'userDetails?user=';
+const urlForuserRoles = url + 'userRoles?user=';
 const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user=';
 const urlForProgrammeSection = url + 'programmeSection?programme=';
 
@@ -76,7 +77,14 @@ export const userDetails = async(user) => {
     return await response
   }
 }
-
+export const userRoles = async(user) => {
+  const response = await fetch(urlForuserRoles+user)
+  if (response.status >= 400) {
+    throw(new Error('Network request failed'))
+  } else {
+    return await response.json()
+  }
+}
 export const getOrganisations = async(type) => {
   const response = await fetch(urlForOrganisations+type)
   if (response.status >= 400) {
