@@ -159,6 +159,7 @@
 .submit{
     margin-left: 15px;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 .reset{
     margin-left: 15px;
@@ -168,12 +169,7 @@
     max-height: 25px;
     max-width: 60px;
 }
-.datePicker{
-    margin-left: 15px;
-    display: flex;
-    margin-bottom: 15px;
-    align-items: center;
-}
+
 .coredetails {
     display: grid;
     grid-template-columns: 1fr 1fr;

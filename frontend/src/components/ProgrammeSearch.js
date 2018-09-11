@@ -69,17 +69,16 @@ class Programmesearch extends React.Component {
             <section className='indies' name="indies">
               <Getorganisations name="indie" indies={this.handleChange}/>
             </section>
-          <section className="datePicker">
-            <section>From</section>
-            <section className="from">
-              <input type="date" name="fromdate" id="datetime" form="form"></input>
+          
+            <section className="from">From
+            
+              <input className="from" type="date" name="fromdate" id="datetime" form="form"></input>
             </section>
-            <section>To</section>
-            <section className="to">
-              <input type="date" name="todate" id="datetime" form="form"></input>
+            <section className="to">To
+              <input className="to" type="date" name="todate" id="datetime" form="form"></input>
             </section>
           </section>
-          </section>
+          
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
           <button id="download" className="csv" >CSV
