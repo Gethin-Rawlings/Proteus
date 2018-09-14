@@ -39,4 +39,7 @@ router.all('/proposalsearch', jsonParser, proposalsearch);
 const programmeSearchColumns = require('./searches/programmeSearchColumns');
 router.all('/programmeSearchColumns', jsonParser, programmeSearchColumns);
 
+const addUser = require('./users/addUser');
+router.all('/addUser', jsonParser, addUser);
+
 module.exports = router;

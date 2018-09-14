@@ -9,6 +9,7 @@ const urlForuserDetails = url + 'userDetails?user=';
 const urlForuserRoles = url + 'userRoles?user=';
 const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user=';
 const urlForProgrammeSection = url + 'programmeSection?programme=';
+const urlForAddUser = url + 'adduser'
 
 //Fetch to handle login submit
 export const login = async(submit) => {
@@ -23,6 +24,19 @@ export const login = async(submit) => {
   };
   return await response.json()
 }
+
+export const addUser = async(submit) => {
+  const dataform = new FormData(submit)
+  const response = await fetch(urlForAddUser, {
+    method: 'POST',
+    body: dataform
+  })
+  if (response.status >= 400) {
+    throw(new Error('Network request failed'))
+  };
+  return await response.json()
+}
+
 // Fetch to update user information
 export const updateUsers = async(submit) => {
   const response = await fetch(urlForUpdateUsers, {

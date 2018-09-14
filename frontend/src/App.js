@@ -8,7 +8,7 @@ import Logout from "./components/Logout";
 import Reports from "./components/Reports";
 import ProgrammeDetails from "./components/ProgrammeDetails";
 import Proposaldetails from "./components/Proposaldetails";
-
+import AddUser from "./components/AddUser";
 
 import Brands from "./components/Brands";
 import Proposalsearch from "./components/Proposalsearch";
@@ -32,6 +32,7 @@ class App extends Component {
             <Route path='/ProgrammeDetails' component={ProgrammeDetails} />
             <Route path='/Proposaldetails' component={Proposaldetails} />
             <Route path='/Brands' component={Brands} />
+            <Route path='/AddUser' component={AddUser} />
           </Switch>
         </BrowserRouter>
       </div>
