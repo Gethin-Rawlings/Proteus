@@ -21,6 +21,7 @@ router.post('/useradmin', async (req, res) => {
     await request.execute('PR_GET_USERS', function (err, result) {
         if (err)
             console.log(err)
+        console.log(result)
         res.send(result.recordset)
     });
 });
