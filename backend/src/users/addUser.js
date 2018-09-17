@@ -9,7 +9,7 @@ const sql = require('../config/db')
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(formidable());
 
-router.post('/updateUsers', async (req, res) => {
+router.post('/addUser', async (req, res) => {
     const username = req.fields.userName;
     const userFirstname = req.fields.userFirstname;
     const userLastname = req.fields.userLastname;

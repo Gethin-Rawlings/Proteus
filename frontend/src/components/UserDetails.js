@@ -26,6 +26,7 @@ class UserDetails extends React.Component {
     event.preventDefault();
     if (window.confirm("Save?")) { 
       const dataForm = new FormData(event.target);
+      console.log(dataForm.userEmailAddress)
       try {
         await updateUsers(dataForm)
       } catch (err) {

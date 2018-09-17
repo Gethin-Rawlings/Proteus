@@ -9,7 +9,7 @@ const urlForuserDetails = url + 'userDetails?user=';
 const urlForuserRoles = url + 'userRoles?user=';
 const urlForUserProgrammeSearch = url + 'programmeSearchColumns?user=';
 const urlForProgrammeSection = url + 'programmeSection?programme=';
-const urlForAddUser = url + 'adduser'
+const urlForAddUser = url + 'addUser'
 
 //Fetch to handle login submit
 export const login = async(submit) => {
@@ -26,10 +26,9 @@ export const login = async(submit) => {
 }
 
 export const addUser = async(submit) => {
-  const dataform = new FormData(submit)
   const response = await fetch(urlForAddUser, {
     method: 'POST',
-    body: dataform
+    body: submit
   })
   if (response.status >= 400) {
     throw(new Error('Network request failed'))
