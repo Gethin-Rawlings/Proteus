@@ -1,12 +1,18 @@
-USE [Proteustraining]
-go
-drop PROCEDURE [dbo].[PR_GET_USER_DETAILS]
+USE [Proteus]
 GO
+
+/****** Object:  StoredProcedure [dbo].[PR_GET_USER_DETAILS]    Script Date: 10/2/2018 1:20:39 PM ******/
+DROP PROCEDURE [dbo].[PR_GET_USER_DETAILS]
+GO
+
+/****** Object:  StoredProcedure [dbo].[PR_GET_USER_DETAILS]    Script Date: 10/2/2018 1:20:39 PM ******/
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
-create PROCEDURE [dbo].[PR_GET_USER_DETAILS]
+
+CREATE PROCEDURE [dbo].[PR_GET_USER_DETAILS]
     @userName varchar(50)
 as
 begin
@@ -29,3 +35,6 @@ where       usr_name = @userName
 
            
 end
+GO
+
+
