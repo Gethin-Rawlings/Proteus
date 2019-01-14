@@ -28,7 +28,7 @@ class CoreDetails extends React.Component {
     return (
       <div  onChange={this.handleChange} >
       <form onSubmit={this.handleSubmit} id='form' ></form>
-        <section className="details" name="details">
+        <section className="coredetails" name="details">
         
             <section className="detailSectionText">
               TX title 

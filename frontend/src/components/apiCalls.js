@@ -1,5 +1,6 @@
 //const url ='http://ec2-52-56-248-133.eu-west-2.compute.amazonaws.com:5000/';
-const url = 'http://gethin-laptop:5000/';
+//const url = 'http://gethin-laptop:5000/';
+const url = 'http://192.168.1.47:5000/';
 const urlForOrganisations = url + 'organisations?type='
 const urlForLogin = url + 'login';
 const urlForUpdateUsers = url + 'updateusers';

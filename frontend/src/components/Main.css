@@ -13,90 +13,65 @@
     font-family: arial, sans-serif;
   }
 
-  @media only screen 
-  and (min-width:801px) 
-  {
-    .programmeSection {
-        padding-top: 15px;
-        grid-gap: 10px;
-        display: grid;
-        grid-template-columns:auto auto auto auto;
-        grid-area: programme;  
-      }    
-  }
-@media only screen
-and (min-width:1025px){
+ 
 .programmeSection {
     padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
     grid-gap: 10px;
     display: grid;
+    max-width: 99%;
     grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
     grid-area: programme;  
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 18px grey
   }
-}
-@media only screen 
-and (min-width:801px) 
-{
+
   .transmission {
       padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      max-width: 99%;
       grid-gap: 10px;
       display: grid;
-      grid-template-columns:auto auto auto auto;
+      grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
       grid-area: programme;  
+      border-color: grey;
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: 1px 1px 18px grey
     }    
-}
-@media only screen
-and (min-width:1025px){
-.transmission {
-  padding-top: 15px;
-  grid-gap: 10px;
-  display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-  grid-area: programme;  
-}
-}
-@media only screen 
-and (min-width:801px) 
-{
   .details {
       padding-top: 15px;
+      padding-bottom: 15px;
       grid-gap: 10px;
       display: grid;
-      grid-template-columns:auto auto auto auto;
+      max-width: 99%;
+      grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
       grid-area: programme;  
+      border-color: grey;
+      border-style: solid;
+      border-top-width: 0.1px;
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-bottom-width: 0.5px;
+      
     }    
-}
-@media only screen
-and (min-width:1025px){
-.details {
-  padding-top: 15px;
-  grid-gap: 10px;
-  display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-  grid-area: programme;  
-}
-}
-@media only screen 
-and (min-width:801px) 
-{
   .coredetails {
-      padding-top: 15px;
-      grid-gap: 10px;
-      display: grid;
-      grid-template-columns:auto auto auto auto;
-      grid-area: programme;  
-    }    
-}
-@media only screen
-and (min-width:1025px){
-.coredetails {
-  padding-top: 15px;
-  grid-gap: 10px;
-  display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-  grid-area: programme;  
-}
-}
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-gap: 10px;
+    display: grid;
+    max-width: 99%;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+    grid-area: programme;  
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 18px grey
+  }    
 
 .programmeDetailsTabs{
     padding-left: 10px;

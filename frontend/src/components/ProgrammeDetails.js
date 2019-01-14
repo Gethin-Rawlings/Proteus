@@ -8,6 +8,7 @@ import ProgrammeSection from "./ProgrammeSection";
 import { Tab, Tabs} from 'react-bootstrap';
 import CoreDetails from "./CoreDetails";
 
+
 class ProgrammeDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -43,17 +44,21 @@ class ProgrammeDetails extends React.Component {
       <div className="main">
         <Navbar />
         <section className="programmeDetails">
+        <br></br>
           <Tabs className="programmeDetailsTabs" defaultActiveKey={0} id="programmeDetailsTabs">      
             <section>
+              <br></br>
               <ProgrammeSection programme = {programme}/>  
             </section>
             <section>
+            <br></br>
               <TransmissionSection  programme = {programme}/>
             </section>
               <Tab eventKey={0} title="Core Details">
+              <br></br>
                 <CoreDetails />
               </Tab>
-              <Tab eventKey={1} className='test' title="Transmissions">Transmissions</Tab>
+              <Tab eventKey={1} title="Transmissions">Transmissions</Tab>
               <Tab eventKey={2} title="Compliance">Compliance</Tab>
               <Tab eventKey={3} title="Finance">Finance</Tab>
               <Tab eventKey={4} title="Recordings">Recordings</Tab>
