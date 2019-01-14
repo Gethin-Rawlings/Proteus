@@ -81,8 +81,8 @@ class Programmesearch extends React.Component {
           
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
-          <button id="download" className="csv" >CSV
-           <CSVLink data={JSON.parse(this.state.programmes)}></CSVLink>
+          <button id="download" className="csv" >
+           <CSVLink data={JSON.parse(this.state.programmes)}>CSV</CSVLink>
           </button>
           <Displayprogrammes
             className='results'
