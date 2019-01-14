@@ -13,6 +13,19 @@
     font-family: arial, sans-serif;
   }
 
+  @media only screen 
+  and (min-width:801px) 
+  {
+    .programmeSection {
+        padding-top: 15px;
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns:auto auto auto auto;
+        grid-area: programme;  
+      }    
+  }
+@media only screen
+and (min-width:1025px){
 .programmeSection {
     padding-top: 15px;
     grid-gap: 10px;
@@ -20,20 +33,71 @@
     grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
     grid-area: programme;  
   }
+}
+@media only screen 
+and (min-width:801px) 
+{
   .transmission {
-    padding-top: 50px;
-    grid-gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
-    grid-area: transmission;
-} 
- .details {
-    padding-top: 50px;
-    grid-area: details;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-} 
+      padding-top: 15px;
+      grid-gap: 10px;
+      display: grid;
+      grid-template-columns:auto auto auto auto;
+      grid-area: programme;  
+    }    
+}
+@media only screen
+and (min-width:1025px){
+.transmission {
+  padding-top: 15px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+  grid-area: programme;  
+}
+}
+@media only screen 
+and (min-width:801px) 
+{
+  .details {
+      padding-top: 15px;
+      grid-gap: 10px;
+      display: grid;
+      grid-template-columns:auto auto auto auto;
+      grid-area: programme;  
+    }    
+}
+@media only screen
+and (min-width:1025px){
+.details {
+  padding-top: 15px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+  grid-area: programme;  
+}
+}
+@media only screen 
+and (min-width:801px) 
+{
+  .coredetails {
+      padding-top: 15px;
+      grid-gap: 10px;
+      display: grid;
+      grid-template-columns:auto auto auto auto;
+      grid-area: programme;  
+    }    
+}
+@media only screen
+and (min-width:1025px){
+.coredetails {
+  padding-top: 15px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+  grid-area: programme;  
+}
+}
+
 .programmeDetailsTabs{
     padding-left: 10px;
 }
@@ -170,10 +234,6 @@
     max-width: 60px;
 }
 
-.coredetails {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 .textInput{
     align-items: right;
 }
