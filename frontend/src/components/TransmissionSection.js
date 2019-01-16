@@ -34,7 +34,7 @@ class TransmissionSection extends React.Component {
         this.setState( {billedDuration:(this.state.transmission[0].billedDuration)})
         this.setState( {billedTime:(this.state.transmission[0].billedTime)})
         this.setState( {txStatus:(this.state.transmission[0].txStatus)})
-        this.setState( {proteusPrgNumber:(this.state.transmission[0].proteusPrgNumber)})
+        this.setState( {scheduledStatus:(this.state.transmission[0].scheduledStatus)})
         this.setState( {contenttype:(this.state.transmission[0].contenttype)})
         this.setState( {brand:(this.state.transmission[0].brand)})
         this.setState( {series:(this.state.transmission[0].series)})   
@@ -106,6 +106,14 @@ class TransmissionSection extends React.Component {
               type="text" form="form" placeholder="Billed" 
               value={this.state.billedDuration} onChange={this.handleChange} />
             </section>
+            <section className="transmissionSectionText">
+            Scheduled Status
+            </section>
+            <section>
+            <input name="scheduledStatus" className="scheduledStatus" 
+              type="text" form="form" placeholder="scheduledStatus" 
+              value={this.state.scheduledStatus} onChange={this.handleChange} />
+            </section>            
         </section>
        
       </div>
