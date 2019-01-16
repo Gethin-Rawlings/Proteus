@@ -6,6 +6,9 @@ const jsonParser = bodyParser.json();
 const programmeSection = require('./programmeDetails/programmeSection');
 router.all('/programmeSection', jsonParser, programmeSection);
 
+const transmissionSection = require('./programmeDetails/transmissionSection');
+router.all('/transmissionSection', jsonParser, transmissionSection);
+
 const login = require('./users/login');
 router.all('/login', jsonParser, login);
 

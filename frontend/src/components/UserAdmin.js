@@ -6,7 +6,6 @@ import Displayusers from "./Displayusers";
 import "./userAdmin.css";
 import { userSearch } from "./apiCalls"
 import Getorganisations from "./Getorganisations";
-import {withRouter} from "react-router-dom"
 
 class UserAdmin extends React.Component {
   constructor(props) {

@@ -224,3 +224,12 @@
     justify-self: end;
     align-self: center;
 }
+.plannedTime {
+    font-size: 90%;
+}
+.billedTime {
+    font-size: 90%;
+}
+.txDetails{
+    font-size: 90%;
+}
