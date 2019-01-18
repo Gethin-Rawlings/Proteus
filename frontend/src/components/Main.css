@@ -22,7 +22,6 @@
     display: grid;
     max-width: 99%;
     grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-    grid-area: programme;  
     border-color: grey;
     border-style: solid;
     border-width: 1px;
@@ -37,7 +36,6 @@
       grid-gap: 10px;
       display: grid;
       grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-      grid-area: programme;  
       border-color: grey;
       border-style: solid;
       border-width: 1px;
@@ -66,7 +64,6 @@
     display: grid;
     max-width: 99%;
     grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-    grid-area: programme;  
     border-color: grey;
     border-style: solid;
     border-width: 1px;
@@ -111,41 +108,27 @@
     flex-wrap: wrap;
     justify-content: flex-start;    
   }
-  .programmeSearch{
-    padding-top: 20px;
-    padding-left: 5px;
-    display: flex;
-    flex-wrap: wrap;  
+
+  .progSearchLayout{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
   }
 .networks{
     text-align: left;
-    margin-left: 10px; 
-    margin-right: 10px; 
-    max-width: 240px;
+    max-width: 150px;
+    min-height: 25px;
     }
 .indies{
     text-align: left;
-    margin-left: 10px; 
-    margin-right: 10px; 
-    max-width: 240px;
+    max-width: 100px;
 }
 .productions{
     text-align: left;
-    margin-left: 10px; 
-    margin-right: 10px; 
-    max-width: 240px;
-}
-.from{
-  text-align: center;
-  margin-left: 10px; 
-  margin-right: 10px; 
-  max-width: 240px;
-}
-.to{
-  text-align: center;
-  margin-left: 10px; 
-  margin-right: 10px; 
-  max-width: 240px;
+    max-width: 100px;
 }
 .usersearch{
     text-align: center;
@@ -206,7 +189,7 @@
 .csv {
     margin-left: 15px;
     max-height: 25px;
-    max-width: 60px;
+
 }
 
 .textInput{
@@ -232,4 +215,11 @@
 }
 .txDetails{
     font-size: 90%;
+}
+.programmeSearchText{
+    justify-self: end;
+    align-self: center;
+}
+.date{
+    min-width: 150px !important;
 }

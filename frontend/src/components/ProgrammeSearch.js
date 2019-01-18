@@ -46,39 +46,40 @@ class Programmesearch extends React.Component {
     return (
       <div className="main">
         <Navbar/>
-        <section className="App-intro">
+        <section>
           <form onSubmit={this.handleSubmit} id='form' className="programmeForm"></form>
-          
-          <section className='programmeSearch'>
-            <section>
+          <section className="progSearchLayout">
+            <section  className="programmeSearchText">Title </section>
+            <section  >
               <input
                 name="text"
-                className="usersearch"
                 type="text"
                 form="form"
                 placeholder="Title"
                 value={this.state.text}
                 onChange={this.handleChange}/>
             </section>
-            <section className='networks'>
+            <section  className="programmeSearchText">Network </section>
+            <section>
               <Getorganisations name="network" network={this.handleChange}/>
             </section>
-            <section className='productions' name='productions'>
+            <section  className="programmeSearchText">Production </section>
+            <section>
               <Getorganisations name="production" production={this.handleChange}/>
             </section>
-            <section className='indies' name="indies">
+            <section  className="programmeSearchText">Indie </section>
+            <section  name="indies">
               <Getorganisations name="indie" indies={this.handleChange}/>
             </section>
-          
-            <section className="from">From
-            
-              <input className="from" type="date" name="fromdate" id="datetime" form="form"></input>
+            <section className="programmeSearchText">From </section>
+            <section >
+              <input type="date" className = "date" name="fromdate" id="datetime" form="form"></input>
             </section>
-            <section className="to">To
-              <input className="to" type="date" name="todate" id="datetime" form="form"></input>
+            <section className="programmeSearchText">To </section>
+            <section>
+              <input type="date" className = "date" name="todate" id="datetime" form="form"></input>
             </section>
           </section>
-          
           <button id="submit" name = 'submit' className="submit" form="form">Search</button>
           <button id="reset" type="reset" className="reset" form="form">Reset</button>
           <button id="download" className="csv" >
