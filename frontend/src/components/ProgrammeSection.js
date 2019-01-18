@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Main.css";
 import {getProgrammeSection} from "./apiCalls";
+import {CSVLink} from 'react-csv';
 
 class ProgrammeSection extends React.Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class ProgrammeSection extends React.Component {
       <div  onChange={this.handleChange} >
       <form onSubmit={this.handleSubmit} id='form' ></form>
         <section className="programmeSection">
-            <section className="programmeSectionText">Programme title </section>
+          <section className="programmeSectionText">Programme title </section>
             <section>
               <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
             </section>
@@ -73,45 +74,51 @@ class ProgrammeSection extends React.Component {
               Duration 
             </section>
             <section>
-            <input name="duration" className="duration" type="text" form="form" placeholder="duration" value={this.state.duration} onChange={this.handleChange} />
+              <input name="duration" className="duration" type="text" form="form" placeholder="duration" value={this.state.duration} onChange={this.handleChange} />
             </section>
             <section className="programmeSectionText">
               Content type 
             </section>
             <section>
-            <input name="prgType" className="prgType" type="text" form="form" placeholder="prgType" value={this.state.prgType} onChange={this.handleChange} />
+              <input name="prgType" className="prgType" type="text" form="form" placeholder="prgType" value={this.state.prgType} onChange={this.handleChange} />
             </section>
             <section className="programmeSectionText">
               Version title 
             </section>
             <section>
-            <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
+              <input name="programmeTitle" className="programmeTitle" type="text" form="form" placeholder="programmeTitle" value={this.state.programmeTitle} onChange={this.handleChange} />
             </section>
             <section className="programmeSectionText">
               Programme Status 
             </section>
             <section>
-            <input name="txStatus" className="txStatus" type="text" form="form" placeholder="txStatus" value={this.state.txStatus} onChange={this.handleChange} />
+              <input name="txStatus" className="txStatus" type="text" form="form" placeholder="txStatus" value={this.state.txStatus} onChange={this.handleChange} />
             </section>
             <section className="programmeSectionText">
               Proteus Prog Number 
             </section>
             <section>
-            <input name="proteusPrgNumber" className="proteusPrgNumber" type="text" form="form" placeholder="proteusPrgNumber" value={this.state.proteusPrgNumber} onChange={this.handleChange} />
+              <input name="proteusPrgNumber" className="proteusPrgNumber" type="text" form="form" placeholder="proteusPrgNumber" value={this.state.proteusPrgNumber} onChange={this.handleChange} />
             </section>
             <section className="programmeSectionText">
               Brand 
             </section>
             <section>
-            <input name="Brand" className="Brand" type="text" form="form" placeholder="Brand" value={this.state.brand} onChange={this.handleChange} />
+              <input name="Brand" className="Brand" type="text" form="form" placeholder="Brand" value={this.state.brand} onChange={this.handleChange} />
             </section>
             <section className="programmeSectionText">
               Series 
             </section>
             <section>
-            <input name="series" className="series" type="text" form="form" placeholder="series" value={this.state.series} onChange={this.handleChange} />
+              <input name="series" className="series" type="text" form="form" placeholder="series" value={this.state.series} onChange={this.handleChange} />
             </section>
-       </section>  
+            <section>
+              <button id="save" name = 'save' className="save"  form="form">Save</button>
+            </section>
+            <section>
+              <button id="reset" type="reset"  form="form">Reset</button>
+            </section>
+        </section>  
       </div>
     );
   }
