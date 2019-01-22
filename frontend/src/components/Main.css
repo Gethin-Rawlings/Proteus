@@ -70,19 +70,6 @@
     box-shadow: 1px 1px 18px grey
   }    
 
-  .progSearchLayout{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    grid-gap: 10px;
-    display: grid;
-    max-width: 99%;
-    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
-    border-color: grey;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 1px 1px 18px grey
-  }
 .programmeDetailsTabs{
     padding-left: 10px;
 }
@@ -122,6 +109,14 @@
     justify-content: flex-start;    
   }
 
+  .progSearchLayout{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 140px));
+  }
 .networks{
     text-align: left;
     max-width: 150px;
