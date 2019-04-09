@@ -31,10 +31,10 @@ router.post('/addUser', async (req, res) => {
         if (err) console.log(err)
         if (result.recordset[0] === undefined) {
             const response = JSON.stringify({ success: false, err: "update Failed" })
-            res.send(response);
+            res.status(400).send(response);
         } else {
             const response = JSON.stringify({ success: true, err: null })
-            res.send(response);
+            res.status(200).send(response);
         }
     });
 });

@@ -2,19 +2,20 @@
 
 exports[`storage ProgrammeSearch component should render as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Programmesearch
     history={
-        Array [
-            "/ProgrammeSearch",
-          ]
+      Array [
+        "/ProgrammeSearch",
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -25,128 +26,136 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <withRouter(Navbar) />,
-        <section
-          className="App-intro"
->
+        <section>
           <form
-                    className="programmeForm"
-                    id="form"
-                    onSubmit={[Function]}
+            className="programmeForm"
+            id="form"
+            onSubmit={[Function]}
           />
           <section
-                    className="programmeSearch"
+            className="progSearchLayout"
           >
-                    <section>
-                              <input
-                                        className="test"
-                                        form="form"
-                                        name="text"
-                                        onChange={[Function]}
-                                        placeholder="Title"
-                                        type="text"
-                                        value={undefined}
-                              />
-                    </section>
-                    <section
-                              className="networks"
-                    >
-                              <Getorganisations
-                                        name="network"
-                                        network={[Function]}
-                              />
-                    </section>
-                    <section
-                              className="productions"
-                              name="productions"
-                    >
-                              <Getorganisations
-                                        name="production"
-                                        production={[Function]}
-                              />
-                    </section>
-                    <section
-                              className="indies"
-                              name="indies"
-                    >
-                              <Getorganisations
-                                        indies={[Function]}
-                                        name="indie"
-                              />
-                    </section>
-          </section>
-          <br />
-          <section
-                    className="datePicker"
-          >
-                    <section>
-                              From
-                    </section>
-                    <section
-                              className="from"
-                    >
-                              <input
-                                        form="form"
-                                        id="datetime"
-                                        name="fromdate"
-                                        type="date"
-                              />
-                    </section>
-                    <section>
-                              To
-                    </section>
-                    <section
-                              className="to"
-                    >
-                              <input
-                                        form="form"
-                                        id="datetime"
-                                        name="todate"
-                                        type="date"
-                              />
-                    </section>
+            <section
+              className="programmeSearchText"
+            >
+              Title 
+            </section>
+            <section>
+              <input
+                form="form"
+                name="text"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              Network 
+            </section>
+            <section>
+              <Getorganisations
+                name="network"
+                network={[Function]}
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              Production 
+            </section>
+            <section>
+              <Getorganisations
+                name="production"
+                production={[Function]}
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              Indie 
+            </section>
+            <section
+              name="indies"
+            >
+              <Getorganisations
+                indies={[Function]}
+                name="indie"
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              From 
+            </section>
+            <section>
+              <input
+                className="date"
+                form="form"
+                id="datetime"
+                name="fromdate"
+                type="date"
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              To 
+            </section>
+            <section>
+              <input
+                className="date"
+                form="form"
+                id="datetime"
+                name="todate"
+                type="date"
+              />
+            </section>
           </section>
           <button
-                    className="submit"
-                    form="form"
-                    id="submit"
-                    name="submit"
+            className="submit"
+            form="form"
+            id="submit"
+            name="submit"
           >
-                    Search
+            Search
           </button>
           <button
-                    className="reset"
-                    form="form"
-                    id="reset"
-                    type="reset"
+            className="reset"
+            form="form"
+            id="reset"
+            type="reset"
           >
-                    Reset
+            Reset
           </button>
           <button
-                    className="csv"
-                    id="download"
+            className="csv"
+            id="download"
           >
-                    CSV
-                    <CSVLink
-                              data={
-                                        Array [
-                                                  Object {
-                                                    "": "",
-                                                  },
-                                                ]
-                              }
-                              filename="generatedBy_react-csv.csv"
-                              separator=","
-                              target="_blank"
-                              uFEFF={true}
-                    />
+            <CSVLink
+              asyncOnClick={false}
+              data={
+                Array [
+                  Object {
+                    "": "",
+                  },
+                ]
+              }
+              filename="generatedBy_react-csv.csv"
+              separator=","
+              target="_blank"
+              uFEFF={true}
+            >
+              CSV
+            </CSVLink>
           </button>
           <withRouter(Displayprogrammes)
-                    className="results"
-                    history={undefined}
-                    name="results"
-                    programmes="[{\\"\\":\\"\\"}]"
+            className="results"
+            name="results"
+            programmes="[{\\"\\":\\"\\"}]"
           />
-</section>,
+        </section>,
         <Footer />,
       ],
       "className": "main",
@@ -172,122 +181,131 @@ ShallowWrapper {
               className="programmeForm"
               id="form"
               onSubmit={[Function]}
-/>,
+            />,
             <section
-              className="programmeSearch"
->
-              <section>
-                            <input
-                                          className="test"
-                                          form="form"
-                                          name="text"
-                                          onChange={[Function]}
-                                          placeholder="Title"
-                                          type="text"
-                                          value={undefined}
-                            />
-              </section>
+              className="progSearchLayout"
+            >
               <section
-                            className="networks"
+                className="programmeSearchText"
               >
-                            <Getorganisations
-                                          name="network"
-                                          network={[Function]}
-                            />
-              </section>
-              <section
-                            className="productions"
-                            name="productions"
-              >
-                            <Getorganisations
-                                          name="production"
-                                          production={[Function]}
-                            />
-              </section>
-              <section
-                            className="indies"
-                            name="indies"
-              >
-                            <Getorganisations
-                                          indies={[Function]}
-                                          name="indie"
-                            />
-              </section>
-</section>,
-            <br />,
-            <section
-              className="datePicker"
->
-              <section>
-                            From
-              </section>
-              <section
-                            className="from"
-              >
-                            <input
-                                          form="form"
-                                          id="datetime"
-                                          name="fromdate"
-                                          type="date"
-                            />
+                Title 
               </section>
               <section>
-                            To
+                <input
+                  form="form"
+                  name="text"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                />
               </section>
               <section
-                            className="to"
+                className="programmeSearchText"
               >
-                            <input
-                                          form="form"
-                                          id="datetime"
-                                          name="todate"
-                                          type="date"
-                            />
+                Network 
               </section>
-</section>,
+              <section>
+                <Getorganisations
+                  name="network"
+                  network={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Production 
+              </section>
+              <section>
+                <Getorganisations
+                  name="production"
+                  production={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Indie 
+              </section>
+              <section
+                name="indies"
+              >
+                <Getorganisations
+                  indies={[Function]}
+                  name="indie"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                From 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="fromdate"
+                  type="date"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                To 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="todate"
+                  type="date"
+                />
+              </section>
+            </section>,
             <button
               className="submit"
               form="form"
               id="submit"
               name="submit"
->
+            >
               Search
-</button>,
+            </button>,
             <button
               className="reset"
               form="form"
               id="reset"
               type="reset"
->
+            >
               Reset
-</button>,
+            </button>,
             <button
               className="csv"
               id="download"
->
-              CSV
+            >
               <CSVLink
-                            data={
-                                          Array [
-                                                        Object {
-                                                          "": "",
-                                                        },
-                                                      ]
-                            }
-                            filename="generatedBy_react-csv.csv"
-                            separator=","
-                            target="_blank"
-                            uFEFF={true}
-              />
-</button>,
+                asyncOnClick={false}
+                data={
+                  Array [
+                    Object {
+                      "": "",
+                    },
+                  ]
+                }
+                filename="generatedBy_react-csv.csv"
+                separator=","
+                target="_blank"
+                uFEFF={true}
+              >
+                CSV
+              </CSVLink>
+            </button>,
             <withRouter(Displayprogrammes)
               className="results"
-              history={undefined}
               name="results"
               programmes="[{\\"\\":\\"\\"}]"
-/>,
+            />,
           ],
-          "className": "App-intro",
         },
         "ref": null,
         "rendered": Array [
@@ -310,45 +328,85 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                <section
+                  className="programmeSearchText"
+                >
+                  Title 
+                </section>,
                 <section>
                   <input
-                                    className="test"
-                                    form="form"
-                                    name="text"
-                                    onChange={[Function]}
-                                    placeholder="Title"
-                                    type="text"
-                                    value={undefined}
+                    form="form"
+                    name="text"
+                    onChange={[Function]}
+                    placeholder="Title"
+                    type="text"
                   />
-</section>,
+                </section>,
                 <section
-                  className="networks"
->
+                  className="programmeSearchText"
+                >
+                  Network 
+                </section>,
+                <section>
                   <Getorganisations
-                                    name="network"
-                                    network={[Function]}
+                    name="network"
+                    network={[Function]}
                   />
-</section>,
+                </section>,
                 <section
-                  className="productions"
-                  name="productions"
->
+                  className="programmeSearchText"
+                >
+                  Production 
+                </section>,
+                <section>
                   <Getorganisations
-                                    name="production"
-                                    production={[Function]}
+                    name="production"
+                    production={[Function]}
                   />
-</section>,
+                </section>,
                 <section
-                  className="indies"
+                  className="programmeSearchText"
+                >
+                  Indie 
+                </section>,
+                <section
                   name="indies"
->
+                >
                   <Getorganisations
-                                    indies={[Function]}
-                                    name="indie"
+                    indies={[Function]}
+                    name="indie"
                   />
-</section>,
+                </section>,
+                <section
+                  className="programmeSearchText"
+                >
+                  From 
+                </section>,
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="fromdate"
+                    type="date"
+                  />
+                </section>,
+                <section
+                  className="programmeSearchText"
+                >
+                  To 
+                </section>,
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="todate"
+                    type="date"
+                  />
+                </section>,
               ],
-              "className": "programmeSearch",
+              "className": "progSearchLayout",
             },
             "ref": null,
             "rendered": Array [
@@ -357,15 +415,25 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Title ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Title ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <input
-                    className="test"
                     form="form"
                     name="text"
                     onChange={[Function]}
                     placeholder="Title"
                     type="text"
-                    value={undefined}
-/>,
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -373,7 +441,6 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "test",
                     "form": "form",
                     "name": "text",
                     "onChange": [Function],
@@ -392,11 +459,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Network ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Network ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <Getorganisations
                     name="network"
                     network={[Function]}
-/>,
-                  "className": "networks",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -418,12 +496,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Production ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Production ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <Getorganisations
                     name="production"
                     production={[Function]}
-/>,
-                  "className": "productions",
-                  "name": "productions",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -445,11 +533,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Indie ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Indie ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <Getorganisations
                     indies={[Function]}
                     name="indie"
-/>,
-                  "className": "indies",
+                  />,
                   "name": "indies",
                 },
                 "ref": null,
@@ -467,64 +566,16 @@ ShallowWrapper {
                 },
                 "type": "section",
               },
-            ],
-            "type": "section",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": "br",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <section>
-                  From
-</section>,
-                <section
-                  className="from"
->
-                  <input
-                                    form="form"
-                                    id="datetime"
-                                    name="fromdate"
-                                    type="date"
-                  />
-</section>,
-                <section>
-                  To
-</section>,
-                <section
-                  className="to"
->
-                  <input
-                                    form="form"
-                                    id="datetime"
-                                    name="todate"
-                                    type="date"
-                  />
-</section>,
-              ],
-              "className": "datePicker",
-            },
-            "ref": null,
-            "rendered": Array [
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "From",
+                  "children": "From ",
+                  "className": "programmeSearchText",
                 },
                 "ref": null,
-                "rendered": "From",
+                "rendered": "From ",
                 "type": "section",
               },
               Object {
@@ -533,12 +584,12 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <input
+                    className="date"
                     form="form"
                     id="datetime"
                     name="fromdate"
                     type="date"
-/>,
-                  "className": "from",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -546,6 +597,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "date",
                     "form": "form",
                     "id": "datetime",
                     "name": "fromdate",
@@ -562,10 +614,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "To",
+                  "children": "To ",
+                  "className": "programmeSearchText",
                 },
                 "ref": null,
-                "rendered": "To",
+                "rendered": "To ",
                 "type": "section",
               },
               Object {
@@ -574,12 +627,12 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <input
+                    className="date"
                     form="form"
                     id="datetime"
                     name="todate"
                     type="date"
-/>,
-                  "className": "to",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -587,6 +640,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "date",
                     "form": "form",
                     "id": "datetime",
                     "name": "todate",
@@ -636,48 +690,47 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "CSV",
-                <CSVLink
-                  data={
-                                    Array [
-                                                      Object {
-                                                        "": "",
-                                                      },
-                                                    ]
-                  }
-                  filename="generatedBy_react-csv.csv"
-                  separator=","
-                  target="_blank"
-                  uFEFF={true}
-/>,
-              ],
+              "children": <CSVLink
+                asyncOnClick={false}
+                data={
+                  Array [
+                    Object {
+                      "": "",
+                    },
+                  ]
+                }
+                filename="generatedBy_react-csv.csv"
+                separator=","
+                target="_blank"
+                uFEFF={true}
+              >
+                CSV
+              </CSVLink>,
               "className": "csv",
               "id": "download",
             },
             "ref": null,
-            "rendered": Array [
-              "CSV",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "data": Array [
-                    Object {
-                      "": "",
-                    },
-                  ],
-                  "filename": "generatedBy_react-csv.csv",
-                  "separator": ",",
-                  "target": "_blank",
-                  "uFEFF": true,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "asyncOnClick": false,
+                "children": "CSV",
+                "data": Array [
+                  Object {
+                    "": "",
+                  },
+                ],
+                "filename": "generatedBy_react-csv.csv",
+                "separator": ",",
+                "target": "_blank",
+                "uFEFF": true,
               },
-            ],
+              "ref": null,
+              "rendered": "CSV",
+              "type": [Function],
+            },
             "type": "button",
           },
           Object {
@@ -717,128 +770,136 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <withRouter(Navbar) />,
-          <section
-            className="App-intro"
->
+          <section>
             <form
-                        className="programmeForm"
-                        id="form"
-                        onSubmit={[Function]}
+              className="programmeForm"
+              id="form"
+              onSubmit={[Function]}
             />
             <section
-                        className="programmeSearch"
+              className="progSearchLayout"
             >
-                        <section>
-                                    <input
-                                                className="test"
-                                                form="form"
-                                                name="text"
-                                                onChange={[Function]}
-                                                placeholder="Title"
-                                                type="text"
-                                                value={undefined}
-                                    />
-                        </section>
-                        <section
-                                    className="networks"
-                        >
-                                    <Getorganisations
-                                                name="network"
-                                                network={[Function]}
-                                    />
-                        </section>
-                        <section
-                                    className="productions"
-                                    name="productions"
-                        >
-                                    <Getorganisations
-                                                name="production"
-                                                production={[Function]}
-                                    />
-                        </section>
-                        <section
-                                    className="indies"
-                                    name="indies"
-                        >
-                                    <Getorganisations
-                                                indies={[Function]}
-                                                name="indie"
-                                    />
-                        </section>
-            </section>
-            <br />
-            <section
-                        className="datePicker"
-            >
-                        <section>
-                                    From
-                        </section>
-                        <section
-                                    className="from"
-                        >
-                                    <input
-                                                form="form"
-                                                id="datetime"
-                                                name="fromdate"
-                                                type="date"
-                                    />
-                        </section>
-                        <section>
-                                    To
-                        </section>
-                        <section
-                                    className="to"
-                        >
-                                    <input
-                                                form="form"
-                                                id="datetime"
-                                                name="todate"
-                                                type="date"
-                                    />
-                        </section>
+              <section
+                className="programmeSearchText"
+              >
+                Title 
+              </section>
+              <section>
+                <input
+                  form="form"
+                  name="text"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Network 
+              </section>
+              <section>
+                <Getorganisations
+                  name="network"
+                  network={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Production 
+              </section>
+              <section>
+                <Getorganisations
+                  name="production"
+                  production={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Indie 
+              </section>
+              <section
+                name="indies"
+              >
+                <Getorganisations
+                  indies={[Function]}
+                  name="indie"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                From 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="fromdate"
+                  type="date"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                To 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="todate"
+                  type="date"
+                />
+              </section>
             </section>
             <button
-                        className="submit"
-                        form="form"
-                        id="submit"
-                        name="submit"
+              className="submit"
+              form="form"
+              id="submit"
+              name="submit"
             >
-                        Search
+              Search
             </button>
             <button
-                        className="reset"
-                        form="form"
-                        id="reset"
-                        type="reset"
+              className="reset"
+              form="form"
+              id="reset"
+              type="reset"
             >
-                        Reset
+              Reset
             </button>
             <button
-                        className="csv"
-                        id="download"
+              className="csv"
+              id="download"
             >
-                        CSV
-                        <CSVLink
-                                    data={
-                                                Array [
-                                                            Object {
-                                                              "": "",
-                                                            },
-                                                          ]
-                                    }
-                                    filename="generatedBy_react-csv.csv"
-                                    separator=","
-                                    target="_blank"
-                                    uFEFF={true}
-                        />
+              <CSVLink
+                asyncOnClick={false}
+                data={
+                  Array [
+                    Object {
+                      "": "",
+                    },
+                  ]
+                }
+                filename="generatedBy_react-csv.csv"
+                separator=","
+                target="_blank"
+                uFEFF={true}
+              >
+                CSV
+              </CSVLink>
             </button>
             <withRouter(Displayprogrammes)
-                        className="results"
-                        history={undefined}
-                        name="results"
-                        programmes="[{\\"\\":\\"\\"}]"
+              className="results"
+              name="results"
+              programmes="[{\\"\\":\\"\\"}]"
             />
-</section>,
+          </section>,
           <Footer />,
         ],
         "className": "main",
@@ -864,122 +925,131 @@ ShallowWrapper {
                 className="programmeForm"
                 id="form"
                 onSubmit={[Function]}
-/>,
+              />,
               <section
-                className="programmeSearch"
->
-                <section>
-                                <input
-                                                className="test"
-                                                form="form"
-                                                name="text"
-                                                onChange={[Function]}
-                                                placeholder="Title"
-                                                type="text"
-                                                value={undefined}
-                                />
-                </section>
+                className="progSearchLayout"
+              >
                 <section
-                                className="networks"
+                  className="programmeSearchText"
                 >
-                                <Getorganisations
-                                                name="network"
-                                                network={[Function]}
-                                />
-                </section>
-                <section
-                                className="productions"
-                                name="productions"
-                >
-                                <Getorganisations
-                                                name="production"
-                                                production={[Function]}
-                                />
-                </section>
-                <section
-                                className="indies"
-                                name="indies"
-                >
-                                <Getorganisations
-                                                indies={[Function]}
-                                                name="indie"
-                                />
-                </section>
-</section>,
-              <br />,
-              <section
-                className="datePicker"
->
-                <section>
-                                From
-                </section>
-                <section
-                                className="from"
-                >
-                                <input
-                                                form="form"
-                                                id="datetime"
-                                                name="fromdate"
-                                                type="date"
-                                />
+                  Title 
                 </section>
                 <section>
-                                To
+                  <input
+                    form="form"
+                    name="text"
+                    onChange={[Function]}
+                    placeholder="Title"
+                    type="text"
+                  />
                 </section>
                 <section
-                                className="to"
+                  className="programmeSearchText"
                 >
-                                <input
-                                                form="form"
-                                                id="datetime"
-                                                name="todate"
-                                                type="date"
-                                />
+                  Network 
                 </section>
-</section>,
+                <section>
+                  <Getorganisations
+                    name="network"
+                    network={[Function]}
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  Production 
+                </section>
+                <section>
+                  <Getorganisations
+                    name="production"
+                    production={[Function]}
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  Indie 
+                </section>
+                <section
+                  name="indies"
+                >
+                  <Getorganisations
+                    indies={[Function]}
+                    name="indie"
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  From 
+                </section>
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="fromdate"
+                    type="date"
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  To 
+                </section>
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="todate"
+                    type="date"
+                  />
+                </section>
+              </section>,
               <button
                 className="submit"
                 form="form"
                 id="submit"
                 name="submit"
->
+              >
                 Search
-</button>,
+              </button>,
               <button
                 className="reset"
                 form="form"
                 id="reset"
                 type="reset"
->
+              >
                 Reset
-</button>,
+              </button>,
               <button
                 className="csv"
                 id="download"
->
-                CSV
+              >
                 <CSVLink
-                                data={
-                                                Array [
-                                                                Object {
-                                                                  "": "",
-                                                                },
-                                                              ]
-                                }
-                                filename="generatedBy_react-csv.csv"
-                                separator=","
-                                target="_blank"
-                                uFEFF={true}
-                />
-</button>,
+                  asyncOnClick={false}
+                  data={
+                    Array [
+                      Object {
+                        "": "",
+                      },
+                    ]
+                  }
+                  filename="generatedBy_react-csv.csv"
+                  separator=","
+                  target="_blank"
+                  uFEFF={true}
+                >
+                  CSV
+                </CSVLink>
+              </button>,
               <withRouter(Displayprogrammes)
                 className="results"
-                history={undefined}
                 name="results"
                 programmes="[{\\"\\":\\"\\"}]"
-/>,
+              />,
             ],
-            "className": "App-intro",
           },
           "ref": null,
           "rendered": Array [
@@ -1002,45 +1072,85 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  <section
+                    className="programmeSearchText"
+                  >
+                    Title 
+                  </section>,
                   <section>
                     <input
-                                        className="test"
-                                        form="form"
-                                        name="text"
-                                        onChange={[Function]}
-                                        placeholder="Title"
-                                        type="text"
-                                        value={undefined}
+                      form="form"
+                      name="text"
+                      onChange={[Function]}
+                      placeholder="Title"
+                      type="text"
                     />
-</section>,
+                  </section>,
                   <section
-                    className="networks"
->
+                    className="programmeSearchText"
+                  >
+                    Network 
+                  </section>,
+                  <section>
                     <Getorganisations
-                                        name="network"
-                                        network={[Function]}
+                      name="network"
+                      network={[Function]}
                     />
-</section>,
+                  </section>,
                   <section
-                    className="productions"
-                    name="productions"
->
+                    className="programmeSearchText"
+                  >
+                    Production 
+                  </section>,
+                  <section>
                     <Getorganisations
-                                        name="production"
-                                        production={[Function]}
+                      name="production"
+                      production={[Function]}
                     />
-</section>,
+                  </section>,
                   <section
-                    className="indies"
+                    className="programmeSearchText"
+                  >
+                    Indie 
+                  </section>,
+                  <section
                     name="indies"
->
+                  >
                     <Getorganisations
-                                        indies={[Function]}
-                                        name="indie"
+                      indies={[Function]}
+                      name="indie"
                     />
-</section>,
+                  </section>,
+                  <section
+                    className="programmeSearchText"
+                  >
+                    From 
+                  </section>,
+                  <section>
+                    <input
+                      className="date"
+                      form="form"
+                      id="datetime"
+                      name="fromdate"
+                      type="date"
+                    />
+                  </section>,
+                  <section
+                    className="programmeSearchText"
+                  >
+                    To 
+                  </section>,
+                  <section>
+                    <input
+                      className="date"
+                      form="form"
+                      id="datetime"
+                      name="todate"
+                      type="date"
+                    />
+                  </section>,
                 ],
-                "className": "programmeSearch",
+                "className": "progSearchLayout",
               },
               "ref": null,
               "rendered": Array [
@@ -1049,15 +1159,25 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Title ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Title ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <input
-                      className="test"
                       form="form"
                       name="text"
                       onChange={[Function]}
                       placeholder="Title"
                       type="text"
-                      value={undefined}
-/>,
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1065,7 +1185,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "test",
                       "form": "form",
                       "name": "text",
                       "onChange": [Function],
@@ -1084,11 +1203,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Network ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Network ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <Getorganisations
                       name="network"
                       network={[Function]}
-/>,
-                    "className": "networks",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1110,12 +1240,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Production ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Production ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <Getorganisations
                       name="production"
                       production={[Function]}
-/>,
-                    "className": "productions",
-                    "name": "productions",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1137,11 +1277,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Indie ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Indie ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <Getorganisations
                       indies={[Function]}
                       name="indie"
-/>,
-                    "className": "indies",
+                    />,
                     "name": "indies",
                   },
                   "ref": null,
@@ -1159,64 +1310,16 @@ ShallowWrapper {
                   },
                   "type": "section",
                 },
-              ],
-              "type": "section",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": "br",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <section>
-                    From
-</section>,
-                  <section
-                    className="from"
->
-                    <input
-                                        form="form"
-                                        id="datetime"
-                                        name="fromdate"
-                                        type="date"
-                    />
-</section>,
-                  <section>
-                    To
-</section>,
-                  <section
-                    className="to"
->
-                    <input
-                                        form="form"
-                                        id="datetime"
-                                        name="todate"
-                                        type="date"
-                    />
-</section>,
-                ],
-                "className": "datePicker",
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "From",
+                    "children": "From ",
+                    "className": "programmeSearchText",
                   },
                   "ref": null,
-                  "rendered": "From",
+                  "rendered": "From ",
                   "type": "section",
                 },
                 Object {
@@ -1225,12 +1328,12 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <input
+                      className="date"
                       form="form"
                       id="datetime"
                       name="fromdate"
                       type="date"
-/>,
-                    "className": "from",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1238,6 +1341,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "className": "date",
                       "form": "form",
                       "id": "datetime",
                       "name": "fromdate",
@@ -1254,10 +1358,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "To",
+                    "children": "To ",
+                    "className": "programmeSearchText",
                   },
                   "ref": null,
-                  "rendered": "To",
+                  "rendered": "To ",
                   "type": "section",
                 },
                 Object {
@@ -1266,12 +1371,12 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <input
+                      className="date"
                       form="form"
                       id="datetime"
                       name="todate"
                       type="date"
-/>,
-                    "className": "to",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1279,6 +1384,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "className": "date",
                       "form": "form",
                       "id": "datetime",
                       "name": "todate",
@@ -1328,48 +1434,47 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "CSV",
-                  <CSVLink
-                    data={
-                                        Array [
-                                                            Object {
-                                                              "": "",
-                                                            },
-                                                          ]
-                    }
-                    filename="generatedBy_react-csv.csv"
-                    separator=","
-                    target="_blank"
-                    uFEFF={true}
-/>,
-                ],
+                "children": <CSVLink
+                  asyncOnClick={false}
+                  data={
+                    Array [
+                      Object {
+                        "": "",
+                      },
+                    ]
+                  }
+                  filename="generatedBy_react-csv.csv"
+                  separator=","
+                  target="_blank"
+                  uFEFF={true}
+                >
+                  CSV
+                </CSVLink>,
                 "className": "csv",
                 "id": "download",
               },
               "ref": null,
-              "rendered": Array [
-                "CSV",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "data": Array [
-                      Object {
-                        "": "",
-                      },
-                    ],
-                    "filename": "generatedBy_react-csv.csv",
-                    "separator": ",",
-                    "target": "_blank",
-                    "uFEFF": true,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "asyncOnClick": false,
+                  "children": "CSV",
+                  "data": Array [
+                    Object {
+                      "": "",
+                    },
+                  ],
+                  "filename": "generatedBy_react-csv.csv",
+                  "separator": ",",
+                  "target": "_blank",
+                  "uFEFF": true,
                 },
-              ],
+                "ref": null,
+                "rendered": "CSV",
+                "type": [Function],
+              },
               "type": "button",
             },
             Object {
@@ -1406,27 +1511,43 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
 
 exports[`storage ProgrammeSearch component should render as expected 2`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Programmesearch
     history={
-        Array [
-            "/ProgrammeSearch",
-          ]
+      Array [
+        "/ProgrammeSearch",
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -1437,128 +1558,136 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <withRouter(Navbar) />,
-        <section
-          className="App-intro"
->
+        <section>
           <form
-                    className="programmeForm"
-                    id="form"
-                    onSubmit={[Function]}
+            className="programmeForm"
+            id="form"
+            onSubmit={[Function]}
           />
           <section
-                    className="programmeSearch"
+            className="progSearchLayout"
           >
-                    <section>
-                              <input
-                                        className="test"
-                                        form="form"
-                                        name="text"
-                                        onChange={[Function]}
-                                        placeholder="Title"
-                                        type="text"
-                                        value={undefined}
-                              />
-                    </section>
-                    <section
-                              className="networks"
-                    >
-                              <Getorganisations
-                                        name="network"
-                                        network={[Function]}
-                              />
-                    </section>
-                    <section
-                              className="productions"
-                              name="productions"
-                    >
-                              <Getorganisations
-                                        name="production"
-                                        production={[Function]}
-                              />
-                    </section>
-                    <section
-                              className="indies"
-                              name="indies"
-                    >
-                              <Getorganisations
-                                        indies={[Function]}
-                                        name="indie"
-                              />
-                    </section>
-          </section>
-          <br />
-          <section
-                    className="datePicker"
-          >
-                    <section>
-                              From
-                    </section>
-                    <section
-                              className="from"
-                    >
-                              <input
-                                        form="form"
-                                        id="datetime"
-                                        name="fromdate"
-                                        type="date"
-                              />
-                    </section>
-                    <section>
-                              To
-                    </section>
-                    <section
-                              className="to"
-                    >
-                              <input
-                                        form="form"
-                                        id="datetime"
-                                        name="todate"
-                                        type="date"
-                              />
-                    </section>
+            <section
+              className="programmeSearchText"
+            >
+              Title 
+            </section>
+            <section>
+              <input
+                form="form"
+                name="text"
+                onChange={[Function]}
+                placeholder="Title"
+                type="text"
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              Network 
+            </section>
+            <section>
+              <Getorganisations
+                name="network"
+                network={[Function]}
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              Production 
+            </section>
+            <section>
+              <Getorganisations
+                name="production"
+                production={[Function]}
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              Indie 
+            </section>
+            <section
+              name="indies"
+            >
+              <Getorganisations
+                indies={[Function]}
+                name="indie"
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              From 
+            </section>
+            <section>
+              <input
+                className="date"
+                form="form"
+                id="datetime"
+                name="fromdate"
+                type="date"
+              />
+            </section>
+            <section
+              className="programmeSearchText"
+            >
+              To 
+            </section>
+            <section>
+              <input
+                className="date"
+                form="form"
+                id="datetime"
+                name="todate"
+                type="date"
+              />
+            </section>
           </section>
           <button
-                    className="submit"
-                    form="form"
-                    id="submit"
-                    name="submit"
+            className="submit"
+            form="form"
+            id="submit"
+            name="submit"
           >
-                    Search
+            Search
           </button>
           <button
-                    className="reset"
-                    form="form"
-                    id="reset"
-                    type="reset"
+            className="reset"
+            form="form"
+            id="reset"
+            type="reset"
           >
-                    Reset
+            Reset
           </button>
           <button
-                    className="csv"
-                    id="download"
+            className="csv"
+            id="download"
           >
-                    CSV
-                    <CSVLink
-                              data={
-                                        Array [
-                                                  Object {
-                                                    "": "",
-                                                  },
-                                                ]
-                              }
-                              filename="generatedBy_react-csv.csv"
-                              separator=","
-                              target="_blank"
-                              uFEFF={true}
-                    />
+            <CSVLink
+              asyncOnClick={false}
+              data={
+                Array [
+                  Object {
+                    "": "",
+                  },
+                ]
+              }
+              filename="generatedBy_react-csv.csv"
+              separator=","
+              target="_blank"
+              uFEFF={true}
+            >
+              CSV
+            </CSVLink>
           </button>
           <withRouter(Displayprogrammes)
-                    className="results"
-                    history={undefined}
-                    name="results"
-                    programmes="[{\\"\\":\\"\\"}]"
+            className="results"
+            name="results"
+            programmes="[{\\"\\":\\"\\"}]"
           />
-</section>,
+        </section>,
         <Footer />,
       ],
       "className": "main",
@@ -1584,122 +1713,131 @@ ShallowWrapper {
               className="programmeForm"
               id="form"
               onSubmit={[Function]}
-/>,
+            />,
             <section
-              className="programmeSearch"
->
-              <section>
-                            <input
-                                          className="test"
-                                          form="form"
-                                          name="text"
-                                          onChange={[Function]}
-                                          placeholder="Title"
-                                          type="text"
-                                          value={undefined}
-                            />
-              </section>
+              className="progSearchLayout"
+            >
               <section
-                            className="networks"
+                className="programmeSearchText"
               >
-                            <Getorganisations
-                                          name="network"
-                                          network={[Function]}
-                            />
-              </section>
-              <section
-                            className="productions"
-                            name="productions"
-              >
-                            <Getorganisations
-                                          name="production"
-                                          production={[Function]}
-                            />
-              </section>
-              <section
-                            className="indies"
-                            name="indies"
-              >
-                            <Getorganisations
-                                          indies={[Function]}
-                                          name="indie"
-                            />
-              </section>
-</section>,
-            <br />,
-            <section
-              className="datePicker"
->
-              <section>
-                            From
-              </section>
-              <section
-                            className="from"
-              >
-                            <input
-                                          form="form"
-                                          id="datetime"
-                                          name="fromdate"
-                                          type="date"
-                            />
+                Title 
               </section>
               <section>
-                            To
+                <input
+                  form="form"
+                  name="text"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                />
               </section>
               <section
-                            className="to"
+                className="programmeSearchText"
               >
-                            <input
-                                          form="form"
-                                          id="datetime"
-                                          name="todate"
-                                          type="date"
-                            />
+                Network 
               </section>
-</section>,
+              <section>
+                <Getorganisations
+                  name="network"
+                  network={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Production 
+              </section>
+              <section>
+                <Getorganisations
+                  name="production"
+                  production={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Indie 
+              </section>
+              <section
+                name="indies"
+              >
+                <Getorganisations
+                  indies={[Function]}
+                  name="indie"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                From 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="fromdate"
+                  type="date"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                To 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="todate"
+                  type="date"
+                />
+              </section>
+            </section>,
             <button
               className="submit"
               form="form"
               id="submit"
               name="submit"
->
+            >
               Search
-</button>,
+            </button>,
             <button
               className="reset"
               form="form"
               id="reset"
               type="reset"
->
+            >
               Reset
-</button>,
+            </button>,
             <button
               className="csv"
               id="download"
->
-              CSV
+            >
               <CSVLink
-                            data={
-                                          Array [
-                                                        Object {
-                                                          "": "",
-                                                        },
-                                                      ]
-                            }
-                            filename="generatedBy_react-csv.csv"
-                            separator=","
-                            target="_blank"
-                            uFEFF={true}
-              />
-</button>,
+                asyncOnClick={false}
+                data={
+                  Array [
+                    Object {
+                      "": "",
+                    },
+                  ]
+                }
+                filename="generatedBy_react-csv.csv"
+                separator=","
+                target="_blank"
+                uFEFF={true}
+              >
+                CSV
+              </CSVLink>
+            </button>,
             <withRouter(Displayprogrammes)
               className="results"
-              history={undefined}
               name="results"
               programmes="[{\\"\\":\\"\\"}]"
-/>,
+            />,
           ],
-          "className": "App-intro",
         },
         "ref": null,
         "rendered": Array [
@@ -1722,45 +1860,85 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                <section
+                  className="programmeSearchText"
+                >
+                  Title 
+                </section>,
                 <section>
                   <input
-                                    className="test"
-                                    form="form"
-                                    name="text"
-                                    onChange={[Function]}
-                                    placeholder="Title"
-                                    type="text"
-                                    value={undefined}
+                    form="form"
+                    name="text"
+                    onChange={[Function]}
+                    placeholder="Title"
+                    type="text"
                   />
-</section>,
+                </section>,
                 <section
-                  className="networks"
->
+                  className="programmeSearchText"
+                >
+                  Network 
+                </section>,
+                <section>
                   <Getorganisations
-                                    name="network"
-                                    network={[Function]}
+                    name="network"
+                    network={[Function]}
                   />
-</section>,
+                </section>,
                 <section
-                  className="productions"
-                  name="productions"
->
+                  className="programmeSearchText"
+                >
+                  Production 
+                </section>,
+                <section>
                   <Getorganisations
-                                    name="production"
-                                    production={[Function]}
+                    name="production"
+                    production={[Function]}
                   />
-</section>,
+                </section>,
                 <section
-                  className="indies"
+                  className="programmeSearchText"
+                >
+                  Indie 
+                </section>,
+                <section
                   name="indies"
->
+                >
                   <Getorganisations
-                                    indies={[Function]}
-                                    name="indie"
+                    indies={[Function]}
+                    name="indie"
                   />
-</section>,
+                </section>,
+                <section
+                  className="programmeSearchText"
+                >
+                  From 
+                </section>,
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="fromdate"
+                    type="date"
+                  />
+                </section>,
+                <section
+                  className="programmeSearchText"
+                >
+                  To 
+                </section>,
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="todate"
+                    type="date"
+                  />
+                </section>,
               ],
-              "className": "programmeSearch",
+              "className": "progSearchLayout",
             },
             "ref": null,
             "rendered": Array [
@@ -1769,15 +1947,25 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Title ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Title ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <input
-                    className="test"
                     form="form"
                     name="text"
                     onChange={[Function]}
                     placeholder="Title"
                     type="text"
-                    value={undefined}
-/>,
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1785,7 +1973,6 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "test",
                     "form": "form",
                     "name": "text",
                     "onChange": [Function],
@@ -1804,11 +1991,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Network ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Network ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <Getorganisations
                     name="network"
                     network={[Function]}
-/>,
-                  "className": "networks",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1830,12 +2028,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Production ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Production ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <Getorganisations
                     name="production"
                     production={[Function]}
-/>,
-                  "className": "productions",
-                  "name": "productions",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1857,11 +2065,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Indie ",
+                  "className": "programmeSearchText",
+                },
+                "ref": null,
+                "rendered": "Indie ",
+                "type": "section",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": <Getorganisations
                     indies={[Function]}
                     name="indie"
-/>,
-                  "className": "indies",
+                  />,
                   "name": "indies",
                 },
                 "ref": null,
@@ -1879,64 +2098,16 @@ ShallowWrapper {
                 },
                 "type": "section",
               },
-            ],
-            "type": "section",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": "br",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <section>
-                  From
-</section>,
-                <section
-                  className="from"
->
-                  <input
-                                    form="form"
-                                    id="datetime"
-                                    name="fromdate"
-                                    type="date"
-                  />
-</section>,
-                <section>
-                  To
-</section>,
-                <section
-                  className="to"
->
-                  <input
-                                    form="form"
-                                    id="datetime"
-                                    name="todate"
-                                    type="date"
-                  />
-</section>,
-              ],
-              "className": "datePicker",
-            },
-            "ref": null,
-            "rendered": Array [
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "From",
+                  "children": "From ",
+                  "className": "programmeSearchText",
                 },
                 "ref": null,
-                "rendered": "From",
+                "rendered": "From ",
                 "type": "section",
               },
               Object {
@@ -1945,12 +2116,12 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <input
+                    className="date"
                     form="form"
                     id="datetime"
                     name="fromdate"
                     type="date"
-/>,
-                  "className": "from",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1958,6 +2129,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "date",
                     "form": "form",
                     "id": "datetime",
                     "name": "fromdate",
@@ -1974,10 +2146,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "To",
+                  "children": "To ",
+                  "className": "programmeSearchText",
                 },
                 "ref": null,
-                "rendered": "To",
+                "rendered": "To ",
                 "type": "section",
               },
               Object {
@@ -1986,12 +2159,12 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <input
+                    className="date"
                     form="form"
                     id="datetime"
                     name="todate"
                     type="date"
-/>,
-                  "className": "to",
+                  />,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1999,6 +2172,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "date",
                     "form": "form",
                     "id": "datetime",
                     "name": "todate",
@@ -2048,48 +2222,47 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "CSV",
-                <CSVLink
-                  data={
-                                    Array [
-                                                      Object {
-                                                        "": "",
-                                                      },
-                                                    ]
-                  }
-                  filename="generatedBy_react-csv.csv"
-                  separator=","
-                  target="_blank"
-                  uFEFF={true}
-/>,
-              ],
+              "children": <CSVLink
+                asyncOnClick={false}
+                data={
+                  Array [
+                    Object {
+                      "": "",
+                    },
+                  ]
+                }
+                filename="generatedBy_react-csv.csv"
+                separator=","
+                target="_blank"
+                uFEFF={true}
+              >
+                CSV
+              </CSVLink>,
               "className": "csv",
               "id": "download",
             },
             "ref": null,
-            "rendered": Array [
-              "CSV",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "data": Array [
-                    Object {
-                      "": "",
-                    },
-                  ],
-                  "filename": "generatedBy_react-csv.csv",
-                  "separator": ",",
-                  "target": "_blank",
-                  "uFEFF": true,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "asyncOnClick": false,
+                "children": "CSV",
+                "data": Array [
+                  Object {
+                    "": "",
+                  },
+                ],
+                "filename": "generatedBy_react-csv.csv",
+                "separator": ",",
+                "target": "_blank",
+                "uFEFF": true,
               },
-            ],
+              "ref": null,
+              "rendered": "CSV",
+              "type": [Function],
+            },
             "type": "button",
           },
           Object {
@@ -2129,128 +2302,136 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <withRouter(Navbar) />,
-          <section
-            className="App-intro"
->
+          <section>
             <form
-                        className="programmeForm"
-                        id="form"
-                        onSubmit={[Function]}
+              className="programmeForm"
+              id="form"
+              onSubmit={[Function]}
             />
             <section
-                        className="programmeSearch"
+              className="progSearchLayout"
             >
-                        <section>
-                                    <input
-                                                className="test"
-                                                form="form"
-                                                name="text"
-                                                onChange={[Function]}
-                                                placeholder="Title"
-                                                type="text"
-                                                value={undefined}
-                                    />
-                        </section>
-                        <section
-                                    className="networks"
-                        >
-                                    <Getorganisations
-                                                name="network"
-                                                network={[Function]}
-                                    />
-                        </section>
-                        <section
-                                    className="productions"
-                                    name="productions"
-                        >
-                                    <Getorganisations
-                                                name="production"
-                                                production={[Function]}
-                                    />
-                        </section>
-                        <section
-                                    className="indies"
-                                    name="indies"
-                        >
-                                    <Getorganisations
-                                                indies={[Function]}
-                                                name="indie"
-                                    />
-                        </section>
-            </section>
-            <br />
-            <section
-                        className="datePicker"
-            >
-                        <section>
-                                    From
-                        </section>
-                        <section
-                                    className="from"
-                        >
-                                    <input
-                                                form="form"
-                                                id="datetime"
-                                                name="fromdate"
-                                                type="date"
-                                    />
-                        </section>
-                        <section>
-                                    To
-                        </section>
-                        <section
-                                    className="to"
-                        >
-                                    <input
-                                                form="form"
-                                                id="datetime"
-                                                name="todate"
-                                                type="date"
-                                    />
-                        </section>
+              <section
+                className="programmeSearchText"
+              >
+                Title 
+              </section>
+              <section>
+                <input
+                  form="form"
+                  name="text"
+                  onChange={[Function]}
+                  placeholder="Title"
+                  type="text"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Network 
+              </section>
+              <section>
+                <Getorganisations
+                  name="network"
+                  network={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Production 
+              </section>
+              <section>
+                <Getorganisations
+                  name="production"
+                  production={[Function]}
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                Indie 
+              </section>
+              <section
+                name="indies"
+              >
+                <Getorganisations
+                  indies={[Function]}
+                  name="indie"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                From 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="fromdate"
+                  type="date"
+                />
+              </section>
+              <section
+                className="programmeSearchText"
+              >
+                To 
+              </section>
+              <section>
+                <input
+                  className="date"
+                  form="form"
+                  id="datetime"
+                  name="todate"
+                  type="date"
+                />
+              </section>
             </section>
             <button
-                        className="submit"
-                        form="form"
-                        id="submit"
-                        name="submit"
+              className="submit"
+              form="form"
+              id="submit"
+              name="submit"
             >
-                        Search
+              Search
             </button>
             <button
-                        className="reset"
-                        form="form"
-                        id="reset"
-                        type="reset"
+              className="reset"
+              form="form"
+              id="reset"
+              type="reset"
             >
-                        Reset
+              Reset
             </button>
             <button
-                        className="csv"
-                        id="download"
+              className="csv"
+              id="download"
             >
-                        CSV
-                        <CSVLink
-                                    data={
-                                                Array [
-                                                            Object {
-                                                              "": "",
-                                                            },
-                                                          ]
-                                    }
-                                    filename="generatedBy_react-csv.csv"
-                                    separator=","
-                                    target="_blank"
-                                    uFEFF={true}
-                        />
+              <CSVLink
+                asyncOnClick={false}
+                data={
+                  Array [
+                    Object {
+                      "": "",
+                    },
+                  ]
+                }
+                filename="generatedBy_react-csv.csv"
+                separator=","
+                target="_blank"
+                uFEFF={true}
+              >
+                CSV
+              </CSVLink>
             </button>
             <withRouter(Displayprogrammes)
-                        className="results"
-                        history={undefined}
-                        name="results"
-                        programmes="[{\\"\\":\\"\\"}]"
+              className="results"
+              name="results"
+              programmes="[{\\"\\":\\"\\"}]"
             />
-</section>,
+          </section>,
           <Footer />,
         ],
         "className": "main",
@@ -2276,122 +2457,131 @@ ShallowWrapper {
                 className="programmeForm"
                 id="form"
                 onSubmit={[Function]}
-/>,
+              />,
               <section
-                className="programmeSearch"
->
-                <section>
-                                <input
-                                                className="test"
-                                                form="form"
-                                                name="text"
-                                                onChange={[Function]}
-                                                placeholder="Title"
-                                                type="text"
-                                                value={undefined}
-                                />
-                </section>
+                className="progSearchLayout"
+              >
                 <section
-                                className="networks"
+                  className="programmeSearchText"
                 >
-                                <Getorganisations
-                                                name="network"
-                                                network={[Function]}
-                                />
-                </section>
-                <section
-                                className="productions"
-                                name="productions"
-                >
-                                <Getorganisations
-                                                name="production"
-                                                production={[Function]}
-                                />
-                </section>
-                <section
-                                className="indies"
-                                name="indies"
-                >
-                                <Getorganisations
-                                                indies={[Function]}
-                                                name="indie"
-                                />
-                </section>
-</section>,
-              <br />,
-              <section
-                className="datePicker"
->
-                <section>
-                                From
-                </section>
-                <section
-                                className="from"
-                >
-                                <input
-                                                form="form"
-                                                id="datetime"
-                                                name="fromdate"
-                                                type="date"
-                                />
+                  Title 
                 </section>
                 <section>
-                                To
+                  <input
+                    form="form"
+                    name="text"
+                    onChange={[Function]}
+                    placeholder="Title"
+                    type="text"
+                  />
                 </section>
                 <section
-                                className="to"
+                  className="programmeSearchText"
                 >
-                                <input
-                                                form="form"
-                                                id="datetime"
-                                                name="todate"
-                                                type="date"
-                                />
+                  Network 
                 </section>
-</section>,
+                <section>
+                  <Getorganisations
+                    name="network"
+                    network={[Function]}
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  Production 
+                </section>
+                <section>
+                  <Getorganisations
+                    name="production"
+                    production={[Function]}
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  Indie 
+                </section>
+                <section
+                  name="indies"
+                >
+                  <Getorganisations
+                    indies={[Function]}
+                    name="indie"
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  From 
+                </section>
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="fromdate"
+                    type="date"
+                  />
+                </section>
+                <section
+                  className="programmeSearchText"
+                >
+                  To 
+                </section>
+                <section>
+                  <input
+                    className="date"
+                    form="form"
+                    id="datetime"
+                    name="todate"
+                    type="date"
+                  />
+                </section>
+              </section>,
               <button
                 className="submit"
                 form="form"
                 id="submit"
                 name="submit"
->
+              >
                 Search
-</button>,
+              </button>,
               <button
                 className="reset"
                 form="form"
                 id="reset"
                 type="reset"
->
+              >
                 Reset
-</button>,
+              </button>,
               <button
                 className="csv"
                 id="download"
->
-                CSV
+              >
                 <CSVLink
-                                data={
-                                                Array [
-                                                                Object {
-                                                                  "": "",
-                                                                },
-                                                              ]
-                                }
-                                filename="generatedBy_react-csv.csv"
-                                separator=","
-                                target="_blank"
-                                uFEFF={true}
-                />
-</button>,
+                  asyncOnClick={false}
+                  data={
+                    Array [
+                      Object {
+                        "": "",
+                      },
+                    ]
+                  }
+                  filename="generatedBy_react-csv.csv"
+                  separator=","
+                  target="_blank"
+                  uFEFF={true}
+                >
+                  CSV
+                </CSVLink>
+              </button>,
               <withRouter(Displayprogrammes)
                 className="results"
-                history={undefined}
                 name="results"
                 programmes="[{\\"\\":\\"\\"}]"
-/>,
+              />,
             ],
-            "className": "App-intro",
           },
           "ref": null,
           "rendered": Array [
@@ -2414,45 +2604,85 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  <section
+                    className="programmeSearchText"
+                  >
+                    Title 
+                  </section>,
                   <section>
                     <input
-                                        className="test"
-                                        form="form"
-                                        name="text"
-                                        onChange={[Function]}
-                                        placeholder="Title"
-                                        type="text"
-                                        value={undefined}
+                      form="form"
+                      name="text"
+                      onChange={[Function]}
+                      placeholder="Title"
+                      type="text"
                     />
-</section>,
+                  </section>,
                   <section
-                    className="networks"
->
+                    className="programmeSearchText"
+                  >
+                    Network 
+                  </section>,
+                  <section>
                     <Getorganisations
-                                        name="network"
-                                        network={[Function]}
+                      name="network"
+                      network={[Function]}
                     />
-</section>,
+                  </section>,
                   <section
-                    className="productions"
-                    name="productions"
->
+                    className="programmeSearchText"
+                  >
+                    Production 
+                  </section>,
+                  <section>
                     <Getorganisations
-                                        name="production"
-                                        production={[Function]}
+                      name="production"
+                      production={[Function]}
                     />
-</section>,
+                  </section>,
                   <section
-                    className="indies"
+                    className="programmeSearchText"
+                  >
+                    Indie 
+                  </section>,
+                  <section
                     name="indies"
->
+                  >
                     <Getorganisations
-                                        indies={[Function]}
-                                        name="indie"
+                      indies={[Function]}
+                      name="indie"
                     />
-</section>,
+                  </section>,
+                  <section
+                    className="programmeSearchText"
+                  >
+                    From 
+                  </section>,
+                  <section>
+                    <input
+                      className="date"
+                      form="form"
+                      id="datetime"
+                      name="fromdate"
+                      type="date"
+                    />
+                  </section>,
+                  <section
+                    className="programmeSearchText"
+                  >
+                    To 
+                  </section>,
+                  <section>
+                    <input
+                      className="date"
+                      form="form"
+                      id="datetime"
+                      name="todate"
+                      type="date"
+                    />
+                  </section>,
                 ],
-                "className": "programmeSearch",
+                "className": "progSearchLayout",
               },
               "ref": null,
               "rendered": Array [
@@ -2461,15 +2691,25 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Title ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Title ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <input
-                      className="test"
                       form="form"
                       name="text"
                       onChange={[Function]}
                       placeholder="Title"
                       type="text"
-                      value={undefined}
-/>,
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2477,7 +2717,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "test",
                       "form": "form",
                       "name": "text",
                       "onChange": [Function],
@@ -2496,11 +2735,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Network ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Network ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <Getorganisations
                       name="network"
                       network={[Function]}
-/>,
-                    "className": "networks",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2522,12 +2772,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Production ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Production ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <Getorganisations
                       name="production"
                       production={[Function]}
-/>,
-                    "className": "productions",
-                    "name": "productions",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2549,11 +2809,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Indie ",
+                    "className": "programmeSearchText",
+                  },
+                  "ref": null,
+                  "rendered": "Indie ",
+                  "type": "section",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": <Getorganisations
                       indies={[Function]}
                       name="indie"
-/>,
-                    "className": "indies",
+                    />,
                     "name": "indies",
                   },
                   "ref": null,
@@ -2571,64 +2842,16 @@ ShallowWrapper {
                   },
                   "type": "section",
                 },
-              ],
-              "type": "section",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": "br",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <section>
-                    From
-</section>,
-                  <section
-                    className="from"
->
-                    <input
-                                        form="form"
-                                        id="datetime"
-                                        name="fromdate"
-                                        type="date"
-                    />
-</section>,
-                  <section>
-                    To
-</section>,
-                  <section
-                    className="to"
->
-                    <input
-                                        form="form"
-                                        id="datetime"
-                                        name="todate"
-                                        type="date"
-                    />
-</section>,
-                ],
-                "className": "datePicker",
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "From",
+                    "children": "From ",
+                    "className": "programmeSearchText",
                   },
                   "ref": null,
-                  "rendered": "From",
+                  "rendered": "From ",
                   "type": "section",
                 },
                 Object {
@@ -2637,12 +2860,12 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <input
+                      className="date"
                       form="form"
                       id="datetime"
                       name="fromdate"
                       type="date"
-/>,
-                    "className": "from",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2650,6 +2873,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "className": "date",
                       "form": "form",
                       "id": "datetime",
                       "name": "fromdate",
@@ -2666,10 +2890,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "To",
+                    "children": "To ",
+                    "className": "programmeSearchText",
                   },
                   "ref": null,
-                  "rendered": "To",
+                  "rendered": "To ",
                   "type": "section",
                 },
                 Object {
@@ -2678,12 +2903,12 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <input
+                      className="date"
                       form="form"
                       id="datetime"
                       name="todate"
                       type="date"
-/>,
-                    "className": "to",
+                    />,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2691,6 +2916,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "className": "date",
                       "form": "form",
                       "id": "datetime",
                       "name": "todate",
@@ -2740,48 +2966,47 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "CSV",
-                  <CSVLink
-                    data={
-                                        Array [
-                                                            Object {
-                                                              "": "",
-                                                            },
-                                                          ]
-                    }
-                    filename="generatedBy_react-csv.csv"
-                    separator=","
-                    target="_blank"
-                    uFEFF={true}
-/>,
-                ],
+                "children": <CSVLink
+                  asyncOnClick={false}
+                  data={
+                    Array [
+                      Object {
+                        "": "",
+                      },
+                    ]
+                  }
+                  filename="generatedBy_react-csv.csv"
+                  separator=","
+                  target="_blank"
+                  uFEFF={true}
+                >
+                  CSV
+                </CSVLink>,
                 "className": "csv",
                 "id": "download",
               },
               "ref": null,
-              "rendered": Array [
-                "CSV",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "data": Array [
-                      Object {
-                        "": "",
-                      },
-                    ],
-                    "filename": "generatedBy_react-csv.csv",
-                    "separator": ",",
-                    "target": "_blank",
-                    "uFEFF": true,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "asyncOnClick": false,
+                  "children": "CSV",
+                  "data": Array [
+                    Object {
+                      "": "",
+                    },
+                  ],
+                  "filename": "generatedBy_react-csv.csv",
+                  "separator": ",",
+                  "target": "_blank",
+                  "uFEFF": true,
                 },
-              ],
+                "ref": null,
+                "rendered": "CSV",
+                "type": [Function],
+              },
               "type": "button",
             },
             Object {
@@ -2818,8 +3043,23 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

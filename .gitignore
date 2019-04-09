@@ -1,2 +1,4 @@
 config.js
 node_modules
+coverage
+./frontend/components/__snapshots__

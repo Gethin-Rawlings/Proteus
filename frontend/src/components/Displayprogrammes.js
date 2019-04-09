@@ -27,7 +27,8 @@ class Displayprogrammes extends Component {
           }
         });
     }
-  }handleChange(event) {
+  }
+  handleChange(event) {
     const target = event.target;
     const name = target.name;
     const value = target.value;
