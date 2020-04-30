@@ -17,20 +17,22 @@
     "react-scripts": "^2.1.8",
     "redux": "^3.7.2",
     "sinon": "^6.3.5",
-    "whatwg-fetch": "^2.0.4"
+    "whatwg-fetch": "^2.0.4",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "snyk test && react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "jest-localstorage-mock": "^2.4.0",
-    "mock-local-storage": "^1.1.8",
-    "snyk": "^1.147.0"
+    "mock-local-storage": "^1.1.8"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -42,5 +44,6 @@
       "!src/components/UserAdmin.js",
       "!src/components/UserDetails.js"
     ]
-  }
+  },
+  "snyk": true
 }
