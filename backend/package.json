@@ -4,7 +4,9 @@
   "description": "react front end with restful node js and ms sql stored procs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Gethin",
   "license": "ISC",
@@ -23,7 +25,8 @@
     "mssql": "^4.3.2",
     "nodemon": "^1.18.10",
     "save": "^2.3.3",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -32,5 +35,6 @@
     "expect.js": "^0.3.1",
     "mocha": "^4.1.0",
     "webpack": "^3.12.0"
-  }
+  },
+  "snyk": true
 }
